@@ -48,6 +48,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.custPSLbl = new System.Windows.Forms.Label();
             this.custReqRTB = new System.Windows.Forms.RichTextBox();
+            this.ViewCustBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // AddProjLbl
@@ -117,7 +118,7 @@
             // 
             // custAddBtn
             // 
-            this.custAddBtn.Location = new System.Drawing.Point(625, 321);
+            this.custAddBtn.Location = new System.Drawing.Point(623, 271);
             this.custAddBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.custAddBtn.Name = "custAddBtn";
             this.custAddBtn.Size = new System.Drawing.Size(120, 46);
@@ -200,7 +201,7 @@
             this.custDTP.Name = "custDTP";
             this.custDTP.Size = new System.Drawing.Size(110, 25);
             this.custDTP.TabIndex = 40;
-            this.custDTP.Value = new System.DateTime(2006, 9, 1, 0, 0, 0, 0);
+            this.custDTP.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             // 
             // specialReqCB
             // 
@@ -240,11 +241,23 @@
             this.custReqRTB.TabIndex = 44;
             this.custReqRTB.Text = "";
             // 
+            // ViewCustBtn
+            // 
+            this.ViewCustBtn.Location = new System.Drawing.Point(623, 321);
+            this.ViewCustBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ViewCustBtn.Name = "ViewCustBtn";
+            this.ViewCustBtn.Size = new System.Drawing.Size(120, 46);
+            this.ViewCustBtn.TabIndex = 45;
+            this.ViewCustBtn.Text = "View Customer";
+            this.ViewCustBtn.UseVisualStyleBackColor = true;
+            this.ViewCustBtn.Click += new System.EventHandler(this.ViewCustBtn_Click);
+            // 
             // CustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 478);
+            this.Controls.Add(this.ViewCustBtn);
             this.Controls.Add(this.custReqRTB);
             this.Controls.Add(this.custPSLbl);
             this.Controls.Add(this.label2);
@@ -295,6 +308,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label custPSLbl;
         private System.Windows.Forms.RichTextBox custReqRTB;
+        private System.Windows.Forms.Button ViewCustBtn;
     }
 }
 

@@ -78,3 +78,4 @@ C:\Users\IISXG\Documents\Year 14\SSD\Coursework SSD\9320RyanMillerDatabase\9320R
 C:\Users\IISXG\Documents\Year 14\SSD\Coursework SSD\9320RyanMillerDatabase\9320RyanMillerDatabase\obj\Debug\9320RyanMillerDatabase.csproj.CopyComplete
 C:\Users\IISXG\Documents\Year 14\SSD\Coursework SSD\9320RyanMillerDatabase\9320RyanMillerDatabase\obj\Debug\9320RyanMillerDatabase.exe
 C:\Users\IISXG\Documents\Year 14\SSD\Coursework SSD\9320RyanMillerDatabase\9320RyanMillerDatabase\obj\Debug\9320RyanMillerDatabase.pdb
+C:\Users\IISXG\Documents\Year 14\SSD\Coursework SSD\9320RyanMillerDatabase\9320RyanMillerDatabase\obj\Debug\_9320RyanMillerDatabase.ViewCustomer.resources

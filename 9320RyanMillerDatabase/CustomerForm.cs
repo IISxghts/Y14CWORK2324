@@ -16,34 +16,38 @@ namespace _9320RyanMillerDatabase
         {
             InitializeComponent();
             CenterToScreen();
+            custReqRTB.Visible = false;
+            custPSLbl.Visible = false;
         }
 
         private void custAddBtn_Click(object sender, EventArgs e)
-        {            
-            string forename = custFnameBox.Text;
-            string surname = custSnameBox.Text;
-            string address = custAddressBox.Text;
-            string postcode = custPostcodeBox.Text;
-            string town = custTownBox.Text;
-            string phone = custPhoneBox.Text;
-            string bdate = custDTP.Text;
-            string specialreqs = custReqRTB.Text;
-
-            CustomerModel newcustomer = new CustomerModel(forename, surname, address, postcode, town, phone, bdate, specialreqs);
-
-            int rowsAffected = CustomerDAL.AddCustomer(newcustomer);
-
-            if (rowsAffected > 0)
+        {
+            if (NullChecker()) //if all fields are filled, move on
             {
-                MessageBox.Show("New project has been successfully added", "Success");
-            }
-            else
-            {
-                MessageBox.Show("An error has occured in adding the project", "Failure");
-            }
+                string forename = custFnameBox.Text;
+                string surname = custSnameBox.Text;
+                string address = custAddressBox.Text;
+                string postcode = custPostcodeBox.Text;
+                string town = custTownBox.Text;
+                string phone = custPhoneBox.Text;
+                string bdate = custDTP.Text;
+                string specialreqs = custReqRTB.Text;
 
+                CustomerModel newcustomer = new CustomerModel(forename, surname, address, postcode, town, phone, bdate, specialreqs);
+
+                int rowsAffected = CustomerDAL.AddCustomer(newcustomer);
+
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("New customer has been successfully added", "Success");
+                }
+                else
+                {
+                    MessageBox.Show("An error has occured in adding the customer", "Failure");
+                }
+
+            }
         }
-
         private void specialReqCB_CheckedChanged(object sender, EventArgs e)
         {
             if (specialReqCB.Checked)
@@ -58,6 +62,55 @@ namespace _9320RyanMillerDatabase
                 custReqRTB.Visible = false;
                 custReqRTB.Text = "N/A";
             }
+        }
+        private bool NullChecker()
+        {
+            StringBuilder error = new StringBuilder();
+
+            if (string.IsNullOrEmpty(custFnameBox.Text))
+            {
+                error.AppendLine("You must enter a first name.");
+            }
+            if (string.IsNullOrEmpty(custSnameBox.Text))
+            {
+                error.AppendLine("You must enter a  surname.");
+            }
+            if (string.IsNullOrEmpty(custPostcodeBox.Text))
+            {
+                error.AppendLine("You must enter a postcode.");
+            }
+            if (string.IsNullOrEmpty(custAddressBox.Text))
+            {
+                error.AppendLine("You must enter an address.");
+            }
+            if (string.IsNullOrEmpty(custDTP.Text))
+            {
+                error.AppendLine("You must enter a date of birth.");
+            }
+            if (string.IsNullOrEmpty(custTownBox.Text))
+            {
+                error.AppendLine("You must enter a town.");
+            }
+            if (string.IsNullOrEmpty(custPhoneBox.Text))
+            {
+                error.AppendLine("You must enter a phone number.");
+            }
+            if (string.IsNullOrEmpty(custDTP.Text))
+            {
+                error.AppendLine("You must enter a date of birth.");
+            }
+            if(string.IsNullOrEmpty(error.ToString()))
+            {
+                return true;
+            }
+            MessageBox.Show(error.ToString(), "Required fields left blank");
+            return false;
+        }
+
+        private void ViewCustBtn_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new ViewCustomer().Show();
         }
     }
 }

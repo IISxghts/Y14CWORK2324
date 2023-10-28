@@ -37,7 +37,8 @@ namespace _9320RyanMillerDatabase
         public string PostalCode
         {
             get { return _pcode; }
-            set { _pcode = value; }
+            set { 
+                _pcode = value; }
         }
         public string Address
         {
@@ -52,7 +53,7 @@ namespace _9320RyanMillerDatabase
         public string Phone
         {
             get { return _phone; }
-            set { _phone = value; }
+            set {  _phone = value; }
         }
         public string DOB
         {
