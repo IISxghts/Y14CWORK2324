@@ -71,11 +71,13 @@ C:\Users\IISXG\Documents\Year 14\SSD\Coursework SSD\9320RyanMillerDatabase\9320R
 C:\Users\IISXG\Documents\Year 14\SSD\Coursework SSD\9320RyanMillerDatabase\9320RyanMillerDatabase\bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
 C:\Users\IISXG\Documents\Year 14\SSD\Coursework SSD\9320RyanMillerDatabase\9320RyanMillerDatabase\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
 C:\Users\IISXG\Documents\Year 14\SSD\Coursework SSD\9320RyanMillerDatabase\9320RyanMillerDatabase\obj\Debug\9320RyanMillerDatabase.csproj.AssemblyReference.cache
-C:\Users\IISXG\Documents\Year 14\SSD\Coursework SSD\9320RyanMillerDatabase\9320RyanMillerDatabase\obj\Debug\_9320RyanMillerDatabase.CustomerForm.resources
 C:\Users\IISXG\Documents\Year 14\SSD\Coursework SSD\9320RyanMillerDatabase\9320RyanMillerDatabase\obj\Debug\_9320RyanMillerDatabase.Properties.Resources.resources
 C:\Users\IISXG\Documents\Year 14\SSD\Coursework SSD\9320RyanMillerDatabase\9320RyanMillerDatabase\obj\Debug\9320RyanMillerDatabase.csproj.GenerateResource.cache
 C:\Users\IISXG\Documents\Year 14\SSD\Coursework SSD\9320RyanMillerDatabase\9320RyanMillerDatabase\obj\Debug\9320RyanMillerDatabase.csproj.CoreCompileInputs.cache
 C:\Users\IISXG\Documents\Year 14\SSD\Coursework SSD\9320RyanMillerDatabase\9320RyanMillerDatabase\obj\Debug\9320RyanMillerDatabase.csproj.CopyComplete
 C:\Users\IISXG\Documents\Year 14\SSD\Coursework SSD\9320RyanMillerDatabase\9320RyanMillerDatabase\obj\Debug\9320RyanMillerDatabase.exe
 C:\Users\IISXG\Documents\Year 14\SSD\Coursework SSD\9320RyanMillerDatabase\9320RyanMillerDatabase\obj\Debug\9320RyanMillerDatabase.pdb
-C:\Users\IISXG\Documents\Year 14\SSD\Coursework SSD\9320RyanMillerDatabase\9320RyanMillerDatabase\obj\Debug\_9320RyanMillerDatabase.ViewCustomer.resources
+C:\Users\IISXG\Documents\Year 14\SSD\Coursework SSD\9320RyanMillerDatabase\9320RyanMillerDatabase\obj\Debug\_9320RyanMillerDatabase.AddCustomerForm.resources
+C:\Users\IISXG\Documents\Year 14\SSD\Coursework SSD\9320RyanMillerDatabase\9320RyanMillerDatabase\obj\Debug\_9320RyanMillerDatabase.DatabaseMenu.resources
+C:\Users\IISXG\Documents\Year 14\SSD\Coursework SSD\9320RyanMillerDatabase\9320RyanMillerDatabase\obj\Debug\_9320RyanMillerDatabase.EditCustomerForm.resources
+C:\Users\IISXG\Documents\Year 14\SSD\Coursework SSD\9320RyanMillerDatabase\9320RyanMillerDatabase\obj\Debug\_9320RyanMillerDatabase.DeleteCustomerForm.resources

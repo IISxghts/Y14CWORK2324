@@ -72,6 +72,8 @@ namespace _9320RyanMillerDatabase
         
         public CustomerModel(int custID, string firstname, string surname, string postcode, string address, string town, string phone, string dob, string specialreqs)
         {
+            // WITH ID
+            
             this._id = custID;
             this._fname = firstname;
             this._sname = surname;
@@ -84,6 +86,8 @@ namespace _9320RyanMillerDatabase
         }
         public CustomerModel(string firstname, string surname, string postcode, string address, string town, string phone, string dob, string specialreqs)
         {
+            // NO ID
+            
             this._fname = firstname;
             this._sname = surname;
             this._pcode = postcode;

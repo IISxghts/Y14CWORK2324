@@ -59,5 +59,19 @@ namespace _9320RyanMillerDatabase
             }
 
         }
+        public static int EditLoyalCustomer(int CustomerNum, string CustomerForename, string CustomerSurname, string CustomerAddress, string CustomerPostcode, string CustomerTown, string CustomerPhone, string CustomerDOB, string CustomerSpecialReqs)
+
+        {
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+                string sqlQuery = string.Format("UPDATE Customer SET CustomerForename = '{0}', CustomerSurname = '{1}', CustomerAddress = '{2}', CustomerPostcode = '{3}', CustomerTown = '{4}', CustomerPhone = '{5}', CustomerDOB = '{6}', CustomerSpecialReqs = '{7}' WHERE CustomerNum = {8}", CustomerForename, CustomerSurname, CustomerAddress, CustomerPostcode, CustomerTown, CustomerPhone, CustomerDOB, CustomerSpecialReqs);
+                SqlCommand CustomerEditSQLCmd = new SqlCommand(sqlQuery, connection);
+                int effectedRows = CustomerEditSQLCmd.ExecuteNonQuery();
+                connection.Close();
+                return effectedRows;
+
+            }
+        }
     }
 }

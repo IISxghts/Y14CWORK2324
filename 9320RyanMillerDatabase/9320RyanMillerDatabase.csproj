@@ -198,13 +198,30 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomerDAL.cs" />
-    <Compile Include="CustomerForm.cs">
+    <Compile Include="AddCustomerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustomerForm.Designer.cs">
-      <DependentUpon>CustomerForm.cs</DependentUpon>
+    <Compile Include="AddCustomerForm.Designer.cs">
+      <DependentUpon>AddCustomerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="CustomerModel.cs" />
+    <Compile Include="DatabaseMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatabaseMenu.Designer.cs">
+      <DependentUpon>DatabaseMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditCustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditCustomerForm.Designer.cs">
+      <DependentUpon>EditCustomerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lakeside9320CEDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Lakeside9320CEDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Lakeside9320CustDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -212,14 +229,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewCustomer.cs">
+    <Compile Include="DeleteCustomerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ViewCustomer.Designer.cs">
-      <DependentUpon>ViewCustomer.cs</DependentUpon>
+    <Compile Include="DeleteCustomerForm.Designer.cs">
+      <DependentUpon>DeleteCustomerForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CustomerForm.resx">
-      <DependentUpon>CustomerForm.cs</DependentUpon>
+    <EmbeddedResource Include="AddCustomerForm.resx">
+      <DependentUpon>AddCustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatabaseMenu.resx">
+      <DependentUpon>DatabaseMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditCustomerForm.resx">
+      <DependentUpon>EditCustomerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -230,9 +253,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ViewCustomer.resx">
-      <DependentUpon>ViewCustomer.cs</DependentUpon>
+    <EmbeddedResource Include="DeleteCustomerForm.resx">
+      <DependentUpon>DeleteCustomerForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Lakeside9320CEDataSet.xsc">
+      <DependentUpon>Lakeside9320CEDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Lakeside9320CEDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Lakeside9320CEDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Lakeside9320CEDataSet.xss">
+      <DependentUpon>Lakeside9320CEDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Lakeside9320CustDataSet.xsc">
       <DependentUpon>Lakeside9320CustDataSet.xsd</DependentUpon>
     </None>
