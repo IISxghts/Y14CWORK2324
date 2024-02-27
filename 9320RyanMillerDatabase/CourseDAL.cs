@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace _9320RyanMillerDatabase
 {
@@ -85,6 +86,28 @@ namespace _9320RyanMillerDatabase
                 connection.Close();
                 return rowsAffected;
 
+            }
+        }
+
+        public static DataTable ViewCourses()
+        {
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+
+                SqlCommand command = new SqlCommand();
+
+                string sqlQuery = @"SELECT * FROM Courses";
+
+                command.CommandText = sqlQuery;
+                command.Connection = connection;
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable dt = new DataTable();
+
+                adapter.Fill(dt);
+                connection.Close();
+
+                return dt;
             }
         }
     }

@@ -31,11 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchForm));
             this.CustomerInfoDGV = new System.Windows.Forms.DataGridView();
-            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lakeside9320SearchDataSet = new _9320RyanMillerDatabase.Lakeside9320SearchDataSet();
-            this.bookingBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lakeside9320SearchBookingDataSet = new _9320RyanMillerDatabase.Lakeside9320SearchBookingDataSet();
-            this.customerTableAdapter = new _9320RyanMillerDatabase.Lakeside9320SearchDataSetTableAdapters.CustomerTableAdapter();
             this.CriteriaLbl = new System.Windows.Forms.Label();
             this.CriteriaSelectBox = new System.Windows.Forms.ComboBox();
             this.SearchTxtBox = new System.Windows.Forms.TextBox();
@@ -47,18 +42,23 @@
             this.MainMenuTSM = new System.Windows.Forms.ToolStripMenuItem();
             this.TableSelectBox = new System.Windows.Forms.ComboBox();
             this.TableLbl = new System.Windows.Forms.Label();
+            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lakeside9320SearchDataSet = new _9320RyanMillerDatabase.Lakeside9320SearchDataSet();
+            this.bookingBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lakeside9320SearchBookingDataSet = new _9320RyanMillerDatabase.Lakeside9320SearchBookingDataSet();
+            this.customerTableAdapter = new _9320RyanMillerDatabase.Lakeside9320SearchDataSetTableAdapters.CustomerTableAdapter();
             this.lakeside9320SearchCoursesDataSet = new _9320RyanMillerDatabase.Lakeside9320SearchCoursesDataSet();
             this.coursesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.coursesTableAdapter = new _9320RyanMillerDatabase.Lakeside9320SearchCoursesDataSetTableAdapters.CoursesTableAdapter();
             this.bookingTableAdapter = new _9320RyanMillerDatabase.Lakeside9320SearchBookingDataSetTableAdapters.BookingTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.CustomerInfoDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lakeside9320SearchDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lakeside9320SearchBookingDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
-            this.panel3.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lakeside9320SearchCoursesDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coursesBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -73,55 +73,29 @@
             this.CustomerInfoDGV.Size = new System.Drawing.Size(772, 293);
             this.CustomerInfoDGV.TabIndex = 0;
             // 
-            // customerBindingSource
-            // 
-            this.customerBindingSource.DataMember = "Customer";
-            this.customerBindingSource.DataSource = this.lakeside9320SearchDataSet;
-            // 
-            // lakeside9320SearchDataSet
-            // 
-            this.lakeside9320SearchDataSet.DataSetName = "Lakeside9320SearchDataSet";
-            this.lakeside9320SearchDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bookingBindingSource
-            // 
-            this.bookingBindingSource.DataMember = "Booking";
-            this.bookingBindingSource.DataSource = this.lakeside9320SearchBookingDataSet;
-            // 
-            // lakeside9320SearchBookingDataSet
-            // 
-            this.lakeside9320SearchBookingDataSet.DataSetName = "Lakeside9320SearchBookingDataSet";
-            this.lakeside9320SearchBookingDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // customerTableAdapter
-            // 
-            this.customerTableAdapter.ClearBeforeFill = true;
-            // 
             // CriteriaLbl
             // 
             this.CriteriaLbl.AutoSize = true;
             this.CriteriaLbl.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CriteriaLbl.Location = new System.Drawing.Point(12, 154);
+            this.CriteriaLbl.Location = new System.Drawing.Point(16, 150);
             this.CriteriaLbl.Name = "CriteriaLbl";
-            this.CriteriaLbl.Size = new System.Drawing.Size(235, 21);
+            this.CriteriaLbl.Size = new System.Drawing.Size(126, 21);
             this.CriteriaLbl.TabIndex = 2;
-            this.CriteriaLbl.Text = "Select Criteria to search by";
+            this.CriteriaLbl.Text = "Select Criteria";
             // 
             // CriteriaSelectBox
             // 
             this.CriteriaSelectBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CriteriaSelectBox.FormattingEnabled = true;
-            this.CriteriaSelectBox.Items.AddRange(new object[] {
-            "Forename",
-            "Surname"});
-            this.CriteriaSelectBox.Location = new System.Drawing.Point(284, 151);
+            this.CriteriaSelectBox.Location = new System.Drawing.Point(174, 151);
             this.CriteriaSelectBox.Name = "CriteriaSelectBox";
             this.CriteriaSelectBox.Size = new System.Drawing.Size(146, 24);
             this.CriteriaSelectBox.TabIndex = 3;
+            this.CriteriaSelectBox.SelectedIndexChanged += new System.EventHandler(this.CriteriaSelectBox_SelectedIndexChanged);
             // 
             // SearchTxtBox
             // 
-            this.SearchTxtBox.Location = new System.Drawing.Point(515, 125);
+            this.SearchTxtBox.Location = new System.Drawing.Point(468, 128);
             this.SearchTxtBox.Name = "SearchTxtBox";
             this.SearchTxtBox.Size = new System.Drawing.Size(226, 22);
             this.SearchTxtBox.TabIndex = 4;
@@ -131,7 +105,7 @@
             // 
             this.SearchLbl.AutoSize = true;
             this.SearchLbl.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchLbl.Location = new System.Drawing.Point(442, 126);
+            this.SearchLbl.Location = new System.Drawing.Point(395, 127);
             this.SearchLbl.Name = "SearchLbl";
             this.SearchLbl.Size = new System.Drawing.Size(67, 21);
             this.SearchLbl.TabIndex = 5;
@@ -142,11 +116,11 @@
             this.LLMenuLbl.AutoSize = true;
             this.LLMenuLbl.Font = new System.Drawing.Font("Segoe UI Black", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LLMenuLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
-            this.LLMenuLbl.Location = new System.Drawing.Point(167, 6);
+            this.LLMenuLbl.Location = new System.Drawing.Point(167, 12);
             this.LLMenuLbl.Name = "LLMenuLbl";
-            this.LLMenuLbl.Size = new System.Drawing.Size(578, 38);
+            this.LLMenuLbl.Size = new System.Drawing.Size(414, 38);
             this.LLMenuLbl.TabIndex = 1;
-            this.LLMenuLbl.Text = "LAKESIDE ESCAPES - CUSTOMER SEARCH";
+            this.LLMenuLbl.Text = "LAKESIDE ESCAPES - SEARCH";
             // 
             // guna2PictureBox1
             // 
@@ -195,8 +169,8 @@
             this.TableSelectBox.Items.AddRange(new object[] {
             "Customer",
             "Bookings",
-            "Activity"});
-            this.TableSelectBox.Location = new System.Drawing.Point(257, 105);
+            "Courses"});
+            this.TableSelectBox.Location = new System.Drawing.Point(174, 105);
             this.TableSelectBox.Name = "TableSelectBox";
             this.TableSelectBox.Size = new System.Drawing.Size(146, 24);
             this.TableSelectBox.TabIndex = 9;
@@ -206,11 +180,35 @@
             // 
             this.TableLbl.AutoSize = true;
             this.TableLbl.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TableLbl.Location = new System.Drawing.Point(12, 107);
+            this.TableLbl.Location = new System.Drawing.Point(16, 106);
             this.TableLbl.Name = "TableLbl";
-            this.TableLbl.Size = new System.Drawing.Size(196, 21);
+            this.TableLbl.Size = new System.Drawing.Size(112, 21);
             this.TableLbl.TabIndex = 8;
-            this.TableLbl.Text = "Select Table to search";
+            this.TableLbl.Text = "Select Table";
+            // 
+            // customerBindingSource
+            // 
+            this.customerBindingSource.DataMember = "Customer";
+            this.customerBindingSource.DataSource = this.lakeside9320SearchDataSet;
+            // 
+            // lakeside9320SearchDataSet
+            // 
+            this.lakeside9320SearchDataSet.DataSetName = "Lakeside9320SearchDataSet";
+            this.lakeside9320SearchDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bookingBindingSource
+            // 
+            this.bookingBindingSource.DataMember = "Booking";
+            this.bookingBindingSource.DataSource = this.lakeside9320SearchBookingDataSet;
+            // 
+            // lakeside9320SearchBookingDataSet
+            // 
+            this.lakeside9320SearchBookingDataSet.DataSetName = "Lakeside9320SearchBookingDataSet";
+            this.lakeside9320SearchBookingDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // customerTableAdapter
+            // 
+            this.customerTableAdapter.ClearBeforeFill = true;
             // 
             // lakeside9320SearchCoursesDataSet
             // 
@@ -249,15 +247,15 @@
             this.Name = "SearchForm";
             this.Text = "CustomerSearchForm";
             ((System.ComponentModel.ISupportInitialize)(this.CustomerInfoDGV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320SearchDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookingBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320SearchBookingDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320SearchDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookingBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320SearchBookingDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lakeside9320SearchCoursesDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coursesBindingSource)).EndInit();
             this.ResumeLayout(false);

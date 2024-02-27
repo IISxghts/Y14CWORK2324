@@ -22,7 +22,7 @@ namespace _9320RyanMillerDatabase
         }
         public static string _connectionString = ConfigurationManager.ConnectionStrings["LakesideConnection"].ConnectionString;
 
-        public static DataTable GetLessonsFromBooking(DateTime date)
+        public static DataTable GetLessonsFromBooking()
         {
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
@@ -30,12 +30,7 @@ namespace _9320RyanMillerDatabase
 
                 SqlCommand command = new SqlCommand();
 
-                string sqlQuery = @"SELECT Courses.CourseID, CourseTitle, StartDate, EndDate, Timing, Price, Capacity, SpacesBooked FROM Courses
-                                   LEFT JOIN
-                                   (SELECT Count(*) as 'SpacesBooked', Booking.CourseID FROM Booking
-                                   WHERE BookingDate = @Date GROUP BY Booking.CourseID) as BookingResults
-                                   on Courses.CourseID = BookingResults.CourseID
-                                   WHERE BookingResults.SpacesBooked IS NULL OR Capacity > BookingResults.SpacesBooked";
+                string sqlQuery = @"";
 
                 command.CommandText = sqlQuery;
                 command.Connection = connection;

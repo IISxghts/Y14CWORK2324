@@ -60,5 +60,27 @@ namespace _9320RyanMillerDatabase
             }
 
         }
+
+        public static DataTable ViewBookings()
+        {
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+
+                SqlCommand command = new SqlCommand();
+
+                string sqlQuery = @"SELECT * FROM Booking";
+
+                command.CommandText = sqlQuery;
+                command.Connection = connection;
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable dt = new DataTable();
+
+                adapter.Fill(dt);
+                connection.Close();
+
+                return dt;
+            }
+        }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -12,12 +13,12 @@ namespace _9320RyanMillerDatabase
     {
         public static string _connectionString = ConfigurationManager.ConnectionStrings["LakesideConnection"].ConnectionString;
 
-         
+
         public static int AddCustomer(CustomerModel customer)
         {
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
-                
+
                 connection.Open();
                 SqlCommand insertProjectCommand = new SqlCommand();
                 insertProjectCommand.Connection = connection;
@@ -89,6 +90,28 @@ namespace _9320RyanMillerDatabase
                 connection.Close();
                 return rowsAffected;
 
+            }
+        }
+
+        public static DataTable ViewCustomer()
+        {
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+
+                SqlCommand command = new SqlCommand();
+
+                string sqlQuery = @"SELECT * FROM Customer";
+
+                command.CommandText = sqlQuery;
+                command.Connection = connection;
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable dt = new DataTable();
+
+                adapter.Fill(dt);
+                connection.Close();
+
+                return dt;
             }
         }
     }

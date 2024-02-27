@@ -30,6 +30,7 @@
         {
             this.LLReportsLbl = new System.Windows.Forms.Label();
             this.G2BtnReportOne = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.G2SearchBtn = new Guna.UI2.WinForms.Guna2CircleButton();
             this.SuspendLayout();
             // 
             // LLReportsLbl
@@ -60,11 +61,29 @@
             this.G2BtnReportOne.Text = "Customer Report";
             this.G2BtnReportOne.Click += new System.EventHandler(this.G2BtnReportOne_Click);
             // 
+            // G2SearchBtn
+            // 
+            this.G2SearchBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.G2SearchBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.G2SearchBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.G2SearchBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.G2SearchBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(215)))), ((int)(((byte)(150)))));
+            this.G2SearchBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.G2SearchBtn.ForeColor = System.Drawing.Color.White;
+            this.G2SearchBtn.Location = new System.Drawing.Point(218, 96);
+            this.G2SearchBtn.Name = "G2SearchBtn";
+            this.G2SearchBtn.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.G2SearchBtn.Size = new System.Drawing.Size(150, 150);
+            this.G2SearchBtn.TabIndex = 10;
+            this.G2SearchBtn.Text = "Search";
+            this.G2SearchBtn.Click += new System.EventHandler(this.G2SearchBtn_Click);
+            // 
             // UC_ReportsStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.Controls.Add(this.G2SearchBtn);
             this.Controls.Add(this.G2BtnReportOne);
             this.Controls.Add(this.LLReportsLbl);
             this.Name = "UC_ReportsStaff";
@@ -78,5 +97,6 @@
 
         private System.Windows.Forms.Label LLReportsLbl;
         private Guna.UI2.WinForms.Guna2CircleButton G2BtnReportOne;
+        private Guna.UI2.WinForms.Guna2CircleButton G2SearchBtn;
     }
 }
