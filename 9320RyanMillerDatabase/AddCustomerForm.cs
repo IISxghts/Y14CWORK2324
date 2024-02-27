@@ -18,6 +18,8 @@ namespace _9320RyanMillerDatabase
             CenterToScreen();
             custReqRTB.Visible = false;
             custPSLbl.Visible = false;
+       //     string currentDate = DateTime.Now.ToShortDateString();
+       //     custDTP.Value = currentDate;
         }
 
         private void custAddBtn_Click(object sender, EventArgs e)
@@ -32,7 +34,7 @@ namespace _9320RyanMillerDatabase
                 string phone = custPhoneBox.Text;
                 string bdate = custDTP.Text;
                 string specialreqs = custReqRTB.Text;
-
+                
                 CustomerModel newcustomer = new CustomerModel(forename, surname, address, postcode, town, phone, bdate, specialreqs);
 
                 int rowsAffected = CustomerDAL.AddCustomer(newcustomer);
@@ -46,17 +48,19 @@ namespace _9320RyanMillerDatabase
                     MessageBox.Show("An error has occured in adding the customer", "Failure");
                 }
 
+
+
             }
         }
         private void specialReqCB_CheckedChanged(object sender, EventArgs e)
         {
-            if (specialReqCB.Checked)
+            if (specialReqCB.Checked == true)
             {
                 custPSLbl.Visible = true;
                 custReqRTB.Visible = true;
                 custReqRTB.Text = "";
             }
-            else if (specialReqCB.Checked != true)
+            else if (specialReqCB.Checked == false)
             {
                 custPSLbl.Visible = false;
                 custReqRTB.Visible = false;
@@ -107,10 +111,64 @@ namespace _9320RyanMillerDatabase
             return false;
         }
 
+       
+
+        #region BUTTONS
+
         private void ViewCustBtn_Click(object sender, EventArgs e)
         {
             Hide();
             new DeleteCustomerForm().Show();
         }
+
+        private void EditCustomerBtn_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new EditCustomerForm().Show();
+        }
+
+        private void ACMainMenuBtn_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new LakesideMenu().Show();
+        }
+        
+
+        private void mainMenuTSM_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new LakesideMenu().Show();
+        }
+
+        private void addCustomerTSM_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new AddCustomerForm().Show();
+        }
+
+        private void deleteCustomerTSM_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new DeleteCustomerForm().Show();
+        }
+
+        private void deleteCourseTSM_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new DeleteCourse().Show();
+        }
+
+        private void editCourseTSM_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new EditCourse().Show();
+        }
+
+        private void addCourseTSM_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new AddCourseForm().Show();
+        }
+        #endregion
     }
 }

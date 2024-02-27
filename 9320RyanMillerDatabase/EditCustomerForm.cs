@@ -27,10 +27,9 @@ namespace _9320RyanMillerDatabase
 
         }
 
-        private void EFCMainMenuBtn_Click(object sender, EventArgs e)
+        private void CustomerTableRefresh()
         {
-            Hide();
-            new DatabaseMenu().Show();
+            customerTableAdapter.Fill(lakeside9320CEDataSet.Customer);
         }
 
         // ROW SELECTION CODE
@@ -45,6 +44,8 @@ namespace _9320RyanMillerDatabase
             DFRowSelect = EFCustDGV.CurrentRow != null ? (DataRowView)EFCustDGV.CurrentRow.DataBoundItem : null;
         }
 
+        
+        // Code that sends the details of the selected customer into the text boxes, allowing them to be edited.
         private void EFCustEditBtn_Click(object sender, EventArgs e)
         {
             if (DFRowSelect != null)
@@ -53,15 +54,89 @@ namespace _9320RyanMillerDatabase
                 EFCustIDTB.Text = Convert.ToString(IDThatSelected);
                 EFCustForenameTB.Text = Convert.ToString(DFRowSelect["CustomerForename"]);
                 EFCustSurnameTB.Text = Convert.ToString(DFRowSelect["CustomerSurname"]);
-                EFCustAddressTB.Text = Convert.ToString(DFRowSelect["CustomerAddress"]);
                 EFCustPostcodeTB.Text = Convert.ToString(DFRowSelect["CustomerPostcode"]);
+                EFCustAddressTB.Text = Convert.ToString(DFRowSelect["CustomerAddress"]);
                 EFCustTownTB.Text = Convert.ToString(DFRowSelect["CustomerTown"]);
                 EFCustDOBTB.Text = Convert.ToString(DFRowSelect["CustomerDOB"]);
                 EFCustPhoneTB.Text = Convert.ToString(DFRowSelect["CustomerPhone"]);
                 EFCustSpecialReqTB.Text = Convert.ToString(DFRowSelect["CustomerSpecialReqs"]);
-
-
             }
         }
+
+        
+        // Code that will allow us to make changes 
+        private void EFCustSNDBtn_Click(object sender, EventArgs e)
+        {
+            string custidhold = EFCustIDTB.Text;
+            int customerid = Convert.ToInt32(custidhold);
+            string forename = EFCustForenameTB.Text;
+            string surname = EFCustSurnameTB.Text;
+            string address = EFCustAddressTB.Text;
+            string postcode = EFCustPostcodeTB.Text;
+            string town = EFCustTownTB.Text;
+            string phone = EFCustPhoneTB.Text;
+            string bdate = EFCustDOBTB.Text;
+            string specialreqs = EFCustSpecialReqTB.Text;                        
+
+            CustomerModel existingcustomers = new CustomerModel(customerid, forename, surname, address, postcode, town, phone, bdate, specialreqs);
+
+            int rowsAffected = CustomerDAL.EditLoyalCustomer(existingcustomers);
+
+            if (rowsAffected > 0)
+            {
+                MessageBox.Show("Customer has been edited successfully", "Success");
+                CustomerTableRefresh();
+                
+            }
+            else
+            {
+                MessageBox.Show("An error has occured in editing the customer", "Failure");
+                CustomerTableRefresh();
+            }
+        }
+
+        #region///MENU STRIP\\\
+        private void mainMenuTSM_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new LakesideMenu().Show();
+        }
+
+        private void addCustomerTSM_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new AddCustomerForm().Show();
+        }
+
+        private void deleteCustomerTSM_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new DeleteCustomerForm().Show();
+        }
+
+        private void addCourseTSM_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new AddCourseForm().Show();
+        }
+
+        private void editCourseTSM_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new EditCourse().Show();
+        }
+
+        private void deleteCourseTSM_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new DeleteCourse().Show();
+        }
+
+        private void bookingFormTSM_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new BookingForm().Show();   
+        }
+        #endregion
     }
-}
+}   

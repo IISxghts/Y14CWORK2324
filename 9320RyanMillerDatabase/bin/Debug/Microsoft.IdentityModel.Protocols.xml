@@ -98,11 +98,6 @@
             </summary>
             <typeparam name="T">The type of <see cref="T:Microsoft.IdentityModel.Protocols.IDocumentRetriever"/>.</typeparam>
         </member>
-        <member name="M:Microsoft.IdentityModel.Protocols.ConfigurationManager`1.#cctor">
-            <summary>
-            Static initializer for a new object. Static initializers run before the first instance of the type is created.
-            </summary>
-        </member>
         <member name="M:Microsoft.IdentityModel.Protocols.ConfigurationManager`1.#ctor(System.String,Microsoft.IdentityModel.Protocols.IConfigurationRetriever{`0})">
             <summary>
             Instantiates a new <see cref="T:Microsoft.IdentityModel.Protocols.ConfigurationManager`1"/> that manages automatic and controls refreshing on configuration data.
@@ -129,14 +124,38 @@
             <exception cref="T:System.ArgumentNullException">If 'configRetriever' is null.</exception>
             <exception cref="T:System.ArgumentNullException">If 'docRetriever' is null.</exception>
         </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.ConfigurationManager`1.#ctor(System.String,Microsoft.IdentityModel.Protocols.IConfigurationRetriever{`0},Microsoft.IdentityModel.Protocols.IDocumentRetriever,Microsoft.IdentityModel.Protocols.Configuration.LastKnownGoodConfigurationCacheOptions)">
+            <summary>
+            Instantiates a new <see cref="T:Microsoft.IdentityModel.Protocols.ConfigurationManager`1"/> that manages automatic and controls refreshing on configuration data.
+            </summary>
+            <param name="metadataAddress">The address to obtain configuration.</param>
+            <param name="configRetriever">The <see cref="T:Microsoft.IdentityModel.Protocols.IConfigurationRetriever`1"/></param>
+            <param name="docRetriever">The <see cref="T:Microsoft.IdentityModel.Protocols.IDocumentRetriever"/> that reaches out to obtain the configuration.</param>
+            <param name="lkgCacheOptions">The <see cref="T:Microsoft.IdentityModel.Protocols.Configuration.LastKnownGoodConfigurationCacheOptions"/></param>
+            <exception cref="T:System.ArgumentNullException">If 'metadataAddress' is null or empty.</exception>
+            <exception cref="T:System.ArgumentNullException">If 'configRetriever' is null.</exception>
+            <exception cref="T:System.ArgumentNullException">If 'docRetriever' is null.</exception>
+            <exception cref="T:System.ArgumentNullException">If 'lkgCacheOptions' is null.</exception>
+        </member>
         <member name="M:Microsoft.IdentityModel.Protocols.ConfigurationManager`1.#ctor(System.String,Microsoft.IdentityModel.Protocols.IConfigurationRetriever{`0},Microsoft.IdentityModel.Protocols.IDocumentRetriever,Microsoft.IdentityModel.Protocols.IConfigurationValidator{`0})">
             <summary>
-            Instantiates a new <see cref="T:Microsoft.IdentityModel.Protocols.ConfigurationManager`1"/> with cinfiguration validator that manages automatic and controls refreshing on configuration data.
+            Instantiates a new <see cref="T:Microsoft.IdentityModel.Protocols.ConfigurationManager`1"/> with configuration validator that manages automatic and controls refreshing on configuration data.
             </summary>
             <param name="metadataAddress">The address to obtain configuration.</param>
             <param name="configRetriever">The <see cref="T:Microsoft.IdentityModel.Protocols.IConfigurationRetriever`1"/></param>
             <param name="docRetriever">The <see cref="T:Microsoft.IdentityModel.Protocols.IDocumentRetriever"/> that reaches out to obtain the configuration.</param>
             <param name="configValidator">The <see cref="T:Microsoft.IdentityModel.Protocols.IConfigurationValidator`1"/></param>
+            <exception cref="T:System.ArgumentNullException">If 'configValidator' is null.</exception>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.ConfigurationManager`1.#ctor(System.String,Microsoft.IdentityModel.Protocols.IConfigurationRetriever{`0},Microsoft.IdentityModel.Protocols.IDocumentRetriever,Microsoft.IdentityModel.Protocols.IConfigurationValidator{`0},Microsoft.IdentityModel.Protocols.Configuration.LastKnownGoodConfigurationCacheOptions)">
+            <summary>
+            Instantiates a new <see cref="T:Microsoft.IdentityModel.Protocols.ConfigurationManager`1"/> with configuration validator that manages automatic and controls refreshing on configuration data.
+            </summary>
+            <param name="metadataAddress">The address to obtain configuration.</param>
+            <param name="configRetriever">The <see cref="T:Microsoft.IdentityModel.Protocols.IConfigurationRetriever`1"/></param>
+            <param name="docRetriever">The <see cref="T:Microsoft.IdentityModel.Protocols.IDocumentRetriever"/> that reaches out to obtain the configuration.</param>
+            <param name="configValidator">The <see cref="T:Microsoft.IdentityModel.Protocols.IConfigurationValidator`1"/></param>
+            <param name="lkgCacheOptions">The <see cref="T:Microsoft.IdentityModel.Protocols.Configuration.LastKnownGoodConfigurationCacheOptions"/></param>
             <exception cref="T:System.ArgumentNullException">If 'configValidator' is null.</exception>
         </member>
         <member name="M:Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationAsync">
@@ -332,6 +351,47 @@
             <param name="address">location of document.</param>
             <param name="cancel"><see cref="T:System.Threading.CancellationToken"/>.</param>
             <returns>document as a string.</returns>
+        </member>
+        <member name="T:Microsoft.IdentityModel.Protocols.Configuration.InvalidConfigurationException">
+            <summary>
+            This exception is thrown when retrieved configuration is not valid.
+            </summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Configuration.InvalidConfigurationException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.IdentityModel.Protocols.Configuration.InvalidConfigurationException"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Configuration.InvalidConfigurationException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.IdentityModel.Protocols.Configuration.InvalidConfigurationException"/> class.
+            </summary>
+            <param name="message">Additional information to be included in the exception and displayed to user.</param>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Configuration.InvalidConfigurationException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.IdentityModel.Protocols.Configuration.InvalidConfigurationException"/> class.
+            </summary>
+            <param name="message">Additional information to be included in the exception and displayed to user.</param>
+            <param name="innerException">A <see cref="T:System.Exception"/> that represents the root cause of the exception.</param>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Configuration.InvalidConfigurationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.IdentityModel.Protocols.Configuration.InvalidConfigurationException"/> class.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo"/> that holds the serialized object data.</param>
+            <param name="context">The contextual information about the source or destination.</param>
+        </member>
+        <member name="T:Microsoft.IdentityModel.Protocols.Configuration.LastKnownGoodConfigurationCacheOptions">
+            <summary>
+            Specifies the LastKnownGoodConfigurationCacheOptions which can be used to configure the internal LKG configuration cache.
+            See <see cref="T:Microsoft.IdentityModel.Tokens.EventBasedLRUCache`2"/> for more details.
+            
+            All fields/properties are now defined in the Microsoft.IdentityModel.Tokens.Configuration.LKGConfigurationCacheOptions class so they are more accessible from other assemblies/classes.
+            </summary>
+        </member>
+        <member name="F:Microsoft.IdentityModel.Protocols.Configuration.LastKnownGoodConfigurationCacheOptions.DefaultLastKnownGoodConfigurationSizeLimit">
+            <inheritdoc/>
         </member>
         <member name="T:Microsoft.IdentityModel.Protocols.StaticConfigurationManager`1">
             <summary>

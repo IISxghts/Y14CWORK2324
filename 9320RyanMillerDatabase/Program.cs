@@ -18,7 +18,7 @@ namespace _9320RyanMillerDatabase
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             SetupDataDirectoryPath();
-            Application.Run(new DatabaseMenu());
+            Application.Run(new SearchForm());
         }
         private static void SetupDataDirectoryPath()
         {

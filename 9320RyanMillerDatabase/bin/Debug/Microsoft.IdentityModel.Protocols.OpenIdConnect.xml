@@ -97,11 +97,19 @@
             <summary>
             Gets or sets the 'frontchannel_logout_session_supported'.
             </summary>
+            <remarks>Would be breaking to change, in 6x it was string, spec says bool.
+            TODO - add another property, obsolete and drop in 8x?
+            see: https://openid.net/specs/openid-connect-frontchannel-1_0.html
+            </remarks>
         </member>
         <member name="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.FrontchannelLogoutSupported">
             <summary>
             Gets or sets the 'frontchannel_logout_supported'.
             </summary>
+            <remarks>Would be breaking to change, in 6x it was string, spec says bool.
+            TODO - add another property, obsolete and drop in 8x?
+            see: https://openid.net/specs/openid-connect-frontchannel-1_0.html
+            </remarks>
         </member>
         <member name="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.GrantTypesSupported">
             <summary>
@@ -241,6 +249,11 @@
         <member name="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.TokenEndpoint">
             <summary>
             Gets or sets the 'token_endpoint'.
+            </summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ActiveTokenEndpoint">
+            <summary>
+            This base class property is not used in OpenIdConnect. 
             </summary>
         </member>
         <member name="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.TokenEndpointAuthMethodsSupported">
@@ -656,6 +669,14 @@
             <param name="info">the <see cref="T:System.Runtime.Serialization.SerializationInfo"/> that holds the serialized object data.</param>
             <param name="context">The contextual information about the source or destination.</param>
         </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfigurationSerializer.Read(System.Text.Json.Utf8JsonReader@,Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration)">
+            <summary>
+            Reads config. see: https://openid.net/specs/openid-connect-discovery-1_0.html
+            </summary>
+            <param name="reader">a <see cref="T:System.Text.Json.Utf8JsonReader"/> pointing at a StartObject.</param>
+            <param name="config"></param>
+            <returns>A <see cref="T:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration"/>.</returns>
+        </member>
         <member name="T:Microsoft.IdentityModel.Protocols.OpenIdConnect.LogMessages">
             <summary>
             Log messages and codes
@@ -698,13 +719,7 @@
             <summary>
             Initializes a new instance of the <see cref="T:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectMessage"/> class.
             </summary>
-            <param name="parameters">Enumeration of key value pairs.</param>        
-        </member>
-        <member name="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectMessage.#ctor(System.Object)">
-            <summary>
-            Initializes a new instance of the <see cref="T:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectMessage"/> class.
-            </summary>
-            <param name="json">The JSON object from which the instance is created.</param>
+            <param name="parameters">Enumeration of key value pairs.</param>
         </member>
         <member name="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectMessage.Clone">
             <summary>
@@ -964,7 +979,13 @@
         </member>
         <member name="T:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectParameterNames">
             <summary>
-            Parameter names for OpenIdConnect.
+            Parameter names for OpenIdConnect Request/Response messages.
+            </summary>
+        </member>
+        <member name="T:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectParameterUtf8Bytes">
+            <summary>
+            Parameter names for OpenIdConnect Request/Response messages as UTF8 bytes.
+            Used by UTF8JsonReader/Writer for performance gains.
             </summary>
         </member>
         <member name="T:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectPrompt">
@@ -1403,8 +1424,15 @@
         </member>
         <member name="T:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames">
             <summary>
-            OpenIdProviderConfiguration Names
+            OpenId Provider Metadata parameter names
             http://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata 
+            </summary>
+        </member>
+        <member name="T:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataUtf8Bytes">
+            <summary>
+            OpenId Provider Metadata parameter names as UTF8Bytes
+            Used by UTF8JsonReader/Writer for performance gains.
+            http://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata
             </summary>
         </member>
     </members>

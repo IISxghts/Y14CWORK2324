@@ -805,7 +805,7 @@ A relative sensitivity ranking of the query. Available values are as below:
             Exception when executing a enclave based Always Encrypted query 
             </summary>
         </member>
-        <member name="M:Microsoft.Data.SqlClient.EnclaveDelegate.CreateEnclaveSession(Microsoft.Data.SqlClient.SqlConnectionAttestationProtocol,System.String,Microsoft.Data.SqlClient.EnclaveSessionParameters,System.Byte[],Microsoft.Data.SqlClient.SqlEnclaveAttestationParameters,System.Byte[],System.Int32)">
+        <member name="M:Microsoft.Data.SqlClient.EnclaveDelegate.CreateEnclaveSession(Microsoft.Data.SqlClient.SqlConnectionAttestationProtocol,System.String,Microsoft.Data.SqlClient.EnclaveSessionParameters,System.Byte[],Microsoft.Data.SqlClient.SqlEnclaveAttestationParameters,System.Byte[],System.Int32,System.Boolean)">
             <summary>
             Create a new enclave session
             </summary>
@@ -814,8 +814,9 @@ A relative sensitivity ranking of the query. Available values are as below:
             <param name="enclaveSessionParameters">The set of parameters required for enclave session.</param>
             <param name="attestationInfo">attestation info from SQL Server</param>
             <param name="attestationParameters">attestation parameters</param>
-            <param name="customData">A set of extra data needed for attestating the enclave.</param>
-            <param name="customDataLength">The length of the extra data needed for attestating the enclave.</param>
+            <param name="customData">A set of extra data needed for attesting the enclave.</param>
+            <param name="customDataLength">The length of the extra data needed for attesting the enclave.</param>
+            <param name="isRetry">Indicates if this is a retry from a failed call.</param>
         </member>
         <member name="M:Microsoft.Data.SqlClient.EnclaveDelegate.GenerateEnclavePackage(Microsoft.Data.SqlClient.SqlConnectionAttestationProtocol,System.Collections.Concurrent.ConcurrentDictionary{System.Int32,Microsoft.Data.SqlClient.SqlTceCipherInfoEntry},System.String,System.String,Microsoft.Data.SqlClient.EnclaveSessionParameters,Microsoft.Data.SqlClient.SqlConnection,Microsoft.Data.SqlClient.SqlCommand)">
             <summary>
@@ -10749,15 +10750,15 @@ the enclave attestation protocol as well as the logic for creating and caching e
 ]]></format>
             </remarks>
         </member>
-        <member name="M:Microsoft.Data.SqlClient.SqlColumnEncryptionEnclaveProvider.GetEnclaveSession(Microsoft.Data.SqlClient.EnclaveSessionParameters,System.Boolean,Microsoft.Data.SqlClient.SqlEnclaveSession@,System.Int64@,System.Byte[]@,System.Int32@)">
-            <param name="enclaveSessionParameters">The set of parameters required for enclave session.</param><param name="generateCustomData"><see langword="true" /> to indicate that a set of extra data needs to be generated for attestation; otherwise, <see langword="false" />.</param><param name="sqlEnclaveSession">When this method returns, the requested enclave session or <see langword="null" /> if the provider doesn't implement session caching. This parameter is treated as uninitialized.</param><param name="counter">A counter that the enclave provider is expected to increment each time SqlClient retrieves the session from the cache. The purpose of this field is to prevent replay attacks.</param><param name="customData">A set of extra data needed for attestating the enclave.</param><param name="customDataLength">The length of the extra data needed for attestating the enclave.</param><summary>When overridden in a derived class, looks up an existing enclave session information in the enclave session cache. If the enclave provider doesn't implement enclave session caching, this method is expected to return <see langword="null" /> in the <paramref name="sqlEnclaveSession" /> parameter.
+        <member name="M:Microsoft.Data.SqlClient.SqlColumnEncryptionEnclaveProvider.GetEnclaveSession(Microsoft.Data.SqlClient.EnclaveSessionParameters,System.Boolean,System.Boolean,Microsoft.Data.SqlClient.SqlEnclaveSession@,System.Int64@,System.Byte[]@,System.Int32@)">
+            <param name="enclaveSessionParameters">The set of parameters required for enclave session.</param><param name="generateCustomData"><see langword="true" /> to indicate that a set of extra data needs to be generated for attestation; otherwise, <see langword="false" />.</param><param name="isRetry">Indicates if this is a retry from a failed call.</param><param name="sqlEnclaveSession">When this method returns, the requested enclave session or <see langword="null" /> if the provider doesn't implement session caching. This parameter is treated as uninitialized.</param><param name="counter">A counter that the enclave provider is expected to increment each time SqlClient retrieves the session from the cache. The purpose of this field is to prevent replay attacks.</param><param name="customData">A set of extra data needed for attesting the enclave.</param><param name="customDataLength">The length of the extra data needed for attesting the enclave.</param><summary>When overridden in a derived class, looks up an existing enclave session information in the enclave session cache. If the enclave provider doesn't implement enclave session caching, this method is expected to return <see langword="null" /> in the <paramref name="sqlEnclaveSession" /> parameter.
             </summary><remarks>To be added.</remarks>
         </member>
         <member name="M:Microsoft.Data.SqlClient.SqlColumnEncryptionEnclaveProvider.GetAttestationParameters(System.String,System.Byte[],System.Int32)">
-            <param name="attestationUrl">The endpoint of an attestation service for attesting the enclave.</param><param name="customData">A set of extra data needed for attestating the enclave.</param><param name="customDataLength">The length of the extra data needed for attestating the enclave.</param><summary>Gets the information that SqlClient subsequently uses to initiate the process of attesting the enclave and to establish a secure session with the enclave.</summary><returns>The information SqlClient subsequently uses to initiate the process of attesting the enclave and to establish a secure session with the enclave.</returns><remarks>To be added.</remarks>
+            <param name="attestationUrl">The endpoint of an attestation service for attesting the enclave.</param><param name="customData">A set of extra data needed for attesting the enclave.</param><param name="customDataLength">The length of the extra data needed for attesting the enclave.</param><summary>Gets the information that SqlClient subsequently uses to initiate the process of attesting the enclave and to establish a secure session with the enclave.</summary><returns>The information SqlClient subsequently uses to initiate the process of attesting the enclave and to establish a secure session with the enclave.</returns><remarks>To be added.</remarks>
         </member>
         <member name="M:Microsoft.Data.SqlClient.SqlColumnEncryptionEnclaveProvider.CreateEnclaveSession(System.Byte[],System.Security.Cryptography.ECDiffieHellman,Microsoft.Data.SqlClient.EnclaveSessionParameters,System.Byte[],System.Int32,Microsoft.Data.SqlClient.SqlEnclaveSession@,System.Int64@)">
-            <param name="enclaveAttestationInfo">The information the provider uses to attest the enclave and generate a symmetric key for the session. The format of this information is specific to the enclave attestation protocol.</param><param name="clientDiffieHellmanKey">A Diffie-Hellman algorithm object that encapsulates a client-side key pair.</param><param name="enclaveSessionParameters">The set of parameters required for an enclave session.</param><param name="customData">The set of extra data needed for attestating the enclave.</param><param name="customDataLength">The length of the extra data needed for attestating the enclave.</param><param name="sqlEnclaveSession">The requested enclave session or <see langword="null" /> if the provider doesn't implement session caching.</param><param name="counter">A counter that the enclave provider is expected to increment each time SqlClient retrieves the session from the cache. The purpose of this field is to prevent replay attacks.</param><summary>When overridden in a derived class, performs enclave attestation, generates a symmetric key for the session, creates a an enclave session and stores the session information in the cache.</summary><remarks>To be added.</remarks>
+            <param name="enclaveAttestationInfo">The information the provider uses to attest the enclave and generate a symmetric key for the session. The format of this information is specific to the enclave attestation protocol.</param><param name="clientDiffieHellmanKey">A Diffie-Hellman algorithm object that encapsulates a client-side key pair.</param><param name="enclaveSessionParameters">The set of parameters required for an enclave session.</param><param name="customData">The set of extra data needed for attesting the enclave.</param><param name="customDataLength">The length of the extra data needed for attesting the enclave.</param><param name="sqlEnclaveSession">The requested enclave session or <see langword="null" /> if the provider doesn't implement session caching.</param><param name="counter">A counter that the enclave provider is expected to increment each time SqlClient retrieves the session from the cache. The purpose of this field is to prevent replay attacks.</param><summary>When overridden in a derived class, performs enclave attestation, generates a symmetric key for the session, creates a an enclave session and stores the session information in the cache.</summary><remarks>To be added.</remarks>
         </member>
         <member name="M:Microsoft.Data.SqlClient.SqlColumnEncryptionEnclaveProvider.InvalidateEnclaveSession(Microsoft.Data.SqlClient.EnclaveSessionParameters,Microsoft.Data.SqlClient.SqlEnclaveSession)">
             <param name="enclaveSessionParameters">The set of parameters required for enclave session.</param><param name="enclaveSession">The session to be invalidated.</param><summary>When overridden in a derived class, looks up and evicts an enclave session from the enclave session cache, if the provider implements session caching.</summary><remarks>To be added.</remarks>
@@ -13676,7 +13677,7 @@ This does shallow copying of the dictionary so that the app cannot alter the cus
             <param name="inRetry"></param>
             <returns></returns>
         </member>
-        <member name="M:Microsoft.Data.SqlClient.SqlCommand.TryFetchInputParameterEncryptionInfo(System.Int32,System.Boolean,System.Boolean,System.Boolean@,System.Threading.Tasks.Task@,System.Collections.ObjectModel.ReadOnlyDictionary{Microsoft.Data.SqlClient._SqlRPC,Microsoft.Data.SqlClient._SqlRPC}@)">
+        <member name="M:Microsoft.Data.SqlClient.SqlCommand.TryFetchInputParameterEncryptionInfo(System.Int32,System.Boolean,System.Boolean,System.Boolean@,System.Threading.Tasks.Task@,System.Collections.ObjectModel.ReadOnlyDictionary{Microsoft.Data.SqlClient._SqlRPC,Microsoft.Data.SqlClient._SqlRPC}@,System.Boolean)">
             <summary>
             Executes an RPC to fetch param encryption info from SQL Engine. If this method is not done writing
              the request to wire, it'll set the "task" parameter which can be used to create continuations.
@@ -13687,6 +13688,7 @@ This does shallow copying of the dictionary so that the app cannot alter the cus
             <param name="inputParameterEncryptionNeeded"></param>
             <param name="task"></param>
             <param name="describeParameterEncryptionRpcOriginalRpcMap"></param>
+            <param name="inRetry">Indicates if this is a retry from a failed call.</param>
             <returns></returns>
         </member>
         <member name="M:Microsoft.Data.SqlClient.SqlCommand.GetSqlParameterWithQueryText(System.String)">
@@ -13706,12 +13708,13 @@ This does shallow copying of the dictionary so that the app cannot alter the cus
             <param name="describeParameterEncryptionRequest"></param>
             <param name="attestationParameters"></param>
         </member>
-        <member name="M:Microsoft.Data.SqlClient.SqlCommand.ReadDescribeEncryptionParameterResults(Microsoft.Data.SqlClient.SqlDataReader,System.Collections.ObjectModel.ReadOnlyDictionary{Microsoft.Data.SqlClient._SqlRPC,Microsoft.Data.SqlClient._SqlRPC})">
+        <member name="M:Microsoft.Data.SqlClient.SqlCommand.ReadDescribeEncryptionParameterResults(Microsoft.Data.SqlClient.SqlDataReader,System.Collections.ObjectModel.ReadOnlyDictionary{Microsoft.Data.SqlClient._SqlRPC,Microsoft.Data.SqlClient._SqlRPC},System.Boolean)">
             <summary>
             Read the output of sp_describe_parameter_encryption
             </summary>
             <param name="ds">Resultset from calling to sp_describe_parameter_encryption</param>
             <param name="describeParameterEncryptionRpcOriginalRpcMap"> Readonly dictionary with the map of parameter encryption rpc requests with the corresponding original rpc requests.</param>
+            <param name="inRetry">Indicates if this is a retry from a failed call.</param>
         </member>
         <member name="M:Microsoft.Data.SqlClient.SqlCommand.Clone">
             <summary>

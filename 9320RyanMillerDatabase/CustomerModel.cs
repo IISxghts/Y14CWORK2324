@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.IdentityModel.Tokens;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ namespace _9320RyanMillerDatabase
 {
     public class CustomerModel
     {
-        private  int _id;
+        public  int _id;
         public string _fname;
         public string _sname;
         public string _pcode;
@@ -25,7 +26,7 @@ namespace _9320RyanMillerDatabase
         }
         public string FirstName
         {
-            get { return _fname; }
+            get { return _fname; }            
             set { _fname = value; }
         }
 
@@ -72,7 +73,7 @@ namespace _9320RyanMillerDatabase
         
         public CustomerModel(int custID, string firstname, string surname, string postcode, string address, string town, string phone, string dob, string specialreqs)
         {
-            // WITH ID
+            // WITH ID for editing an existing customer
             
             this._id = custID;
             this._fname = firstname;
@@ -86,7 +87,27 @@ namespace _9320RyanMillerDatabase
         }
         public CustomerModel(string firstname, string surname, string postcode, string address, string town, string phone, string dob, string specialreqs)
         {
-            // NO ID
+            // NO ID for creating a new customer
+
+            //Validation
+
+            if (ValidationClass.GenericLength(firstname) != true)
+            {
+                throw new ArgumentException("First name invalid");
+            }
+            else if (ValidationClass.GenericLength(surname) != true)
+            {
+                throw new ArgumentException("Surname invalid");
+            }
+            else if (ValidationClass.PhoneLength(phone) != true)
+            {
+                throw new ArgumentException("Phone number invalid");
+            }
+            else if (ValidationClass.PostcodeChecker(postcode) != true)
+            {
+                throw new ArgumentException("Postcode invalid");
+            }
+
             
             this._fname = firstname;
             this._sname = surname;

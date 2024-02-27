@@ -33,9 +33,9 @@ namespace _9320RyanMillerDatabase
 
         private void DeleteCustBtn_Click(object sender, EventArgs e)
         {
-            ViewCustIDBox.Text = Convert.ToString(rowselect["CustomerNum"]);
+            ViewCourseIDBox.Text = Convert.ToString(rowselect["CustomerNum"]);
 
-            MessageBoxResult confirmResult = System.Windows.MessageBox.Show("Are you sure to delete this customer with ID:" + ViewCustIDBox.Text, "Confirm Deletion", MessageBoxButton.OKCancel);   
+            MessageBoxResult confirmResult = System.Windows.MessageBox.Show("Are you sure to delete this customer with ID:" + ViewCourseIDBox.Text, "Confirm Deletion", MessageBoxButton.OKCancel);   
 
             if (confirmResult == MessageBoxResult.OK)
             {
@@ -44,7 +44,7 @@ namespace _9320RyanMillerDatabase
                 {
                     System.Windows.MessageBox.Show("Customer has successfully been deleted", "Completed");
                     CustomerTableRefresh();
-                    ViewCustIDBox.Text = "";
+                    ViewCourseIDBox.Text = "";
                 }
                 else
                 {
@@ -55,7 +55,7 @@ namespace _9320RyanMillerDatabase
             {
                 System.Windows.MessageBox.Show("Deletion cancelled.");
                 CustomerTableRefresh();
-                ViewCustIDBox.Text = "";
+                ViewCourseIDBox.Text = "";
             }
         }
 
@@ -68,10 +68,43 @@ namespace _9320RyanMillerDatabase
             rowselect = CustDeleteDGV.CurrentRow != null ? (DataRowView)CustDeleteDGV.CurrentRow.DataBoundItem : null;
         }
 
-        private void CustEditBtn_Click(object sender, EventArgs e)
+
+        #region ///MENU STRIP CONTROLS\\\
+        private void mainMenuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new LakesideMenu().Show();
+        }
+
+        private void addCustomerTSM_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new AddCustomerForm().Show();
+        }
+
+        private void editCustomerTSM_Click(object sender, EventArgs e)
         {
             Hide();
             new EditCustomerForm().Show();
         }
+        
+        private void addCourseTSM_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new AddCourseForm().Show();
+        }
+
+        private void editCourseTSM_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new EditCourse().Show();
+        }
+
+        private void deleteCourseTSM_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new DeleteCourse().Show();
+        }
+        #endregion
     }
 }

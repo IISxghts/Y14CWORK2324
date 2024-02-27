@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeleteCustomerForm));
             this.CustDeleteDGV = new System.Windows.Forms.DataGridView();
             this.customerNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customerForenameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,14 +42,30 @@
             this.customerSpecialReqsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lakeside9320CustDataSet = new _9320RyanMillerDatabase.Lakeside9320CustDataSet();
-            this.customerTableAdapter = new _9320RyanMillerDatabase.Lakeside9320CustDataSetTableAdapters.CustomerTableAdapter();
             this.ViewCustIDLbl = new System.Windows.Forms.Label();
-            this.ViewCustIDBox = new System.Windows.Forms.TextBox();
-            this.DeleteCustBtn = new System.Windows.Forms.Button();
-            this.CustEditBtn = new System.Windows.Forms.Button();
+            this.ViewCourseIDBox = new System.Windows.Forms.TextBox();
+            this.DeleteCourseBtn = new System.Windows.Forms.Button();
+            this.customerTableAdapter = new _9320RyanMillerDatabase.Lakeside9320CustDataSetTableAdapters.CustomerTableAdapter();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.mainMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addCustomerTSM = new System.Windows.Forms.ToolStripMenuItem();
+            this.editCustomerTSM = new System.Windows.Forms.ToolStripMenuItem();
+            this.coursesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addCourseTSM = new System.Windows.Forms.ToolStripMenuItem();
+            this.editCourseTSM = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteCourseTSM = new System.Windows.Forms.ToolStripMenuItem();
+            this.bookingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bookingFormToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.LLMenuLbl = new System.Windows.Forms.Label();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.CustDeleteDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lakeside9320CustDataSet)).BeginInit();
+            this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // CustDeleteDGV
@@ -66,7 +83,7 @@
             this.customerDOBDataGridViewTextBoxColumn,
             this.customerSpecialReqsDataGridViewTextBoxColumn});
             this.CustDeleteDGV.DataSource = this.customerBindingSource;
-            this.CustDeleteDGV.Location = new System.Drawing.Point(12, 12);
+            this.CustDeleteDGV.Location = new System.Drawing.Point(12, 159);
             this.CustDeleteDGV.Name = "CustDeleteDGV";
             this.CustDeleteDGV.RowHeadersWidth = 51;
             this.CustDeleteDGV.RowTemplate.Height = 24;
@@ -157,62 +174,182 @@
             this.lakeside9320CustDataSet.DataSetName = "Lakeside9320CustDataSet";
             this.lakeside9320CustDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // customerTableAdapter
-            // 
-            this.customerTableAdapter.ClearBeforeFill = true;
-            // 
             // ViewCustIDLbl
             // 
             this.ViewCustIDLbl.AutoSize = true;
-            this.ViewCustIDLbl.Location = new System.Drawing.Point(661, 11);
+            this.ViewCustIDLbl.Location = new System.Drawing.Point(661, 76);
             this.ViewCustIDLbl.Name = "ViewCustIDLbl";
             this.ViewCustIDLbl.Size = new System.Drawing.Size(115, 16);
             this.ViewCustIDLbl.TabIndex = 1;
             this.ViewCustIDLbl.Text = "Customer Number";
             // 
-            // ViewCustIDBox
+            // ViewCourseIDBox
             // 
-            this.ViewCustIDBox.Location = new System.Drawing.Point(664, 30);
-            this.ViewCustIDBox.Name = "ViewCustIDBox";
-            this.ViewCustIDBox.Size = new System.Drawing.Size(100, 22);
-            this.ViewCustIDBox.TabIndex = 2;
+            this.ViewCourseIDBox.Location = new System.Drawing.Point(664, 159);
+            this.ViewCourseIDBox.Name = "ViewCourseIDBox";
+            this.ViewCourseIDBox.Size = new System.Drawing.Size(100, 22);
+            this.ViewCourseIDBox.TabIndex = 2;
             // 
-            // DeleteCustBtn
+            // DeleteCourseBtn
             // 
-            this.DeleteCustBtn.Location = new System.Drawing.Point(664, 58);
-            this.DeleteCustBtn.Name = "DeleteCustBtn";
-            this.DeleteCustBtn.Size = new System.Drawing.Size(100, 52);
-            this.DeleteCustBtn.TabIndex = 3;
-            this.DeleteCustBtn.Text = "Delete Customer";
-            this.DeleteCustBtn.UseVisualStyleBackColor = true;
-            this.DeleteCustBtn.Click += new System.EventHandler(this.DeleteCustBtn_Click);
+            this.DeleteCourseBtn.Location = new System.Drawing.Point(664, 187);
+            this.DeleteCourseBtn.Name = "DeleteCourseBtn";
+            this.DeleteCourseBtn.Size = new System.Drawing.Size(100, 52);
+            this.DeleteCourseBtn.TabIndex = 3;
+            this.DeleteCourseBtn.Text = "Delete Customer";
+            this.DeleteCourseBtn.UseVisualStyleBackColor = true;
+            this.DeleteCourseBtn.Click += new System.EventHandler(this.DeleteCustBtn_Click);
             // 
-            // CustEditBtn
+            // customerTableAdapter
             // 
-            this.CustEditBtn.Location = new System.Drawing.Point(664, 129);
-            this.CustEditBtn.Name = "CustEditBtn";
-            this.CustEditBtn.Size = new System.Drawing.Size(100, 52);
-            this.CustEditBtn.TabIndex = 4;
-            this.CustEditBtn.Text = "Edit Customer";
-            this.CustEditBtn.UseVisualStyleBackColor = true;
-            this.CustEditBtn.Click += new System.EventHandler(this.CustEditBtn_Click);
+            this.customerTableAdapter.ClearBeforeFill = true;
             // 
-            // ViewCustomer
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mainMenuToolStripMenuItem,
+            this.addCustomerToolStripMenuItem,
+            this.coursesToolStripMenuItem,
+            this.bookingsToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 30);
+            this.menuStrip1.TabIndex = 6;
+            this.menuStrip1.Text = "editCustStrip";
+            // 
+            // mainMenuToolStripMenuItem
+            // 
+            this.mainMenuToolStripMenuItem.Name = "mainMenuToolStripMenuItem";
+            this.mainMenuToolStripMenuItem.Size = new System.Drawing.Size(97, 26);
+            this.mainMenuToolStripMenuItem.Text = "Main Menu";
+            this.mainMenuToolStripMenuItem.Click += new System.EventHandler(this.mainMenuToolStripMenuItem_Click);
+            // 
+            // addCustomerToolStripMenuItem
+            // 
+            this.addCustomerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addCustomerTSM,
+            this.editCustomerTSM});
+            this.addCustomerToolStripMenuItem.Name = "addCustomerToolStripMenuItem";
+            this.addCustomerToolStripMenuItem.Size = new System.Drawing.Size(86, 26);
+            this.addCustomerToolStripMenuItem.Text = "Customer";
+            // 
+            // addCustomerTSM
+            // 
+            this.addCustomerTSM.Name = "addCustomerTSM";
+            this.addCustomerTSM.Size = new System.Drawing.Size(187, 26);
+            this.addCustomerTSM.Text = "Add Customer";
+            this.addCustomerTSM.Click += new System.EventHandler(this.addCustomerTSM_Click);
+            // 
+            // editCustomerTSM
+            // 
+            this.editCustomerTSM.Name = "editCustomerTSM";
+            this.editCustomerTSM.Size = new System.Drawing.Size(187, 26);
+            this.editCustomerTSM.Text = "Edit Customer";
+            this.editCustomerTSM.Click += new System.EventHandler(this.editCustomerTSM_Click);
+            // 
+            // coursesToolStripMenuItem
+            // 
+            this.coursesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addCourseTSM,
+            this.editCourseTSM,
+            this.deleteCourseTSM});
+            this.coursesToolStripMenuItem.Name = "coursesToolStripMenuItem";
+            this.coursesToolStripMenuItem.Size = new System.Drawing.Size(74, 26);
+            this.coursesToolStripMenuItem.Text = "Courses";
+            // 
+            // addCourseTSM
+            // 
+            this.addCourseTSM.Name = "addCourseTSM";
+            this.addCourseTSM.Size = new System.Drawing.Size(185, 26);
+            this.addCourseTSM.Text = "Add Course";
+            this.addCourseTSM.Click += new System.EventHandler(this.addCourseTSM_Click);
+            // 
+            // editCourseTSM
+            // 
+            this.editCourseTSM.Name = "editCourseTSM";
+            this.editCourseTSM.Size = new System.Drawing.Size(185, 26);
+            this.editCourseTSM.Text = "Edit Course";
+            this.editCourseTSM.Click += new System.EventHandler(this.editCourseTSM_Click);
+            // 
+            // deleteCourseTSM
+            // 
+            this.deleteCourseTSM.Name = "deleteCourseTSM";
+            this.deleteCourseTSM.Size = new System.Drawing.Size(185, 26);
+            this.deleteCourseTSM.Text = "Delete Course";
+            this.deleteCourseTSM.Click += new System.EventHandler(this.deleteCourseTSM_Click);
+            // 
+            // bookingsToolStripMenuItem
+            // 
+            this.bookingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bookingFormToolStripMenuItem});
+            this.bookingsToolStripMenuItem.Name = "bookingsToolStripMenuItem";
+            this.bookingsToolStripMenuItem.Size = new System.Drawing.Size(84, 26);
+            this.bookingsToolStripMenuItem.Text = "Bookings";
+            // 
+            // bookingFormToolStripMenuItem
+            // 
+            this.bookingFormToolStripMenuItem.Name = "bookingFormToolStripMenuItem";
+            this.bookingFormToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
+            this.bookingFormToolStripMenuItem.Text = "Booking Form";
+            // 
+            // LLMenuLbl
+            // 
+            this.LLMenuLbl.AutoSize = true;
+            this.LLMenuLbl.Font = new System.Drawing.Font("Segoe UI Black", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LLMenuLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.LLMenuLbl.Location = new System.Drawing.Point(167, 6);
+            this.LLMenuLbl.Name = "LLMenuLbl";
+            this.LLMenuLbl.Size = new System.Drawing.Size(582, 38);
+            this.LLMenuLbl.TabIndex = 1;
+            this.LLMenuLbl.Text = "LAKESIDE ESCAPES - DELETE CUSTOMERS";
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(12, 6);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(144, 51);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 0;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(215)))), ((int)(((byte)(150)))));
+            this.panel3.Controls.Add(this.LLMenuLbl);
+            this.panel3.Controls.Add(this.guna2PictureBox1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 30);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(800, 63);
+            this.panel3.TabIndex = 69;
+            // 
+            // DeleteCustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.CustEditBtn);
-            this.Controls.Add(this.DeleteCustBtn);
-            this.Controls.Add(this.ViewCustIDBox);
+            this.ClientSize = new System.Drawing.Size(800, 478);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.DeleteCourseBtn);
+            this.Controls.Add(this.ViewCourseIDBox);
             this.Controls.Add(this.ViewCustIDLbl);
             this.Controls.Add(this.CustDeleteDGV);
-            this.Name = "ViewCustomer";
-            this.Text = "ViewCustomer";
+            this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MainMenuStrip = this.menuStrip1;
+            this.Name = "DeleteCustomerForm";
+            this.Text = "Delete Customer";
             this.Load += new System.EventHandler(this.ViewCustomer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.CustDeleteDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lakeside9320CustDataSet)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,8 +371,21 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn customerDOBDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn customerSpecialReqsDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label ViewCustIDLbl;
-        private System.Windows.Forms.TextBox ViewCustIDBox;
-        private System.Windows.Forms.Button DeleteCustBtn;
-        private System.Windows.Forms.Button CustEditBtn;
+        private System.Windows.Forms.TextBox ViewCourseIDBox;
+        private System.Windows.Forms.Button DeleteCourseBtn;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem mainMenuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addCustomerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addCustomerTSM;
+        private System.Windows.Forms.ToolStripMenuItem editCustomerTSM;
+        private System.Windows.Forms.ToolStripMenuItem coursesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addCourseTSM;
+        private System.Windows.Forms.ToolStripMenuItem editCourseTSM;
+        private System.Windows.Forms.ToolStripMenuItem deleteCourseTSM;
+        private System.Windows.Forms.ToolStripMenuItem bookingsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bookingFormToolStripMenuItem;
+        private System.Windows.Forms.Label LLMenuLbl;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private System.Windows.Forms.Panel panel3;
     }
 }

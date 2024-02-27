@@ -1,0 +1,2 @@
+﻿first~TEST123~CUSTOMER
+firststaff~12345~STAFF
