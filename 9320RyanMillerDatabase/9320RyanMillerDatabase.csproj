@@ -667,6 +667,8 @@
       <DependentUpon>Lakeside9320.mdf</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="LakesideLogo.ico.ico" />
+    <Content Include="Resources\LakesideLogo.ico" />
     <None Include="Resources\eyefinalvs.png" />
     <None Include="Resources\navyuservs.png" />
     <None Include="Resources\newhidevs.png" />

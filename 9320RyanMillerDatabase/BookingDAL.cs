@@ -48,7 +48,7 @@ namespace _9320RyanMillerDatabase
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
-                string sqlQuery = string.Format("");
+                string sqlQuery = string.Format("INSERT INTO Booking VALUES('{0}','{1}','{2}','{3}','{4}','{5}')", bookModel.CourseID, bookModel.BookingDate, bookModel.DiscountYN, bookModel.DiscountPercent, bookModel.CustomerNum, bookModel.CustomerQuantity);
 
                 SqlCommand custDelCommand = new SqlCommand(sqlQuery, connection);
 

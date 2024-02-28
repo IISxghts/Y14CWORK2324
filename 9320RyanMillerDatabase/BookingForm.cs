@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -68,16 +69,70 @@ namespace _9320RyanMillerDatabase
 
         private void G2AddBookingBtn_Click(object sender, EventArgs e)
         {
-            if (DFRowSelectCourse != null && DFRowSelectCustomer != null)
+            if(NullChecker())
             {
-                int IDThatSelected = Convert.ToInt32(DFRowSelectCustomer["CustomerNum"]);
+                 if (DFRowSelectCourse != null && DFRowSelectCustomer != null)
+                 {
+                    
+                    int CustID = Convert.ToInt32(DFRowSelectCustomer["CustomerNum"]);
+                    int CourseID = Convert.ToInt32(DFRowSelectCourse["CourseID"]);
+                    DateTime bookDate = DTPBooking.Value; 
+                    bool discountYN = false;
+                    int discountPercent = Convert.ToInt32(DiscountSelectBox.Value);
+                    if (DiscountCheckBox.Checked == true)
+                    {
+                         discountYN = true;                      
+                    }
+                    else
+                    {
+                        discountYN = false;
+                    }
+                    int customerQuantity = Convert.ToInt32(QuantitySelectBox.Value);
+
+                    BookingModel newBooking = new BookingModel(CourseID, bookDate, discountYN, discountPercent, CustID, customerQuantity);
+
+                    int rowsAffected = BookingDAL.AddBooking(newBooking);
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("New booking has been reserved", "Success");
+                    }
+                    else
+                    {
+                        MessageBox.Show("An error has occured in creating the booking", "Failure");
+                    }
+                }
+                 else
+                 {
+                     MessageBox.Show("Please select a customer and a course to book", "Error");
+                 }
+
             }
-            else
-            {
-                MessageBox.Show("Please select a customer and a course to book", "Error");
-            }
+            
+
         }
 
+        private bool NullChecker()
+        {
+            StringBuilder error = new StringBuilder();
+
+            if (string.IsNullOrEmpty(DiscountSelectBox.Text))
+            {
+                error.AppendLine("You must enter an amount of attendees.");
+            }
+            if (DiscountCheckBox.Checked && string.IsNullOrEmpty(DiscountSelectBox.ToString()))
+            {
+                error.AppendLine("You must enter a discount percentage.");
+            }
+            if (string.IsNullOrEmpty(error.ToString()))
+            {
+                return true;
+            }
+            MessageBox.Show(error.ToString(), "Required fields left blank");
+            return false;
+        }
+    
+        
         private void DGVCourse_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             ChooseTheRowings();
