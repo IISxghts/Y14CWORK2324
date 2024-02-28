@@ -22,27 +22,9 @@ namespace _9320RyanMillerDatabase
         }
         public static string _connectionString = ConfigurationManager.ConnectionStrings["LakesideConnection"].ConnectionString;
 
-        public static DataTable GetLessonsFromBooking()
+        private void ViewBookingBtn_Click(object sender, EventArgs e)
         {
-            using (SqlConnection connection = new SqlConnection(_connectionString))
-            {
-                connection.Open();
-
-                SqlCommand command = new SqlCommand();
-
-                string sqlQuery = @"";
-
-                command.CommandText = sqlQuery;
-                command.Connection = connection;
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
-                DataTable dt = new DataTable();
-
-                adapter.Fill(dt);
-                connection.Close();
-
-                return dt;
-            }
-
+            BookingViewDGV.DataSource = ViewDAL.ViewThingy();
         }
     }
 }

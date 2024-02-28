@@ -17,7 +17,7 @@ namespace _9320RyanMillerDatabase
             CenterToScreen();
             InitializeComponent();
         }
-        
+
         DataRowView DFRowSelect;
 
         private void EditCustomerForm_Load(object sender, EventArgs e)

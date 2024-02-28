@@ -470,6 +470,7 @@
     <Compile Include="ViewBookingsForm.Designer.cs">
       <DependentUpon>ViewBookingsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewDAL.cs" />
     <EmbeddedResource Include="AddCourseForm.resx">
       <DependentUpon>AddCourseForm.cs</DependentUpon>
     </EmbeddedResource>

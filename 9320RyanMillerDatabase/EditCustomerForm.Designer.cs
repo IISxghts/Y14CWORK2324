@@ -193,7 +193,7 @@
             // 
             // EFCustIDTB
             // 
-            this.EFCustIDTB.Location = new System.Drawing.Point(81, 388);
+            this.EFCustIDTB.Location = new System.Drawing.Point(81, 385);
             this.EFCustIDTB.Name = "EFCustIDTB";
             this.EFCustIDTB.ReadOnly = true;
             this.EFCustIDTB.Size = new System.Drawing.Size(98, 22);
@@ -275,7 +275,7 @@
             // EFCustPostcodeLbl
             // 
             this.EFCustPostcodeLbl.AutoSize = true;
-            this.EFCustPostcodeLbl.Location = new System.Drawing.Point(230, 419);
+            this.EFCustPostcodeLbl.Location = new System.Drawing.Point(216, 419);
             this.EFCustPostcodeLbl.Name = "EFCustPostcodeLbl";
             this.EFCustPostcodeLbl.Size = new System.Drawing.Size(65, 16);
             this.EFCustPostcodeLbl.TabIndex = 12;
@@ -291,7 +291,7 @@
             // EFCustTownLbl
             // 
             this.EFCustTownLbl.AutoSize = true;
-            this.EFCustTownLbl.Location = new System.Drawing.Point(230, 385);
+            this.EFCustTownLbl.Location = new System.Drawing.Point(216, 391);
             this.EFCustTownLbl.Name = "EFCustTownLbl";
             this.EFCustTownLbl.Size = new System.Drawing.Size(40, 16);
             this.EFCustTownLbl.TabIndex = 10;
@@ -301,7 +301,7 @@
             // 
             this.EFCustTownTB.Location = new System.Drawing.Point(315, 385);
             this.EFCustTownTB.Name = "EFCustTownTB";
-            this.EFCustTownTB.Size = new System.Drawing.Size(98, 22);
+            this.EFCustTownTB.Size = new System.Drawing.Size(106, 22);
             this.EFCustTownTB.TabIndex = 9;
             // 
             // EFCustSpecReqLbl
@@ -318,23 +318,23 @@
             this.EFCustSpecialReqTB.Location = new System.Drawing.Point(453, 385);
             this.EFCustSpecialReqTB.Multiline = true;
             this.EFCustSpecialReqTB.Name = "EFCustSpecialReqTB";
-            this.EFCustSpecialReqTB.Size = new System.Drawing.Size(332, 103);
+            this.EFCustSpecialReqTB.Size = new System.Drawing.Size(435, 44);
             this.EFCustSpecialReqTB.TabIndex = 16;
             // 
             // EFCustEditBtn
             // 
-            this.EFCustEditBtn.Location = new System.Drawing.Point(1, 321);
+            this.EFCustEditBtn.Location = new System.Drawing.Point(48, 274);
             this.EFCustEditBtn.Name = "EFCustEditBtn";
-            this.EFCustEditBtn.Size = new System.Drawing.Size(88, 41);
+            this.EFCustEditBtn.Size = new System.Drawing.Size(108, 41);
             this.EFCustEditBtn.TabIndex = 18;
-            this.EFCustEditBtn.Text = "Edit";
+            this.EFCustEditBtn.Text = "Edit Customer";
             this.EFCustEditBtn.UseVisualStyleBackColor = true;
             this.EFCustEditBtn.Click += new System.EventHandler(this.EFCustEditBtn_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(230, 444);
+            this.label1.Location = new System.Drawing.Point(216, 444);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 16);
             this.label1.TabIndex = 20;
@@ -349,7 +349,7 @@
             // 
             // EFCustSNDBtn
             // 
-            this.EFCustSNDBtn.Location = new System.Drawing.Point(95, 321);
+            this.EFCustSNDBtn.Location = new System.Drawing.Point(48, 321);
             this.EFCustSNDBtn.Name = "EFCustSNDBtn";
             this.EFCustSNDBtn.Size = new System.Drawing.Size(108, 42);
             this.EFCustSNDBtn.TabIndex = 21;
@@ -367,7 +367,7 @@
             this.bookingsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(900, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(900, 28);
             this.menuStrip1.TabIndex = 22;
             this.menuStrip1.Text = "editCustStrip";
             // 
@@ -479,7 +479,7 @@
             this.panel3.Controls.Add(this.LLMenuLbl);
             this.panel3.Controls.Add(this.guna2PictureBox1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 30);
+            this.panel3.Location = new System.Drawing.Point(0, 28);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(900, 63);
             this.panel3.TabIndex = 23;

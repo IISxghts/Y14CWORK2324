@@ -24,8 +24,6 @@ namespace _9320RyanMillerDatabase
         }
         // GOAL: Allow user to select what they want to search by.
 
-
-
         private void Init()
         {
             SearchLbl.Visible = false;
@@ -43,6 +41,8 @@ namespace _9320RyanMillerDatabase
         private void TableSelectBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             CriteriaSelectBox.Items.Clear();
+            CustomerInfoDGV.DataSource = null;
+            SearchTxtBox.Text = string.Empty;
             switch (TableSelectBox.SelectedItem)
             {
                 case "Customer":

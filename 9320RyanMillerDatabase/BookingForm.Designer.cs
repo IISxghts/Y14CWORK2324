@@ -185,7 +185,7 @@
             // 
             this.DTPBookLbl.AutoSize = true;
             this.DTPBookLbl.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DTPBookLbl.Location = new System.Drawing.Point(552, 92);
+            this.DTPBookLbl.Location = new System.Drawing.Point(578, 92);
             this.DTPBookLbl.Name = "DTPBookLbl";
             this.DTPBookLbl.Size = new System.Drawing.Size(108, 21);
             this.DTPBookLbl.TabIndex = 21;
@@ -305,6 +305,7 @@
             this.DGVCourse.RowTemplate.Height = 24;
             this.DGVCourse.Size = new System.Drawing.Size(535, 150);
             this.DGVCourse.TabIndex = 18;
+            this.DGVCourse.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVCourse_CellClick);
             // 
             // menuStrip1
             // 
@@ -326,7 +327,7 @@
             // 
             // DTPBooking
             // 
-            this.DTPBooking.Location = new System.Drawing.Point(553, 116);
+            this.DTPBooking.Location = new System.Drawing.Point(582, 116);
             this.DTPBooking.Name = "DTPBooking";
             this.DTPBooking.Size = new System.Drawing.Size(200, 22);
             this.DTPBooking.TabIndex = 29;
@@ -363,7 +364,7 @@
             this.DiscountBookingLbl.TabIndex = 32;
             this.DiscountBookingLbl.Text = "Discount Percent";
             // 
-            // TempBookingForm
+            // BookingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -385,7 +386,7 @@
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "TempBookingForm";
+            this.Name = "BookingForm";
             this.Text = "TempBookingForm";
             this.Load += new System.EventHandler(this.TempBookingForm_Load);
             this.panel3.ResumeLayout(false);

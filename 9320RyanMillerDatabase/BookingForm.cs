@@ -18,7 +18,9 @@ namespace _9320RyanMillerDatabase
             CenterToScreen();
             Discount();
         }
-
+        
+        DataRowView DFRowSelectCustomer;
+        DataRowView DFRowSelectCourse;
         private void MainMenuTSM_Click(object sender, EventArgs e)
         {
             Hide();
@@ -28,6 +30,12 @@ namespace _9320RyanMillerDatabase
         private void TempBookingForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'lakeside9320CustomerSelectDataSet.Customer' table. You can move, or remove it, as needed.
+            this.customerTableAdapter.Fill(this.lakeside9320CustomerSelectDataSet.Customer);
+
+        }
+
+        private void BookingTablesRefresh()
+        {
             this.customerTableAdapter.Fill(this.lakeside9320CustomerSelectDataSet.Customer);
 
         }
@@ -46,35 +54,38 @@ namespace _9320RyanMillerDatabase
 
         private void Discount()
         {
-            if (DiscountCheckBox.Checked == true)
+            if (DiscountCheckBox.Checked)
             {
+                DiscountBookingLbl.Visible = true;
                 DiscountSelectBox.Visible = true;
             }
             else
             {
-
+                DiscountBookingLbl.Visible = false;
+                DiscountSelectBox.Visible = false;
             }
         }
 
         private void G2AddBookingBtn_Click(object sender, EventArgs e)
         {
-
+            if (DFRowSelectCourse != null && DFRowSelectCustomer != null)
+            {
+                int IDThatSelected = Convert.ToInt32(DFRowSelectCustomer["CustomerNum"]);
+            }
+            else
+            {
+                MessageBox.Show("Please select a customer and a course to book", "Error");
+            }
         }
 
-    /*    private bool NullChecker()
+        private void DGVCourse_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            StringBuilder error = new StringBuilder();
-
-            if (string.IsNullOrEmpty(custFnameBox.Text))
-            {
-                error.AppendLine("You must enter a first name.");
-            }
-            if (string.IsNullOrEmpty(error.ToString()))
-            {
-                return true;
-            }
-            MessageBox.Show(error.ToString(), "Required fields left blank");
-            return false;
-        } */
+            ChooseTheRowings();
+        }
+        private void ChooseTheRowings()
+        {
+            DFRowSelectCustomer = DGVCustomer.CurrentRow != null ? (DataRowView)DGVCustomer.CurrentRow.DataBoundItem : null;
+            DFRowSelectCourse = DGVCourse.CurrentRow != null ? (DataRowView)DGVCourse.CurrentRow.DataBoundItem : null;
+        }
     }
 }
