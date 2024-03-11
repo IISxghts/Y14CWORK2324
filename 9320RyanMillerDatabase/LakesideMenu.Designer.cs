@@ -38,6 +38,7 @@
             this.LLMenuLbl = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.G2SettingsBtn = new Guna.UI2.WinForms.Guna2Button();
             this.G2BtnBookings = new Guna.UI2.WinForms.Guna2Button();
             this.G2BtnReports = new Guna.UI2.WinForms.Guna2Button();
             this.G2BtnCourses = new Guna.UI2.WinForms.Guna2Button();
@@ -45,7 +46,6 @@
             this.panelContainer = new System.Windows.Forms.Panel();
             this.LMLoadingAnim = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.tableAdapterManager1 = new _9320RyanMillerDatabase.Lakeside9320CEDataSetTableAdapters.TableAdapterManager();
-            this.G2SettingsBtn = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -145,6 +145,26 @@
             this.panel4.Size = new System.Drawing.Size(953, 70);
             this.panel4.TabIndex = 2;
             // 
+            // G2SettingsBtn
+            // 
+            this.G2SettingsBtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.G2SettingsBtn.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.G2SettingsBtn.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.G2SettingsBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.G2SettingsBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.G2SettingsBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.G2SettingsBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.G2SettingsBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.G2SettingsBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.G2SettingsBtn.ForeColor = System.Drawing.Color.White;
+            this.G2SettingsBtn.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(215)))), ((int)(((byte)(150)))));
+            this.G2SettingsBtn.Location = new System.Drawing.Point(768, 3);
+            this.G2SettingsBtn.Name = "G2SettingsBtn";
+            this.G2SettingsBtn.Size = new System.Drawing.Size(185, 67);
+            this.G2SettingsBtn.TabIndex = 5;
+            this.G2SettingsBtn.Text = "Settings";
+            this.G2SettingsBtn.Click += new System.EventHandler(this.G2SettingsBtn_Click);
+            // 
             // G2BtnBookings
             // 
             this.G2BtnBookings.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
@@ -178,7 +198,7 @@
             this.G2BtnReports.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.G2BtnReports.ForeColor = System.Drawing.Color.White;
             this.G2BtnReports.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(215)))), ((int)(((byte)(150)))));
-            this.G2BtnReports.Location = new System.Drawing.Point(576, 0);
+            this.G2BtnReports.Location = new System.Drawing.Point(577, 3);
             this.G2BtnReports.Name = "G2BtnReports";
             this.G2BtnReports.Size = new System.Drawing.Size(185, 67);
             this.G2BtnReports.TabIndex = 4;
@@ -198,7 +218,7 @@
             this.G2BtnCourses.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.G2BtnCourses.ForeColor = System.Drawing.Color.White;
             this.G2BtnCourses.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(215)))), ((int)(((byte)(150)))));
-            this.G2BtnCourses.Location = new System.Drawing.Point(194, 0);
+            this.G2BtnCourses.Location = new System.Drawing.Point(194, 3);
             this.G2BtnCourses.Name = "G2BtnCourses";
             this.G2BtnCourses.Size = new System.Drawing.Size(185, 67);
             this.G2BtnCourses.TabIndex = 1;
@@ -218,7 +238,7 @@
             this.G2BtnCustomer.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
             this.G2BtnCustomer.ForeColor = System.Drawing.Color.White;
             this.G2BtnCustomer.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(215)))), ((int)(((byte)(150)))));
-            this.G2BtnCustomer.Location = new System.Drawing.Point(3, 0);
+            this.G2BtnCustomer.Location = new System.Drawing.Point(3, 3);
             this.G2BtnCustomer.Name = "G2BtnCustomer";
             this.G2BtnCustomer.Size = new System.Drawing.Size(185, 67);
             this.G2BtnCustomer.TabIndex = 0;
@@ -242,26 +262,6 @@
             this.tableAdapterManager1.Connection = null;
             this.tableAdapterManager1.CustomerTableAdapter = null;
             this.tableAdapterManager1.UpdateOrder = _9320RyanMillerDatabase.Lakeside9320CEDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // G2SettingsBtn
-            // 
-            this.G2SettingsBtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.G2SettingsBtn.CustomBorderColor = System.Drawing.Color.Transparent;
-            this.G2SettingsBtn.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.G2SettingsBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.G2SettingsBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.G2SettingsBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.G2SettingsBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.G2SettingsBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
-            this.G2SettingsBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.G2SettingsBtn.ForeColor = System.Drawing.Color.White;
-            this.G2SettingsBtn.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(215)))), ((int)(((byte)(150)))));
-            this.G2SettingsBtn.Location = new System.Drawing.Point(768, 3);
-            this.G2SettingsBtn.Name = "G2SettingsBtn";
-            this.G2SettingsBtn.Size = new System.Drawing.Size(185, 67);
-            this.G2SettingsBtn.TabIndex = 5;
-            this.G2SettingsBtn.Text = "Settings";
-            this.G2SettingsBtn.Click += new System.EventHandler(this.G2SettingsBtn_Click);
             // 
             // LakesideMenu
             // 

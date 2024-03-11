@@ -15,6 +15,24 @@ namespace _9320RyanMillerDatabase
         public EditCourse()
         {
             InitializeComponent();
+            CenterToScreen();
+        }
+
+        private void EFCustEditBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EFCustSNDBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EditCourse_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'lakeside9320CoursesEditDataSet.Courses' table. You can move, or remove it, as needed.
+            this.coursesTableAdapter.Fill(this.lakeside9320CoursesEditDataSet.Courses);
+
         }
     }
 }

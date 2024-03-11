@@ -318,6 +318,11 @@
     <Compile Include="CustomerReportOne.Designer.cs">
       <DependentUpon>CustomerReportOne.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lakeside9320CoursesEditDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Lakeside9320CoursesEditDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Lakeside9320SearchBookingDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -577,6 +582,17 @@
     </None>
     <None Include="Lakeside9320CEDataSet.xss">
       <DependentUpon>Lakeside9320CEDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Lakeside9320CoursesEditDataSet.xsc">
+      <DependentUpon>Lakeside9320CoursesEditDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Lakeside9320CoursesEditDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Lakeside9320CoursesEditDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Lakeside9320CoursesEditDataSet.xss">
+      <DependentUpon>Lakeside9320CoursesEditDataSet.xsd</DependentUpon>
     </None>
     <None Include="Lakeside9320CustDataSet.xsc">
       <DependentUpon>Lakeside9320CustDataSet.xsd</DependentUpon>

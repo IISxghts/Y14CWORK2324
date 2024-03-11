@@ -25,12 +25,12 @@ namespace _9320RyanMillerDatabase
                 string sqlQuery = @"SELECT Courses.CourseID, CourseTitle, StartDate, EndDate, Timing, Price, Capacity, SpacesBooked FROM Courses
                                    LEFT JOIN
                                    (SELECT Count(*) as 'SpacesBooked', Booking.CourseID FROM Booking
-                                   WHERE BookingDate = @Date GROUP BY Booking.CourseID) as BookingResults
+                                   GROUP BY Booking.CourseID) as BookingResults
                                    on Courses.CourseID = BookingResults.CourseID
-                                   WHERE BookingResults.SpacesBooked IS NULL OR Capacity > BookingResults.SpacesBooked";
+                                   WHERE BookingResults.SpacesBooked IS NULL OR Capacity >= BookingResults.SpacesBooked";
 
                 command.CommandText = sqlQuery;
-                command.Parameters.AddWithValue("Date", date);
+                //command.Parameters.AddWithValue("Date", date);
                 command.Connection = connection;
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
                 DataTable dt = new DataTable();
@@ -40,7 +40,7 @@ namespace _9320RyanMillerDatabase
 
                 return dt;
             }
-
+            
         }
       
         public static int AddBooking(BookingModel bookModel)
@@ -48,7 +48,7 @@ namespace _9320RyanMillerDatabase
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
-                string sqlQuery = string.Format("INSERT INTO Booking VALUES('{0}','{1}','{2}','{3}','{4}','{5}')", bookModel.CourseID, bookModel.BookingDate, bookModel.DiscountYN, bookModel.DiscountPercent, bookModel.CustomerNum, bookModel.CustomerQuantity);
+                string sqlQuery = string.Format("INSERT INTO Booking VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', {5})", bookModel.CourseID, bookModel.BookingDate, bookModel.DiscountYN, bookModel.DiscountPercent, bookModel.CustomerNum, bookModel.CustomerQuantity);
 
                 SqlCommand custDelCommand = new SqlCommand(sqlQuery, connection);
 

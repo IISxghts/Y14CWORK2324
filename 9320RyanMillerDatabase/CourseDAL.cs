@@ -39,7 +39,7 @@ namespace _9320RyanMillerDatabase
                 connection.Close();
                 return rowsAffected;
             }
-
+            
         }
         public static int DeleteCourse(int CourseID)
         {

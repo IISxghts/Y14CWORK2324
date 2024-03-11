@@ -10,9 +10,9 @@ namespace _9320RyanMillerDatabase
     {
         public int _BookingID;
         public int _CourseID;
-        public DateTime _BookingDate;
-        public bool _DiscountYN;
-        public int _DiscountPercent;
+        public string _BookingDate;
+        public string _DiscountYN;
+        public decimal _DiscountPercent;
         public int _CustomerNum;
         public int _CustomerQuantity;
         
@@ -26,17 +26,17 @@ namespace _9320RyanMillerDatabase
             get { return _CourseID; }
             set { _CourseID = value; }
         }
-        public DateTime BookingDate
+        public string BookingDate
         { 
             get { return _BookingDate; }           
             set { _BookingDate = value; } 
         }
-        public bool DiscountYN
+        public string DiscountYN
         { 
             get { return _DiscountYN; }
             set { _DiscountYN = value; }
         }
-        public int DiscountPercent
+        public decimal DiscountPercent
         {
             get { return _DiscountPercent; }
             set { _DiscountPercent = value; }
@@ -56,7 +56,7 @@ namespace _9320RyanMillerDatabase
         {
 
         }
-        public BookingModel(int BookingID, int CourseID, DateTime BookingDate, bool Discount, int DiscountPercent, int CustomerNum, int Quantity )
+        public BookingModel(int BookingID, int CourseID, string BookingDate, string Discount, decimal DiscountPercent, int CustomerNum, int Quantity )
         {
             // WITH ID
             this.BookingID = BookingID;
@@ -67,11 +67,11 @@ namespace _9320RyanMillerDatabase
             this.CustomerNum = CustomerNum;
             this.CustomerQuantity = Quantity;
         }
-        public BookingModel(int CourseID, DateTime BookingDate, bool Discount, int DiscountPercent, int CustomerNum, int Quantity)
+        public BookingModel(int CourseID, string BookingDate, string Discount, decimal DiscountPercent, int CustomerNum, int Quantity)
         {
             //WITHOUT ID
-            this.BookingDate = BookingDate;
             this.CourseID = CourseID;
+            this.BookingDate = BookingDate;
             this.DiscountYN = Discount;
             this.DiscountPercent = DiscountPercent;
             this.CustomerNum = CustomerNum;

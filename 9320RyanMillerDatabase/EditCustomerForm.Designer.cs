@@ -60,7 +60,6 @@
             this.EFCustSpecialReqTB = new System.Windows.Forms.TextBox();
             this.EFCustEditBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.EFCustDOBTB = new System.Windows.Forms.TextBox();
             this.EFCustSNDBtn = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mainMenuTSM = new System.Windows.Forms.ToolStripMenuItem();
@@ -77,6 +76,7 @@
             this.LLMenuLbl = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.EditCustDTP = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.EFCustDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lakeside9320CEDataSet)).BeginInit();
@@ -340,13 +340,6 @@
             this.label1.TabIndex = 20;
             this.label1.Text = "Date of Birth";
             // 
-            // EFCustDOBTB
-            // 
-            this.EFCustDOBTB.Location = new System.Drawing.Point(315, 441);
-            this.EFCustDOBTB.Name = "EFCustDOBTB";
-            this.EFCustDOBTB.Size = new System.Drawing.Size(106, 22);
-            this.EFCustDOBTB.TabIndex = 19;
-            // 
             // EFCustSNDBtn
             // 
             this.EFCustSNDBtn.Location = new System.Drawing.Point(48, 321);
@@ -484,16 +477,23 @@
             this.panel3.Size = new System.Drawing.Size(900, 63);
             this.panel3.TabIndex = 23;
             // 
+            // EditCustDTP
+            // 
+            this.EditCustDTP.Location = new System.Drawing.Point(315, 441);
+            this.EditCustDTP.Name = "EditCustDTP";
+            this.EditCustDTP.Size = new System.Drawing.Size(160, 22);
+            this.EditCustDTP.TabIndex = 24;
+            // 
             // EditCustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 500);
+            this.Controls.Add(this.EditCustDTP);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.EFCustSNDBtn);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.EFCustDOBTB);
             this.Controls.Add(this.EFCustEditBtn);
             this.Controls.Add(this.EFCustSpecReqLbl);
             this.Controls.Add(this.EFCustSpecialReqTB);
@@ -562,7 +562,6 @@
         private System.Windows.Forms.TextBox EFCustSpecialReqTB;
         private System.Windows.Forms.Button EFCustEditBtn;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox EFCustDOBTB;
         private System.Windows.Forms.Button EFCustSNDBtn;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem mainMenuTSM;
@@ -578,5 +577,6 @@
         private System.Windows.Forms.Label LLMenuLbl;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.DateTimePicker EditCustDTP;
     }
 }

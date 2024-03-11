@@ -56,12 +56,15 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.MainMenuTSM = new System.Windows.Forms.ToolStripMenuItem();
             this.DTPBooking = new System.Windows.Forms.DateTimePicker();
-            this.customerTableAdapter = new _9320RyanMillerDatabase.Lakeside9320CustomerSelectDataSetTableAdapters.CustomerTableAdapter();
             this.DiscountCheckBox = new System.Windows.Forms.CheckBox();
             this.DiscountSelectBox = new System.Windows.Forms.NumericUpDown();
             this.DiscountBookingLbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.QuantitySelectBox = new System.Windows.Forms.NumericUpDown();
+            this.customerTableAdapter = new _9320RyanMillerDatabase.Lakeside9320CustomerSelectDataSetTableAdapters.CustomerTableAdapter();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVCustomer)).BeginInit();
@@ -118,7 +121,7 @@
             this.G2CheckAvailabilityBtn.FillColor = System.Drawing.Color.Empty;
             this.G2CheckAvailabilityBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.G2CheckAvailabilityBtn.ForeColor = System.Drawing.Color.White;
-            this.G2CheckAvailabilityBtn.Location = new System.Drawing.Point(566, 221);
+            this.G2CheckAvailabilityBtn.Location = new System.Drawing.Point(556, 231);
             this.G2CheckAvailabilityBtn.Name = "G2CheckAvailabilityBtn";
             this.G2CheckAvailabilityBtn.Size = new System.Drawing.Size(232, 45);
             this.G2CheckAvailabilityBtn.TabIndex = 27;
@@ -137,7 +140,7 @@
             this.G2AddBookingBtn.FillColor = System.Drawing.Color.Empty;
             this.G2AddBookingBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.G2AddBookingBtn.ForeColor = System.Drawing.Color.White;
-            this.G2AddBookingBtn.Location = new System.Drawing.Point(570, 398);
+            this.G2AddBookingBtn.Location = new System.Drawing.Point(556, 398);
             this.G2AddBookingBtn.Name = "G2AddBookingBtn";
             this.G2AddBookingBtn.Size = new System.Drawing.Size(226, 45);
             this.G2AddBookingBtn.TabIndex = 26;
@@ -160,7 +163,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
-            this.label4.Location = new System.Drawing.Point(566, 197);
+            this.label4.Location = new System.Drawing.Point(556, 197);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(183, 21);
             this.label4.TabIndex = 24;
@@ -171,7 +174,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
-            this.label3.Location = new System.Drawing.Point(570, 374);
+            this.label3.Location = new System.Drawing.Point(556, 374);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(160, 21);
             this.label3.TabIndex = 23;
@@ -193,7 +196,7 @@
             this.DTPBookLbl.AutoSize = true;
             this.DTPBookLbl.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DTPBookLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
-            this.DTPBookLbl.Location = new System.Drawing.Point(578, 92);
+            this.DTPBookLbl.Location = new System.Drawing.Point(552, 92);
             this.DTPBookLbl.Name = "DTPBookLbl";
             this.DTPBookLbl.Size = new System.Drawing.Size(108, 21);
             this.DTPBookLbl.TabIndex = 21;
@@ -335,30 +338,34 @@
             // 
             // DTPBooking
             // 
-            this.DTPBooking.Location = new System.Drawing.Point(582, 116);
+            this.DTPBooking.CustomFormat = "dd/MM/yyyy";
+            this.DTPBooking.Location = new System.Drawing.Point(556, 116);
             this.DTPBooking.Name = "DTPBooking";
-            this.DTPBooking.Size = new System.Drawing.Size(200, 22);
+            this.DTPBooking.Size = new System.Drawing.Size(160, 22);
             this.DTPBooking.TabIndex = 29;
-            // 
-            // customerTableAdapter
-            // 
-            this.customerTableAdapter.ClearBeforeFill = true;
+            this.DTPBooking.Value = new System.DateTime(2024, 2, 29, 0, 0, 0, 0);
             // 
             // DiscountCheckBox
             // 
             this.DiscountCheckBox.AutoSize = true;
             this.DiscountCheckBox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DiscountCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
-            this.DiscountCheckBox.Location = new System.Drawing.Point(263, 449);
+            this.DiscountCheckBox.Location = new System.Drawing.Point(15, 488);
             this.DiscountCheckBox.Name = "DiscountCheckBox";
             this.DiscountCheckBox.Size = new System.Drawing.Size(104, 25);
             this.DiscountCheckBox.TabIndex = 30;
             this.DiscountCheckBox.Text = "Discount";
             this.DiscountCheckBox.UseVisualStyleBackColor = true;
+            this.DiscountCheckBox.CheckedChanged += new System.EventHandler(this.DiscountCheckBox_CheckedChanged);
             // 
             // DiscountSelectBox
             // 
-            this.DiscountSelectBox.Location = new System.Drawing.Point(422, 477);
+            this.DiscountSelectBox.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.DiscountSelectBox.Location = new System.Drawing.Point(192, 526);
             this.DiscountSelectBox.Name = "DiscountSelectBox";
             this.DiscountSelectBox.Size = new System.Drawing.Size(120, 22);
             this.DiscountSelectBox.TabIndex = 31;
@@ -368,7 +375,7 @@
             this.DiscountBookingLbl.AutoSize = true;
             this.DiscountBookingLbl.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DiscountBookingLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
-            this.DiscountBookingLbl.Location = new System.Drawing.Point(264, 478);
+            this.DiscountBookingLbl.Location = new System.Drawing.Point(12, 524);
             this.DiscountBookingLbl.Name = "DiscountBookingLbl";
             this.DiscountBookingLbl.Size = new System.Drawing.Size(152, 21);
             this.DiscountBookingLbl.TabIndex = 32;
@@ -379,7 +386,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
-            this.label1.Location = new System.Drawing.Point(12, 453);
+            this.label1.Location = new System.Drawing.Point(12, 457);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(200, 21);
             this.label1.TabIndex = 33;
@@ -387,21 +394,60 @@
             // 
             // QuantitySelectBox
             // 
-            this.QuantitySelectBox.Location = new System.Drawing.Point(16, 478);
+            this.QuantitySelectBox.Location = new System.Drawing.Point(232, 459);
             this.QuantitySelectBox.Maximum = new decimal(new int[] {
             5,
             0,
             0,
             0});
+            this.QuantitySelectBox.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.QuantitySelectBox.Name = "QuantitySelectBox";
+            this.QuantitySelectBox.ReadOnly = true;
             this.QuantitySelectBox.Size = new System.Drawing.Size(120, 22);
             this.QuantitySelectBox.TabIndex = 34;
+            this.QuantitySelectBox.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // customerTableAdapter
+            // 
+            this.customerTableAdapter.ClearBeforeFill = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(397, 449);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 35;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(397, 477);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 22);
+            this.textBox2.TabIndex = 36;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(397, 505);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 22);
+            this.textBox3.TabIndex = 37;
             // 
             // BookingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 523);
+            this.ClientSize = new System.Drawing.Size(800, 554);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.QuantitySelectBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DiscountBookingLbl);
@@ -422,7 +468,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "BookingForm";
-            this.Text = "TempBookingForm";
+            this.Text = "Booking Form";
             this.Load += new System.EventHandler(this.TempBookingForm_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -474,5 +520,8 @@
         private System.Windows.Forms.Label DiscountBookingLbl;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown QuantitySelectBox;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }

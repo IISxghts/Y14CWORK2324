@@ -1,13 +1,16 @@
 ﻿using Guna.UI2.WinForms;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.WebRequestMethods;
 
 namespace _9320RyanMillerDatabase
 {
@@ -17,11 +20,18 @@ namespace _9320RyanMillerDatabase
         {
             InitializeComponent();
             CenterToScreen();
+            DiscountSelectBox.Visible = false;
             Discount();
+            DTPValue();
         }
-        
+        bool ConfirmedBook;
+
         DataRowView DFRowSelectCustomer;
         DataRowView DFRowSelectCourse;
+
+        FileStream aFile;
+        StreamWriter sw;
+
         private void MainMenuTSM_Click(object sender, EventArgs e)
         {
             Hide();
@@ -55,57 +65,79 @@ namespace _9320RyanMillerDatabase
 
         private void Discount()
         {
-            if (DiscountCheckBox.Checked)
+            if (DiscountCheckBox.Checked == true)
             {
-                DiscountBookingLbl.Visible = true;
                 DiscountSelectBox.Visible = true;
+                DiscountBookingLbl.Visible = true;
             }
-            else
+            else if (DiscountCheckBox.Checked == false)
             {
-                DiscountBookingLbl.Visible = false;
                 DiscountSelectBox.Visible = false;
+                DiscountBookingLbl.Visible = false;
             }
+
+        }
+
+        public void DTPValue()
+        {
+            DateTime dt = DateTime.Now;
+
+            DTPBooking.Value = dt;
         }
 
         private void G2AddBookingBtn_Click(object sender, EventArgs e)
         {
             if(NullChecker())
             {
-                 if (DFRowSelectCourse != null && DFRowSelectCustomer != null)
-                 {
-                    
-                    int CustID = Convert.ToInt32(DFRowSelectCustomer["CustomerNum"]);
-                    int CourseID = Convert.ToInt32(DFRowSelectCourse["CourseID"]);
-                    DateTime bookDate = DTPBooking.Value; 
-                    bool discountYN = false;
-                    int discountPercent = Convert.ToInt32(DiscountSelectBox.Value);
-                    if (DiscountCheckBox.Checked == true)
-                    {
-                         discountYN = true;                      
-                    }
-                    else
-                    {
-                        discountYN = false;
-                    }
-                    int customerQuantity = Convert.ToInt32(QuantitySelectBox.Value);
+                bool status = false;
+                DoubleBookCheck(status);
 
-                    BookingModel newBooking = new BookingModel(CourseID, bookDate, discountYN, discountPercent, CustID, customerQuantity);
-
-                    int rowsAffected = BookingDAL.AddBooking(newBooking);
-
-                    if (rowsAffected > 0)
-                    {
-                        MessageBox.Show("New booking has been reserved", "Success");
-                    }
-                    else
-                    {
-                        MessageBox.Show("An error has occured in creating the booking", "Failure");
-                    }
+                if (status == false)
+                {
+                    MessageBox.Show("Unable to confirm booking", "Double booking");                    
                 }
-                 else
-                 {
-                     MessageBox.Show("Please select a customer and a course to book", "Error");
-                 }
+                else
+                {
+                    if (DFRowSelectCourse != null && DFRowSelectCustomer != null)
+                    {
+                        ConfirmedBook = true;
+
+                        int CustID = Convert.ToInt32(DFRowSelectCustomer["CustomerNum"]);
+                        int CourseID = Convert.ToInt32(DFRowSelectCourse["CourseID"]);
+                        DateTime bookDateHold = DTPBooking.Value;
+                        string bookDate = bookDateHold.ToShortDateString();
+                        string discountYN = "N/A";
+                        decimal discountPercent = DiscountSelectBox.Value;
+                        if (DiscountCheckBox.Checked == true)
+                        {
+                            discountYN = "Yes";
+                        }
+                        else
+                        {
+                            discountYN = "No";
+                        }
+                        int customerQuantity = (int)QuantitySelectBox.Value;
+
+                        BookingModel newBooking = new BookingModel(CourseID, bookDate, discountYN, discountPercent, CustID, customerQuantity);
+
+                        int rowsAffected = BookingDAL.AddBooking(newBooking);
+
+                          WriteToFile();
+
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("New booking has been reserved", "Success");
+                        }
+                        else
+                        {
+                            MessageBox.Show("An error has occured in creating the booking", "Failure");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please select a customer and a course to book", "Error");
+                    }
+                }           
 
             }
             
@@ -142,5 +174,103 @@ namespace _9320RyanMillerDatabase
             DFRowSelectCustomer = DGVCustomer.CurrentRow != null ? (DataRowView)DGVCustomer.CurrentRow.DataBoundItem : null;
             DFRowSelectCourse = DGVCourse.CurrentRow != null ? (DataRowView)DGVCourse.CurrentRow.DataBoundItem : null;
         }
+
+        private void DiscountCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            Discount();
+        }
+
+        public void WriteToFile()
+        {
+            FileStream aFile;
+            StreamWriter sw;
+
+            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "BookingsMade.txt");
+
+            if (System.IO.File.Exists(filePath))
+            {
+
+                aFile = new FileStream(filePath, FileMode.Create, FileAccess.Write);
+
+            }
+            else
+            {
+                aFile = new FileStream(filePath, FileMode.Append, FileAccess.Write);
+
+            }
+
+            sw = new StreamWriter(aFile);
+
+            if (ConfirmedBook == true)
+            {
+                string CustID = Convert.ToString(DFRowSelectCustomer["CustomerNum"]);
+                string CustPhone = Convert.ToString(DFRowSelectCustomer["CustomerPhone"]);
+                string CourseID = Convert.ToString(DFRowSelectCourse["CourseID"]);
+
+                string[] data = new string[2];
+
+                data[0] = CustID;
+                data[1] = CourseID;
+                data[2] = CustPhone;
+
+                sw.WriteLine(data[0], data[1], data[2]);
+
+                sw.Close();
+                aFile.Close();
+            }
+            else
+            {
+                MessageBox.Show("Unable to backup data for booking", "Error");
+            }
+        }
+        
+        public bool DoubleBookCheck(bool status)
+        {
+
+            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "BookingsMade.txt");
+            bool bookExist = false;
+
+            try
+            {
+                StreamReader bookingExists = new StreamReader(filePath);
+                string line;
+                while ((line = bookingExists.ReadLine()) != null)
+                {
+                    string user = line.Split('~')[0];
+                    string course = line.Split('~')[1];
+                    string phone = line.Split('~')[2];
+
+                    string CustID = Convert.ToString(DFRowSelectCustomer["CustomerNum"]);
+                    string CustPhone = Convert.ToString(DFRowSelectCustomer["CustomerPhone"]);
+                    string CourseID = Convert.ToString(DFRowSelectCourse["CourseID"]);
+
+                    if (user == CustID && course == CourseID && phone == CustPhone) // what to use as check
+                    {
+                        bookExist = true;
+                        break;
+                    }
+
+                    bookingExists.Close();
+
+                    if (bookExist == true)
+                    {
+                        status = false;
+                    }
+                    else if (bookExist == false) 
+                    {
+                        status = true;
+                    }
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Cannot verify status of booking", "Error occured");
+            }
+            return false;
+        }
+
+
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ReactiveUI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -57,7 +58,7 @@ namespace _9320RyanMillerDatabase
                 EFCustPostcodeTB.Text = Convert.ToString(DFRowSelect["CustomerPostcode"]);
                 EFCustAddressTB.Text = Convert.ToString(DFRowSelect["CustomerAddress"]);
                 EFCustTownTB.Text = Convert.ToString(DFRowSelect["CustomerTown"]);
-                EFCustDOBTB.Text = Convert.ToString(DFRowSelect["CustomerDOB"]);
+                EditCustDTP.Value = Convert.ToDateTime(DFRowSelect["CustomerDOB"]);
                 EFCustPhoneTB.Text = Convert.ToString(DFRowSelect["CustomerPhone"]);
                 EFCustSpecialReqTB.Text = Convert.ToString(DFRowSelect["CustomerSpecialReqs"]);
             }
@@ -75,7 +76,7 @@ namespace _9320RyanMillerDatabase
             string postcode = EFCustPostcodeTB.Text;
             string town = EFCustTownTB.Text;
             string phone = EFCustPhoneTB.Text;
-            string bdate = EFCustDOBTB.Text;
+            DateTime bdate = EditCustDTP.Value;
             string specialreqs = EFCustSpecialReqTB.Text;                        
 
             CustomerModel existingcustomers = new CustomerModel(customerid, forename, surname, address, postcode, town, phone, bdate, specialreqs);

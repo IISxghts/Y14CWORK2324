@@ -23,7 +23,7 @@ namespace _9320RyanMillerDatabase
                 SqlCommand command = new SqlCommand();
 
                 string sqlQuery = @"SELECT BookingID, Booking.CustomerNum, Courses.CourseID, CustomerForename, CustomerSurname, CourseTitle, Price, StartDate FROM Booking
-                                    JOIN Courses on Booking.BookingID = Booking.CourseID JOIN Customer on Customer.CustomerNum = Booking.CustomerNum";
+                                    JOIN Courses on Courses.CourseID = Booking.CourseID JOIN Customer on Customer.CustomerNum = Booking.CustomerNum";
 
                 command.CommandText = sqlQuery;
                 command.Connection = connection;

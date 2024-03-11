@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditCourse));
             this.LLMenuLbl = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -45,17 +46,33 @@
             this.EFCustTownLbl = new System.Windows.Forms.Label();
             this.EFCustTownTB = new System.Windows.Forms.TextBox();
             this.EFCustAddressLbl = new System.Windows.Forms.Label();
-            this.EFCustAddressTB = new System.Windows.Forms.TextBox();
+            this.EFEndDateTB = new System.Windows.Forms.TextBox();
             this.EFCustSurnameLbl = new System.Windows.Forms.Label();
             this.EFCustSurnameTB = new System.Windows.Forms.TextBox();
-            this.EFCustForenameLbl = new System.Windows.Forms.Label();
-            this.EFCustForenameTB = new System.Windows.Forms.TextBox();
-            this.EFCustIDLbl = new System.Windows.Forms.Label();
-            this.EFCustIDTB = new System.Windows.Forms.TextBox();
+            this.EFCourseTitleLbl = new System.Windows.Forms.Label();
+            this.EFCourseTitleTB = new System.Windows.Forms.TextBox();
+            this.EFCourseIDLbl = new System.Windows.Forms.Label();
+            this.EFCourseIDTB = new System.Windows.Forms.TextBox();
             this.EFCustDGV = new System.Windows.Forms.DataGridView();
+            this.courseIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.courseTitleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.startDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.endDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.capacityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cManagerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coursesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lakeside9320CoursesEditDataSet = new _9320RyanMillerDatabase.Lakeside9320CoursesEditDataSet();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.mainMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.coursesTableAdapter = new _9320RyanMillerDatabase.Lakeside9320CoursesEditDataSetTableAdapters.CoursesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EFCustDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coursesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320CoursesEditDataSet)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // LLMenuLbl
@@ -86,19 +103,20 @@
             this.panel3.Controls.Add(this.LLMenuLbl);
             this.panel3.Controls.Add(this.guna2PictureBox1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Location = new System.Drawing.Point(0, 28);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(800, 63);
             this.panel3.TabIndex = 67;
             // 
             // EFCustSNDBtn
             // 
-            this.EFCustSNDBtn.Location = new System.Drawing.Point(110, 261);
+            this.EFCustSNDBtn.Location = new System.Drawing.Point(12, 247);
             this.EFCustSNDBtn.Name = "EFCustSNDBtn";
             this.EFCustSNDBtn.Size = new System.Drawing.Size(108, 46);
             this.EFCustSNDBtn.TabIndex = 88;
             this.EFCustSNDBtn.Text = "Save New Details";
             this.EFCustSNDBtn.UseVisualStyleBackColor = true;
+            this.EFCustSNDBtn.Click += new System.EventHandler(this.EFCustSNDBtn_Click);
             // 
             // label1
             // 
@@ -118,12 +136,13 @@
             // 
             // EFCustEditBtn
             // 
-            this.EFCustEditBtn.Location = new System.Drawing.Point(16, 261);
+            this.EFCustEditBtn.Location = new System.Drawing.Point(16, 196);
             this.EFCustEditBtn.Name = "EFCustEditBtn";
-            this.EFCustEditBtn.Size = new System.Drawing.Size(88, 45);
+            this.EFCustEditBtn.Size = new System.Drawing.Size(104, 45);
             this.EFCustEditBtn.TabIndex = 85;
             this.EFCustEditBtn.Text = "Edit";
             this.EFCustEditBtn.UseVisualStyleBackColor = true;
+            this.EFCustEditBtn.Click += new System.EventHandler(this.EFCustEditBtn_Click);
             // 
             // EFCustSpecReqLbl
             // 
@@ -193,27 +212,27 @@
             // EFCustAddressLbl
             // 
             this.EFCustAddressLbl.AutoSize = true;
-            this.EFCustAddressLbl.Location = new System.Drawing.Point(19, 416);
+            this.EFCustAddressLbl.Location = new System.Drawing.Point(6, 419);
             this.EFCustAddressLbl.Name = "EFCustAddressLbl";
-            this.EFCustAddressLbl.Size = new System.Drawing.Size(58, 16);
+            this.EFCustAddressLbl.Size = new System.Drawing.Size(63, 16);
             this.EFCustAddressLbl.TabIndex = 76;
-            this.EFCustAddressLbl.Text = "Address";
+            this.EFCustAddressLbl.Text = "End Date";
             // 
-            // EFCustAddressTB
+            // EFEndDateTB
             // 
-            this.EFCustAddressTB.Location = new System.Drawing.Point(88, 413);
-            this.EFCustAddressTB.Name = "EFCustAddressTB";
-            this.EFCustAddressTB.Size = new System.Drawing.Size(128, 22);
-            this.EFCustAddressTB.TabIndex = 75;
+            this.EFEndDateTB.Location = new System.Drawing.Point(88, 413);
+            this.EFEndDateTB.Name = "EFEndDateTB";
+            this.EFEndDateTB.Size = new System.Drawing.Size(98, 22);
+            this.EFEndDateTB.TabIndex = 75;
             // 
             // EFCustSurnameLbl
             // 
             this.EFCustSurnameLbl.AutoSize = true;
-            this.EFCustSurnameLbl.Location = new System.Drawing.Point(19, 385);
+            this.EFCustSurnameLbl.Location = new System.Drawing.Point(6, 388);
             this.EFCustSurnameLbl.Name = "EFCustSurnameLbl";
-            this.EFCustSurnameLbl.Size = new System.Drawing.Size(61, 16);
+            this.EFCustSurnameLbl.Size = new System.Drawing.Size(66, 16);
             this.EFCustSurnameLbl.TabIndex = 74;
-            this.EFCustSurnameLbl.Text = "Surname";
+            this.EFCustSurnameLbl.Text = "Start Date";
             // 
             // EFCustSurnameTB
             // 
@@ -222,48 +241,155 @@
             this.EFCustSurnameTB.Size = new System.Drawing.Size(98, 22);
             this.EFCustSurnameTB.TabIndex = 73;
             // 
-            // EFCustForenameLbl
+            // EFCourseTitleLbl
             // 
-            this.EFCustForenameLbl.AutoSize = true;
-            this.EFCustForenameLbl.Location = new System.Drawing.Point(13, 357);
-            this.EFCustForenameLbl.Name = "EFCustForenameLbl";
-            this.EFCustForenameLbl.Size = new System.Drawing.Size(69, 16);
-            this.EFCustForenameLbl.TabIndex = 72;
-            this.EFCustForenameLbl.Text = "Forename";
+            this.EFCourseTitleLbl.AutoSize = true;
+            this.EFCourseTitleLbl.Location = new System.Drawing.Point(6, 363);
+            this.EFCourseTitleLbl.Name = "EFCourseTitleLbl";
+            this.EFCourseTitleLbl.Size = new System.Drawing.Size(79, 16);
+            this.EFCourseTitleLbl.TabIndex = 72;
+            this.EFCourseTitleLbl.Text = "Course Title";
             // 
-            // EFCustForenameTB
+            // EFCourseTitleTB
             // 
-            this.EFCustForenameTB.Location = new System.Drawing.Point(88, 357);
-            this.EFCustForenameTB.Name = "EFCustForenameTB";
-            this.EFCustForenameTB.Size = new System.Drawing.Size(98, 22);
-            this.EFCustForenameTB.TabIndex = 71;
+            this.EFCourseTitleTB.Location = new System.Drawing.Point(88, 357);
+            this.EFCourseTitleTB.Name = "EFCourseTitleTB";
+            this.EFCourseTitleTB.Size = new System.Drawing.Size(98, 22);
+            this.EFCourseTitleTB.TabIndex = 71;
             // 
-            // EFCustIDLbl
+            // EFCourseIDLbl
             // 
-            this.EFCustIDLbl.AutoSize = true;
-            this.EFCustIDLbl.Location = new System.Drawing.Point(13, 332);
-            this.EFCustIDLbl.Name = "EFCustIDLbl";
-            this.EFCustIDLbl.Size = new System.Drawing.Size(77, 16);
-            this.EFCustIDLbl.TabIndex = 70;
-            this.EFCustIDLbl.Text = "CustomerID";
+            this.EFCourseIDLbl.AutoSize = true;
+            this.EFCourseIDLbl.Location = new System.Drawing.Point(12, 338);
+            this.EFCourseIDLbl.Name = "EFCourseIDLbl";
+            this.EFCourseIDLbl.Size = new System.Drawing.Size(66, 16);
+            this.EFCourseIDLbl.TabIndex = 70;
+            this.EFCourseIDLbl.Text = "Course ID";
             // 
-            // EFCustIDTB
+            // EFCourseIDTB
             // 
-            this.EFCustIDTB.Location = new System.Drawing.Point(96, 332);
-            this.EFCustIDTB.Name = "EFCustIDTB";
-            this.EFCustIDTB.ReadOnly = true;
-            this.EFCustIDTB.Size = new System.Drawing.Size(98, 22);
-            this.EFCustIDTB.TabIndex = 69;
+            this.EFCourseIDTB.Location = new System.Drawing.Point(96, 332);
+            this.EFCourseIDTB.Name = "EFCourseIDTB";
+            this.EFCourseIDTB.ReadOnly = true;
+            this.EFCourseIDTB.Size = new System.Drawing.Size(98, 22);
+            this.EFCourseIDTB.TabIndex = 69;
             // 
             // EFCustDGV
             // 
+            this.EFCustDGV.AutoGenerateColumns = false;
             this.EFCustDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.EFCustDGV.Location = new System.Drawing.Point(224, 69);
+            this.EFCustDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.courseIDDataGridViewTextBoxColumn,
+            this.courseTitleDataGridViewTextBoxColumn,
+            this.startDateDataGridViewTextBoxColumn,
+            this.endDateDataGridViewTextBoxColumn,
+            this.timingDataGridViewTextBoxColumn,
+            this.priceDataGridViewTextBoxColumn,
+            this.capacityDataGridViewTextBoxColumn,
+            this.cManagerNameDataGridViewTextBoxColumn});
+            this.EFCustDGV.DataSource = this.coursesBindingSource;
+            this.EFCustDGV.Location = new System.Drawing.Point(126, 97);
             this.EFCustDGV.Name = "EFCustDGV";
             this.EFCustDGV.RowHeadersWidth = 51;
             this.EFCustDGV.RowTemplate.Height = 24;
-            this.EFCustDGV.Size = new System.Drawing.Size(576, 238);
+            this.EFCustDGV.Size = new System.Drawing.Size(662, 210);
             this.EFCustDGV.TabIndex = 68;
+            // 
+            // courseIDDataGridViewTextBoxColumn
+            // 
+            this.courseIDDataGridViewTextBoxColumn.DataPropertyName = "CourseID";
+            this.courseIDDataGridViewTextBoxColumn.HeaderText = "CourseID";
+            this.courseIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.courseIDDataGridViewTextBoxColumn.Name = "courseIDDataGridViewTextBoxColumn";
+            this.courseIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.courseIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // courseTitleDataGridViewTextBoxColumn
+            // 
+            this.courseTitleDataGridViewTextBoxColumn.DataPropertyName = "CourseTitle";
+            this.courseTitleDataGridViewTextBoxColumn.HeaderText = "CourseTitle";
+            this.courseTitleDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.courseTitleDataGridViewTextBoxColumn.Name = "courseTitleDataGridViewTextBoxColumn";
+            this.courseTitleDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // startDateDataGridViewTextBoxColumn
+            // 
+            this.startDateDataGridViewTextBoxColumn.DataPropertyName = "StartDate";
+            this.startDateDataGridViewTextBoxColumn.HeaderText = "StartDate";
+            this.startDateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.startDateDataGridViewTextBoxColumn.Name = "startDateDataGridViewTextBoxColumn";
+            this.startDateDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // endDateDataGridViewTextBoxColumn
+            // 
+            this.endDateDataGridViewTextBoxColumn.DataPropertyName = "EndDate";
+            this.endDateDataGridViewTextBoxColumn.HeaderText = "EndDate";
+            this.endDateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.endDateDataGridViewTextBoxColumn.Name = "endDateDataGridViewTextBoxColumn";
+            this.endDateDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // timingDataGridViewTextBoxColumn
+            // 
+            this.timingDataGridViewTextBoxColumn.DataPropertyName = "Timing";
+            this.timingDataGridViewTextBoxColumn.HeaderText = "Timing";
+            this.timingDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.timingDataGridViewTextBoxColumn.Name = "timingDataGridViewTextBoxColumn";
+            this.timingDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
+            this.priceDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            this.priceDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // capacityDataGridViewTextBoxColumn
+            // 
+            this.capacityDataGridViewTextBoxColumn.DataPropertyName = "Capacity";
+            this.capacityDataGridViewTextBoxColumn.HeaderText = "Capacity";
+            this.capacityDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.capacityDataGridViewTextBoxColumn.Name = "capacityDataGridViewTextBoxColumn";
+            this.capacityDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // cManagerNameDataGridViewTextBoxColumn
+            // 
+            this.cManagerNameDataGridViewTextBoxColumn.DataPropertyName = "CManagerName";
+            this.cManagerNameDataGridViewTextBoxColumn.HeaderText = "CManagerName";
+            this.cManagerNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.cManagerNameDataGridViewTextBoxColumn.Name = "cManagerNameDataGridViewTextBoxColumn";
+            this.cManagerNameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // coursesBindingSource
+            // 
+            this.coursesBindingSource.DataMember = "Courses";
+            this.coursesBindingSource.DataSource = this.lakeside9320CoursesEditDataSet;
+            // 
+            // lakeside9320CoursesEditDataSet
+            // 
+            this.lakeside9320CoursesEditDataSet.DataSetName = "Lakeside9320CoursesEditDataSet";
+            this.lakeside9320CoursesEditDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mainMenuToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.TabIndex = 89;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // mainMenuToolStripMenuItem
+            // 
+            this.mainMenuToolStripMenuItem.Name = "mainMenuToolStripMenuItem";
+            this.mainMenuToolStripMenuItem.Size = new System.Drawing.Size(97, 24);
+            this.mainMenuToolStripMenuItem.Text = "Main Menu";
+            // 
+            // coursesTableAdapter
+            // 
+            this.coursesTableAdapter.ClearBeforeFill = true;
             // 
             // EditCourse
             // 
@@ -283,22 +409,29 @@
             this.Controls.Add(this.EFCustTownLbl);
             this.Controls.Add(this.EFCustTownTB);
             this.Controls.Add(this.EFCustAddressLbl);
-            this.Controls.Add(this.EFCustAddressTB);
+            this.Controls.Add(this.EFEndDateTB);
             this.Controls.Add(this.EFCustSurnameLbl);
             this.Controls.Add(this.EFCustSurnameTB);
-            this.Controls.Add(this.EFCustForenameLbl);
-            this.Controls.Add(this.EFCustForenameTB);
-            this.Controls.Add(this.EFCustIDLbl);
-            this.Controls.Add(this.EFCustIDTB);
+            this.Controls.Add(this.EFCourseTitleLbl);
+            this.Controls.Add(this.EFCourseTitleTB);
+            this.Controls.Add(this.EFCourseIDLbl);
+            this.Controls.Add(this.EFCourseIDTB);
             this.Controls.Add(this.EFCustDGV);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "EditCourse";
             this.Text = "EditCourse";
+            this.Load += new System.EventHandler(this.EditCourse_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EFCustDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coursesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320CoursesEditDataSet)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -322,13 +455,26 @@
         private System.Windows.Forms.Label EFCustTownLbl;
         private System.Windows.Forms.TextBox EFCustTownTB;
         private System.Windows.Forms.Label EFCustAddressLbl;
-        private System.Windows.Forms.TextBox EFCustAddressTB;
+        private System.Windows.Forms.TextBox EFEndDateTB;
         private System.Windows.Forms.Label EFCustSurnameLbl;
         private System.Windows.Forms.TextBox EFCustSurnameTB;
-        private System.Windows.Forms.Label EFCustForenameLbl;
-        private System.Windows.Forms.TextBox EFCustForenameTB;
-        private System.Windows.Forms.Label EFCustIDLbl;
-        private System.Windows.Forms.TextBox EFCustIDTB;
+        private System.Windows.Forms.Label EFCourseTitleLbl;
+        private System.Windows.Forms.TextBox EFCourseTitleTB;
+        private System.Windows.Forms.Label EFCourseIDLbl;
+        private System.Windows.Forms.TextBox EFCourseIDTB;
         private System.Windows.Forms.DataGridView EFCustDGV;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem mainMenuToolStripMenuItem;
+        private Lakeside9320CoursesEditDataSet lakeside9320CoursesEditDataSet;
+        private System.Windows.Forms.BindingSource coursesBindingSource;
+        private Lakeside9320CoursesEditDataSetTableAdapters.CoursesTableAdapter coursesTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn courseIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn courseTitleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn startDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn endDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn timingDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn capacityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cManagerNameDataGridViewTextBoxColumn;
     }
 }

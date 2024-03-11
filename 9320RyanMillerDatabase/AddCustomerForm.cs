@@ -18,8 +18,6 @@ namespace _9320RyanMillerDatabase
             CenterToScreen();
             custReqRTB.Visible = false;
             custPSLbl.Visible = false;
-       //     string currentDate = DateTime.Now.ToShortDateString();
-       //     custDTP.Value = currentDate;
         }
 
         private void custAddBtn_Click(object sender, EventArgs e)
@@ -32,7 +30,7 @@ namespace _9320RyanMillerDatabase
                 string postcode = custPostcodeBox.Text;
                 string town = custTownBox.Text;
                 string phone = custPhoneBox.Text;
-                string bdate = custDTP.Text;
+                DateTime bdate = custDTP.Value;
                 string specialreqs = custReqRTB.Text;
                 
                 CustomerModel newcustomer = new CustomerModel(forename, surname, address, postcode, town, phone, bdate, specialreqs);
