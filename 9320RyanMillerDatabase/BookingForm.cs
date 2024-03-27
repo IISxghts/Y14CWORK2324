@@ -22,15 +22,13 @@ namespace _9320RyanMillerDatabase
             CenterToScreen();
             DiscountSelectBox.Visible = false;
             Discount();
-            DTPValue();
+            DateTime dt = DateTime.Now;
+            DTPBooking.Value = dt;
         }
-        bool ConfirmedBook;
+
 
         DataRowView DFRowSelectCustomer;
         DataRowView DFRowSelectCourse;
-
-        FileStream aFile;
-        StreamWriter sw;
 
         private void MainMenuTSM_Click(object sender, EventArgs e)
         {
@@ -45,17 +43,14 @@ namespace _9320RyanMillerDatabase
 
         }
 
-        private void BookingTablesRefresh()
-        {
-            this.customerTableAdapter.Fill(this.lakeside9320CustomerSelectDataSet.Customer);
-
-        }
 
         private void G2CheckAvailabilityBtn_Click(object sender, EventArgs e)
         {
-            if(DTPBooking.Value.Date >= DateTime.Now.Date)
+            DateTime dtPicked = DTPBooking.Value.Date;
+
+            if (dtPicked >= DateTime.Now.Date)
             {
-                DGVCourse.DataSource = BookingDAL.GetLessonsFromBooking(DTPBooking.Value.Date);
+                DGVCourse.DataSource = BookingDAL.GetLessonsFromBooking(dtPicked);
             }
             else
             {
@@ -78,36 +73,35 @@ namespace _9320RyanMillerDatabase
 
         }
 
-        public void DTPValue()
-        {
-            DateTime dt = DateTime.Now;
-
-            DTPBooking.Value = dt;
-        }
-
         private void G2AddBookingBtn_Click(object sender, EventArgs e)
         {
             if(NullChecker())
             {
-                bool status = false;
-                DoubleBookCheck(status);
-
-                if (status == false)
-                {
-                    MessageBox.Show("Unable to confirm booking", "Double booking");                    
-                }
-                else
-                {
-                    if (DFRowSelectCourse != null && DFRowSelectCustomer != null)
+                
+                if (DFRowSelectCourse != null && DFRowSelectCustomer != null)
                     {
-                        ConfirmedBook = true;
 
-                        int CustID = Convert.ToInt32(DFRowSelectCustomer["CustomerNum"]);
-                        int CourseID = Convert.ToInt32(DFRowSelectCourse["CourseID"]);
-                        DateTime bookDateHold = DTPBooking.Value;
-                        string bookDate = bookDateHold.ToShortDateString();
+                        
+                    int CustID = Convert.ToInt32(DFRowSelectCustomer["CustomerNum"]);
+                        
+                    int CourseID = Convert.ToInt32(DFRowSelectCourse["CourseID"]);
+
+                    DateTime chosenDate = DTPBooking.Value.Date;
+
+                    if (BookingDAL.DoubleBooking(CourseID, CustID).Count != 0)
+                    {
+                        MessageBox.Show("This customer has already been booked for this course", "Double booking");
+                    }
+                  /*  else if (BookingDAL.CorrectDate(chosenDate).Count != 0)
+                    {
+                        MessageBox.Show("Course does not run on this date, try again", "Error");
+                    } */
+                    else
+                    {
+             
                         string discountYN = "N/A";
                         decimal discountPercent = DiscountSelectBox.Value;
+                        int paidYN;
                         if (DiscountCheckBox.Checked == true)
                         {
                             discountYN = "Yes";
@@ -116,29 +110,44 @@ namespace _9320RyanMillerDatabase
                         {
                             discountYN = "No";
                         }
+                        if (PaidCB.Checked == true)
+                        {
+                            paidYN = 1;
+                        }
+                        else
+                        {
+                            paidYN = 0;
+                        }
                         int customerQuantity = (int)QuantitySelectBox.Value;
 
-                        BookingModel newBooking = new BookingModel(CourseID, bookDate, discountYN, discountPercent, CustID, customerQuantity);
+                        BookingModel newBooking = new BookingModel(CourseID, chosenDate, discountYN, discountPercent, CustID, customerQuantity, paidYN);
 
                         int rowsAffected = BookingDAL.AddBooking(newBooking);
-
-                          WriteToFile();
 
                         if (rowsAffected > 0)
                         {
                             MessageBox.Show("New booking has been reserved", "Success");
+                            this.Refresh();
+
                         }
                         else
                         {
                             MessageBox.Show("An error has occured in creating the booking", "Failure");
+                            this.Refresh();
                         }
+                    }
+                    
                     }
                     else
                     {
                         MessageBox.Show("Please select a customer and a course to book", "Error");
                     }
-                }           
+                          
 
+            }
+            else
+            {
+                MessageBox.Show("Required fields left blank", "Error");
             }
             
 
@@ -180,97 +189,6 @@ namespace _9320RyanMillerDatabase
             Discount();
         }
 
-        public void WriteToFile()
-        {
-            FileStream aFile;
-            StreamWriter sw;
-
-            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "BookingsMade.txt");
-
-            if (System.IO.File.Exists(filePath))
-            {
-
-                aFile = new FileStream(filePath, FileMode.Create, FileAccess.Write);
-
-            }
-            else
-            {
-                aFile = new FileStream(filePath, FileMode.Append, FileAccess.Write);
-
-            }
-
-            sw = new StreamWriter(aFile);
-
-            if (ConfirmedBook == true)
-            {
-                string CustID = Convert.ToString(DFRowSelectCustomer["CustomerNum"]);
-                string CustPhone = Convert.ToString(DFRowSelectCustomer["CustomerPhone"]);
-                string CourseID = Convert.ToString(DFRowSelectCourse["CourseID"]);
-
-                string[] data = new string[2];
-
-                data[0] = CustID;
-                data[1] = CourseID;
-                data[2] = CustPhone;
-
-                sw.WriteLine(data[0], data[1], data[2]);
-
-                sw.Close();
-                aFile.Close();
-            }
-            else
-            {
-                MessageBox.Show("Unable to backup data for booking", "Error");
-            }
-        }
-        
-        public bool DoubleBookCheck(bool status)
-        {
-
-            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "BookingsMade.txt");
-            bool bookExist = false;
-
-            try
-            {
-                StreamReader bookingExists = new StreamReader(filePath);
-                string line;
-                while ((line = bookingExists.ReadLine()) != null)
-                {
-                    string user = line.Split('~')[0];
-                    string course = line.Split('~')[1];
-                    string phone = line.Split('~')[2];
-
-                    string CustID = Convert.ToString(DFRowSelectCustomer["CustomerNum"]);
-                    string CustPhone = Convert.ToString(DFRowSelectCustomer["CustomerPhone"]);
-                    string CourseID = Convert.ToString(DFRowSelectCourse["CourseID"]);
-
-                    if (user == CustID && course == CourseID && phone == CustPhone) // what to use as check
-                    {
-                        bookExist = true;
-                        break;
-                    }
-
-                    bookingExists.Close();
-
-                    if (bookExist == true)
-                    {
-                        status = false;
-                    }
-                    else if (bookExist == false) 
-                    {
-                        status = true;
-                    }
-                }
-
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Cannot verify status of booking", "Error occured");
-            }
-            return false;
-        }
-
-
+      
     }
 }

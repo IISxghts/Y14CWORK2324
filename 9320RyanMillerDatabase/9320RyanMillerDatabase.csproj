@@ -53,6 +53,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>LakesideLogo.ico.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Azure.Core, Version=1.36.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
       <HintPath>..\packages\Azure.Core.1.36.0\lib\net472\Azure.Core.dll</HintPath>
@@ -318,10 +321,27 @@
     <Compile Include="CustomerReportOne.Designer.cs">
       <DependentUpon>CustomerReportOne.cs</DependentUpon>
     </Compile>
+    <Compile Include="DeleteBookingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteBookingForm.Designer.cs">
+      <DependentUpon>DeleteBookingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditBookingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditBookingForm.Designer.cs">
+      <DependentUpon>EditBookingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Lakeside9320CoursesEditDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Lakeside9320CoursesEditDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Lakeside9320NBCoursesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Lakeside9320NBCoursesDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Lakeside9320SearchBookingDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -339,18 +359,18 @@
     <Compile Include="SearchForm.Designer.cs">
       <DependentUpon>SearchForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DeleteCourse.cs">
+    <Compile Include="DeleteCourseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DeleteCourse.Designer.cs">
-      <DependentUpon>DeleteCourse.cs</DependentUpon>
+    <Compile Include="DeleteCourseForm.Designer.cs">
+      <DependentUpon>DeleteCourseForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DataModel.cs" />
-    <Compile Include="EditCourse.cs">
+    <Compile Include="EditCourseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditCourse.Designer.cs">
-      <DependentUpon>EditCourse.cs</DependentUpon>
+    <Compile Include="EditCourseForm.Designer.cs">
+      <DependentUpon>EditCourseForm.cs</DependentUpon>
     </Compile>
     <Compile Include="EditCustomerForm.cs">
       <SubType>Form</SubType>
@@ -486,14 +506,20 @@
     <EmbeddedResource Include="CustomerReportOne.resx">
       <DependentUpon>CustomerReportOne.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DeleteBookingForm.resx">
+      <DependentUpon>DeleteBookingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditBookingForm.resx">
+      <DependentUpon>EditBookingForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SearchForm.resx">
       <DependentUpon>SearchForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DeleteCourse.resx">
-      <DependentUpon>DeleteCourse.cs</DependentUpon>
+    <EmbeddedResource Include="DeleteCourseForm.resx">
+      <DependentUpon>DeleteCourseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditCourse.resx">
-      <DependentUpon>EditCourse.cs</DependentUpon>
+    <EmbeddedResource Include="EditCourseForm.resx">
+      <DependentUpon>EditCourseForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditCustomerForm.resx">
       <DependentUpon>EditCustomerForm.cs</DependentUpon>
@@ -616,6 +642,17 @@
     <None Include="Lakeside9320CustomerSelectDataSet.xss">
       <DependentUpon>Lakeside9320CustomerSelectDataSet.xsd</DependentUpon>
     </None>
+    <None Include="Lakeside9320NBCoursesDataSet.xsc">
+      <DependentUpon>Lakeside9320NBCoursesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Lakeside9320NBCoursesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Lakeside9320NBCoursesDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Lakeside9320NBCoursesDataSet.xss">
+      <DependentUpon>Lakeside9320NBCoursesDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Lakeside9320SearchBookingDataSet.xsc">
       <DependentUpon>Lakeside9320SearchBookingDataSet.xsd</DependentUpon>
     </None>
@@ -693,9 +730,7 @@
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.3.3.4\analyzers\dotnet\cs\Microsoft.CodeAnalysis.Analyzers.dll" />
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.3.3.4\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UserControlsMMCust\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BookingForm));
             this.LLMenuLbl = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.G2CheckAvailabilityBtn = new Guna.UI2.WinForms.Guna2Button();
             this.G2AddBookingBtn = new Guna.UI2.WinForms.Guna2Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -55,18 +54,16 @@
             this.DGVCourse = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.MainMenuTSM = new System.Windows.Forms.ToolStripMenuItem();
-            this.DTPBooking = new System.Windows.Forms.DateTimePicker();
             this.DiscountCheckBox = new System.Windows.Forms.CheckBox();
             this.DiscountSelectBox = new System.Windows.Forms.NumericUpDown();
             this.DiscountBookingLbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.QuantitySelectBox = new System.Windows.Forms.NumericUpDown();
+            this.PaidCB = new System.Windows.Forms.CheckBox();
+            this.DTPBooking = new System.Windows.Forms.DateTimePicker();
             this.customerTableAdapter = new _9320RyanMillerDatabase.Lakeside9320CustomerSelectDataSetTableAdapters.CustomerTableAdapter();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVCustomer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lakeside9320CustomerSelectDataSet)).BeginInit();
@@ -74,6 +71,7 @@
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DiscountSelectBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.QuantitySelectBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // LLMenuLbl
@@ -98,17 +96,6 @@
             this.panel3.Size = new System.Drawing.Size(800, 63);
             this.panel3.TabIndex = 5;
             // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(12, 6);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(144, 51);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 0;
-            this.guna2PictureBox1.TabStop = false;
-            // 
             // G2CheckAvailabilityBtn
             // 
             this.G2CheckAvailabilityBtn.AutoRoundedCorners = true;
@@ -121,7 +108,7 @@
             this.G2CheckAvailabilityBtn.FillColor = System.Drawing.Color.Empty;
             this.G2CheckAvailabilityBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.G2CheckAvailabilityBtn.ForeColor = System.Drawing.Color.White;
-            this.G2CheckAvailabilityBtn.Location = new System.Drawing.Point(556, 231);
+            this.G2CheckAvailabilityBtn.Location = new System.Drawing.Point(556, 221);
             this.G2CheckAvailabilityBtn.Name = "G2CheckAvailabilityBtn";
             this.G2CheckAvailabilityBtn.Size = new System.Drawing.Size(232, 45);
             this.G2CheckAvailabilityBtn.TabIndex = 27;
@@ -196,7 +183,7 @@
             this.DTPBookLbl.AutoSize = true;
             this.DTPBookLbl.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DTPBookLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
-            this.DTPBookLbl.Location = new System.Drawing.Point(552, 92);
+            this.DTPBookLbl.Location = new System.Drawing.Point(556, 92);
             this.DTPBookLbl.Name = "DTPBookLbl";
             this.DTPBookLbl.Size = new System.Drawing.Size(108, 21);
             this.DTPBookLbl.TabIndex = 21;
@@ -336,21 +323,12 @@
             this.MainMenuTSM.Text = "Main Menu";
             this.MainMenuTSM.Click += new System.EventHandler(this.MainMenuTSM_Click);
             // 
-            // DTPBooking
-            // 
-            this.DTPBooking.CustomFormat = "dd/MM/yyyy";
-            this.DTPBooking.Location = new System.Drawing.Point(556, 116);
-            this.DTPBooking.Name = "DTPBooking";
-            this.DTPBooking.Size = new System.Drawing.Size(160, 22);
-            this.DTPBooking.TabIndex = 29;
-            this.DTPBooking.Value = new System.DateTime(2024, 2, 29, 0, 0, 0, 0);
-            // 
             // DiscountCheckBox
             // 
             this.DiscountCheckBox.AutoSize = true;
             this.DiscountCheckBox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DiscountCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
-            this.DiscountCheckBox.Location = new System.Drawing.Point(15, 488);
+            this.DiscountCheckBox.Location = new System.Drawing.Point(12, 512);
             this.DiscountCheckBox.Name = "DiscountCheckBox";
             this.DiscountCheckBox.Size = new System.Drawing.Size(104, 25);
             this.DiscountCheckBox.TabIndex = 30;
@@ -365,7 +343,7 @@
             0,
             0,
             0});
-            this.DiscountSelectBox.Location = new System.Drawing.Point(192, 526);
+            this.DiscountSelectBox.Location = new System.Drawing.Point(280, 512);
             this.DiscountSelectBox.Name = "DiscountSelectBox";
             this.DiscountSelectBox.Size = new System.Drawing.Size(120, 22);
             this.DiscountSelectBox.TabIndex = 31;
@@ -375,7 +353,7 @@
             this.DiscountBookingLbl.AutoSize = true;
             this.DiscountBookingLbl.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DiscountBookingLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
-            this.DiscountBookingLbl.Location = new System.Drawing.Point(12, 524);
+            this.DiscountBookingLbl.Location = new System.Drawing.Point(122, 513);
             this.DiscountBookingLbl.Name = "DiscountBookingLbl";
             this.DiscountBookingLbl.Size = new System.Drawing.Size(152, 21);
             this.DiscountBookingLbl.TabIndex = 32;
@@ -415,45 +393,57 @@
             0,
             0});
             // 
+            // PaidCB
+            // 
+            this.PaidCB.AutoSize = true;
+            this.PaidCB.Font = new System.Drawing.Font("Century Gothic", 10.2F);
+            this.PaidCB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.PaidCB.Location = new System.Drawing.Point(12, 481);
+            this.PaidCB.Name = "PaidCB";
+            this.PaidCB.Size = new System.Drawing.Size(79, 25);
+            this.PaidCB.TabIndex = 35;
+            this.PaidCB.Text = "Paid?";
+            this.PaidCB.UseVisualStyleBackColor = true;
+            // 
+            // DTPBooking
+            // 
+            this.DTPBooking.CustomFormat = "dd-MM-yyyy";
+            this.DTPBooking.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DTPBooking.Location = new System.Drawing.Point(560, 116);
+            this.DTPBooking.MaxDate = new System.DateTime(2050, 9, 1, 0, 0, 0, 0);
+            this.DTPBooking.MinDate = new System.DateTime(2023, 9, 1, 0, 0, 0, 0);
+            this.DTPBooking.Name = "DTPBooking";
+            this.DTPBooking.Size = new System.Drawing.Size(110, 22);
+            this.DTPBooking.TabIndex = 57;
+            this.DTPBooking.Value = new System.DateTime(2023, 9, 1, 0, 0, 0, 0);
+            // 
             // customerTableAdapter
             // 
             this.customerTableAdapter.ClearBeforeFill = true;
             // 
-            // textBox1
+            // guna2PictureBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(397, 449);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 35;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(397, 477);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 36;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(397, 505);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 37;
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(12, 6);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(144, 51);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 0;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // BookingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 554);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.DTPBooking);
+            this.Controls.Add(this.PaidCB);
             this.Controls.Add(this.QuantitySelectBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DiscountBookingLbl);
             this.Controls.Add(this.DiscountSelectBox);
             this.Controls.Add(this.DiscountCheckBox);
-            this.Controls.Add(this.DTPBooking);
             this.Controls.Add(this.G2CheckAvailabilityBtn);
             this.Controls.Add(this.G2AddBookingBtn);
             this.Controls.Add(this.label5);
@@ -472,7 +462,6 @@
             this.Load += new System.EventHandler(this.TempBookingForm_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVCustomer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lakeside9320CustomerSelectDataSet)).EndInit();
@@ -481,6 +470,7 @@
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DiscountSelectBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.QuantitySelectBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -502,7 +492,6 @@
         private System.Windows.Forms.DataGridView DGVCourse;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem MainMenuTSM;
-        private System.Windows.Forms.DateTimePicker DTPBooking;
         private Lakeside9320CustomerSelectDataSet lakeside9320CustomerSelectDataSet;
         private System.Windows.Forms.BindingSource customerBindingSource;
         private Lakeside9320CustomerSelectDataSetTableAdapters.CustomerTableAdapter customerTableAdapter;
@@ -520,8 +509,7 @@
         private System.Windows.Forms.Label DiscountBookingLbl;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown QuantitySelectBox;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.CheckBox PaidCB;
+        private System.Windows.Forms.DateTimePicker DTPBooking;
     }
 }

@@ -10,11 +10,12 @@ namespace _9320RyanMillerDatabase
     {
         public int _BookingID;
         public int _CourseID;
-        public string _BookingDate;
+        public DateTime _BookingDate;
         public string _DiscountYN;
         public decimal _DiscountPercent;
         public int _CustomerNum;
         public int _CustomerQuantity;
+        public int _Paid;
         
         public int BookingID
         {
@@ -26,7 +27,7 @@ namespace _9320RyanMillerDatabase
             get { return _CourseID; }
             set { _CourseID = value; }
         }
-        public string BookingDate
+        public DateTime BookingDate
         { 
             get { return _BookingDate; }           
             set { _BookingDate = value; } 
@@ -51,12 +52,16 @@ namespace _9320RyanMillerDatabase
             get { return _CustomerQuantity; }
             set { _CustomerQuantity = value; }
         }
-
+        public int Paid
+        {
+            get { return _Paid; }
+            set { _Paid = value; }
+        }
         public BookingModel() 
         {
 
         }
-        public BookingModel(int BookingID, int CourseID, string BookingDate, string Discount, decimal DiscountPercent, int CustomerNum, int Quantity )
+        public BookingModel(int BookingID, int CourseID, DateTime BookingDate, string Discount, decimal DiscountPercent, int CustomerNum, int Quantity, int Paid )
         {
             // WITH ID
             this.BookingID = BookingID;
@@ -66,8 +71,9 @@ namespace _9320RyanMillerDatabase
             this.DiscountPercent = DiscountPercent;
             this.CustomerNum = CustomerNum;
             this.CustomerQuantity = Quantity;
+            this.Paid = Paid;
         }
-        public BookingModel(int CourseID, string BookingDate, string Discount, decimal DiscountPercent, int CustomerNum, int Quantity)
+        public BookingModel(int CourseID, DateTime BookingDate, string Discount, decimal DiscountPercent, int CustomerNum, int Quantity, int Paid)
         {
             //WITHOUT ID
             this.CourseID = CourseID;
@@ -76,6 +82,7 @@ namespace _9320RyanMillerDatabase
             this.DiscountPercent = DiscountPercent;
             this.CustomerNum = CustomerNum;
             this.CustomerQuantity = Quantity;
+            this.Paid = Paid;
             
         }
     }

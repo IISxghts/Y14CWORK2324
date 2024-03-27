@@ -153,13 +153,13 @@ namespace _9320RyanMillerDatabase
         private void deleteCourseTSM_Click(object sender, EventArgs e)
         {
             Hide();
-            new DeleteCourse().Show();
+            new DeleteCourseForm().Show();
         }
 
         private void editCourseTSM_Click(object sender, EventArgs e)
         {
             Hide();
-            new EditCourse().Show();
+            new EditCourseForm().Show();
         }
 
         private void addCourseTSM_Click(object sender, EventArgs e)

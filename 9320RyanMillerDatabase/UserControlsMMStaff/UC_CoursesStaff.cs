@@ -26,13 +26,13 @@ namespace _9320RyanMillerDatabase.UserControls
         private void G2BtnEditCourse_Click(object sender, EventArgs e)
         {
             ((LakesideMenu)this.TopLevelControl).Hide();
-            new EditCourse().Show();
+            new EditCourseForm().Show();
         }
 
         private void G2BtnDeleteCourse_Click(object sender, EventArgs e)
         {
             ((LakesideMenu)this.TopLevelControl).Hide();
-            new DeleteCourse().Show();
+            new DeleteCourseForm().Show();
         }
 
     }

@@ -12,6 +12,7 @@ namespace _9320RyanMillerDatabase
         public static string DisplayUname;
         public static string UserType;
         public static string ViewOption;
+        public static bool Check;
         
         
         public static bool Brightness(bool bright)

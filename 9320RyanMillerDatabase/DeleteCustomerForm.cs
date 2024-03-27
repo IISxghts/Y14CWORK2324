@@ -97,13 +97,13 @@ namespace _9320RyanMillerDatabase
         private void editCourseTSM_Click(object sender, EventArgs e)
         {
             Hide();
-            new EditCourse().Show();
+            new EditCourseForm().Show();
         }
 
         private void deleteCourseTSM_Click(object sender, EventArgs e)
         {
             Hide();
-            new DeleteCourse().Show();
+            new DeleteCourseForm().Show();
         }
         #endregion
     }

@@ -16,6 +16,9 @@ namespace _9320RyanMillerDatabase
         {
             InitializeComponent();
             CenterToScreen();
+            DateTime today = DateTime.Now;
+            StartDateDTP.Value = today;
+            EndDateDTP.Value = today;
         }
 
         private void G2AddCourseBtn_Click(object sender, EventArgs e)

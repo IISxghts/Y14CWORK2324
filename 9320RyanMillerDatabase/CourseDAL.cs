@@ -13,7 +13,7 @@ namespace _9320RyanMillerDatabase
     {
         public static string _connectionString = ConfigurationManager.ConnectionStrings["LakesideConnection"].ConnectionString;
 
-        public static int AddCourse(CourseModel customer)
+        public static int AddCourse(CourseModel course)
         {
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
@@ -22,17 +22,17 @@ namespace _9320RyanMillerDatabase
                 SqlCommand insertProjectCommand = new SqlCommand();
                 insertProjectCommand.Connection = connection;
 
-                insertProjectCommand.CommandType = System.Data.CommandType.StoredProcedure;
+                insertProjectCommand.CommandType = CommandType.StoredProcedure;
 
                 insertProjectCommand.CommandText = "AddCourse";
 
-                insertProjectCommand.Parameters.Add(new SqlParameter("@CourseTitle", customer._Coursename));
-                insertProjectCommand.Parameters.Add(new SqlParameter("@StartDate", customer._StartDate));
-                insertProjectCommand.Parameters.Add(new SqlParameter("@EndDate", customer._EndDate));
-                insertProjectCommand.Parameters.Add(new SqlParameter("@Timing", customer._Timing));
-                insertProjectCommand.Parameters.Add(new SqlParameter("@Price", customer._Price));
-                insertProjectCommand.Parameters.Add(new SqlParameter("@Capacity", customer._Capacity));
-                insertProjectCommand.Parameters.Add(new SqlParameter("@CManagerName", customer._Managername));
+                insertProjectCommand.Parameters.Add(new SqlParameter("@CourseTitle", course._Coursename));
+                insertProjectCommand.Parameters.Add(new SqlParameter("@StartDate", course._StartDate));
+                insertProjectCommand.Parameters.Add(new SqlParameter("@EndDate", course._EndDate));
+                insertProjectCommand.Parameters.Add(new SqlParameter("@Timing", course._Timing));
+                insertProjectCommand.Parameters.Add(new SqlParameter("@Price", course._Price));
+                insertProjectCommand.Parameters.Add(new SqlParameter("@Capacity", course._Capacity));
+                insertProjectCommand.Parameters.Add(new SqlParameter("@CManagerName", course._Managername));
 
                 int rowsAffected = insertProjectCommand.ExecuteNonQuery();
 

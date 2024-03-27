@@ -75,7 +75,7 @@ namespace _9320RyanMillerDatabase
            
             if (confirmResult == MessageBoxResult.OK)
             {
-                Environment.Exit(0);
+                Environment.Exit(0); 
             }
             else
             {

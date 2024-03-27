@@ -56,7 +56,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(355, 89);
+            this.label1.Location = new System.Drawing.Point(353, 84);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(184, 17);
             this.label1.TabIndex = 54;
@@ -155,7 +155,7 @@
             // 
             // CManagerNameBox
             // 
-            this.CManagerNameBox.Location = new System.Drawing.Point(548, 87);
+            this.CManagerNameBox.Location = new System.Drawing.Point(543, 82);
             this.CManagerNameBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CManagerNameBox.Name = "CManagerNameBox";
             this.CManagerNameBox.Size = new System.Drawing.Size(172, 22);
@@ -247,14 +247,14 @@
             this.G2AddCourseBtn.FillColor = System.Drawing.Color.Empty;
             this.G2AddCourseBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.G2AddCourseBtn.ForeColor = System.Drawing.Color.White;
-            this.G2AddCourseBtn.Location = new System.Drawing.Point(441, 295);
+            this.G2AddCourseBtn.Location = new System.Drawing.Point(562, 393);
             this.G2AddCourseBtn.Name = "G2AddCourseBtn";
             this.G2AddCourseBtn.Size = new System.Drawing.Size(226, 45);
             this.G2AddCourseBtn.TabIndex = 67;
             this.G2AddCourseBtn.Text = "Add Course";
             this.G2AddCourseBtn.Click += new System.EventHandler(this.G2AddCourseBtn_Click);
             // 
-            // AddCourse
+            // AddCourseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -277,7 +277,7 @@
             this.Controls.Add(this.custSurLbl);
             this.Controls.Add(this.custAddressLbl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AddCourse";
+            this.Name = "AddCourseForm";
             this.Text = "AddCourse";
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);

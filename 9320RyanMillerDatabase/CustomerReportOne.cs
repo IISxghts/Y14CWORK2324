@@ -15,6 +15,7 @@ namespace _9320RyanMillerDatabase
         public CustomerReportOne()
         {
             InitializeComponent();
+            CenterToScreen();
         }
 
         private void CustomerReportOne_Load(object sender, EventArgs e)
@@ -22,7 +23,7 @@ namespace _9320RyanMillerDatabase
             // TODO: This line of code loads data into the 'lakeside9320CustDataSet.Customer' table. You can move, or remove it, as needed.
             this.customerTableAdapter.Fill(this.lakeside9320CustDataSet.Customer);
 
-            this.reportViewer1.RefreshReport();
+            this.ReportViewer1.RefreshReport();
         }
     }
 }
