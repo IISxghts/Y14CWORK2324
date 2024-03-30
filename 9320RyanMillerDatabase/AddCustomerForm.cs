@@ -18,6 +18,8 @@ namespace _9320RyanMillerDatabase
             CenterToScreen();
             custReqRTB.Visible = false;
             custPSLbl.Visible = false;
+            DateTime today = DateTime.Now;
+            custDTP.Value = today; 
         }
 
         private void custAddBtn_Click(object sender, EventArgs e)
@@ -109,64 +111,6 @@ namespace _9320RyanMillerDatabase
             return false;
         }
 
-       
-
-        #region BUTTONS
-
-        private void ViewCustBtn_Click(object sender, EventArgs e)
-        {
-            Hide();
-            new DeleteCustomerForm().Show();
-        }
-
-        private void EditCustomerBtn_Click(object sender, EventArgs e)
-        {
-            Hide();
-            new EditCustomerForm().Show();
-        }
-
-        private void ACMainMenuBtn_Click(object sender, EventArgs e)
-        {
-            Hide();
-            new LakesideMenu().Show();
-        }
-        
-
-        private void mainMenuTSM_Click(object sender, EventArgs e)
-        {
-            Hide();
-            new LakesideMenu().Show();
-        }
-
-        private void addCustomerTSM_Click(object sender, EventArgs e)
-        {
-            Hide();
-            new AddCustomerForm().Show();
-        }
-
-        private void deleteCustomerTSM_Click(object sender, EventArgs e)
-        {
-            Hide();
-            new DeleteCustomerForm().Show();
-        }
-
-        private void deleteCourseTSM_Click(object sender, EventArgs e)
-        {
-            Hide();
-            new DeleteCourseForm().Show();
-        }
-
-        private void editCourseTSM_Click(object sender, EventArgs e)
-        {
-            Hide();
-            new EditCourseForm().Show();
-        }
-
-        private void addCourseTSM_Click(object sender, EventArgs e)
-        {
-            Hide();
-            new AddCourseForm().Show();
-        }
-        #endregion
+              
     }
 }

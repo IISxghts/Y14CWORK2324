@@ -43,6 +43,11 @@ namespace _9320RyanMillerDatabase
 
         }
 
+        private void RefreshForm()
+        {
+            this.customerTableAdapter.Fill(this.lakeside9320CustomerSelectDataSet.Customer);
+        }
+
 
         private void G2CheckAvailabilityBtn_Click(object sender, EventArgs e)
         {

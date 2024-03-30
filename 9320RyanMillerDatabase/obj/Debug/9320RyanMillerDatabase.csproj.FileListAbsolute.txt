@@ -673,8 +673,6 @@ C:\Users\IISXG\Source\Repos\Y14CWORK2324\9320RyanMillerDatabase\obj\Debug\_9320R
 C:\Users\IISXG\Source\Repos\Y14CWORK2324\9320RyanMillerDatabase\obj\Debug\_9320RyanMillerDatabase.AddCustomerForm.resources
 C:\Users\IISXG\Source\Repos\Y14CWORK2324\9320RyanMillerDatabase\obj\Debug\_9320RyanMillerDatabase.CustomerReportOne.resources
 C:\Users\IISXG\Source\Repos\Y14CWORK2324\9320RyanMillerDatabase\obj\Debug\_9320RyanMillerDatabase.SearchForm.resources
-C:\Users\IISXG\Source\Repos\Y14CWORK2324\9320RyanMillerDatabase\obj\Debug\_9320RyanMillerDatabase.DeleteCourse.resources
-C:\Users\IISXG\Source\Repos\Y14CWORK2324\9320RyanMillerDatabase\obj\Debug\_9320RyanMillerDatabase.EditCourse.resources
 C:\Users\IISXG\Source\Repos\Y14CWORK2324\9320RyanMillerDatabase\obj\Debug\_9320RyanMillerDatabase.EditCustomerForm.resources
 C:\Users\IISXG\Source\Repos\Y14CWORK2324\9320RyanMillerDatabase\obj\Debug\_9320RyanMillerDatabase.ImageResource.resources
 C:\Users\IISXG\Source\Repos\Y14CWORK2324\9320RyanMillerDatabase\obj\Debug\_9320RyanMillerDatabase.LakesideMenu.resources
@@ -715,3 +713,8 @@ C:\Users\IISXG\source\repos\Y14CWORK2324\9320RyanMillerDatabase\bin\Debug\arm\li
 C:\Users\IISXG\source\repos\Y14CWORK2324\9320RyanMillerDatabase\bin\Debug\arm64\libHarfBuzzSharp.so
 C:\Users\IISXG\source\repos\Y14CWORK2324\9320RyanMillerDatabase\bin\Debug\musl-x64\libHarfBuzzSharp.so
 C:\Users\IISXG\source\repos\Y14CWORK2324\9320RyanMillerDatabase\obj\Debug\9320RyanMillerDatabase.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\IISXG\Source\Repos\Y14CWORK2324\9320RyanMillerDatabase\obj\Debug\_9320RyanMillerDatabase.DeleteBookingForm.resources
+C:\Users\IISXG\Source\Repos\Y14CWORK2324\9320RyanMillerDatabase\obj\Debug\_9320RyanMillerDatabase.EditBookingForm.resources
+C:\Users\IISXG\Source\Repos\Y14CWORK2324\9320RyanMillerDatabase\obj\Debug\_9320RyanMillerDatabase.FlowPanel.resources
+C:\Users\IISXG\Source\Repos\Y14CWORK2324\9320RyanMillerDatabase\obj\Debug\_9320RyanMillerDatabase.DeleteCourseForm.resources
+C:\Users\IISXG\Source\Repos\Y14CWORK2324\9320RyanMillerDatabase\obj\Debug\_9320RyanMillerDatabase.EditCourseForm.resources

@@ -204,7 +204,7 @@
             this.customerDOBDataGridViewTextBoxColumn,
             this.customerSpecialReqsDataGridViewTextBoxColumn});
             this.DGVCustomer.DataSource = this.customerBindingSource;
-            this.DGVCustomer.Location = new System.Drawing.Point(15, 116);
+            this.DGVCustomer.Location = new System.Drawing.Point(12, 116);
             this.DGVCustomer.Name = "DGVCustomer";
             this.DGVCustomer.RowHeadersWidth = 51;
             this.DGVCustomer.RowTemplate.Height = 24;
@@ -372,7 +372,7 @@
             // 
             // QuantitySelectBox
             // 
-            this.QuantitySelectBox.Location = new System.Drawing.Point(232, 459);
+            this.QuantitySelectBox.Location = new System.Drawing.Point(218, 456);
             this.QuantitySelectBox.Maximum = new decimal(new int[] {
             5,
             0,

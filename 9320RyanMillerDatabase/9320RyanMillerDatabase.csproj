@@ -333,6 +333,12 @@
     <Compile Include="EditBookingForm.Designer.cs">
       <DependentUpon>EditBookingForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FlowPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FlowPanel.Designer.cs">
+      <DependentUpon>FlowPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Lakeside9320CoursesEditDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -512,6 +518,9 @@
     <EmbeddedResource Include="EditBookingForm.resx">
       <DependentUpon>EditBookingForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FlowPanel.resx">
+      <DependentUpon>FlowPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SearchForm.resx">
       <DependentUpon>SearchForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -545,6 +554,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="DeleteCustomerForm.resx">
       <DependentUpon>DeleteCustomerForm.cs</DependentUpon>
@@ -721,6 +731,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="LakesideLogo.ico.ico" />
+    <None Include="Resources\DocIconFinal.png" />
     <Content Include="Resources\LakesideLogo.ico" />
     <None Include="Resources\eyefinalvs.png" />
     <None Include="Resources\navyuservs.png" />
