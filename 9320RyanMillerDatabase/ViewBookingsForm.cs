@@ -26,5 +26,35 @@ namespace _9320RyanMillerDatabase
         {
             BookingViewDGV.DataSource = ViewDAL.ViewThingy();
         }
+
+        private void SidebarPB_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void G2HomeSideBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void G2CustSideBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void G2CourseSideBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void G2BookSideBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void G2ReportsBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

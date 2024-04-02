@@ -21,6 +21,12 @@ namespace _9320RyanMillerDatabase
 
         DataRowView DFRowSelect;
 
+        bool sidebarExpand;
+        bool sidebarReportsExpand;
+        bool sidebarCourseExpand;
+        bool sidebarCustExpand;
+        bool sidebarBookExpand;
+
         private void EditCustomerForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'lakeside9320CEDataSet.Customer' table. You can move, or remove it, as needed.
@@ -58,7 +64,7 @@ namespace _9320RyanMillerDatabase
                 EFCustPostcodeTB.Text = Convert.ToString(DFRowSelect["CustomerPostcode"]);
                 EFCustAddressTB.Text = Convert.ToString(DFRowSelect["CustomerAddress"]);
                 EFCustTownTB.Text = Convert.ToString(DFRowSelect["CustomerTown"]);
-                EditCustDTP.Value = Convert.ToDateTime(DFRowSelect["CustomerDOB"]);
+                EditCustDTP.Value = Convert.ToDateTime(DFRowSelect["CustomerDOB"]); // this is broken
                 EFCustPhoneTB.Text = Convert.ToString(DFRowSelect["CustomerPhone"]);
                 EFCustSpecialReqTB.Text = Convert.ToString(DFRowSelect["CustomerSpecialReqs"]);
             }
@@ -96,48 +102,207 @@ namespace _9320RyanMillerDatabase
             }
         }
 
-        #region///MENU STRIP\\\
-        private void mainMenuTSM_Click(object sender, EventArgs e)
+        private void G2HomeSideBtn_Click(object sender, EventArgs e)
         {
             Hide();
             new LakesideMenu().Show();
         }
 
-        private void addCustomerTSM_Click(object sender, EventArgs e)
+        private void G2CustSideBtn_Click(object sender, EventArgs e)
+        {
+           CustSideTimer.Start();
+        }
+
+        private void G2CourseSideBtn_Click(object sender, EventArgs e)
+        {
+            CourseSideTimer.Start();
+        }
+
+        private void G2BookSideBtn_Click(object sender, EventArgs e)
+        {
+            BookSideTimer.Start();
+        }
+
+        private void G2ReportsBtn_Click(object sender, EventArgs e)
+        {
+            ReportSideTimer.Start();
+        }
+
+        private void SidebarPB_Click(object sender, EventArgs e)
+        {
+            sidebarTimer.Start();
+        }
+
+        private void G2AddCustBtnS_Click(object sender, EventArgs e)
         {
             Hide();
             new AddCustomerForm().Show();
         }
 
-        private void deleteCustomerTSM_Click(object sender, EventArgs e)
+        private void G2EditCustBtnS_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new EditCustomerForm().Show();
+        }
+
+        private void G2DeleteCustBtnS_Click(object sender, EventArgs e)
         {
             Hide();
             new DeleteCustomerForm().Show();
         }
 
-        private void addCourseTSM_Click(object sender, EventArgs e)
+        private void AddCourseBtnS_Click(object sender, EventArgs e)
         {
             Hide();
             new AddCourseForm().Show();
         }
 
-        private void editCourseTSM_Click(object sender, EventArgs e)
+        private void EditCourseBtnS_Click(object sender, EventArgs e)
         {
             Hide();
             new EditCourseForm().Show();
         }
 
-        private void deleteCourseTSM_Click(object sender, EventArgs e)
+        private void DeleteCourseBtnS_Click(object sender, EventArgs e)
         {
             Hide();
             new DeleteCourseForm().Show();
         }
 
-        private void bookingFormTSM_Click(object sender, EventArgs e)
+        private void G2AddBookBtnS_Click(object sender, EventArgs e)
         {
             Hide();
-            new BookingForm().Show();   
+            new BookingForm().Show();
         }
-        #endregion
+
+        private void G2EditBookBtnS_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new EditBookingForm().Show();
+        }
+
+        private void G2DeleteBookBtnS_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new DeleteBookingForm().Show(); 
+        }
+
+        private void G2UnpaidBtn_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new CustomerReportOne().Show();
+        }
+
+        private void ReportSideTimer_Tick(object sender, EventArgs e)
+        {
+            if (sidebarReportsExpand)
+            {
+                ReportsContainer.Height += 10;
+                if (ReportsContainer.Height == ReportsContainer.MaximumSize.Height)
+                {
+                    sidebarReportsExpand = false;
+                    ReportSideTimer.Stop();
+                }
+            }
+            else
+            {
+                ReportsContainer.Height -= 10;
+                if (ReportsContainer.Height == ReportsContainer.MinimumSize.Height)
+                {
+                    sidebarReportsExpand = true;
+                    ReportSideTimer.Stop();
+                }
+            }
+        }
+
+        private void CustSideTimer_Tick(object sender, EventArgs e)
+        {
+            if (sidebarCustExpand)
+            {
+                customerContainer.Height += 10;
+                if (customerContainer.Height == customerContainer.MaximumSize.Height)
+                {
+                    sidebarCustExpand = false;
+                    CustSideTimer.Stop();
+                }
+            }
+            else
+            {
+                customerContainer.Height -= 10;
+                if (customerContainer.Height == customerContainer.MinimumSize.Height)
+                {
+                    sidebarCustExpand = true;
+                    CustSideTimer.Stop();
+                }
+            }
+        }
+
+        private void CourseSideTimer_Tick(object sender, EventArgs e)
+        {
+            if (sidebarCourseExpand)
+            {
+                coursesContainer.Height += 10;
+                if (coursesContainer.Height == coursesContainer.MaximumSize.Height)
+                {
+                    sidebarCourseExpand = false;
+                    CourseSideTimer.Stop();
+                }
+            }
+            else
+            {
+                coursesContainer.Height -= 10;
+                if (coursesContainer.Height == coursesContainer.MinimumSize.Height)
+                {
+                    sidebarCourseExpand = true;
+                    CourseSideTimer.Stop();
+                }
+            }
+        }
+
+        private void BookSideTimer_Tick(object sender, EventArgs e)
+        {
+            if (sidebarBookExpand)
+            {
+                bookingContainer.Height += 10;
+                if (bookingContainer.Height == bookingContainer.MaximumSize.Height)
+                {
+                    sidebarBookExpand = false;
+                    BookSideTimer.Stop();
+                }
+            }
+            else
+            {
+                bookingContainer.Height -= 10;
+                if (bookingContainer.Height == bookingContainer.MinimumSize.Height)
+                {
+                    sidebarBookExpand = true;
+                    BookSideTimer.Stop();
+                }
+            }
+        }
+
+        private void sidebarTimer_Tick(object sender, EventArgs e)
+        {
+            if (sidebarExpand)
+            {
+                sidebar.Width -= 10;
+
+                if (sidebar.Width == sidebar.MinimumSize.Width)
+                {
+                    sidebarExpand = false;
+                    sidebarTimer.Stop();
+                }
+            }
+            else
+            {
+                sidebar.Width += 10;
+
+                if (sidebar.Width == sidebar.MaximumSize.Width)
+                {
+                    sidebarExpand = true;
+                    sidebarTimer.Stop();
+                }
+            }
+        }
     }
 }   

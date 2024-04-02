@@ -92,7 +92,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(800, 63);
+            this.panel3.Size = new System.Drawing.Size(900, 63);
             this.panel3.TabIndex = 7;
             // 
             // LLMenuLbl
@@ -127,10 +127,10 @@
             this.sidebar.Controls.Add(this.bookingContainer);
             this.sidebar.Controls.Add(this.ReportsContainer);
             this.sidebar.Location = new System.Drawing.Point(0, 0);
-            this.sidebar.MaximumSize = new System.Drawing.Size(218, 452);
-            this.sidebar.MinimumSize = new System.Drawing.Size(70, 452);
+            this.sidebar.MaximumSize = new System.Drawing.Size(215, 500);
+            this.sidebar.MinimumSize = new System.Drawing.Size(70, 500);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(216, 452);
+            this.sidebar.Size = new System.Drawing.Size(70, 500);
             this.sidebar.TabIndex = 8;
             // 
             // panel1
@@ -587,7 +587,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(900, 500);
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
