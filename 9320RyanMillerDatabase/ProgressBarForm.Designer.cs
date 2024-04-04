@@ -108,6 +108,7 @@
             this.Controls.Add(this.ProgBar);
             this.Controls.Add(this.guna2PictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ProgressBarForm";
             this.Text = "ProgressBarForm";
             this.Load += new System.EventHandler(this.ProgressBarForm_Load);

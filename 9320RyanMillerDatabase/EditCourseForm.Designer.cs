@@ -154,7 +154,7 @@
             // 
             // EFCustSNDBtn
             // 
-            this.EFCustSNDBtn.Location = new System.Drawing.Point(839, 453);
+            this.EFCustSNDBtn.Location = new System.Drawing.Point(732, 454);
             this.EFCustSNDBtn.Name = "EFCustSNDBtn";
             this.EFCustSNDBtn.Size = new System.Drawing.Size(108, 46);
             this.EFCustSNDBtn.TabIndex = 88;
@@ -165,7 +165,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(471, 385);
+            this.label1.Location = new System.Drawing.Point(364, 386);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 16);
             this.label1.TabIndex = 87;
@@ -173,14 +173,14 @@
             // 
             // EFCustDOBTB
             // 
-            this.EFCustDOBTB.Location = new System.Drawing.Point(556, 382);
+            this.EFCustDOBTB.Location = new System.Drawing.Point(449, 383);
             this.EFCustDOBTB.Name = "EFCustDOBTB";
             this.EFCustDOBTB.Size = new System.Drawing.Size(106, 22);
             this.EFCustDOBTB.TabIndex = 86;
             // 
             // EFCustEditBtn
             // 
-            this.EFCustEditBtn.Location = new System.Drawing.Point(708, 453);
+            this.EFCustEditBtn.Location = new System.Drawing.Point(601, 454);
             this.EFCustEditBtn.Name = "EFCustEditBtn";
             this.EFCustEditBtn.Size = new System.Drawing.Size(104, 45);
             this.EFCustEditBtn.TabIndex = 85;
@@ -191,7 +191,7 @@
             // EFCustSpecReqLbl
             // 
             this.EFCustSpecReqLbl.AutoSize = true;
-            this.EFCustSpecReqLbl.Location = new System.Drawing.Point(665, 329);
+            this.EFCustSpecReqLbl.Location = new System.Drawing.Point(558, 330);
             this.EFCustSpecReqLbl.Name = "EFCustSpecReqLbl";
             this.EFCustSpecReqLbl.Size = new System.Drawing.Size(140, 16);
             this.EFCustSpecReqLbl.TabIndex = 84;
@@ -199,7 +199,7 @@
             // 
             // EFCustSpecialReqTB
             // 
-            this.EFCustSpecialReqTB.Location = new System.Drawing.Point(668, 349);
+            this.EFCustSpecialReqTB.Location = new System.Drawing.Point(561, 350);
             this.EFCustSpecialReqTB.Multiline = true;
             this.EFCustSpecialReqTB.Name = "EFCustSpecialReqTB";
             this.EFCustSpecialReqTB.Size = new System.Drawing.Size(332, 83);
@@ -208,7 +208,7 @@
             // EFCustPhoneLbl
             // 
             this.EFCustPhoneLbl.AutoSize = true;
-            this.EFCustPhoneLbl.Location = new System.Drawing.Point(453, 413);
+            this.EFCustPhoneLbl.Location = new System.Drawing.Point(346, 414);
             this.EFCustPhoneLbl.Name = "EFCustPhoneLbl";
             this.EFCustPhoneLbl.Size = new System.Drawing.Size(97, 16);
             this.EFCustPhoneLbl.TabIndex = 82;
@@ -216,7 +216,7 @@
             // 
             // EFCustPhoneTB
             // 
-            this.EFCustPhoneTB.Location = new System.Drawing.Point(556, 410);
+            this.EFCustPhoneTB.Location = new System.Drawing.Point(449, 411);
             this.EFCustPhoneTB.Name = "EFCustPhoneTB";
             this.EFCustPhoneTB.Size = new System.Drawing.Size(106, 22);
             this.EFCustPhoneTB.TabIndex = 81;
@@ -224,7 +224,7 @@
             // EFCustPostcodeLbl
             // 
             this.EFCustPostcodeLbl.AutoSize = true;
-            this.EFCustPostcodeLbl.Location = new System.Drawing.Point(471, 360);
+            this.EFCustPostcodeLbl.Location = new System.Drawing.Point(364, 361);
             this.EFCustPostcodeLbl.Name = "EFCustPostcodeLbl";
             this.EFCustPostcodeLbl.Size = new System.Drawing.Size(65, 16);
             this.EFCustPostcodeLbl.TabIndex = 80;
@@ -232,7 +232,7 @@
             // 
             // EFCustPostcodeTB
             // 
-            this.EFCustPostcodeTB.Location = new System.Drawing.Point(556, 354);
+            this.EFCustPostcodeTB.Location = new System.Drawing.Point(449, 355);
             this.EFCustPostcodeTB.Name = "EFCustPostcodeTB";
             this.EFCustPostcodeTB.Size = new System.Drawing.Size(106, 22);
             this.EFCustPostcodeTB.TabIndex = 79;
@@ -240,7 +240,7 @@
             // EFCustTownLbl
             // 
             this.EFCustTownLbl.AutoSize = true;
-            this.EFCustTownLbl.Location = new System.Drawing.Point(496, 332);
+            this.EFCustTownLbl.Location = new System.Drawing.Point(389, 333);
             this.EFCustTownLbl.Name = "EFCustTownLbl";
             this.EFCustTownLbl.Size = new System.Drawing.Size(40, 16);
             this.EFCustTownLbl.TabIndex = 78;
@@ -248,7 +248,7 @@
             // 
             // EFCustTownTB
             // 
-            this.EFCustTownTB.Location = new System.Drawing.Point(556, 326);
+            this.EFCustTownTB.Location = new System.Drawing.Point(449, 327);
             this.EFCustTownTB.Name = "EFCustTownTB";
             this.EFCustTownTB.Size = new System.Drawing.Size(106, 22);
             this.EFCustTownTB.TabIndex = 77;
@@ -256,7 +256,7 @@
             // EFCustAddressLbl
             // 
             this.EFCustAddressLbl.AutoSize = true;
-            this.EFCustAddressLbl.Location = new System.Drawing.Point(232, 416);
+            this.EFCustAddressLbl.Location = new System.Drawing.Point(125, 417);
             this.EFCustAddressLbl.Name = "EFCustAddressLbl";
             this.EFCustAddressLbl.Size = new System.Drawing.Size(63, 16);
             this.EFCustAddressLbl.TabIndex = 76;
@@ -264,7 +264,7 @@
             // 
             // EFEndDateTB
             // 
-            this.EFEndDateTB.Location = new System.Drawing.Point(314, 410);
+            this.EFEndDateTB.Location = new System.Drawing.Point(207, 411);
             this.EFEndDateTB.Name = "EFEndDateTB";
             this.EFEndDateTB.Size = new System.Drawing.Size(98, 22);
             this.EFEndDateTB.TabIndex = 75;
@@ -272,7 +272,7 @@
             // EFCustSurnameLbl
             // 
             this.EFCustSurnameLbl.AutoSize = true;
-            this.EFCustSurnameLbl.Location = new System.Drawing.Point(232, 385);
+            this.EFCustSurnameLbl.Location = new System.Drawing.Point(125, 386);
             this.EFCustSurnameLbl.Name = "EFCustSurnameLbl";
             this.EFCustSurnameLbl.Size = new System.Drawing.Size(66, 16);
             this.EFCustSurnameLbl.TabIndex = 74;
@@ -280,7 +280,7 @@
             // 
             // EFCustSurnameTB
             // 
-            this.EFCustSurnameTB.Location = new System.Drawing.Point(314, 382);
+            this.EFCustSurnameTB.Location = new System.Drawing.Point(207, 383);
             this.EFCustSurnameTB.Name = "EFCustSurnameTB";
             this.EFCustSurnameTB.Size = new System.Drawing.Size(98, 22);
             this.EFCustSurnameTB.TabIndex = 73;
@@ -288,7 +288,7 @@
             // EFCourseTitleLbl
             // 
             this.EFCourseTitleLbl.AutoSize = true;
-            this.EFCourseTitleLbl.Location = new System.Drawing.Point(232, 360);
+            this.EFCourseTitleLbl.Location = new System.Drawing.Point(125, 361);
             this.EFCourseTitleLbl.Name = "EFCourseTitleLbl";
             this.EFCourseTitleLbl.Size = new System.Drawing.Size(79, 16);
             this.EFCourseTitleLbl.TabIndex = 72;
@@ -296,7 +296,7 @@
             // 
             // EFCourseTitleTB
             // 
-            this.EFCourseTitleTB.Location = new System.Drawing.Point(314, 354);
+            this.EFCourseTitleTB.Location = new System.Drawing.Point(207, 355);
             this.EFCourseTitleTB.Name = "EFCourseTitleTB";
             this.EFCourseTitleTB.Size = new System.Drawing.Size(98, 22);
             this.EFCourseTitleTB.TabIndex = 71;
@@ -304,7 +304,7 @@
             // EFCourseIDLbl
             // 
             this.EFCourseIDLbl.AutoSize = true;
-            this.EFCourseIDLbl.Location = new System.Drawing.Point(238, 335);
+            this.EFCourseIDLbl.Location = new System.Drawing.Point(131, 336);
             this.EFCourseIDLbl.Name = "EFCourseIDLbl";
             this.EFCourseIDLbl.Size = new System.Drawing.Size(66, 16);
             this.EFCourseIDLbl.TabIndex = 70;
@@ -312,7 +312,7 @@
             // 
             // EFCourseIDTB
             // 
-            this.EFCourseIDTB.Location = new System.Drawing.Point(314, 329);
+            this.EFCourseIDTB.Location = new System.Drawing.Point(207, 330);
             this.EFCourseIDTB.Name = "EFCourseIDTB";
             this.EFCourseIDTB.ReadOnly = true;
             this.EFCourseIDTB.Size = new System.Drawing.Size(98, 22);
@@ -332,7 +332,7 @@
             this.capacityDataGridViewTextBoxColumn,
             this.cManagerNameDataGridViewTextBoxColumn});
             this.EFCustDGV.DataSource = this.coursesBindingSource;
-            this.EFCustDGV.Location = new System.Drawing.Point(326, 97);
+            this.EFCustDGV.Location = new System.Drawing.Point(219, 98);
             this.EFCustDGV.Name = "EFCustDGV";
             this.EFCustDGV.RowHeadersWidth = 51;
             this.EFCustDGV.RowTemplate.Height = 24;
@@ -914,6 +914,7 @@
             this.Controls.Add(this.EFCustDGV);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EditCourseForm";
             this.Text = "EditCourse";
             this.Load += new System.EventHandler(this.EditCourse_Load);

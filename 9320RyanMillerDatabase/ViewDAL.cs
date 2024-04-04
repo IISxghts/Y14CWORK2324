@@ -14,15 +14,17 @@ namespace _9320RyanMillerDatabase
     {
         public static string _connectionString = ConfigurationManager.ConnectionStrings["LakesideConnection"].ConnectionString;
 
-        public static DataTable ViewThingy()
+        public static DataTable ViewThingy(string choice)
         {
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
+               
+                
                 connection.Open();
 
                 SqlCommand command = new SqlCommand();
 
-                string sqlQuery = @"SELECT BookingID, Booking.CustomerNum, Courses.CourseID, CustomerForename, CustomerSurname, CourseTitle, Price, StartDate FROM Booking
+                    string sqlQuery = @"SELECT BookingID, Booking.CustomerNum, Courses.CourseID, CustomerForename, CustomerSurname, CourseTitle, Price, StartDate, EndDate FROM Booking
                                     JOIN Courses on Courses.CourseID = Booking.CourseID JOIN Customer on Customer.CustomerNum = Booking.CustomerNum";
 
                 command.CommandText = sqlQuery;

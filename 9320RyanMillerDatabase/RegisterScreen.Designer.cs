@@ -325,6 +325,7 @@
             this.Controls.Add(this.G2UserPanel);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RegisterScreen";
             this.Text = "RegisterScreen";
             this.guna2Panel1.ResumeLayout(false);

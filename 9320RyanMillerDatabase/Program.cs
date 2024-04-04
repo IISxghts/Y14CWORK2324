@@ -18,7 +18,7 @@ namespace _9320RyanMillerDatabase
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             SetupDataDirectoryPath();
-            Application.Run(new FlowPanel());
+            Application.Run(new LakesideMenu());
         }
         private static void SetupDataDirectoryPath()
         {

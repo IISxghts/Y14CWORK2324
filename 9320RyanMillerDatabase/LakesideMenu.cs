@@ -20,7 +20,6 @@ namespace _9320RyanMillerDatabase
         {
             InitializeComponent();
             CenterToScreen();
-            LLMenuGreetLbl.Text = "Welcome, " + DataModel.DisplayUname + "!";
         }
          
 
@@ -60,7 +59,7 @@ namespace _9320RyanMillerDatabase
         }
         private void G2SettingsBtn_Click(object sender, EventArgs e)
         {
-            UC_Settings settings = new UC_Settings();
+            UC_Staff settings = new UC_Staff();
             AddUserControls(settings);
         }
         #endregion

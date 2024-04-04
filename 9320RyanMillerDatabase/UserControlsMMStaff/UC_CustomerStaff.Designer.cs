@@ -32,6 +32,7 @@
             this.G2BtnEditCust = new Guna.UI2.WinForms.Guna2CircleButton();
             this.G2BtnAddCust = new Guna.UI2.WinForms.Guna2CircleButton();
             this.LLMenuLbl = new System.Windows.Forms.Label();
+            this.G2ViewBookBtn = new Guna.UI2.WinForms.Guna2CircleButton();
             this.SuspendLayout();
             // 
             // G2BtnDelCust
@@ -43,7 +44,7 @@
             this.G2BtnDelCust.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(215)))), ((int)(((byte)(150)))));
             this.G2BtnDelCust.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.G2BtnDelCust.ForeColor = System.Drawing.Color.White;
-            this.G2BtnDelCust.Location = new System.Drawing.Point(391, 84);
+            this.G2BtnDelCust.Location = new System.Drawing.Point(395, 84);
             this.G2BtnDelCust.Name = "G2BtnDelCust";
             this.G2BtnDelCust.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.G2BtnDelCust.Size = new System.Drawing.Size(150, 150);
@@ -60,7 +61,7 @@
             this.G2BtnEditCust.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(215)))), ((int)(((byte)(150)))));
             this.G2BtnEditCust.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.G2BtnEditCust.ForeColor = System.Drawing.Color.White;
-            this.G2BtnEditCust.Location = new System.Drawing.Point(204, 84);
+            this.G2BtnEditCust.Location = new System.Drawing.Point(206, 84);
             this.G2BtnEditCust.Name = "G2BtnEditCust";
             this.G2BtnEditCust.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.G2BtnEditCust.Size = new System.Drawing.Size(150, 150);
@@ -96,10 +97,27 @@
             this.LLMenuLbl.TabIndex = 9;
             this.LLMenuLbl.Text = "Customers";
             // 
+            // G2ViewBookBtn
+            // 
+            this.G2ViewBookBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.G2ViewBookBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.G2ViewBookBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.G2ViewBookBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.G2ViewBookBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(215)))), ((int)(((byte)(150)))));
+            this.G2ViewBookBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.G2ViewBookBtn.ForeColor = System.Drawing.Color.White;
+            this.G2ViewBookBtn.Location = new System.Drawing.Point(584, 84);
+            this.G2ViewBookBtn.Name = "G2ViewBookBtn";
+            this.G2ViewBookBtn.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.G2ViewBookBtn.Size = new System.Drawing.Size(150, 150);
+            this.G2ViewBookBtn.TabIndex = 13;
+            this.G2ViewBookBtn.Text = "View Customer";
+            // 
             // UC_CustomerStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.G2ViewBookBtn);
             this.Controls.Add(this.G2BtnDelCust);
             this.Controls.Add(this.G2BtnEditCust);
             this.Controls.Add(this.G2BtnAddCust);
@@ -117,5 +135,6 @@
         private Guna.UI2.WinForms.Guna2CircleButton G2BtnEditCust;
         private Guna.UI2.WinForms.Guna2CircleButton G2BtnAddCust;
         private System.Windows.Forms.Label LLMenuLbl;
+        private Guna.UI2.WinForms.Guna2CircleButton G2ViewBookBtn;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewBookingsForm));
             this.BookingViewDGV = new System.Windows.Forms.DataGridView();
             this.ViewBookingBtn = new System.Windows.Forms.Button();
@@ -63,6 +64,13 @@
             this.ReportsContainer = new System.Windows.Forms.Panel();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.G2UnpaidBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.ReportSideTimer = new System.Windows.Forms.Timer(this.components);
+            this.CustSideTimer = new System.Windows.Forms.Timer(this.components);
+            this.CourseSideTimer = new System.Windows.Forms.Timer(this.components);
+            this.BookSideTimer = new System.Windows.Forms.Timer(this.components);
+            this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.BookingViewDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -84,16 +92,16 @@
             // BookingViewDGV
             // 
             this.BookingViewDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.BookingViewDGV.Location = new System.Drawing.Point(221, 121);
+            this.BookingViewDGV.Location = new System.Drawing.Point(91, 124);
             this.BookingViewDGV.Name = "BookingViewDGV";
             this.BookingViewDGV.RowHeadersWidth = 51;
             this.BookingViewDGV.RowTemplate.Height = 24;
-            this.BookingViewDGV.Size = new System.Drawing.Size(776, 312);
+            this.BookingViewDGV.Size = new System.Drawing.Size(897, 312);
             this.BookingViewDGV.TabIndex = 0;
             // 
             // ViewBookingBtn
             // 
-            this.ViewBookingBtn.Location = new System.Drawing.Point(221, 439);
+            this.ViewBookingBtn.Location = new System.Drawing.Point(771, 68);
             this.ViewBookingBtn.Name = "ViewBookingBtn";
             this.ViewBookingBtn.Size = new System.Drawing.Size(226, 51);
             this.ViewBookingBtn.TabIndex = 1;
@@ -330,6 +338,7 @@
             this.G2AddCustBtnS.TabIndex = 17;
             this.G2AddCustBtnS.Text = "Add Customer";
             this.G2AddCustBtnS.UseTransparentBackground = true;
+            this.G2AddCustBtnS.Click += new System.EventHandler(this.G2AddCustBtnS_Click);
             // 
             // G2DeleteCustBtnS
             // 
@@ -348,6 +357,7 @@
             this.G2DeleteCustBtnS.TabIndex = 18;
             this.G2DeleteCustBtnS.Text = "Delete Customer";
             this.G2DeleteCustBtnS.UseTransparentBackground = true;
+            this.G2DeleteCustBtnS.Click += new System.EventHandler(this.G2DeleteCustBtnS_Click);
             // 
             // G2EditCustBtnS
             // 
@@ -366,6 +376,7 @@
             this.G2EditCustBtnS.TabIndex = 16;
             this.G2EditCustBtnS.Text = "Edit Customer";
             this.G2EditCustBtnS.UseTransparentBackground = true;
+            this.G2EditCustBtnS.Click += new System.EventHandler(this.G2EditCustBtnS_Click);
             // 
             // coursesContainer
             // 
@@ -398,6 +409,7 @@
             this.AddCourseBtnS.TabIndex = 20;
             this.AddCourseBtnS.Text = "Add Course";
             this.AddCourseBtnS.UseTransparentBackground = true;
+            this.AddCourseBtnS.Click += new System.EventHandler(this.AddCourseBtnS_Click);
             // 
             // DeleteCourseBtnS
             // 
@@ -416,6 +428,7 @@
             this.DeleteCourseBtnS.TabIndex = 21;
             this.DeleteCourseBtnS.Text = "Delete Course";
             this.DeleteCourseBtnS.UseTransparentBackground = true;
+            this.DeleteCourseBtnS.Click += new System.EventHandler(this.DeleteCourseBtnS_Click);
             // 
             // guna2PictureBox7
             // 
@@ -445,6 +458,7 @@
             this.EditCourseBtnS.TabIndex = 19;
             this.EditCourseBtnS.Text = "Edit Course";
             this.EditCourseBtnS.UseTransparentBackground = true;
+            this.EditCourseBtnS.Click += new System.EventHandler(this.EditCourseBtnS_Click);
             // 
             // bookingContainer
             // 
@@ -477,6 +491,7 @@
             this.G2AddBookBtnS.TabIndex = 17;
             this.G2AddBookBtnS.Text = "Add Booking";
             this.G2AddBookBtnS.UseTransparentBackground = true;
+            this.G2AddBookBtnS.Click += new System.EventHandler(this.G2AddBookBtnS_Click);
             // 
             // G2DeleteBookBtnS
             // 
@@ -495,6 +510,7 @@
             this.G2DeleteBookBtnS.TabIndex = 18;
             this.G2DeleteBookBtnS.Text = "Delete Booking";
             this.G2DeleteBookBtnS.UseTransparentBackground = true;
+            this.G2DeleteBookBtnS.Click += new System.EventHandler(this.G2DeleteBookBtnS_Click);
             // 
             // guna2PictureBox8
             // 
@@ -524,6 +540,7 @@
             this.G2EditBookBtnS.TabIndex = 16;
             this.G2EditBookBtnS.Text = "Edit Booking";
             this.G2EditBookBtnS.UseTransparentBackground = true;
+            this.G2EditBookBtnS.Click += new System.EventHandler(this.G2EditBookBtnS_Click);
             // 
             // ReportsContainer
             // 
@@ -565,12 +582,57 @@
             this.G2UnpaidBtn.TabIndex = 14;
             this.G2UnpaidBtn.Text = "Unpaid Orders";
             this.G2UnpaidBtn.UseTransparentBackground = true;
+            this.G2UnpaidBtn.Click += new System.EventHandler(this.G2UnpaidBtn_Click);
+            // 
+            // ReportSideTimer
+            // 
+            this.ReportSideTimer.Interval = 10;
+            this.ReportSideTimer.Tick += new System.EventHandler(this.ReportSideTimer_Tick);
+            // 
+            // CustSideTimer
+            // 
+            this.CustSideTimer.Interval = 10;
+            this.CustSideTimer.Tick += new System.EventHandler(this.CustSideTimer_Tick);
+            // 
+            // CourseSideTimer
+            // 
+            this.CourseSideTimer.Interval = 10;
+            this.CourseSideTimer.Tick += new System.EventHandler(this.CourseSideTimer_Tick);
+            // 
+            // BookSideTimer
+            // 
+            this.BookSideTimer.Interval = 10;
+            this.BookSideTimer.Tick += new System.EventHandler(this.BookSideTimer_Tick);
+            // 
+            // sidebarTimer
+            // 
+            this.sidebarTimer.Interval = 10;
+            this.sidebarTimer.Tick += new System.EventHandler(this.sidebarTimer_Tick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(361, 83);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(92, 16);
+            this.label1.TabIndex = 92;
+            this.label1.Text = "Please select ";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(459, 82);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 93;
             // 
             // ViewBookingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 500);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.ViewBookingBtn);
@@ -597,6 +659,7 @@
             this.ReportsContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -636,5 +699,12 @@
         private System.Windows.Forms.Panel ReportsContainer;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Guna.UI2.WinForms.Guna2Button G2UnpaidBtn;
+        private System.Windows.Forms.Timer ReportSideTimer;
+        private System.Windows.Forms.Timer CustSideTimer;
+        private System.Windows.Forms.Timer CourseSideTimer;
+        private System.Windows.Forms.Timer BookSideTimer;
+        private System.Windows.Forms.Timer sidebarTimer;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

@@ -38,7 +38,7 @@
             this.LLMenuLbl = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.G2SettingsBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.G2StaffBtn = new Guna.UI2.WinForms.Guna2Button();
             this.G2BtnBookings = new Guna.UI2.WinForms.Guna2Button();
             this.G2BtnReports = new Guna.UI2.WinForms.Guna2Button();
             this.G2BtnCourses = new Guna.UI2.WinForms.Guna2Button();
@@ -134,7 +134,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
-            this.panel4.Controls.Add(this.G2SettingsBtn);
+            this.panel4.Controls.Add(this.G2StaffBtn);
             this.panel4.Controls.Add(this.G2BtnBookings);
             this.panel4.Controls.Add(this.G2BtnReports);
             this.panel4.Controls.Add(this.G2BtnCourses);
@@ -145,25 +145,25 @@
             this.panel4.Size = new System.Drawing.Size(953, 70);
             this.panel4.TabIndex = 2;
             // 
-            // G2SettingsBtn
+            // G2StaffBtn
             // 
-            this.G2SettingsBtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.G2SettingsBtn.CustomBorderColor = System.Drawing.Color.Transparent;
-            this.G2SettingsBtn.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.G2SettingsBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.G2SettingsBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.G2SettingsBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.G2SettingsBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.G2SettingsBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
-            this.G2SettingsBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.G2SettingsBtn.ForeColor = System.Drawing.Color.White;
-            this.G2SettingsBtn.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(215)))), ((int)(((byte)(150)))));
-            this.G2SettingsBtn.Location = new System.Drawing.Point(768, 3);
-            this.G2SettingsBtn.Name = "G2SettingsBtn";
-            this.G2SettingsBtn.Size = new System.Drawing.Size(185, 67);
-            this.G2SettingsBtn.TabIndex = 5;
-            this.G2SettingsBtn.Text = "Settings";
-            this.G2SettingsBtn.Click += new System.EventHandler(this.G2SettingsBtn_Click);
+            this.G2StaffBtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.G2StaffBtn.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.G2StaffBtn.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.G2StaffBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.G2StaffBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.G2StaffBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.G2StaffBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.G2StaffBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.G2StaffBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.G2StaffBtn.ForeColor = System.Drawing.Color.White;
+            this.G2StaffBtn.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(215)))), ((int)(((byte)(150)))));
+            this.G2StaffBtn.Location = new System.Drawing.Point(576, 3);
+            this.G2StaffBtn.Name = "G2StaffBtn";
+            this.G2StaffBtn.Size = new System.Drawing.Size(185, 67);
+            this.G2StaffBtn.TabIndex = 5;
+            this.G2StaffBtn.Text = "Staff";
+            this.G2StaffBtn.Click += new System.EventHandler(this.G2SettingsBtn_Click);
             // 
             // G2BtnBookings
             // 
@@ -198,7 +198,7 @@
             this.G2BtnReports.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.G2BtnReports.ForeColor = System.Drawing.Color.White;
             this.G2BtnReports.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(215)))), ((int)(((byte)(150)))));
-            this.G2BtnReports.Location = new System.Drawing.Point(577, 3);
+            this.G2BtnReports.Location = new System.Drawing.Point(765, 3);
             this.G2BtnReports.Name = "G2BtnReports";
             this.G2BtnReports.Size = new System.Drawing.Size(185, 67);
             this.G2BtnReports.TabIndex = 4;
@@ -254,6 +254,7 @@
             // 
             // LMLoadingAnim
             // 
+            this.LMLoadingAnim.AnimationType = Guna.UI2.WinForms.Guna2AnimateWindow.AnimateWindowType.AW_BLEND;
             this.LMLoadingAnim.TargetForm = this;
             // 
             // tableAdapterManager1
@@ -272,6 +273,7 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LakesideMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panel1.ResumeLayout(false);
@@ -301,6 +303,6 @@
         private System.Windows.Forms.Label LLMenuGreetLbl;
         private Guna.UI2.WinForms.Guna2AnimateWindow LMLoadingAnim;
         private System.Windows.Forms.Label ExitLbl;
-        private Guna.UI2.WinForms.Guna2Button G2SettingsBtn;
+        private Guna.UI2.WinForms.Guna2Button G2StaffBtn;
     }
 }

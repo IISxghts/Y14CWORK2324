@@ -22,5 +22,23 @@ namespace _9320RyanMillerDatabase.UserControls
             ((LakesideMenu)this.TopLevelControl).Hide();
             new BookingForm().Show();
         }
+
+        private void G2BtnEditBook_Click(object sender, EventArgs e)
+        {
+            ((LakesideMenu)this.TopLevelControl).Hide();
+            new EditBookingForm().Show();
+        }
+
+        private void G2BtnDeleteBook_Click(object sender, EventArgs e)
+        {
+            ((LakesideMenu)this.TopLevelControl).Hide();
+            new DeleteBookingForm().Show();
+        }
+
+        private void G2ViewBookBtn_Click(object sender, EventArgs e)
+        {
+            ((LakesideMenu)this.TopLevelControl).Hide();
+            new ViewBookingsForm().Show();
+        }
     }
 }

@@ -101,7 +101,7 @@ namespace _9320RyanMillerDatabase
                 CustomerTableRefresh();
             }
         }
-
+        #region sidebar controls
         private void G2HomeSideBtn_Click(object sender, EventArgs e)
         {
             Hide();
@@ -304,5 +304,6 @@ namespace _9320RyanMillerDatabase
                 }
             }
         }
+        #endregion
     }
 }   

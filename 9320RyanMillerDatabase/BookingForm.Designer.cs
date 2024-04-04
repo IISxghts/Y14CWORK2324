@@ -65,18 +65,15 @@
             this.CustSideTimer = new System.Windows.Forms.Timer(this.components);
             this.CourseSideTimer = new System.Windows.Forms.Timer(this.components);
             this.BookSideTimer = new System.Windows.Forms.Timer(this.components);
-            this.SidebarPB = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox10 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox9 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox8 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.MenuSideLbl = new System.Windows.Forms.Label();
+            this.SidebarPB = new Guna.UI2.WinForms.Guna2PictureBox();
             this.homePanel = new System.Windows.Forms.Panel();
+            this.guna2PictureBox10 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.G2HomeSideBtn = new Guna.UI2.WinForms.Guna2Button();
             this.customerContainer = new System.Windows.Forms.Panel();
+            this.guna2PictureBox9 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.G2AddCustBtnS = new Guna.UI2.WinForms.Guna2Button();
             this.G2DeleteCustBtnS = new Guna.UI2.WinForms.Guna2Button();
             this.G2CustSideBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -84,14 +81,17 @@
             this.coursesContainer = new System.Windows.Forms.Panel();
             this.AddCourseBtnS = new Guna.UI2.WinForms.Guna2Button();
             this.DeleteCourseBtnS = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.EditCourseBtnS = new Guna.UI2.WinForms.Guna2Button();
             this.G2CourseSideBtn = new Guna.UI2.WinForms.Guna2Button();
             this.bookingContainer = new System.Windows.Forms.Panel();
             this.G2AddBookBtnS = new Guna.UI2.WinForms.Guna2Button();
             this.G2DeleteBookBtnS = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2PictureBox8 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.G2EditBookBtnS = new Guna.UI2.WinForms.Guna2Button();
             this.G2BookSideBtn = new Guna.UI2.WinForms.Guna2Button();
             this.ReportsContainer = new System.Windows.Forms.Panel();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.G2UnpaidBtn = new Guna.UI2.WinForms.Guna2Button();
             this.G2ReportsBtn = new Guna.UI2.WinForms.Guna2Button();
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
@@ -103,19 +103,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.DGVCourse)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DiscountSelectBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.QuantitySelectBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SidebarPB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.sidebar.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SidebarPB)).BeginInit();
             this.homePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox10)).BeginInit();
             this.customerContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox9)).BeginInit();
             this.coursesContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).BeginInit();
             this.bookingContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).BeginInit();
             this.ReportsContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // LLMenuLbl
@@ -478,73 +478,6 @@
             this.BookSideTimer.Interval = 10;
             this.BookSideTimer.Tick += new System.EventHandler(this.BookSideTimer_Tick);
             // 
-            // SidebarPB
-            // 
-            this.SidebarPB.Image = ((System.Drawing.Image)(resources.GetObject("SidebarPB.Image")));
-            this.SidebarPB.ImageRotate = 0F;
-            this.SidebarPB.Location = new System.Drawing.Point(17, 13);
-            this.SidebarPB.Name = "SidebarPB";
-            this.SidebarPB.Size = new System.Drawing.Size(39, 32);
-            this.SidebarPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.SidebarPB.TabIndex = 12;
-            this.SidebarPB.TabStop = false;
-            this.SidebarPB.Click += new System.EventHandler(this.SidebarPB_Click);
-            // 
-            // guna2PictureBox10
-            // 
-            this.guna2PictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox10.Image")));
-            this.guna2PictureBox10.ImageRotate = 0F;
-            this.guna2PictureBox10.Location = new System.Drawing.Point(0, 0);
-            this.guna2PictureBox10.Name = "guna2PictureBox10";
-            this.guna2PictureBox10.Size = new System.Drawing.Size(61, 46);
-            this.guna2PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox10.TabIndex = 12;
-            this.guna2PictureBox10.TabStop = false;
-            // 
-            // guna2PictureBox9
-            // 
-            this.guna2PictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox9.Image")));
-            this.guna2PictureBox9.ImageRotate = 0F;
-            this.guna2PictureBox9.Location = new System.Drawing.Point(0, 0);
-            this.guna2PictureBox9.Name = "guna2PictureBox9";
-            this.guna2PictureBox9.Size = new System.Drawing.Size(68, 52);
-            this.guna2PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox9.TabIndex = 12;
-            this.guna2PictureBox9.TabStop = false;
-            // 
-            // guna2PictureBox7
-            // 
-            this.guna2PictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox7.Image")));
-            this.guna2PictureBox7.ImageRotate = 0F;
-            this.guna2PictureBox7.Location = new System.Drawing.Point(-3, 0);
-            this.guna2PictureBox7.Name = "guna2PictureBox7";
-            this.guna2PictureBox7.Size = new System.Drawing.Size(64, 52);
-            this.guna2PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox7.TabIndex = 12;
-            this.guna2PictureBox7.TabStop = false;
-            // 
-            // guna2PictureBox8
-            // 
-            this.guna2PictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox8.Image")));
-            this.guna2PictureBox8.ImageRotate = 0F;
-            this.guna2PictureBox8.Location = new System.Drawing.Point(0, -2);
-            this.guna2PictureBox8.Name = "guna2PictureBox8";
-            this.guna2PictureBox8.Size = new System.Drawing.Size(61, 52);
-            this.guna2PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox8.TabIndex = 12;
-            this.guna2PictureBox8.TabStop = false;
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.Image = global::_9320RyanMillerDatabase.Properties.Resources.DocIconFinal;
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(61, 46);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox2.TabIndex = 14;
-            this.guna2PictureBox2.TabStop = false;
-            // 
             // sidebar
             // 
             this.sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
@@ -558,7 +491,7 @@
             this.sidebar.MaximumSize = new System.Drawing.Size(215, 500);
             this.sidebar.MinimumSize = new System.Drawing.Size(70, 500);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(70, 500);
+            this.sidebar.Size = new System.Drawing.Size(215, 500);
             this.sidebar.TabIndex = 58;
             // 
             // panel1
@@ -581,6 +514,18 @@
             this.MenuSideLbl.TabIndex = 13;
             this.MenuSideLbl.Text = "Menu";
             // 
+            // SidebarPB
+            // 
+            this.SidebarPB.Image = ((System.Drawing.Image)(resources.GetObject("SidebarPB.Image")));
+            this.SidebarPB.ImageRotate = 0F;
+            this.SidebarPB.Location = new System.Drawing.Point(17, 13);
+            this.SidebarPB.Name = "SidebarPB";
+            this.SidebarPB.Size = new System.Drawing.Size(39, 32);
+            this.SidebarPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.SidebarPB.TabIndex = 12;
+            this.SidebarPB.TabStop = false;
+            this.SidebarPB.Click += new System.EventHandler(this.SidebarPB_Click);
+            // 
             // homePanel
             // 
             this.homePanel.Controls.Add(this.guna2PictureBox10);
@@ -589,6 +534,17 @@
             this.homePanel.Name = "homePanel";
             this.homePanel.Size = new System.Drawing.Size(215, 46);
             this.homePanel.TabIndex = 15;
+            // 
+            // guna2PictureBox10
+            // 
+            this.guna2PictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox10.Image")));
+            this.guna2PictureBox10.ImageRotate = 0F;
+            this.guna2PictureBox10.Location = new System.Drawing.Point(0, 0);
+            this.guna2PictureBox10.Name = "guna2PictureBox10";
+            this.guna2PictureBox10.Size = new System.Drawing.Size(61, 46);
+            this.guna2PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox10.TabIndex = 12;
+            this.guna2PictureBox10.TabStop = false;
             // 
             // G2HomeSideBtn
             // 
@@ -619,6 +575,17 @@
             this.customerContainer.Name = "customerContainer";
             this.customerContainer.Size = new System.Drawing.Size(215, 50);
             this.customerContainer.TabIndex = 21;
+            // 
+            // guna2PictureBox9
+            // 
+            this.guna2PictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox9.Image")));
+            this.guna2PictureBox9.ImageRotate = 0F;
+            this.guna2PictureBox9.Location = new System.Drawing.Point(0, 0);
+            this.guna2PictureBox9.Name = "guna2PictureBox9";
+            this.guna2PictureBox9.Size = new System.Drawing.Size(68, 52);
+            this.guna2PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox9.TabIndex = 12;
+            this.guna2PictureBox9.TabStop = false;
             // 
             // G2AddCustBtnS
             // 
@@ -748,6 +715,17 @@
             this.DeleteCourseBtnS.UseTransparentBackground = true;
             this.DeleteCourseBtnS.Click += new System.EventHandler(this.DeleteCourseBtnS_Click);
             // 
+            // guna2PictureBox7
+            // 
+            this.guna2PictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox7.Image")));
+            this.guna2PictureBox7.ImageRotate = 0F;
+            this.guna2PictureBox7.Location = new System.Drawing.Point(-3, 0);
+            this.guna2PictureBox7.Name = "guna2PictureBox7";
+            this.guna2PictureBox7.Size = new System.Drawing.Size(64, 52);
+            this.guna2PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox7.TabIndex = 12;
+            this.guna2PictureBox7.TabStop = false;
+            // 
             // EditCourseBtnS
             // 
             this.EditCourseBtnS.Animated = true;
@@ -835,6 +813,17 @@
             this.G2DeleteBookBtnS.UseTransparentBackground = true;
             this.G2DeleteBookBtnS.Click += new System.EventHandler(this.G2DeleteBookBtnS_Click);
             // 
+            // guna2PictureBox8
+            // 
+            this.guna2PictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox8.Image")));
+            this.guna2PictureBox8.ImageRotate = 0F;
+            this.guna2PictureBox8.Location = new System.Drawing.Point(0, -2);
+            this.guna2PictureBox8.Name = "guna2PictureBox8";
+            this.guna2PictureBox8.Size = new System.Drawing.Size(61, 52);
+            this.guna2PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox8.TabIndex = 12;
+            this.guna2PictureBox8.TabStop = false;
+            // 
             // G2EditBookBtnS
             // 
             this.G2EditBookBtnS.Animated = true;
@@ -881,6 +870,17 @@
             this.ReportsContainer.Name = "ReportsContainer";
             this.ReportsContainer.Size = new System.Drawing.Size(209, 46);
             this.ReportsContainer.TabIndex = 9;
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Image = global::_9320RyanMillerDatabase.Properties.Resources.DocIconFinal;
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(61, 46);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox2.TabIndex = 14;
+            this.guna2PictureBox2.TabStop = false;
             // 
             // G2UnpaidBtn
             // 
@@ -949,6 +949,7 @@
             this.Controls.Add(this.DGVCourse);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BookingForm";
             this.Text = "Booking Form";
             this.Load += new System.EventHandler(this.TempBookingForm_Load);
@@ -961,20 +962,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.DGVCourse)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DiscountSelectBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.QuantitySelectBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SidebarPB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.sidebar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SidebarPB)).EndInit();
             this.homePanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox10)).EndInit();
             this.customerContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox9)).EndInit();
             this.coursesContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).EndInit();
             this.bookingContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).EndInit();
             this.ReportsContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

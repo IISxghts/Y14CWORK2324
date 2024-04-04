@@ -303,6 +303,12 @@
     <Compile Include="AddCourseForm.Designer.cs">
       <DependentUpon>AddCourseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddStaffForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStaffForm.Designer.cs">
+      <DependentUpon>AddStaffForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="BookingDAL.cs" />
     <Compile Include="BookingModel.cs" />
     <Compile Include="CourseDAL.cs" />
@@ -327,17 +333,29 @@
     <Compile Include="DeleteBookingForm.Designer.cs">
       <DependentUpon>DeleteBookingForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DeleteStaffForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteStaffForm.Designer.cs">
+      <DependentUpon>DeleteStaffForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditBookingForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EditBookingForm.Designer.cs">
       <DependentUpon>EditBookingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="FlowPanel.cs">
+    <Compile Include="CustomerReportTwo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FlowPanel.Designer.cs">
-      <DependentUpon>FlowPanel.cs</DependentUpon>
+    <Compile Include="CustomerReportTwo.Designer.cs">
+      <DependentUpon>CustomerReportTwo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditStaffForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditStaffForm.Designer.cs">
+      <DependentUpon>EditStaffForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Lakeside9320CoursesEditDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -470,12 +488,6 @@
     <Compile Include="UserControlsMMStaff\UC_CoursesStaff.Designer.cs">
       <DependentUpon>UC_CoursesStaff.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControlsMMStaff\UC_CustomerStaf.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControlsMMStaff\UC_CustomerStaf.Designer.cs">
-      <DependentUpon>UC_CustomerStaf.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControlsMMStaff\UC_CustomerStaff.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -488,11 +500,11 @@
     <Compile Include="UserControlsMMStaff\UC_ReportsStaff.Designer.cs">
       <DependentUpon>UC_ReportsStaff.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControlsMMStaff\UC_Settings.cs">
+    <Compile Include="UserControlsMMStaff\UC_Staff.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControlsMMStaff\UC_Settings.Designer.cs">
-      <DependentUpon>UC_Settings.cs</DependentUpon>
+    <Compile Include="UserControlsMMStaff\UC_Staff.Designer.cs">
+      <DependentUpon>UC_Staff.cs</DependentUpon>
     </Compile>
     <Compile Include="ValidationClass.cs" />
     <Compile Include="ViewBookingsForm.cs">
@@ -508,6 +520,9 @@
     <EmbeddedResource Include="AddCustomerForm.resx">
       <DependentUpon>AddCustomerForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddStaffForm.resx">
+      <DependentUpon>AddStaffForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomerListReport.rdlc" />
     <EmbeddedResource Include="CustomerReportOne.resx">
       <DependentUpon>CustomerReportOne.cs</DependentUpon>
@@ -515,12 +530,19 @@
     <EmbeddedResource Include="DeleteBookingForm.resx">
       <DependentUpon>DeleteBookingForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DeleteStaffForm.resx">
+      <DependentUpon>DeleteStaffForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditBookingForm.resx">
       <DependentUpon>EditBookingForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FlowPanel.resx">
-      <DependentUpon>FlowPanel.cs</DependentUpon>
+    <EmbeddedResource Include="CustomerReportTwo.resx">
+      <DependentUpon>CustomerReportTwo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EditStaffForm.resx">
+      <DependentUpon>EditStaffForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerReportTwo.rdlc" />
     <EmbeddedResource Include="SearchForm.resx">
       <DependentUpon>SearchForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -571,17 +593,14 @@
     <EmbeddedResource Include="UserControlsMMStaff\UC_CoursesStaff.resx">
       <DependentUpon>UC_CoursesStaff.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlsMMStaff\UC_CustomerStaf.resx">
-      <DependentUpon>UC_CustomerStaf.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserControlsMMStaff\UC_CustomerStaff.resx">
       <DependentUpon>UC_CustomerStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlsMMStaff\UC_ReportsStaff.resx">
       <DependentUpon>UC_ReportsStaff.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlsMMStaff\UC_Settings.resx">
-      <DependentUpon>UC_Settings.cs</DependentUpon>
+    <EmbeddedResource Include="UserControlsMMStaff\UC_Staff.resx">
+      <DependentUpon>UC_Staff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewBookingsForm.resx">
       <DependentUpon>ViewBookingsForm.cs</DependentUpon>

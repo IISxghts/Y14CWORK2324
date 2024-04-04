@@ -592,6 +592,7 @@
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EditBookingForm";
             this.Text = "Edit Bookings ";
             this.panel3.ResumeLayout(false);

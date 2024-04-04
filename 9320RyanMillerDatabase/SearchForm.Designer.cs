@@ -736,6 +736,7 @@
             this.Controls.Add(this.CriteriaLbl);
             this.Controls.Add(this.CustomerInfoDGV);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SearchForm";
             this.Text = "CustomerSearchForm";
             ((System.ComponentModel.ISupportInitialize)(this.CustomerInfoDGV)).EndInit();

@@ -751,6 +751,7 @@
             this.Controls.Add(this.ViewCustIDLbl);
             this.Controls.Add(this.CustDeleteDGV);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DeleteCustomerForm";
             this.Text = "Delete Customer";
             this.Load += new System.EventHandler(this.ViewCustomer_Load);

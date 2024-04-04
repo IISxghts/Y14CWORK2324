@@ -23,6 +23,11 @@ namespace _9320RyanMillerDatabase.UserControls
             new CustomerReportOne().Show();
         }
 
+        private void G2UnpaidOrdersBtn_Click(object sender, EventArgs e)
+        {
+            ((LakesideMenu)this.TopLevelControl).Hide();
+            new CustomerReportTwo().Show();
+        }
         private void G2SearchBtn_Click(object sender, EventArgs e)
         {
             ((LakesideMenu)this.TopLevelControl).Hide();

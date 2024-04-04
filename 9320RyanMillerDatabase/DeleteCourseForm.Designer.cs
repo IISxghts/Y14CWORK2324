@@ -626,6 +626,7 @@
             this.Controls.Add(this.CustDeleteDGV);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DeleteCourseForm";
             this.Text = "DeleteCourse";
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();

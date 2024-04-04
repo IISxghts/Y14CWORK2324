@@ -67,6 +67,7 @@
             this.CourseSideTimer = new System.Windows.Forms.Timer(this.components);
             this.BookSideTimer = new System.Windows.Forms.Timer(this.components);
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
+            this.CustDeleteDGV = new System.Windows.Forms.DataGridView();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox10)).BeginInit();
@@ -82,6 +83,7 @@
             this.coursesContainer.SuspendLayout();
             this.bookingContainer.SuspendLayout();
             this.ReportsContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CustDeleteDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // LLMenuLbl
@@ -584,14 +586,26 @@
             this.sidebarTimer.Interval = 10;
             this.sidebarTimer.Tick += new System.EventHandler(this.sidebarTimer_Tick);
             // 
+            // CustDeleteDGV
+            // 
+            this.CustDeleteDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.CustDeleteDGV.Location = new System.Drawing.Point(178, 107);
+            this.CustDeleteDGV.Name = "CustDeleteDGV";
+            this.CustDeleteDGV.RowHeadersWidth = 51;
+            this.CustDeleteDGV.RowTemplate.Height = 24;
+            this.CustDeleteDGV.Size = new System.Drawing.Size(620, 307);
+            this.CustDeleteDGV.TabIndex = 70;
+            // 
             // DeleteBookingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 500);
+            this.Controls.Add(this.CustDeleteDGV);
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DeleteBookingForm";
             this.Text = "DeleteBookingForm";
             this.panel3.ResumeLayout(false);
@@ -611,6 +625,7 @@
             this.coursesContainer.ResumeLayout(false);
             this.bookingContainer.ResumeLayout(false);
             this.ReportsContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.CustDeleteDGV)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -654,5 +669,6 @@
         private System.Windows.Forms.Timer CourseSideTimer;
         private System.Windows.Forms.Timer BookSideTimer;
         private System.Windows.Forms.Timer sidebarTimer;
+        private System.Windows.Forms.DataGridView CustDeleteDGV;
     }
 }

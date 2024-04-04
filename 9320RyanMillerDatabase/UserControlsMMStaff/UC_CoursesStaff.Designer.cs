@@ -32,6 +32,7 @@
             this.G2BtnDeleteCourse = new Guna.UI2.WinForms.Guna2CircleButton();
             this.G2BtnEditCourse = new Guna.UI2.WinForms.Guna2CircleButton();
             this.G2BtnAddCourse = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.G2ViewCoursesBtn = new Guna.UI2.WinForms.Guna2CircleButton();
             this.SuspendLayout();
             // 
             // LLMenuLbl
@@ -54,7 +55,7 @@
             this.G2BtnDeleteCourse.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(215)))), ((int)(((byte)(150)))));
             this.G2BtnDeleteCourse.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.G2BtnDeleteCourse.ForeColor = System.Drawing.Color.White;
-            this.G2BtnDeleteCourse.Location = new System.Drawing.Point(391, 84);
+            this.G2BtnDeleteCourse.Location = new System.Drawing.Point(395, 84);
             this.G2BtnDeleteCourse.Name = "G2BtnDeleteCourse";
             this.G2BtnDeleteCourse.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.G2BtnDeleteCourse.Size = new System.Drawing.Size(150, 150);
@@ -71,7 +72,7 @@
             this.G2BtnEditCourse.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(215)))), ((int)(((byte)(150)))));
             this.G2BtnEditCourse.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.G2BtnEditCourse.ForeColor = System.Drawing.Color.White;
-            this.G2BtnEditCourse.Location = new System.Drawing.Point(204, 84);
+            this.G2BtnEditCourse.Location = new System.Drawing.Point(206, 84);
             this.G2BtnEditCourse.Name = "G2BtnEditCourse";
             this.G2BtnEditCourse.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.G2BtnEditCourse.Size = new System.Drawing.Size(150, 150);
@@ -96,11 +97,28 @@
             this.G2BtnAddCourse.Text = "Add Course";
             this.G2BtnAddCourse.Click += new System.EventHandler(this.G2BtnAddCourse_Click);
             // 
+            // G2ViewCoursesBtn
+            // 
+            this.G2ViewCoursesBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.G2ViewCoursesBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.G2ViewCoursesBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.G2ViewCoursesBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.G2ViewCoursesBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(215)))), ((int)(((byte)(150)))));
+            this.G2ViewCoursesBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.G2ViewCoursesBtn.ForeColor = System.Drawing.Color.White;
+            this.G2ViewCoursesBtn.Location = new System.Drawing.Point(584, 84);
+            this.G2ViewCoursesBtn.Name = "G2ViewCoursesBtn";
+            this.G2ViewCoursesBtn.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.G2ViewCoursesBtn.Size = new System.Drawing.Size(150, 150);
+            this.G2ViewCoursesBtn.TabIndex = 9;
+            this.G2ViewCoursesBtn.Text = "View Course";
+            // 
             // UC_CoursesStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.Controls.Add(this.G2ViewCoursesBtn);
             this.Controls.Add(this.G2BtnDeleteCourse);
             this.Controls.Add(this.G2BtnEditCourse);
             this.Controls.Add(this.G2BtnAddCourse);
@@ -118,5 +136,6 @@
         private Guna.UI2.WinForms.Guna2CircleButton G2BtnDeleteCourse;
         private Guna.UI2.WinForms.Guna2CircleButton G2BtnEditCourse;
         private Guna.UI2.WinForms.Guna2CircleButton G2BtnAddCourse;
+        private Guna.UI2.WinForms.Guna2CircleButton G2ViewCoursesBtn;
     }
 }

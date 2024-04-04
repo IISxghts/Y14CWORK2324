@@ -781,6 +781,7 @@
             this.Controls.Add(this.custSurLbl);
             this.Controls.Add(this.custAddressLbl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddCourseForm";
             this.Text = "AddCourse";
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
