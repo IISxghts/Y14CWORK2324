@@ -67,6 +67,27 @@
             this.CourseSideTimer = new System.Windows.Forms.Timer(this.components);
             this.BookSideTimer = new System.Windows.Forms.Timer(this.components);
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
+            this.EditCustDTP = new System.Windows.Forms.DateTimePicker();
+            this.EFCustSNDBtn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.EFCustEditBtn = new System.Windows.Forms.Button();
+            this.EFCustSpecReqLbl = new System.Windows.Forms.Label();
+            this.EFCustSpecialReqTB = new System.Windows.Forms.TextBox();
+            this.EFCustPhoneLbl = new System.Windows.Forms.Label();
+            this.EFCustPhoneTB = new System.Windows.Forms.TextBox();
+            this.EFCustPostcodeLbl = new System.Windows.Forms.Label();
+            this.EFCustPostcodeTB = new System.Windows.Forms.TextBox();
+            this.EFCustTownLbl = new System.Windows.Forms.Label();
+            this.EFCustTownTB = new System.Windows.Forms.TextBox();
+            this.EFCustAddressLbl = new System.Windows.Forms.Label();
+            this.EFCustAddressTB = new System.Windows.Forms.TextBox();
+            this.EFCustSurnameLbl = new System.Windows.Forms.Label();
+            this.EFCustSurnameTB = new System.Windows.Forms.TextBox();
+            this.EFCustForenameLbl = new System.Windows.Forms.Label();
+            this.EFCustForenameTB = new System.Windows.Forms.TextBox();
+            this.EFCustIDLbl = new System.Windows.Forms.Label();
+            this.EFCustIDTB = new System.Windows.Forms.TextBox();
+            this.EFCustDGV = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.sidebar.SuspendLayout();
@@ -82,6 +103,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).BeginInit();
             this.ReportsContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EFCustDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2PictureBox1
@@ -163,6 +185,7 @@
             this.SidebarPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.SidebarPB.TabIndex = 12;
             this.SidebarPB.TabStop = false;
+            this.SidebarPB.Click += new System.EventHandler(this.SidebarPB_Click);
             // 
             // homePanel
             // 
@@ -198,6 +221,7 @@
             this.G2HomeSideBtn.Size = new System.Drawing.Size(209, 47);
             this.G2HomeSideBtn.TabIndex = 13;
             this.G2HomeSideBtn.Text = "Home";
+            this.G2HomeSideBtn.Click += new System.EventHandler(this.G2HomeSideBtn_Click);
             // 
             // customerContainer
             // 
@@ -277,6 +301,7 @@
             this.G2CustSideBtn.TabIndex = 13;
             this.G2CustSideBtn.Text = "Customers";
             this.G2CustSideBtn.UseTransparentBackground = true;
+            this.G2CustSideBtn.Click += new System.EventHandler(this.G2CustSideBtn_Click);
             // 
             // G2EditCustBtnS
             // 
@@ -389,6 +414,7 @@
             this.G2CourseSideBtn.Size = new System.Drawing.Size(215, 50);
             this.G2CourseSideBtn.TabIndex = 13;
             this.G2CourseSideBtn.Text = "Courses";
+            this.G2CourseSideBtn.Click += new System.EventHandler(this.G2CourseSideBtn_Click);
             // 
             // bookingContainer
             // 
@@ -483,6 +509,7 @@
             this.G2BookSideBtn.Size = new System.Drawing.Size(215, 50);
             this.G2BookSideBtn.TabIndex = 13;
             this.G2BookSideBtn.Text = "Bookings";
+            this.G2BookSideBtn.Click += new System.EventHandler(this.G2BookSideBtn_Click);
             // 
             // ReportsContainer
             // 
@@ -542,32 +569,233 @@
             this.G2ReportsBtn.TabIndex = 15;
             this.G2ReportsBtn.Text = "Reports";
             this.G2ReportsBtn.UseTransparentBackground = true;
+            this.G2ReportsBtn.Click += new System.EventHandler(this.G2ReportsBtn_Click);
             // 
             // ReportSideTimer
             // 
             this.ReportSideTimer.Interval = 10;
+            this.ReportSideTimer.Tick += new System.EventHandler(this.ReportSideTimer_Tick);
             // 
             // CustSideTimer
             // 
             this.CustSideTimer.Interval = 10;
+            this.CustSideTimer.Tick += new System.EventHandler(this.CustSideTimer_Tick);
             // 
             // CourseSideTimer
             // 
             this.CourseSideTimer.Interval = 10;
+            this.CourseSideTimer.Tick += new System.EventHandler(this.CourseSideTimer_Tick);
             // 
             // BookSideTimer
             // 
             this.BookSideTimer.Interval = 10;
+            this.BookSideTimer.Tick += new System.EventHandler(this.BookSideTimer_Tick);
             // 
             // sidebarTimer
             // 
             this.sidebarTimer.Interval = 10;
+            this.sidebarTimer.Tick += new System.EventHandler(this.sidebarTimer_Tick);
+            // 
+            // EditCustDTP
+            // 
+            this.EditCustDTP.Location = new System.Drawing.Point(570, 398);
+            this.EditCustDTP.Name = "EditCustDTP";
+            this.EditCustDTP.Size = new System.Drawing.Size(140, 22);
+            this.EditCustDTP.TabIndex = 80;
+            // 
+            // EFCustSNDBtn
+            // 
+            this.EFCustSNDBtn.Location = new System.Drawing.Point(303, 457);
+            this.EFCustSNDBtn.Name = "EFCustSNDBtn";
+            this.EFCustSNDBtn.Size = new System.Drawing.Size(108, 42);
+            this.EFCustSNDBtn.TabIndex = 79;
+            this.EFCustSNDBtn.Text = "Save New Details";
+            this.EFCustSNDBtn.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(471, 401);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 16);
+            this.label1.TabIndex = 78;
+            this.label1.Text = "Date of Birth";
+            // 
+            // EFCustEditBtn
+            // 
+            this.EFCustEditBtn.Location = new System.Drawing.Point(187, 457);
+            this.EFCustEditBtn.Name = "EFCustEditBtn";
+            this.EFCustEditBtn.Size = new System.Drawing.Size(108, 41);
+            this.EFCustEditBtn.TabIndex = 77;
+            this.EFCustEditBtn.Text = "Edit Customer";
+            this.EFCustEditBtn.UseVisualStyleBackColor = true;
+            // 
+            // EFCustSpecReqLbl
+            // 
+            this.EFCustSpecReqLbl.AutoSize = true;
+            this.EFCustSpecReqLbl.Location = new System.Drawing.Point(713, 342);
+            this.EFCustSpecReqLbl.Name = "EFCustSpecReqLbl";
+            this.EFCustSpecReqLbl.Size = new System.Drawing.Size(140, 16);
+            this.EFCustSpecReqLbl.TabIndex = 76;
+            this.EFCustSpecReqLbl.Text = "Special Requirements";
+            // 
+            // EFCustSpecialReqTB
+            // 
+            this.EFCustSpecialReqTB.Location = new System.Drawing.Point(716, 364);
+            this.EFCustSpecialReqTB.Multiline = true;
+            this.EFCustSpecialReqTB.Name = "EFCustSpecialReqTB";
+            this.EFCustSpecialReqTB.Size = new System.Drawing.Size(232, 84);
+            this.EFCustSpecialReqTB.TabIndex = 75;
+            // 
+            // EFCustPhoneLbl
+            // 
+            this.EFCustPhoneLbl.AutoSize = true;
+            this.EFCustPhoneLbl.Location = new System.Drawing.Point(467, 429);
+            this.EFCustPhoneLbl.Name = "EFCustPhoneLbl";
+            this.EFCustPhoneLbl.Size = new System.Drawing.Size(97, 16);
+            this.EFCustPhoneLbl.TabIndex = 74;
+            this.EFCustPhoneLbl.Text = "Phone Number";
+            // 
+            // EFCustPhoneTB
+            // 
+            this.EFCustPhoneTB.Location = new System.Drawing.Point(570, 426);
+            this.EFCustPhoneTB.Name = "EFCustPhoneTB";
+            this.EFCustPhoneTB.Size = new System.Drawing.Size(102, 22);
+            this.EFCustPhoneTB.TabIndex = 73;
+            // 
+            // EFCustPostcodeLbl
+            // 
+            this.EFCustPostcodeLbl.AutoSize = true;
+            this.EFCustPostcodeLbl.Location = new System.Drawing.Point(471, 376);
+            this.EFCustPostcodeLbl.Name = "EFCustPostcodeLbl";
+            this.EFCustPostcodeLbl.Size = new System.Drawing.Size(65, 16);
+            this.EFCustPostcodeLbl.TabIndex = 72;
+            this.EFCustPostcodeLbl.Text = "Postcode";
+            // 
+            // EFCustPostcodeTB
+            // 
+            this.EFCustPostcodeTB.Location = new System.Drawing.Point(570, 370);
+            this.EFCustPostcodeTB.Name = "EFCustPostcodeTB";
+            this.EFCustPostcodeTB.Size = new System.Drawing.Size(102, 22);
+            this.EFCustPostcodeTB.TabIndex = 71;
+            // 
+            // EFCustTownLbl
+            // 
+            this.EFCustTownLbl.AutoSize = true;
+            this.EFCustTownLbl.Location = new System.Drawing.Point(471, 348);
+            this.EFCustTownLbl.Name = "EFCustTownLbl";
+            this.EFCustTownLbl.Size = new System.Drawing.Size(40, 16);
+            this.EFCustTownLbl.TabIndex = 70;
+            this.EFCustTownLbl.Text = "Town";
+            // 
+            // EFCustTownTB
+            // 
+            this.EFCustTownTB.Location = new System.Drawing.Point(570, 342);
+            this.EFCustTownTB.Name = "EFCustTownTB";
+            this.EFCustTownTB.Size = new System.Drawing.Size(102, 22);
+            this.EFCustTownTB.TabIndex = 69;
+            // 
+            // EFCustAddressLbl
+            // 
+            this.EFCustAddressLbl.AutoSize = true;
+            this.EFCustAddressLbl.Location = new System.Drawing.Point(190, 426);
+            this.EFCustAddressLbl.Name = "EFCustAddressLbl";
+            this.EFCustAddressLbl.Size = new System.Drawing.Size(58, 16);
+            this.EFCustAddressLbl.TabIndex = 68;
+            this.EFCustAddressLbl.Text = "Address";
+            // 
+            // EFCustAddressTB
+            // 
+            this.EFCustAddressTB.Location = new System.Drawing.Point(359, 426);
+            this.EFCustAddressTB.Name = "EFCustAddressTB";
+            this.EFCustAddressTB.Size = new System.Drawing.Size(98, 22);
+            this.EFCustAddressTB.TabIndex = 67;
+            // 
+            // EFCustSurnameLbl
+            // 
+            this.EFCustSurnameLbl.AutoSize = true;
+            this.EFCustSurnameLbl.Location = new System.Drawing.Point(190, 395);
+            this.EFCustSurnameLbl.Name = "EFCustSurnameLbl";
+            this.EFCustSurnameLbl.Size = new System.Drawing.Size(61, 16);
+            this.EFCustSurnameLbl.TabIndex = 66;
+            this.EFCustSurnameLbl.Text = "Surname";
+            // 
+            // EFCustSurnameTB
+            // 
+            this.EFCustSurnameTB.Location = new System.Drawing.Point(359, 398);
+            this.EFCustSurnameTB.Name = "EFCustSurnameTB";
+            this.EFCustSurnameTB.Size = new System.Drawing.Size(98, 22);
+            this.EFCustSurnameTB.TabIndex = 65;
+            // 
+            // EFCustForenameLbl
+            // 
+            this.EFCustForenameLbl.AutoSize = true;
+            this.EFCustForenameLbl.Location = new System.Drawing.Point(184, 367);
+            this.EFCustForenameLbl.Name = "EFCustForenameLbl";
+            this.EFCustForenameLbl.Size = new System.Drawing.Size(69, 16);
+            this.EFCustForenameLbl.TabIndex = 64;
+            this.EFCustForenameLbl.Text = "Forename";
+            // 
+            // EFCustForenameTB
+            // 
+            this.EFCustForenameTB.Location = new System.Drawing.Point(359, 370);
+            this.EFCustForenameTB.Name = "EFCustForenameTB";
+            this.EFCustForenameTB.Size = new System.Drawing.Size(98, 22);
+            this.EFCustForenameTB.TabIndex = 63;
+            // 
+            // EFCustIDLbl
+            // 
+            this.EFCustIDLbl.AutoSize = true;
+            this.EFCustIDLbl.Location = new System.Drawing.Point(184, 342);
+            this.EFCustIDLbl.Name = "EFCustIDLbl";
+            this.EFCustIDLbl.Size = new System.Drawing.Size(77, 16);
+            this.EFCustIDLbl.TabIndex = 62;
+            this.EFCustIDLbl.Text = "CustomerID";
+            // 
+            // EFCustIDTB
+            // 
+            this.EFCustIDTB.Location = new System.Drawing.Point(367, 342);
+            this.EFCustIDTB.Name = "EFCustIDTB";
+            this.EFCustIDTB.ReadOnly = true;
+            this.EFCustIDTB.Size = new System.Drawing.Size(98, 22);
+            this.EFCustIDTB.TabIndex = 61;
+            // 
+            // EFCustDGV
+            // 
+            this.EFCustDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.EFCustDGV.Location = new System.Drawing.Point(178, 81);
+            this.EFCustDGV.Name = "EFCustDGV";
+            this.EFCustDGV.RowHeadersWidth = 51;
+            this.EFCustDGV.RowTemplate.Height = 24;
+            this.EFCustDGV.Size = new System.Drawing.Size(679, 258);
+            this.EFCustDGV.TabIndex = 60;
             // 
             // EditStaffForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 500);
+            this.Controls.Add(this.EditCustDTP);
+            this.Controls.Add(this.EFCustSNDBtn);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.EFCustEditBtn);
+            this.Controls.Add(this.EFCustSpecReqLbl);
+            this.Controls.Add(this.EFCustSpecialReqTB);
+            this.Controls.Add(this.EFCustPhoneLbl);
+            this.Controls.Add(this.EFCustPhoneTB);
+            this.Controls.Add(this.EFCustPostcodeLbl);
+            this.Controls.Add(this.EFCustPostcodeTB);
+            this.Controls.Add(this.EFCustTownLbl);
+            this.Controls.Add(this.EFCustTownTB);
+            this.Controls.Add(this.EFCustAddressLbl);
+            this.Controls.Add(this.EFCustAddressTB);
+            this.Controls.Add(this.EFCustSurnameLbl);
+            this.Controls.Add(this.EFCustSurnameTB);
+            this.Controls.Add(this.EFCustForenameLbl);
+            this.Controls.Add(this.EFCustForenameTB);
+            this.Controls.Add(this.EFCustIDLbl);
+            this.Controls.Add(this.EFCustIDTB);
+            this.Controls.Add(this.EFCustDGV);
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -591,7 +819,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).EndInit();
             this.ReportsContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EFCustDGV)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -634,5 +864,26 @@
         private System.Windows.Forms.Timer CourseSideTimer;
         private System.Windows.Forms.Timer BookSideTimer;
         private System.Windows.Forms.Timer sidebarTimer;
+        private System.Windows.Forms.DateTimePicker EditCustDTP;
+        private System.Windows.Forms.Button EFCustSNDBtn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button EFCustEditBtn;
+        private System.Windows.Forms.Label EFCustSpecReqLbl;
+        private System.Windows.Forms.TextBox EFCustSpecialReqTB;
+        private System.Windows.Forms.Label EFCustPhoneLbl;
+        private System.Windows.Forms.TextBox EFCustPhoneTB;
+        private System.Windows.Forms.Label EFCustPostcodeLbl;
+        private System.Windows.Forms.TextBox EFCustPostcodeTB;
+        private System.Windows.Forms.Label EFCustTownLbl;
+        private System.Windows.Forms.TextBox EFCustTownTB;
+        private System.Windows.Forms.Label EFCustAddressLbl;
+        private System.Windows.Forms.TextBox EFCustAddressTB;
+        private System.Windows.Forms.Label EFCustSurnameLbl;
+        private System.Windows.Forms.TextBox EFCustSurnameTB;
+        private System.Windows.Forms.Label EFCustForenameLbl;
+        private System.Windows.Forms.TextBox EFCustForenameTB;
+        private System.Windows.Forms.Label EFCustIDLbl;
+        private System.Windows.Forms.TextBox EFCustIDTB;
+        private System.Windows.Forms.DataGridView EFCustDGV;
     }
 }

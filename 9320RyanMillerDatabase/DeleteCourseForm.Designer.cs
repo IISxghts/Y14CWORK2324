@@ -141,7 +141,7 @@
             // CustDeleteDGV
             // 
             this.CustDeleteDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CustDeleteDGV.Location = new System.Drawing.Point(236, 105);
+            this.CustDeleteDGV.Location = new System.Drawing.Point(224, 105);
             this.CustDeleteDGV.Name = "CustDeleteDGV";
             this.CustDeleteDGV.RowHeadersWidth = 51;
             this.CustDeleteDGV.RowTemplate.Height = 24;
@@ -623,8 +623,8 @@
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.DeleteCourseBtn);
             this.Controls.Add(this.ViewCourseIDBox);
-            this.Controls.Add(this.CustDeleteDGV);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.CustDeleteDGV);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DeleteCourseForm";

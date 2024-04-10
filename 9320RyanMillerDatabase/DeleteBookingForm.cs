@@ -224,5 +224,29 @@ namespace _9320RyanMillerDatabase
             Hide();
             new CustomerReportOne().Show();
         }
+        private void G2CustListBtnS_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new CustomerReportTwo().Show();
+        }
+        private void AddStaffBtnS_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new AddStaffForm().Show();
+        }
+
+        private void EditStaffBtnS_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new EditStaffForm().Show(); 
+        }
+
+        private void DeleteStaffBtnS_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new DeleteStaffForm().Show();
+        }
+
+
     }
 }

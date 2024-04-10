@@ -86,7 +86,8 @@
             this.BookSideTimer = new System.Windows.Forms.Timer(this.components);
             this.CourseSideTimer = new System.Windows.Forms.Timer(this.components);
             this.CustSideTimer = new System.Windows.Forms.Timer(this.components);
-            this.custAddBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.AddCustBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.StaffSideTimer = new System.Windows.Forms.Timer(this.components);
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -131,22 +132,22 @@
             // custForeLbl
             // 
             this.custForeLbl.AutoSize = true;
-            this.custForeLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.custForeLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.custForeLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
-            this.custForeLbl.Location = new System.Drawing.Point(172, 77);
+            this.custForeLbl.Location = new System.Drawing.Point(121, 76);
             this.custForeLbl.Name = "custForeLbl";
-            this.custForeLbl.Size = new System.Drawing.Size(105, 17);
+            this.custForeLbl.Size = new System.Drawing.Size(156, 28);
             this.custForeLbl.TabIndex = 27;
             this.custForeLbl.Text = "Enter Forename";
             // 
             // custSurLbl
             // 
             this.custSurLbl.AutoSize = true;
-            this.custSurLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.custSurLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.custSurLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
-            this.custSurLbl.Location = new System.Drawing.Point(179, 118);
+            this.custSurLbl.Location = new System.Drawing.Point(131, 110);
             this.custSurLbl.Name = "custSurLbl";
-            this.custSurLbl.Size = new System.Drawing.Size(98, 17);
+            this.custSurLbl.Size = new System.Drawing.Size(146, 28);
             this.custSurLbl.TabIndex = 26;
             this.custSurLbl.Text = "Enter Surname";
             this.custSurLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -154,17 +155,17 @@
             // custAddressLbl
             // 
             this.custAddressLbl.AutoSize = true;
-            this.custAddressLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.custAddressLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.custAddressLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
-            this.custAddressLbl.Location = new System.Drawing.Point(184, 158);
+            this.custAddressLbl.Location = new System.Drawing.Point(139, 150);
             this.custAddressLbl.Name = "custAddressLbl";
-            this.custAddressLbl.Size = new System.Drawing.Size(93, 17);
+            this.custAddressLbl.Size = new System.Drawing.Size(138, 28);
             this.custAddressLbl.TabIndex = 25;
             this.custAddressLbl.Text = "Enter Address";
             // 
             // custTownBox
             // 
-            this.custTownBox.Location = new System.Drawing.Point(623, 68);
+            this.custTownBox.Location = new System.Drawing.Point(690, 79);
             this.custTownBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.custTownBox.Name = "custTownBox";
             this.custTownBox.Size = new System.Drawing.Size(172, 25);
@@ -173,11 +174,11 @@
             // custTownLbl
             // 
             this.custTownLbl.AutoSize = true;
-            this.custTownLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.custTownLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.custTownLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
             this.custTownLbl.Location = new System.Drawing.Point(541, 76);
             this.custTownLbl.Name = "custTownLbl";
-            this.custTownLbl.Size = new System.Drawing.Size(76, 17);
+            this.custTownLbl.Size = new System.Drawing.Size(113, 28);
             this.custTownLbl.TabIndex = 32;
             this.custTownLbl.Text = "Enter Town";
             // 
@@ -192,17 +193,17 @@
             // custPostLbl
             // 
             this.custPostLbl.AutoSize = true;
-            this.custPostLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.custPostLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.custPostLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
-            this.custPostLbl.Location = new System.Drawing.Point(173, 201);
+            this.custPostLbl.Location = new System.Drawing.Point(123, 190);
             this.custPostLbl.Name = "custPostLbl";
-            this.custPostLbl.Size = new System.Drawing.Size(104, 17);
+            this.custPostLbl.Size = new System.Drawing.Size(154, 28);
             this.custPostLbl.TabIndex = 34;
             this.custPostLbl.Text = "Enter Postcode ";
             // 
             // custPhoneBox
             // 
-            this.custPhoneBox.Location = new System.Drawing.Point(623, 114);
+            this.custPhoneBox.Location = new System.Drawing.Point(690, 120);
             this.custPhoneBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.custPhoneBox.Name = "custPhoneBox";
             this.custPhoneBox.Size = new System.Drawing.Size(172, 25);
@@ -211,22 +212,22 @@
             // custPhoneLbl
             // 
             this.custPhoneLbl.AutoSize = true;
-            this.custPhoneLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.custPhoneLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.custPhoneLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
             this.custPhoneLbl.Location = new System.Drawing.Point(480, 117);
             this.custPhoneLbl.Name = "custPhoneLbl";
-            this.custPhoneLbl.Size = new System.Drawing.Size(137, 17);
+            this.custPhoneLbl.Size = new System.Drawing.Size(205, 28);
             this.custPhoneLbl.TabIndex = 36;
             this.custPhoneLbl.Text = "Enter Phone Number";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
             this.label1.Location = new System.Drawing.Point(496, 161);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 17);
+            this.label1.Size = new System.Drawing.Size(182, 28);
             this.label1.TabIndex = 38;
             this.label1.Text = "Enter Date of Birth";
             // 
@@ -234,7 +235,7 @@
             // 
             this.custDTP.CustomFormat = "dd-MM-yyyy";
             this.custDTP.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.custDTP.Location = new System.Drawing.Point(623, 158);
+            this.custDTP.Location = new System.Drawing.Point(690, 164);
             this.custDTP.MaxDate = new System.DateTime(2100, 9, 1, 0, 0, 0, 0);
             this.custDTP.MinDate = new System.DateTime(1923, 9, 1, 0, 0, 0, 0);
             this.custDTP.Name = "custDTP";
@@ -245,10 +246,11 @@
             // specialReqCB
             // 
             this.specialReqCB.AutoSize = true;
+            this.specialReqCB.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.specialReqCB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
-            this.specialReqCB.Location = new System.Drawing.Point(175, 257);
+            this.specialReqCB.Location = new System.Drawing.Point(175, 280);
             this.specialReqCB.Name = "specialReqCB";
-            this.specialReqCB.Size = new System.Drawing.Size(65, 21);
+            this.specialReqCB.Size = new System.Drawing.Size(88, 32);
             this.specialReqCB.TabIndex = 41;
             this.specialReqCB.Text = "Select";
             this.specialReqCB.UseVisualStyleBackColor = true;
@@ -257,10 +259,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
-            this.label2.Location = new System.Drawing.Point(172, 237);
+            this.label2.Location = new System.Drawing.Point(97, 258);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(506, 17);
+            this.label2.Size = new System.Drawing.Size(765, 28);
             this.label2.TabIndex = 42;
             this.label2.Text = "Would you need any special assistance from our team? (e.g. Disabilities, Allergen" +
     "s)";
@@ -268,16 +271,17 @@
             // custPSLbl
             // 
             this.custPSLbl.AutoSize = true;
+            this.custPSLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.custPSLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
-            this.custPSLbl.Location = new System.Drawing.Point(172, 281);
+            this.custPSLbl.Location = new System.Drawing.Point(170, 310);
             this.custPSLbl.Name = "custPSLbl";
-            this.custPSLbl.Size = new System.Drawing.Size(127, 17);
+            this.custPSLbl.Size = new System.Drawing.Size(195, 28);
             this.custPSLbl.TabIndex = 43;
             this.custPSLbl.Text = "If so, please specify:";
             // 
             // custReqRTB
             // 
-            this.custReqRTB.Location = new System.Drawing.Point(175, 303);
+            this.custReqRTB.Location = new System.Drawing.Point(175, 341);
             this.custReqRTB.Name = "custReqRTB";
             this.custReqRTB.Size = new System.Drawing.Size(502, 96);
             this.custReqRTB.TabIndex = 44;
@@ -291,7 +295,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(900, 63);
+            this.panel3.Size = new System.Drawing.Size(1000, 63);
             this.panel3.TabIndex = 49;
             // 
             // LLMenuLbl
@@ -793,30 +797,35 @@
             this.CustSideTimer.Interval = 10;
             this.CustSideTimer.Tick += new System.EventHandler(this.CustSideTimer_Tick);
             // 
-            // custAddBtn
+            // AddCustBtn
             // 
-            this.custAddBtn.AutoRoundedCorners = true;
-            this.custAddBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
-            this.custAddBtn.BorderRadius = 21;
-            this.custAddBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.custAddBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.custAddBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.custAddBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.custAddBtn.FillColor = System.Drawing.Color.Empty;
-            this.custAddBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.custAddBtn.ForeColor = System.Drawing.Color.White;
-            this.custAddBtn.Location = new System.Drawing.Point(323, 414);
-            this.custAddBtn.Name = "custAddBtn";
-            this.custAddBtn.Size = new System.Drawing.Size(226, 45);
-            this.custAddBtn.TabIndex = 68;
-            this.custAddBtn.Text = "Add Customer";
+            this.AddCustBtn.AutoRoundedCorners = true;
+            this.AddCustBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.AddCustBtn.BorderRadius = 21;
+            this.AddCustBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.AddCustBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.AddCustBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.AddCustBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.AddCustBtn.FillColor = System.Drawing.Color.Empty;
+            this.AddCustBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.AddCustBtn.ForeColor = System.Drawing.Color.White;
+            this.AddCustBtn.Location = new System.Drawing.Point(323, 443);
+            this.AddCustBtn.Name = "AddCustBtn";
+            this.AddCustBtn.Size = new System.Drawing.Size(226, 45);
+            this.AddCustBtn.TabIndex = 68;
+            this.AddCustBtn.Text = "Add Customer";
+            this.AddCustBtn.Click += new System.EventHandler(this.AddCustBtn_Click);
+            // 
+            // StaffSideTimer
+            // 
+            this.StaffSideTimer.Interval = 10;
             // 
             // AddCustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 500);
-            this.Controls.Add(this.custAddBtn);
+            this.ClientSize = new System.Drawing.Size(1000, 500);
+            this.Controls.Add(this.AddCustBtn);
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.custReqRTB);
@@ -922,7 +931,8 @@
         private System.Windows.Forms.Timer BookSideTimer;
         private System.Windows.Forms.Timer CourseSideTimer;
         private System.Windows.Forms.Timer CustSideTimer;
-        private Guna.UI2.WinForms.Guna2Button custAddBtn;
+        private Guna.UI2.WinForms.Guna2Button AddCustBtn;
+        private System.Windows.Forms.Timer StaffSideTimer;
     }
 }
 

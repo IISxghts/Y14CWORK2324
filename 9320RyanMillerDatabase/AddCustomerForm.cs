@@ -27,8 +27,8 @@ namespace _9320RyanMillerDatabase
         bool sidebarCourseExpand;
         bool sidebarCustExpand;
         bool sidebarBookExpand;
-
-        private void custAddBtn_Click(object sender, EventArgs e)
+        
+        private void AddCustBtn_Click(object sender, EventArgs e)
         {
             if (NullChecker()) //if all fields are filled, move on
             {
@@ -40,7 +40,7 @@ namespace _9320RyanMillerDatabase
                 string phone = custPhoneBox.Text;
                 DateTime bdate = custDTP.Value;
                 string specialreqs = custReqRTB.Text;
-                
+
                 CustomerModel newcustomer = new CustomerModel(forename, surname, address, postcode, town, phone, bdate, specialreqs);
 
                 int rowsAffected = CustomerDAL.AddCustomer(newcustomer);
@@ -323,5 +323,7 @@ namespace _9320RyanMillerDatabase
             Hide();
             new CustomerReportOne().Show();
         }
+
+        
     }
 }

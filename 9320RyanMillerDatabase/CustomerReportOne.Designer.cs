@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerReportOne));
-            this.FirstReportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
             this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lakeside9320CustDataSet = new _9320RyanMillerDatabase.Lakeside9320CustDataSet();
-            this.customerTableAdapter = new _9320RyanMillerDatabase.Lakeside9320CustDataSetTableAdapters.CustomerTableAdapter();
+            this.FirstReportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.MenuSideLbl = new System.Windows.Forms.Label();
@@ -72,6 +72,7 @@
             this.CourseSideTimer = new System.Windows.Forms.Timer(this.components);
             this.BookSideTimer = new System.Windows.Forms.Timer(this.components);
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
+            this.customerTableAdapter = new _9320RyanMillerDatabase.Lakeside9320CustDataSetTableAdapters.CustomerTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lakeside9320CustDataSet)).BeginInit();
             this.sidebar.SuspendLayout();
@@ -91,15 +92,6 @@
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // FirstReportViewer
-            // 
-            this.FirstReportViewer.LocalReport.ReportEmbeddedResource = "_9320RyanMillerDatabase.CustomerReportTwo.rdlc";
-            this.FirstReportViewer.Location = new System.Drawing.Point(77, 125);
-            this.FirstReportViewer.Name = "FirstReportViewer";
-            this.FirstReportViewer.ServerReport.BearerToken = null;
-            this.FirstReportViewer.Size = new System.Drawing.Size(776, 364);
-            this.FirstReportViewer.TabIndex = 0;
-            // 
             // customerBindingSource
             // 
             this.customerBindingSource.DataMember = "Customer";
@@ -110,9 +102,17 @@
             this.lakeside9320CustDataSet.DataSetName = "Lakeside9320CustDataSet";
             this.lakeside9320CustDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // customerTableAdapter
+            // FirstReportViewer
             // 
-            this.customerTableAdapter.ClearBeforeFill = true;
+            reportDataSource1.Name = "UnpaidOrdersDataSet";
+            reportDataSource1.Value = this.customerBindingSource;
+            this.FirstReportViewer.LocalReport.DataSources.Add(reportDataSource1);
+            this.FirstReportViewer.LocalReport.ReportEmbeddedResource = "_9320RyanMillerDatabase.ReportUnpaidOrder.rdlc";
+            this.FirstReportViewer.Location = new System.Drawing.Point(77, 125);
+            this.FirstReportViewer.Name = "FirstReportViewer";
+            this.FirstReportViewer.ServerReport.BearerToken = null;
+            this.FirstReportViewer.Size = new System.Drawing.Size(856, 367);
+            this.FirstReportViewer.TabIndex = 0;
             // 
             // sidebar
             // 
@@ -563,9 +563,9 @@
             this.LLMenuLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
             this.LLMenuLbl.Location = new System.Drawing.Point(355, 16);
             this.LLMenuLbl.Name = "LLMenuLbl";
-            this.LLMenuLbl.Size = new System.Drawing.Size(480, 38);
+            this.LLMenuLbl.Size = new System.Drawing.Size(536, 38);
             this.LLMenuLbl.TabIndex = 1;
-            this.LLMenuLbl.Text = "LAKESIDE ESCAPES - REPORT ONE";
+            this.LLMenuLbl.Text = "LAKESIDE ESCAPES - UNPAID ORDERS";
             // 
             // guna2PictureBox1
             // 
@@ -633,16 +633,21 @@
             this.sidebarTimer.Interval = 10;
             this.sidebarTimer.Tick += new System.EventHandler(this.sidebarTimer_Tick);
             // 
+            // customerTableAdapter
+            // 
+            this.customerTableAdapter.ClearBeforeFill = true;
+            // 
             // CustomerReportOne
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 500);
             this.Controls.Add(this.sidebar);
-            this.Controls.Add(this.FirstReportViewer);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.showReportBtn);
+            this.Controls.Add(this.FirstReportViewer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CustomerReportOne";
             this.Text = "CustomerReportOne";
             this.Load += new System.EventHandler(this.CustomerReportOne_Load);

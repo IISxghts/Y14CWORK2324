@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace _9320RyanMillerDatabase
 {
@@ -93,19 +94,19 @@ namespace _9320RyanMillerDatabase
 
             if (ValidationClass.GenericLength(firstname) != true)
             {
-                throw new ArgumentException("First name invalid");
+                MessageBox.Show("First name invalid");
             }
             else if (ValidationClass.GenericLength(surname) != true)
             {
-                throw new ArgumentException("Surname invalid");
+                MessageBox.Show("Surname invalid");
             }
             else if (ValidationClass.PhoneLength(phone) != true)
             {
-                throw new ArgumentException("Phone number invalid");
+                MessageBox.Show("Phone number invalid");
             }
             else if (ValidationClass.PostcodeChecker(postcode) != true)
             {
-                throw new ArgumentException("Postcode invalid");
+                MessageBox.Show("Postcode invalid");
             }
 
             

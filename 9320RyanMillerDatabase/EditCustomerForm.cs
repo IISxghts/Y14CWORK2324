@@ -64,7 +64,7 @@ namespace _9320RyanMillerDatabase
                 EFCustPostcodeTB.Text = Convert.ToString(DFRowSelect["CustomerPostcode"]);
                 EFCustAddressTB.Text = Convert.ToString(DFRowSelect["CustomerAddress"]);
                 EFCustTownTB.Text = Convert.ToString(DFRowSelect["CustomerTown"]);
-                EditCustDTP.Value = Convert.ToDateTime(DFRowSelect["CustomerDOB"]); // this is broken
+                EditCustDTP.Text = Convert.ToString(DFRowSelect["CustomerDOB"]); // this is broken
                 EFCustPhoneTB.Text = Convert.ToString(DFRowSelect["CustomerPhone"]);
                 EFCustSpecialReqTB.Text = Convert.ToString(DFRowSelect["CustomerSpecialReqs"]);
             }

@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerReportTwo));
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lakeside9320ListReportDataSet = new _9320RyanMillerDatabase.Lakeside9320ListReportDataSet();
             this.panel3 = new System.Windows.Forms.Panel();
             this.LLMenuLbl = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -67,8 +70,11 @@
             this.BookSideTimer = new System.Windows.Forms.Timer(this.components);
             this.CourseSideTimer = new System.Windows.Forms.Timer(this.components);
             this.CustSideTimer = new System.Windows.Forms.Timer(this.components);
-            this.SecondReportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
             this.showReportBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.customerTableAdapter = new _9320RyanMillerDatabase.Lakeside9320ListReportDataSetTableAdapters.CustomerTableAdapter();
+            this.SecondReportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320ListReportDataSet)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.sidebar.SuspendLayout();
@@ -85,6 +91,16 @@
             this.ReportsContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.SuspendLayout();
+            // 
+            // customerBindingSource
+            // 
+            this.customerBindingSource.DataMember = "Customer";
+            this.customerBindingSource.DataSource = this.lakeside9320ListReportDataSet;
+            // 
+            // lakeside9320ListReportDataSet
+            // 
+            this.lakeside9320ListReportDataSet.DataSetName = "Lakeside9320ListReportDataSet";
+            this.lakeside9320ListReportDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel3
             // 
@@ -104,9 +120,9 @@
             this.LLMenuLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
             this.LLMenuLbl.Location = new System.Drawing.Point(355, 16);
             this.LLMenuLbl.Name = "LLMenuLbl";
-            this.LLMenuLbl.Size = new System.Drawing.Size(489, 38);
+            this.LLMenuLbl.Size = new System.Drawing.Size(526, 38);
             this.LLMenuLbl.TabIndex = 1;
-            this.LLMenuLbl.Text = "LAKESIDE ESCAPES - REPORT TWO";
+            this.LLMenuLbl.Text = "LAKESIDE ESCAPES - CUSTOMER LIST";
             // 
             // guna2PictureBox1
             // 
@@ -585,15 +601,6 @@
             this.CustSideTimer.Interval = 10;
             this.CustSideTimer.Tick += new System.EventHandler(this.CustSideTimer_Tick);
             // 
-            // SecondReportViewer
-            // 
-            this.SecondReportViewer.LocalReport.ReportEmbeddedResource = "_9320RyanMillerDatabase.CustomerReportTwo.rdlc";
-            this.SecondReportViewer.Location = new System.Drawing.Point(77, 124);
-            this.SecondReportViewer.Name = "SecondReportViewer";
-            this.SecondReportViewer.ServerReport.BearerToken = null;
-            this.SecondReportViewer.Size = new System.Drawing.Size(776, 364);
-            this.SecondReportViewer.TabIndex = 9;
-            // 
             // showReportBtn
             // 
             this.showReportBtn.AutoRoundedCorners = true;
@@ -606,26 +613,46 @@
             this.showReportBtn.FillColor = System.Drawing.Color.Empty;
             this.showReportBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.showReportBtn.ForeColor = System.Drawing.Color.White;
-            this.showReportBtn.Location = new System.Drawing.Point(77, 73);
+            this.showReportBtn.Location = new System.Drawing.Point(77, 70);
             this.showReportBtn.Name = "showReportBtn";
             this.showReportBtn.Size = new System.Drawing.Size(226, 45);
             this.showReportBtn.TabIndex = 70;
             this.showReportBtn.Text = "Show Report";
             this.showReportBtn.Click += new System.EventHandler(this.showReportBtn_Click);
             // 
+            // customerTableAdapter
+            // 
+            this.customerTableAdapter.ClearBeforeFill = true;
+            // 
+            // SecondReportViewer
+            // 
+            this.SecondReportViewer.DocumentMapWidth = 46;
+            reportDataSource1.Name = "Report1Dataset";
+            reportDataSource1.Value = this.customerBindingSource;
+            this.SecondReportViewer.LocalReport.DataSources.Add(reportDataSource1);
+            this.SecondReportViewer.LocalReport.ReportEmbeddedResource = "_9320RyanMillerDatabase.CustomerListReport.rdlc";
+            this.SecondReportViewer.Location = new System.Drawing.Point(76, 121);
+            this.SecondReportViewer.Name = "SecondReportViewer";
+            this.SecondReportViewer.ServerReport.BearerToken = null;
+            this.SecondReportViewer.Size = new System.Drawing.Size(856, 367);
+            this.SecondReportViewer.TabIndex = 71;
+            // 
             // CustomerReportTwo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 500);
-            this.Controls.Add(this.showReportBtn);
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.SecondReportViewer);
+            this.Controls.Add(this.showReportBtn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CustomerReportTwo";
             this.Text = "FlowPanel";
             this.Load += new System.EventHandler(this.CustomerReportTwo_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320ListReportDataSet)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
@@ -686,7 +713,10 @@
         private Guna.UI2.WinForms.Guna2Button AddCourseBtnS;
         private Guna.UI2.WinForms.Guna2Button DeleteCourseBtnS;
         private Guna.UI2.WinForms.Guna2Button EditCourseBtnS;
-        private Microsoft.Reporting.WinForms.ReportViewer SecondReportViewer;
         private Guna.UI2.WinForms.Guna2Button showReportBtn;
+        private Lakeside9320ListReportDataSet lakeside9320ListReportDataSet;
+        private System.Windows.Forms.BindingSource customerBindingSource;
+        private Lakeside9320ListReportDataSetTableAdapters.CustomerTableAdapter customerTableAdapter;
+        private Microsoft.Reporting.WinForms.ReportViewer SecondReportViewer;
     }
 }

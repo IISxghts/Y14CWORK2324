@@ -67,6 +67,10 @@
             this.CourseSideTimer = new System.Windows.Forms.Timer(this.components);
             this.BookSideTimer = new System.Windows.Forms.Timer(this.components);
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
+            this.DeleteCourseBtn = new System.Windows.Forms.Button();
+            this.ViewCourseIDBox = new System.Windows.Forms.TextBox();
+            this.ViewCustIDLbl = new System.Windows.Forms.Label();
+            this.CustDeleteDGV = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.sidebar.SuspendLayout();
@@ -82,6 +86,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).BeginInit();
             this.ReportsContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CustDeleteDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2PictureBox1
@@ -130,7 +135,7 @@
             this.sidebar.MaximumSize = new System.Drawing.Size(215, 500);
             this.sidebar.MinimumSize = new System.Drawing.Size(70, 500);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(215, 500);
+            this.sidebar.Size = new System.Drawing.Size(70, 500);
             this.sidebar.TabIndex = 59;
             // 
             // panel1
@@ -163,6 +168,7 @@
             this.SidebarPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.SidebarPB.TabIndex = 12;
             this.SidebarPB.TabStop = false;
+            this.SidebarPB.Click += new System.EventHandler(this.SidebarPB_Click);
             // 
             // homePanel
             // 
@@ -198,6 +204,7 @@
             this.G2HomeSideBtn.Size = new System.Drawing.Size(209, 47);
             this.G2HomeSideBtn.TabIndex = 13;
             this.G2HomeSideBtn.Text = "Home";
+            this.G2HomeSideBtn.Click += new System.EventHandler(this.G2HomeSideBtn_Click);
             // 
             // customerContainer
             // 
@@ -277,6 +284,7 @@
             this.G2CustSideBtn.TabIndex = 13;
             this.G2CustSideBtn.Text = "Customers";
             this.G2CustSideBtn.UseTransparentBackground = true;
+            this.G2CustSideBtn.Click += new System.EventHandler(this.G2CustSideBtn_Click);
             // 
             // G2EditCustBtnS
             // 
@@ -389,6 +397,7 @@
             this.G2CourseSideBtn.Size = new System.Drawing.Size(215, 50);
             this.G2CourseSideBtn.TabIndex = 13;
             this.G2CourseSideBtn.Text = "Courses";
+            this.G2CourseSideBtn.Click += new System.EventHandler(this.G2CourseSideBtn_Click);
             // 
             // bookingContainer
             // 
@@ -483,6 +492,7 @@
             this.G2BookSideBtn.Size = new System.Drawing.Size(215, 50);
             this.G2BookSideBtn.TabIndex = 13;
             this.G2BookSideBtn.Text = "Bookings";
+            this.G2BookSideBtn.Click += new System.EventHandler(this.G2BookSideBtn_Click);
             // 
             // ReportsContainer
             // 
@@ -542,32 +552,77 @@
             this.G2ReportsBtn.TabIndex = 15;
             this.G2ReportsBtn.Text = "Reports";
             this.G2ReportsBtn.UseTransparentBackground = true;
+            this.G2ReportsBtn.Click += new System.EventHandler(this.G2ReportsBtn_Click);
             // 
             // ReportSideTimer
             // 
             this.ReportSideTimer.Interval = 10;
+            this.ReportSideTimer.Tick += new System.EventHandler(this.ReportSideTimer_Tick);
             // 
             // CustSideTimer
             // 
             this.CustSideTimer.Interval = 10;
+            this.CustSideTimer.Tick += new System.EventHandler(this.CustSideTimer_Tick);
             // 
             // CourseSideTimer
             // 
             this.CourseSideTimer.Interval = 10;
+            this.CourseSideTimer.Tick += new System.EventHandler(this.CourseSideTimer_Tick);
             // 
             // BookSideTimer
             // 
             this.BookSideTimer.Interval = 10;
+            this.BookSideTimer.Tick += new System.EventHandler(this.BookSideTimer_Tick);
             // 
             // sidebarTimer
             // 
             this.sidebarTimer.Interval = 10;
+            this.sidebarTimer.Tick += new System.EventHandler(this.sidebarTimer_Tick);
+            // 
+            // DeleteCourseBtn
+            // 
+            this.DeleteCourseBtn.Location = new System.Drawing.Point(841, 146);
+            this.DeleteCourseBtn.Name = "DeleteCourseBtn";
+            this.DeleteCourseBtn.Size = new System.Drawing.Size(100, 52);
+            this.DeleteCourseBtn.TabIndex = 63;
+            this.DeleteCourseBtn.Text = "Delete Customer";
+            this.DeleteCourseBtn.UseVisualStyleBackColor = true;
+            // 
+            // ViewCourseIDBox
+            // 
+            this.ViewCourseIDBox.Location = new System.Drawing.Point(841, 118);
+            this.ViewCourseIDBox.Name = "ViewCourseIDBox";
+            this.ViewCourseIDBox.Size = new System.Drawing.Size(100, 22);
+            this.ViewCourseIDBox.TabIndex = 62;
+            // 
+            // ViewCustIDLbl
+            // 
+            this.ViewCustIDLbl.AutoSize = true;
+            this.ViewCustIDLbl.Location = new System.Drawing.Point(838, 99);
+            this.ViewCustIDLbl.Name = "ViewCustIDLbl";
+            this.ViewCustIDLbl.Size = new System.Drawing.Size(115, 16);
+            this.ViewCustIDLbl.TabIndex = 61;
+            this.ViewCustIDLbl.Text = "Customer Number";
+            // 
+            // CustDeleteDGV
+            // 
+            this.CustDeleteDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.CustDeleteDGV.Location = new System.Drawing.Point(197, 97);
+            this.CustDeleteDGV.Name = "CustDeleteDGV";
+            this.CustDeleteDGV.RowHeadersWidth = 51;
+            this.CustDeleteDGV.RowTemplate.Height = 24;
+            this.CustDeleteDGV.Size = new System.Drawing.Size(620, 307);
+            this.CustDeleteDGV.TabIndex = 60;
             // 
             // DeleteStaffForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 500);
+            this.Controls.Add(this.DeleteCourseBtn);
+            this.Controls.Add(this.ViewCourseIDBox);
+            this.Controls.Add(this.ViewCustIDLbl);
+            this.Controls.Add(this.CustDeleteDGV);
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -590,7 +645,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).EndInit();
             this.ReportsContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CustDeleteDGV)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -633,5 +690,9 @@
         private System.Windows.Forms.Timer CourseSideTimer;
         private System.Windows.Forms.Timer BookSideTimer;
         private System.Windows.Forms.Timer sidebarTimer;
+        private System.Windows.Forms.Button DeleteCourseBtn;
+        private System.Windows.Forms.TextBox ViewCourseIDBox;
+        private System.Windows.Forms.Label ViewCustIDLbl;
+        private System.Windows.Forms.DataGridView CustDeleteDGV;
     }
 }

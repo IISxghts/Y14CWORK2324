@@ -34,5 +34,19 @@ namespace _9320RyanMillerDatabase
             }
             return true;
         }
+
+        public static bool PriceValid(string PriceEntered)
+        {
+
+            var result = Decimal.TryParse(PriceEntered, out decimal price);
+
+            if (result && price != 0)
+            {
+                return true;
+            }
+            return false;
+
+
+        }
     }
 }

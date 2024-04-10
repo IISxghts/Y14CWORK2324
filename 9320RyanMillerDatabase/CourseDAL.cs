@@ -67,7 +67,7 @@ namespace _9320RyanMillerDatabase
                 SqlCommand insertProjectCommand = new SqlCommand();
                 insertProjectCommand.Connection = connection;
 
-                insertProjectCommand.CommandType = System.Data.CommandType.StoredProcedure;
+                insertProjectCommand.CommandType = CommandType.StoredProcedure;
 
                 insertProjectCommand.CommandText = "EditCourse";
 

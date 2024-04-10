@@ -31,7 +31,7 @@
             this.LLReportsLbl = new System.Windows.Forms.Label();
             this.G2BtnReportOne = new Guna.UI2.WinForms.Guna2CircleButton();
             this.G2SearchBtn = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.G2UnpaidOrdersBtn = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.G2ReportTwoBtn = new Guna.UI2.WinForms.Guna2CircleButton();
             this.SuspendLayout();
             // 
             // LLReportsLbl
@@ -59,7 +59,7 @@
             this.G2BtnReportOne.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.G2BtnReportOne.Size = new System.Drawing.Size(150, 150);
             this.G2BtnReportOne.TabIndex = 9;
-            this.G2BtnReportOne.Text = "Customer List Report";
+            this.G2BtnReportOne.Text = "Unpaid Orders";
             this.G2BtnReportOne.Click += new System.EventHandler(this.G2BtnReportOne_Click);
             // 
             // G2SearchBtn
@@ -79,29 +79,29 @@
             this.G2SearchBtn.Text = "Search";
             this.G2SearchBtn.Click += new System.EventHandler(this.G2SearchBtn_Click);
             // 
-            // G2UnpaidOrdersBtn
+            // G2ReportTwoBtn
             // 
-            this.G2UnpaidOrdersBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.G2UnpaidOrdersBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.G2UnpaidOrdersBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.G2UnpaidOrdersBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.G2UnpaidOrdersBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(215)))), ((int)(((byte)(150)))));
-            this.G2UnpaidOrdersBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.G2UnpaidOrdersBtn.ForeColor = System.Drawing.Color.White;
-            this.G2UnpaidOrdersBtn.Location = new System.Drawing.Point(206, 84);
-            this.G2UnpaidOrdersBtn.Name = "G2UnpaidOrdersBtn";
-            this.G2UnpaidOrdersBtn.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.G2UnpaidOrdersBtn.Size = new System.Drawing.Size(150, 150);
-            this.G2UnpaidOrdersBtn.TabIndex = 11;
-            this.G2UnpaidOrdersBtn.Text = "Unpaid Orders";
-            this.G2UnpaidOrdersBtn.Click += new System.EventHandler(this.G2UnpaidOrdersBtn_Click);
+            this.G2ReportTwoBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.G2ReportTwoBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.G2ReportTwoBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.G2ReportTwoBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.G2ReportTwoBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(215)))), ((int)(((byte)(150)))));
+            this.G2ReportTwoBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.G2ReportTwoBtn.ForeColor = System.Drawing.Color.White;
+            this.G2ReportTwoBtn.Location = new System.Drawing.Point(206, 84);
+            this.G2ReportTwoBtn.Name = "G2ReportTwoBtn";
+            this.G2ReportTwoBtn.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.G2ReportTwoBtn.Size = new System.Drawing.Size(150, 150);
+            this.G2ReportTwoBtn.TabIndex = 11;
+            this.G2ReportTwoBtn.Text = "List of Customers";
+            this.G2ReportTwoBtn.Click += new System.EventHandler(this.G2UnpaidOrdersBtn_Click);
             // 
             // UC_ReportsStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.Controls.Add(this.G2UnpaidOrdersBtn);
+            this.Controls.Add(this.G2ReportTwoBtn);
             this.Controls.Add(this.G2SearchBtn);
             this.Controls.Add(this.G2BtnReportOne);
             this.Controls.Add(this.LLReportsLbl);
@@ -117,6 +117,6 @@
         private System.Windows.Forms.Label LLReportsLbl;
         private Guna.UI2.WinForms.Guna2CircleButton G2BtnReportOne;
         private Guna.UI2.WinForms.Guna2CircleButton G2SearchBtn;
-        private Guna.UI2.WinForms.Guna2CircleButton G2UnpaidOrdersBtn;
+        private Guna.UI2.WinForms.Guna2CircleButton G2ReportTwoBtn;
     }
 }

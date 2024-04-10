@@ -67,6 +67,19 @@
             this.CourseSideTimer = new System.Windows.Forms.Timer(this.components);
             this.BookSideTimer = new System.Windows.Forms.Timer(this.components);
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
+            this.AddCustBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.custPhoneBox = new System.Windows.Forms.TextBox();
+            this.custPhoneLbl = new System.Windows.Forms.Label();
+            this.custPostcodeBox = new System.Windows.Forms.TextBox();
+            this.custPostLbl = new System.Windows.Forms.Label();
+            this.custTownBox = new System.Windows.Forms.TextBox();
+            this.custTownLbl = new System.Windows.Forms.Label();
+            this.custAddressBox = new System.Windows.Forms.TextBox();
+            this.custSnameBox = new System.Windows.Forms.TextBox();
+            this.custFnameBox = new System.Windows.Forms.TextBox();
+            this.custForeLbl = new System.Windows.Forms.Label();
+            this.custSurLbl = new System.Windows.Forms.Label();
+            this.custAddressLbl = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.sidebar.SuspendLayout();
@@ -130,7 +143,7 @@
             this.sidebar.MaximumSize = new System.Drawing.Size(215, 500);
             this.sidebar.MinimumSize = new System.Drawing.Size(70, 500);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(215, 500);
+            this.sidebar.Size = new System.Drawing.Size(70, 500);
             this.sidebar.TabIndex = 59;
             // 
             // panel1
@@ -163,6 +176,7 @@
             this.SidebarPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.SidebarPB.TabIndex = 12;
             this.SidebarPB.TabStop = false;
+            this.SidebarPB.Click += new System.EventHandler(this.SidebarPB_Click);
             // 
             // homePanel
             // 
@@ -198,6 +212,7 @@
             this.G2HomeSideBtn.Size = new System.Drawing.Size(209, 47);
             this.G2HomeSideBtn.TabIndex = 13;
             this.G2HomeSideBtn.Text = "Home";
+            this.G2HomeSideBtn.Click += new System.EventHandler(this.G2HomeSideBtn_Click);
             // 
             // customerContainer
             // 
@@ -277,6 +292,7 @@
             this.G2CustSideBtn.TabIndex = 13;
             this.G2CustSideBtn.Text = "Customers";
             this.G2CustSideBtn.UseTransparentBackground = true;
+            this.G2CustSideBtn.Click += new System.EventHandler(this.G2CustSideBtn_Click);
             // 
             // G2EditCustBtnS
             // 
@@ -389,6 +405,7 @@
             this.G2CourseSideBtn.Size = new System.Drawing.Size(215, 50);
             this.G2CourseSideBtn.TabIndex = 13;
             this.G2CourseSideBtn.Text = "Courses";
+            this.G2CourseSideBtn.Click += new System.EventHandler(this.G2CourseSideBtn_Click);
             // 
             // bookingContainer
             // 
@@ -483,6 +500,7 @@
             this.G2BookSideBtn.Size = new System.Drawing.Size(215, 50);
             this.G2BookSideBtn.TabIndex = 13;
             this.G2BookSideBtn.Text = "Bookings";
+            this.G2BookSideBtn.Click += new System.EventHandler(this.G2BookSideBtn_Click);
             // 
             // ReportsContainer
             // 
@@ -542,32 +560,184 @@
             this.G2ReportsBtn.TabIndex = 15;
             this.G2ReportsBtn.Text = "Reports";
             this.G2ReportsBtn.UseTransparentBackground = true;
+            this.G2ReportsBtn.Click += new System.EventHandler(this.G2ReportsBtn_Click);
             // 
             // ReportSideTimer
             // 
             this.ReportSideTimer.Interval = 10;
+            this.ReportSideTimer.Tick += new System.EventHandler(this.ReportSideTimer_Tick);
             // 
             // CustSideTimer
             // 
             this.CustSideTimer.Interval = 10;
+            this.CustSideTimer.Tick += new System.EventHandler(this.CustSideTimer_Tick);
             // 
             // CourseSideTimer
             // 
             this.CourseSideTimer.Interval = 10;
+            this.CourseSideTimer.Tick += new System.EventHandler(this.CourseSideTimer_Tick);
             // 
             // BookSideTimer
             // 
             this.BookSideTimer.Interval = 10;
+            this.BookSideTimer.Tick += new System.EventHandler(this.BookSideTimer_Tick);
             // 
             // sidebarTimer
             // 
             this.sidebarTimer.Interval = 10;
+            this.sidebarTimer.Tick += new System.EventHandler(this.sidebarTimer_Tick);
+            // 
+            // AddCustBtn
+            // 
+            this.AddCustBtn.AutoRoundedCorners = true;
+            this.AddCustBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.AddCustBtn.BorderRadius = 19;
+            this.AddCustBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.AddCustBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.AddCustBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.AddCustBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.AddCustBtn.FillColor = System.Drawing.Color.Empty;
+            this.AddCustBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.AddCustBtn.ForeColor = System.Drawing.Color.White;
+            this.AddCustBtn.Location = new System.Drawing.Point(707, 277);
+            this.AddCustBtn.Name = "AddCustBtn";
+            this.AddCustBtn.Size = new System.Drawing.Size(226, 41);
+            this.AddCustBtn.TabIndex = 87;
+            this.AddCustBtn.Text = "Add Customer";
+            // 
+            // custPhoneBox
+            // 
+            this.custPhoneBox.Location = new System.Drawing.Point(739, 124);
+            this.custPhoneBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.custPhoneBox.Name = "custPhoneBox";
+            this.custPhoneBox.Size = new System.Drawing.Size(172, 22);
+            this.custPhoneBox.TabIndex = 80;
+            // 
+            // custPhoneLbl
+            // 
+            this.custPhoneLbl.AutoSize = true;
+            this.custPhoneLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.custPhoneLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.custPhoneLbl.Location = new System.Drawing.Point(529, 121);
+            this.custPhoneLbl.Name = "custPhoneLbl";
+            this.custPhoneLbl.Size = new System.Drawing.Size(205, 28);
+            this.custPhoneLbl.TabIndex = 79;
+            this.custPhoneLbl.Text = "Enter Phone Number";
+            // 
+            // custPostcodeBox
+            // 
+            this.custPostcodeBox.Location = new System.Drawing.Point(332, 197);
+            this.custPostcodeBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.custPostcodeBox.Name = "custPostcodeBox";
+            this.custPostcodeBox.Size = new System.Drawing.Size(172, 22);
+            this.custPostcodeBox.TabIndex = 78;
+            // 
+            // custPostLbl
+            // 
+            this.custPostLbl.AutoSize = true;
+            this.custPostLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.custPostLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.custPostLbl.Location = new System.Drawing.Point(172, 194);
+            this.custPostLbl.Name = "custPostLbl";
+            this.custPostLbl.Size = new System.Drawing.Size(154, 28);
+            this.custPostLbl.TabIndex = 77;
+            this.custPostLbl.Text = "Enter Postcode ";
+            // 
+            // custTownBox
+            // 
+            this.custTownBox.Location = new System.Drawing.Point(739, 83);
+            this.custTownBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.custTownBox.Name = "custTownBox";
+            this.custTownBox.Size = new System.Drawing.Size(172, 22);
+            this.custTownBox.TabIndex = 76;
+            // 
+            // custTownLbl
+            // 
+            this.custTownLbl.AutoSize = true;
+            this.custTownLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.custTownLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.custTownLbl.Location = new System.Drawing.Point(590, 80);
+            this.custTownLbl.Name = "custTownLbl";
+            this.custTownLbl.Size = new System.Drawing.Size(113, 28);
+            this.custTownLbl.TabIndex = 75;
+            this.custTownLbl.Text = "Enter Town";
+            // 
+            // custAddressBox
+            // 
+            this.custAddressBox.Location = new System.Drawing.Point(332, 154);
+            this.custAddressBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.custAddressBox.Name = "custAddressBox";
+            this.custAddressBox.Size = new System.Drawing.Size(172, 22);
+            this.custAddressBox.TabIndex = 74;
+            // 
+            // custSnameBox
+            // 
+            this.custSnameBox.Location = new System.Drawing.Point(332, 114);
+            this.custSnameBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.custSnameBox.Name = "custSnameBox";
+            this.custSnameBox.Size = new System.Drawing.Size(172, 22);
+            this.custSnameBox.TabIndex = 73;
+            // 
+            // custFnameBox
+            // 
+            this.custFnameBox.Location = new System.Drawing.Point(332, 78);
+            this.custFnameBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.custFnameBox.Name = "custFnameBox";
+            this.custFnameBox.Size = new System.Drawing.Size(172, 22);
+            this.custFnameBox.TabIndex = 72;
+            // 
+            // custForeLbl
+            // 
+            this.custForeLbl.AutoSize = true;
+            this.custForeLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.custForeLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.custForeLbl.Location = new System.Drawing.Point(170, 80);
+            this.custForeLbl.Name = "custForeLbl";
+            this.custForeLbl.Size = new System.Drawing.Size(156, 28);
+            this.custForeLbl.TabIndex = 71;
+            this.custForeLbl.Text = "Enter Forename";
+            // 
+            // custSurLbl
+            // 
+            this.custSurLbl.AutoSize = true;
+            this.custSurLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.custSurLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.custSurLbl.Location = new System.Drawing.Point(180, 114);
+            this.custSurLbl.Name = "custSurLbl";
+            this.custSurLbl.Size = new System.Drawing.Size(146, 28);
+            this.custSurLbl.TabIndex = 70;
+            this.custSurLbl.Text = "Enter Surname";
+            this.custSurLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // custAddressLbl
+            // 
+            this.custAddressLbl.AutoSize = true;
+            this.custAddressLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.custAddressLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.custAddressLbl.Location = new System.Drawing.Point(188, 154);
+            this.custAddressLbl.Name = "custAddressLbl";
+            this.custAddressLbl.Size = new System.Drawing.Size(138, 28);
+            this.custAddressLbl.TabIndex = 69;
+            this.custAddressLbl.Text = "Enter Address";
             // 
             // AddStaffForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 500);
+            this.Controls.Add(this.AddCustBtn);
+            this.Controls.Add(this.custPhoneBox);
+            this.Controls.Add(this.custPhoneLbl);
+            this.Controls.Add(this.custPostcodeBox);
+            this.Controls.Add(this.custPostLbl);
+            this.Controls.Add(this.custTownBox);
+            this.Controls.Add(this.custTownLbl);
+            this.Controls.Add(this.custAddressBox);
+            this.Controls.Add(this.custSnameBox);
+            this.Controls.Add(this.custFnameBox);
+            this.Controls.Add(this.custForeLbl);
+            this.Controls.Add(this.custSurLbl);
+            this.Controls.Add(this.custAddressLbl);
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -592,6 +762,7 @@
             this.ReportsContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -634,5 +805,18 @@
         private System.Windows.Forms.Timer CourseSideTimer;
         private System.Windows.Forms.Timer BookSideTimer;
         private System.Windows.Forms.Timer sidebarTimer;
+        private Guna.UI2.WinForms.Guna2Button AddCustBtn;
+        private System.Windows.Forms.TextBox custPhoneBox;
+        private System.Windows.Forms.Label custPhoneLbl;
+        private System.Windows.Forms.TextBox custPostcodeBox;
+        private System.Windows.Forms.Label custPostLbl;
+        private System.Windows.Forms.TextBox custTownBox;
+        private System.Windows.Forms.Label custTownLbl;
+        private System.Windows.Forms.TextBox custAddressBox;
+        private System.Windows.Forms.TextBox custSnameBox;
+        private System.Windows.Forms.TextBox custFnameBox;
+        private System.Windows.Forms.Label custForeLbl;
+        private System.Windows.Forms.Label custSurLbl;
+        private System.Windows.Forms.Label custAddressLbl;
     }
 }

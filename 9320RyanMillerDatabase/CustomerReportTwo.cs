@@ -222,7 +222,10 @@ namespace _9320RyanMillerDatabase
 
         private void CustomerReportTwo_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'lakeside9320ListReportDataSet.Customer' table. You can move, or remove it, as needed.
+            this.customerTableAdapter.Fill(this.lakeside9320ListReportDataSet.Customer);
 
+            this.SecondReportViewer.RefreshReport();
         }
 
         private void showReportBtn_Click(object sender, EventArgs e)

@@ -35,6 +35,7 @@ namespace _9320RyanMillerDatabase
         bool sidebarCourseExpand;
         bool sidebarCustExpand;
         bool sidebarBookExpand;
+        bool sidebarStaffExpand;
 
         private void TempBookingForm_Load(object sender, EventArgs e)
         {
@@ -195,7 +196,7 @@ namespace _9320RyanMillerDatabase
         }
 
 
-
+        #region sidebar
         private void G2BookSideBtn_Click(object sender, EventArgs e)
         {
             BookSideTimer.Start();
@@ -335,6 +336,27 @@ namespace _9320RyanMillerDatabase
                 }
             }
         }
+        private void StaffSideTimer_Tick(object sender, EventArgs e)
+        {
+            if (sidebarStaffExpand)
+            {
+                staffContainer.Height += 10;
+                if (staffContainer.Height == staffContainer.MaximumSize.Height)
+                {
+                    sidebarStaffExpand = false;
+                    StaffSideTimer.Stop();
+                }
+            }
+            else
+            {
+                staffContainer.Height -= 10;
+                if (staffContainer.Height == staffContainer.MinimumSize.Height)
+                {
+                    sidebarStaffExpand = true;
+                    StaffSideTimer.Stop();
+                }
+            }
+        }
 
         private void G2AddCustBtnS_Click(object sender, EventArgs e)
         {
@@ -395,5 +417,30 @@ namespace _9320RyanMillerDatabase
             Hide();
             new CustomerReportOne().Show();
         }
+
+        private void G2StaffSideBtn_Click(object sender, EventArgs e)
+        {
+            StaffSideTimer.Start();
+        }
+
+
+        private void AddStaffBtnS_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new AddStaffForm().Show();
+        }
+
+        private void EditStaffBtnS_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new EditStaffForm().Show();
+        }
+
+        private void DeleteStaffBtnS_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new DeleteStaffForm().Show();
+        }
+        #endregion
     }
 }

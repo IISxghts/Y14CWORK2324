@@ -82,6 +82,8 @@
             this.CourseSideTimer = new System.Windows.Forms.Timer(this.components);
             this.BookSideTimer = new System.Windows.Forms.Timer(this.components);
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
+            this.DiscountSelectBox = new System.Windows.Forms.NumericUpDown();
+            this.StaffSideTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox10)).BeginInit();
@@ -97,21 +99,23 @@
             this.coursesContainer.SuspendLayout();
             this.bookingContainer.SuspendLayout();
             this.ReportsContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DiscountSelectBox)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(553, 91);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.label1.Location = new System.Drawing.Point(531, 206);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(184, 17);
+            this.label1.Size = new System.Drawing.Size(274, 28);
             this.label1.TabIndex = 54;
             this.label1.Text = "Enter Course Manager Name";
             // 
             // CourseCapacityBox
             // 
-            this.CourseCapacityBox.Location = new System.Drawing.Point(347, 316);
+            this.CourseCapacityBox.Location = new System.Drawing.Point(794, 158);
             this.CourseCapacityBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CourseCapacityBox.Name = "CourseCapacityBox";
             this.CourseCapacityBox.Size = new System.Drawing.Size(172, 22);
@@ -120,26 +124,28 @@
             // custPhoneLbl
             // 
             this.custPhoneLbl.AutoSize = true;
-            this.custPhoneLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.custPhoneLbl.Location = new System.Drawing.Point(236, 318);
+            this.custPhoneLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.custPhoneLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.custPhoneLbl.Location = new System.Drawing.Point(582, 141);
             this.custPhoneLbl.Name = "custPhoneLbl";
-            this.custPhoneLbl.Size = new System.Drawing.Size(95, 17);
+            this.custPhoneLbl.Size = new System.Drawing.Size(140, 28);
             this.custPhoneLbl.TabIndex = 52;
             this.custPhoneLbl.Text = "Enter Capacity";
             // 
             // custPostLbl
             // 
             this.custPostLbl.AutoSize = true;
-            this.custPostLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.custPostLbl.Location = new System.Drawing.Point(236, 135);
+            this.custPostLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.custPostLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.custPostLbl.Location = new System.Drawing.Point(104, 145);
             this.custPostLbl.Name = "custPostLbl";
-            this.custPostLbl.Size = new System.Drawing.Size(108, 17);
+            this.custPostLbl.Size = new System.Drawing.Size(159, 28);
             this.custPostLbl.TabIndex = 50;
             this.custPostLbl.Text = "Enter Start Hour";
             // 
             // CoursePriceBox
             // 
-            this.CoursePriceBox.Location = new System.Drawing.Point(347, 265);
+            this.CoursePriceBox.Location = new System.Drawing.Point(794, 108);
             this.CoursePriceBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CoursePriceBox.Name = "CoursePriceBox";
             this.CoursePriceBox.Size = new System.Drawing.Size(172, 22);
@@ -148,20 +154,22 @@
             // custTownLbl
             // 
             this.custTownLbl.AutoSize = true;
-            this.custTownLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.custTownLbl.Location = new System.Drawing.Point(241, 270);
+            this.custTownLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.custTownLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.custTownLbl.Location = new System.Drawing.Point(582, 97);
             this.custTownLbl.Name = "custTownLbl";
-            this.custTownLbl.Size = new System.Drawing.Size(73, 17);
+            this.custTownLbl.Size = new System.Drawing.Size(109, 28);
             this.custTownLbl.TabIndex = 48;
             this.custTownLbl.Text = "Enter Price";
             // 
             // custSurLbl
             // 
             this.custSurLbl.AutoSize = true;
-            this.custSurLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.custSurLbl.Location = new System.Drawing.Point(236, 179);
+            this.custSurLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.custSurLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.custSurLbl.Location = new System.Drawing.Point(104, 189);
             this.custSurLbl.Name = "custSurLbl";
-            this.custSurLbl.Size = new System.Drawing.Size(105, 17);
+            this.custSurLbl.Size = new System.Drawing.Size(155, 28);
             this.custSurLbl.TabIndex = 42;
             this.custSurLbl.Text = "Enter Start Date";
             this.custSurLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -169,10 +177,11 @@
             // custAddressLbl
             // 
             this.custAddressLbl.AutoSize = true;
-            this.custAddressLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.custAddressLbl.Location = new System.Drawing.Point(236, 231);
+            this.custAddressLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.custAddressLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.custAddressLbl.Location = new System.Drawing.Point(104, 233);
             this.custAddressLbl.Name = "custAddressLbl";
-            this.custAddressLbl.Size = new System.Drawing.Size(99, 17);
+            this.custAddressLbl.Size = new System.Drawing.Size(147, 28);
             this.custAddressLbl.TabIndex = 41;
             this.custAddressLbl.Text = "Enter End Date";
             // 
@@ -180,7 +189,7 @@
             // 
             this.StartDateDTP.CustomFormat = "dd-MM-yyyy";
             this.StartDateDTP.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.StartDateDTP.Location = new System.Drawing.Point(347, 179);
+            this.StartDateDTP.Location = new System.Drawing.Point(378, 198);
             this.StartDateDTP.MaxDate = new System.DateTime(2050, 9, 1, 0, 0, 0, 0);
             this.StartDateDTP.MinDate = new System.DateTime(2023, 9, 1, 0, 0, 0, 0);
             this.StartDateDTP.Name = "StartDateDTP";
@@ -192,7 +201,7 @@
             // 
             this.EndDateDTP.CustomFormat = "dd-MM-yyyy";
             this.EndDateDTP.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.EndDateDTP.Location = new System.Drawing.Point(347, 229);
+            this.EndDateDTP.Location = new System.Drawing.Point(378, 253);
             this.EndDateDTP.MaxDate = new System.DateTime(2050, 9, 1, 0, 0, 0, 0);
             this.EndDateDTP.MinDate = new System.DateTime(2023, 9, 1, 0, 0, 0, 0);
             this.EndDateDTP.Name = "EndDateDTP";
@@ -202,17 +211,17 @@
             // 
             // CManagerNameBox
             // 
-            this.CManagerNameBox.Location = new System.Drawing.Point(743, 89);
+            this.CManagerNameBox.Location = new System.Drawing.Point(811, 214);
             this.CManagerNameBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CManagerNameBox.Name = "CManagerNameBox";
-            this.CManagerNameBox.Size = new System.Drawing.Size(172, 22);
+            this.CManagerNameBox.Size = new System.Drawing.Size(155, 22);
             this.CManagerNameBox.TabIndex = 60;
             // 
             // StartHourDTP
             // 
             this.StartHourDTP.CustomFormat = "HH:mm";
             this.StartHourDTP.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.StartHourDTP.Location = new System.Drawing.Point(347, 131);
+            this.StartHourDTP.Location = new System.Drawing.Point(410, 144);
             this.StartHourDTP.MaxDate = new System.DateTime(2006, 9, 1, 0, 0, 0, 0);
             this.StartHourDTP.MinDate = new System.DateTime(1923, 9, 1, 0, 0, 0, 0);
             this.StartHourDTP.Name = "StartHourDTP";
@@ -223,7 +232,7 @@
             // 
             // CourseNameBox
             // 
-            this.CourseNameBox.Location = new System.Drawing.Point(347, 94);
+            this.CourseNameBox.Location = new System.Drawing.Point(316, 107);
             this.CourseNameBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CourseNameBox.Name = "CourseNameBox";
             this.CourseNameBox.Size = new System.Drawing.Size(172, 22);
@@ -232,10 +241,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(221, 94);
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(104, 101);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(126, 17);
+            this.label3.Size = new System.Drawing.Size(188, 28);
             this.label3.TabIndex = 62;
             this.label3.Text = "Enter Course Name";
             // 
@@ -758,11 +767,38 @@
             this.sidebarTimer.Interval = 10;
             this.sidebarTimer.Tick += new System.EventHandler(this.sidebarTimer_Tick);
             // 
+            // DiscountSelectBox
+            // 
+            this.DiscountSelectBox.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.DiscountSelectBox.Location = new System.Drawing.Point(673, 275);
+            this.DiscountSelectBox.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.DiscountSelectBox.Name = "DiscountSelectBox";
+            this.DiscountSelectBox.Size = new System.Drawing.Size(120, 22);
+            this.DiscountSelectBox.TabIndex = 69;
+            this.DiscountSelectBox.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // StaffSideTimer
+            // 
+            this.StaffSideTimer.Interval = 10;
+            // 
             // AddCourseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 500);
+            this.Controls.Add(this.DiscountSelectBox);
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.G2AddCourseBtn);
             this.Controls.Add(this.panel3);
@@ -780,6 +816,7 @@
             this.Controls.Add(this.custTownLbl);
             this.Controls.Add(this.custSurLbl);
             this.Controls.Add(this.custAddressLbl);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddCourseForm";
@@ -801,6 +838,7 @@
             this.coursesContainer.ResumeLayout(false);
             this.bookingContainer.ResumeLayout(false);
             this.ReportsContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DiscountSelectBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -859,5 +897,7 @@
         private System.Windows.Forms.Timer CourseSideTimer;
         private System.Windows.Forms.Timer BookSideTimer;
         private System.Windows.Forms.Timer sidebarTimer;
+        private System.Windows.Forms.NumericUpDown DiscountSelectBox;
+        private System.Windows.Forms.Timer StaffSideTimer;
     }
 }

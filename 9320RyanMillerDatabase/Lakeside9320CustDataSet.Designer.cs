@@ -285,17 +285,13 @@ namespace _9320RyanMillerDatabase {
             
             private global::System.Data.DataColumn columnCustomerSurname;
             
-            private global::System.Data.DataColumn columnCustomerPostcode;
-            
-            private global::System.Data.DataColumn columnCustomerAddress;
-            
-            private global::System.Data.DataColumn columnCustomerTown;
-            
             private global::System.Data.DataColumn columnCustomerPhone;
             
-            private global::System.Data.DataColumn columnCustomerDOB;
+            private global::System.Data.DataColumn columnBookingID;
             
-            private global::System.Data.DataColumn columnCustomerSpecialReqs;
+            private global::System.Data.DataColumn columnBookingDate;
+            
+            private global::System.Data.DataColumn columnPaid;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -356,30 +352,6 @@ namespace _9320RyanMillerDatabase {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn CustomerPostcodeColumn {
-                get {
-                    return this.columnCustomerPostcode;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn CustomerAddressColumn {
-                get {
-                    return this.columnCustomerAddress;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn CustomerTownColumn {
-                get {
-                    return this.columnCustomerTown;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn CustomerPhoneColumn {
                 get {
                     return this.columnCustomerPhone;
@@ -388,17 +360,25 @@ namespace _9320RyanMillerDatabase {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn CustomerDOBColumn {
+            public global::System.Data.DataColumn BookingIDColumn {
                 get {
-                    return this.columnCustomerDOB;
+                    return this.columnBookingID;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn CustomerSpecialReqsColumn {
+            public global::System.Data.DataColumn BookingDateColumn {
                 get {
-                    return this.columnCustomerSpecialReqs;
+                    return this.columnBookingDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PaidColumn {
+                get {
+                    return this.columnPaid;
                 }
             }
             
@@ -439,18 +419,16 @@ namespace _9320RyanMillerDatabase {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CustomerRow AddCustomerRow(string CustomerForename, string CustomerSurname, string CustomerPostcode, string CustomerAddress, string CustomerTown, string CustomerPhone, string CustomerDOB, string CustomerSpecialReqs) {
+            public CustomerRow AddCustomerRow(string CustomerForename, string CustomerSurname, string CustomerPhone, System.DateTime BookingDate, bool Paid) {
                 CustomerRow rowCustomerRow = ((CustomerRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         CustomerForename,
                         CustomerSurname,
-                        CustomerPostcode,
-                        CustomerAddress,
-                        CustomerTown,
                         CustomerPhone,
-                        CustomerDOB,
-                        CustomerSpecialReqs};
+                        null,
+                        BookingDate,
+                        Paid};
                 rowCustomerRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCustomerRow);
                 return rowCustomerRow;
@@ -483,12 +461,10 @@ namespace _9320RyanMillerDatabase {
                 this.columnCustomerNum = base.Columns["CustomerNum"];
                 this.columnCustomerForename = base.Columns["CustomerForename"];
                 this.columnCustomerSurname = base.Columns["CustomerSurname"];
-                this.columnCustomerPostcode = base.Columns["CustomerPostcode"];
-                this.columnCustomerAddress = base.Columns["CustomerAddress"];
-                this.columnCustomerTown = base.Columns["CustomerTown"];
                 this.columnCustomerPhone = base.Columns["CustomerPhone"];
-                this.columnCustomerDOB = base.Columns["CustomerDOB"];
-                this.columnCustomerSpecialReqs = base.Columns["CustomerSpecialReqs"];
+                this.columnBookingID = base.Columns["BookingID"];
+                this.columnBookingDate = base.Columns["BookingDate"];
+                this.columnPaid = base.Columns["Paid"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -500,18 +476,14 @@ namespace _9320RyanMillerDatabase {
                 base.Columns.Add(this.columnCustomerForename);
                 this.columnCustomerSurname = new global::System.Data.DataColumn("CustomerSurname", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCustomerSurname);
-                this.columnCustomerPostcode = new global::System.Data.DataColumn("CustomerPostcode", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCustomerPostcode);
-                this.columnCustomerAddress = new global::System.Data.DataColumn("CustomerAddress", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCustomerAddress);
-                this.columnCustomerTown = new global::System.Data.DataColumn("CustomerTown", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCustomerTown);
                 this.columnCustomerPhone = new global::System.Data.DataColumn("CustomerPhone", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCustomerPhone);
-                this.columnCustomerDOB = new global::System.Data.DataColumn("CustomerDOB", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCustomerDOB);
-                this.columnCustomerSpecialReqs = new global::System.Data.DataColumn("CustomerSpecialReqs", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCustomerSpecialReqs);
+                this.columnBookingID = new global::System.Data.DataColumn("BookingID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBookingID);
+                this.columnBookingDate = new global::System.Data.DataColumn("BookingDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBookingDate);
+                this.columnPaid = new global::System.Data.DataColumn("Paid", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPaid);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCustomerNum}, true));
                 this.columnCustomerNum.AutoIncrement = true;
@@ -524,17 +496,13 @@ namespace _9320RyanMillerDatabase {
                 this.columnCustomerForename.MaxLength = 50;
                 this.columnCustomerSurname.AllowDBNull = false;
                 this.columnCustomerSurname.MaxLength = 50;
-                this.columnCustomerPostcode.AllowDBNull = false;
-                this.columnCustomerPostcode.MaxLength = 50;
-                this.columnCustomerAddress.AllowDBNull = false;
-                this.columnCustomerAddress.MaxLength = 50;
-                this.columnCustomerTown.AllowDBNull = false;
-                this.columnCustomerTown.MaxLength = 50;
                 this.columnCustomerPhone.AllowDBNull = false;
                 this.columnCustomerPhone.MaxLength = 50;
-                this.columnCustomerDOB.AllowDBNull = false;
-                this.columnCustomerDOB.MaxLength = 50;
-                this.columnCustomerSpecialReqs.MaxLength = 50;
+                this.columnBookingID.AutoIncrement = true;
+                this.columnBookingID.AutoIncrementSeed = -1;
+                this.columnBookingID.AutoIncrementStep = -1;
+                this.columnBookingID.AllowDBNull = false;
+                this.columnBookingID.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -710,39 +678,6 @@ namespace _9320RyanMillerDatabase {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string CustomerPostcode {
-                get {
-                    return ((string)(this[this.tableCustomer.CustomerPostcodeColumn]));
-                }
-                set {
-                    this[this.tableCustomer.CustomerPostcodeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string CustomerAddress {
-                get {
-                    return ((string)(this[this.tableCustomer.CustomerAddressColumn]));
-                }
-                set {
-                    this[this.tableCustomer.CustomerAddressColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string CustomerTown {
-                get {
-                    return ((string)(this[this.tableCustomer.CustomerTownColumn]));
-                }
-                set {
-                    this[this.tableCustomer.CustomerTownColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string CustomerPhone {
                 get {
                     return ((string)(this[this.tableCustomer.CustomerPhoneColumn]));
@@ -754,41 +689,69 @@ namespace _9320RyanMillerDatabase {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string CustomerDOB {
+            public int BookingID {
                 get {
-                    return ((string)(this[this.tableCustomer.CustomerDOBColumn]));
+                    return ((int)(this[this.tableCustomer.BookingIDColumn]));
                 }
                 set {
-                    this[this.tableCustomer.CustomerDOBColumn] = value;
+                    this[this.tableCustomer.BookingIDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string CustomerSpecialReqs {
+            public System.DateTime BookingDate {
                 get {
                     try {
-                        return ((string)(this[this.tableCustomer.CustomerSpecialReqsColumn]));
+                        return ((global::System.DateTime)(this[this.tableCustomer.BookingDateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CustomerSpecialReqs\' in table \'Customer\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'BookingDate\' in table \'Customer\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableCustomer.CustomerSpecialReqsColumn] = value;
+                    this[this.tableCustomer.BookingDateColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsCustomerSpecialReqsNull() {
-                return this.IsNull(this.tableCustomer.CustomerSpecialReqsColumn);
+            public bool Paid {
+                get {
+                    try {
+                        return ((bool)(this[this.tableCustomer.PaidColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Paid\' in table \'Customer\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCustomer.PaidColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetCustomerSpecialReqsNull() {
-                this[this.tableCustomer.CustomerSpecialReqsColumn] = global::System.Convert.DBNull;
+            public bool IsBookingDateNull() {
+                return this.IsNull(this.tableCustomer.BookingDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetBookingDateNull() {
+                this[this.tableCustomer.BookingDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsPaidNull() {
+                return this.IsNull(this.tableCustomer.PaidColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetPaidNull() {
+                this[this.tableCustomer.PaidColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -954,12 +917,10 @@ namespace _9320RyanMillerDatabase.Lakeside9320CustDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("CustomerNum", "CustomerNum");
             tableMapping.ColumnMappings.Add("CustomerForename", "CustomerForename");
             tableMapping.ColumnMappings.Add("CustomerSurname", "CustomerSurname");
-            tableMapping.ColumnMappings.Add("CustomerPostcode", "CustomerPostcode");
-            tableMapping.ColumnMappings.Add("CustomerAddress", "CustomerAddress");
-            tableMapping.ColumnMappings.Add("CustomerTown", "CustomerTown");
             tableMapping.ColumnMappings.Add("CustomerPhone", "CustomerPhone");
-            tableMapping.ColumnMappings.Add("CustomerDOB", "CustomerDOB");
-            tableMapping.ColumnMappings.Add("CustomerSpecialReqs", "CustomerSpecialReqs");
+            tableMapping.ColumnMappings.Add("BookingID", "BookingID");
+            tableMapping.ColumnMappings.Add("BookingDate", "BookingDate");
+            tableMapping.ColumnMappings.Add("Paid", "Paid");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -1028,9 +989,10 @@ SELECT CustomerNum, CustomerForename, CustomerSurname, CustomerPostcode, Custome
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT CustomerNum, CustomerForename, CustomerSurname, CustomerPostcode, Customer" +
-                "Address, CustomerTown, CustomerPhone, CustomerDOB, CustomerSpecialReqs FROM dbo." +
-                "Customer";
+            this._commandCollection[0].CommandText = @"SELECT Customer.CustomerNum, Customer.CustomerForename, Customer.CustomerSurname, Customer.CustomerPhone, Booking.BookingID, Booking.BookingDate, Booking.Paid
+FROM     Customer INNER JOIN
+                  Booking ON Customer.CustomerNum = Booking.CustomerNum
+WHERE  (Booking.Paid = 0)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

@@ -750,10 +750,10 @@
         <Source>Embedded</Source>
         <Value>LlOgoO</Value>
         <Sizing>FitProportional</Sizing>
-        <Top>0.40733cm</Top>
-        <Left>0.43603cm</Left>
-        <Height>2.08167cm</Height>
-        <Width>2.333cm</Width>
+        <Top>1cm</Top>
+        <Left>5.07153cm</Left>
+        <Height>2.33567cm</Height>
+        <Width>2.54467cm</Width>
         <ZIndex>3</ZIndex>
         <ToolTip>Lakeside Lodges' Logo</ToolTip>
         <Style>

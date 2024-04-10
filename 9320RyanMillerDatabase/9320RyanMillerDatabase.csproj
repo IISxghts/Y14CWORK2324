@@ -311,6 +311,7 @@
     </Compile>
     <Compile Include="BookingDAL.cs" />
     <Compile Include="BookingModel.cs" />
+    <Compile Include="StaffModel.cs" />
     <Compile Include="CourseDAL.cs" />
     <Compile Include="CourseModel.cs" />
     <Compile Include="CustomerDAL.cs" />
@@ -362,10 +363,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Lakeside9320CoursesEditDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Lakeside9320ListReportDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Lakeside9320ListReportDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Lakeside9320NBCoursesDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Lakeside9320NBCoursesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Lakeside9320OrderUnpaidDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Lakeside9320OrderUnpaidDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Lakeside9320SearchBookingDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -376,6 +387,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Lakeside9320SearchCoursesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Lakeside9320UnpaidDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Lakeside9320UnpaidDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Lakeside9320UnpaidOrderDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Lakeside9320UnpaidOrderDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="SearchForm.cs">
       <SubType>Form</SubType>
@@ -476,6 +497,13 @@
     <Compile Include="BookingForm.Designer.cs">
       <DependentUpon>BookingForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SidebarForms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SidebarForms.Designer.cs">
+      <DependentUpon>SidebarForms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffDAL.cs" />
     <Compile Include="UserControlsMMStaff\UC_BookingsStaff.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -543,6 +571,7 @@
       <DependentUpon>EditStaffForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerReportTwo.rdlc" />
+    <EmbeddedResource Include="ReportUnpaidOrder.rdlc" />
     <EmbeddedResource Include="SearchForm.resx">
       <DependentUpon>SearchForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -586,6 +615,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BookingForm.resx">
       <DependentUpon>BookingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SidebarForms.resx">
+      <DependentUpon>SidebarForms.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlsMMStaff\UC_BookingsStaff.resx">
       <DependentUpon>UC_BookingsStaff.cs</DependentUpon>
@@ -671,6 +703,17 @@
     <None Include="Lakeside9320CustomerSelectDataSet.xss">
       <DependentUpon>Lakeside9320CustomerSelectDataSet.xsd</DependentUpon>
     </None>
+    <None Include="Lakeside9320ListReportDataSet.xsc">
+      <DependentUpon>Lakeside9320ListReportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Lakeside9320ListReportDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Lakeside9320ListReportDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Lakeside9320ListReportDataSet.xss">
+      <DependentUpon>Lakeside9320ListReportDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Lakeside9320NBCoursesDataSet.xsc">
       <DependentUpon>Lakeside9320NBCoursesDataSet.xsd</DependentUpon>
     </None>
@@ -681,6 +724,17 @@
     </None>
     <None Include="Lakeside9320NBCoursesDataSet.xss">
       <DependentUpon>Lakeside9320NBCoursesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Lakeside9320OrderUnpaidDataSet.xsc">
+      <DependentUpon>Lakeside9320OrderUnpaidDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Lakeside9320OrderUnpaidDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Lakeside9320OrderUnpaidDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Lakeside9320OrderUnpaidDataSet.xss">
+      <DependentUpon>Lakeside9320OrderUnpaidDataSet.xsd</DependentUpon>
     </None>
     <None Include="Lakeside9320SearchBookingDataSet.xsc">
       <DependentUpon>Lakeside9320SearchBookingDataSet.xsd</DependentUpon>
@@ -714,6 +768,28 @@
     </None>
     <None Include="Lakeside9320SearchDataSet.xss">
       <DependentUpon>Lakeside9320SearchDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Lakeside9320UnpaidDataSet.xsc">
+      <DependentUpon>Lakeside9320UnpaidDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Lakeside9320UnpaidDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Lakeside9320UnpaidDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Lakeside9320UnpaidDataSet.xss">
+      <DependentUpon>Lakeside9320UnpaidDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Lakeside9320UnpaidOrderDataSet.xsc">
+      <DependentUpon>Lakeside9320UnpaidOrderDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Lakeside9320UnpaidOrderDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Lakeside9320UnpaidOrderDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Lakeside9320UnpaidOrderDataSet.xss">
+      <DependentUpon>Lakeside9320UnpaidOrderDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
