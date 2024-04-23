@@ -17,7 +17,7 @@ namespace _9320RyanMillerDatabase
         public string _address;
         public string _town;
         public string _phone;
-        public DateTime _dob;
+        public string _dob;
         public string _specialreqs;
 
         public int Id
@@ -57,7 +57,7 @@ namespace _9320RyanMillerDatabase
             get { return _phone; }
             set {  _phone = value; }
         }
-        public DateTime DOB
+        public string DOB
         {
             get { return _dob; }
             set { _dob = value; }
@@ -72,7 +72,7 @@ namespace _9320RyanMillerDatabase
 
         }
         
-        public CustomerModel(int custID, string firstname, string surname, string postcode, string address, string town, string phone, DateTime dob, string specialreqs)
+        public CustomerModel(int custID, string firstname, string surname, string postcode, string address, string town, string phone, string dob, string specialreqs)
         {
             // WITH ID for editing an existing customer
             
@@ -86,7 +86,7 @@ namespace _9320RyanMillerDatabase
             this._dob = dob;
             this._specialreqs = specialreqs;
         }
-        public CustomerModel(string firstname, string surname, string postcode, string address, string town, string phone, DateTime dob, string specialreqs)
+        public CustomerModel(string firstname, string surname, string postcode, string address, string town, string phone, string dob, string specialreqs)
         {
             // NO ID for creating a new customer
 

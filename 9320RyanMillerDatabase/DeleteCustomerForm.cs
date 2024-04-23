@@ -281,5 +281,44 @@ namespace _9320RyanMillerDatabase
             new DeleteCourseForm().Show();
         }
         #endregion
+
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.customerTableAdapter1.FillBy(this.lakeside9320SearchDataSet.Customer);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void fillByToolStripButton_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                this.customerTableAdapter.FillBy(this.lakeside9320CustDataSet.Customer);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void fillBy1ToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.customerTableAdapter.FillBy(this.lakeside9320CustDataSet.Customer);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
     }
 }

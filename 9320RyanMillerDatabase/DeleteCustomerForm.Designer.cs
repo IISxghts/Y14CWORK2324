@@ -31,21 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeleteCustomerForm));
             this.CustDeleteDGV = new System.Windows.Forms.DataGridView();
-            this.customerNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerForenameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerSurnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerPostcodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerTownDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerPhoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerDOBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerSpecialReqsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lakeside9320CustDataSet = new _9320RyanMillerDatabase.Lakeside9320CustDataSet();
             this.ViewCustIDLbl = new System.Windows.Forms.Label();
             this.ViewCourseIDBox = new System.Windows.Forms.TextBox();
             this.DeleteCourseBtn = new System.Windows.Forms.Button();
-            this.customerTableAdapter = new _9320RyanMillerDatabase.Lakeside9320CustDataSetTableAdapters.CustomerTableAdapter();
             this.LLMenuLbl = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -83,9 +71,17 @@
             this.CourseSideTimer = new System.Windows.Forms.Timer(this.components);
             this.BookSideTimer = new System.Windows.Forms.Timer(this.components);
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
+            this.lakeside9320SearchDataSet = new _9320RyanMillerDatabase.Lakeside9320SearchDataSet();
+            this.customerTableAdapter1 = new _9320RyanMillerDatabase.Lakeside9320SearchDataSetTableAdapters.CustomerTableAdapter();
+            this.tableAdapterManager = new _9320RyanMillerDatabase.Lakeside9320SearchDataSetTableAdapters.TableAdapterManager();
+            this.customerNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerForenameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerSurnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerPhoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lakeside9320CustDataSet = new _9320RyanMillerDatabase.Lakeside9320CustDataSet();
+            this.customerTableAdapter = new _9320RyanMillerDatabase.Lakeside9320CustDataSetTableAdapters.CustomerTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.CustDeleteDGV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320CustDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.sidebar.SuspendLayout();
@@ -101,6 +97,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).BeginInit();
             this.ReportsContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320SearchDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320CustDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // CustDeleteDGV
@@ -111,12 +110,7 @@
             this.customerNumDataGridViewTextBoxColumn,
             this.customerForenameDataGridViewTextBoxColumn,
             this.customerSurnameDataGridViewTextBoxColumn,
-            this.customerPostcodeDataGridViewTextBoxColumn,
-            this.customerAddressDataGridViewTextBoxColumn,
-            this.customerTownDataGridViewTextBoxColumn,
-            this.customerPhoneDataGridViewTextBoxColumn,
-            this.customerDOBDataGridViewTextBoxColumn,
-            this.customerSpecialReqsDataGridViewTextBoxColumn});
+            this.customerPhoneDataGridViewTextBoxColumn});
             this.CustDeleteDGV.DataSource = this.customerBindingSource;
             this.CustDeleteDGV.Location = new System.Drawing.Point(224, 72);
             this.CustDeleteDGV.Name = "CustDeleteDGV";
@@ -125,89 +119,6 @@
             this.CustDeleteDGV.Size = new System.Drawing.Size(620, 307);
             this.CustDeleteDGV.TabIndex = 0;
             this.CustDeleteDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CustDeleteDGV_CellClick);
-            // 
-            // customerNumDataGridViewTextBoxColumn
-            // 
-            this.customerNumDataGridViewTextBoxColumn.DataPropertyName = "CustomerNum";
-            this.customerNumDataGridViewTextBoxColumn.HeaderText = "CustomerNum";
-            this.customerNumDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.customerNumDataGridViewTextBoxColumn.Name = "customerNumDataGridViewTextBoxColumn";
-            this.customerNumDataGridViewTextBoxColumn.ReadOnly = true;
-            this.customerNumDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // customerForenameDataGridViewTextBoxColumn
-            // 
-            this.customerForenameDataGridViewTextBoxColumn.DataPropertyName = "CustomerForename";
-            this.customerForenameDataGridViewTextBoxColumn.HeaderText = "CustomerForename";
-            this.customerForenameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.customerForenameDataGridViewTextBoxColumn.Name = "customerForenameDataGridViewTextBoxColumn";
-            this.customerForenameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // customerSurnameDataGridViewTextBoxColumn
-            // 
-            this.customerSurnameDataGridViewTextBoxColumn.DataPropertyName = "CustomerSurname";
-            this.customerSurnameDataGridViewTextBoxColumn.HeaderText = "CustomerSurname";
-            this.customerSurnameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.customerSurnameDataGridViewTextBoxColumn.Name = "customerSurnameDataGridViewTextBoxColumn";
-            this.customerSurnameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // customerPostcodeDataGridViewTextBoxColumn
-            // 
-            this.customerPostcodeDataGridViewTextBoxColumn.DataPropertyName = "CustomerPostcode";
-            this.customerPostcodeDataGridViewTextBoxColumn.HeaderText = "CustomerPostcode";
-            this.customerPostcodeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.customerPostcodeDataGridViewTextBoxColumn.Name = "customerPostcodeDataGridViewTextBoxColumn";
-            this.customerPostcodeDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // customerAddressDataGridViewTextBoxColumn
-            // 
-            this.customerAddressDataGridViewTextBoxColumn.DataPropertyName = "CustomerAddress";
-            this.customerAddressDataGridViewTextBoxColumn.HeaderText = "CustomerAddress";
-            this.customerAddressDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.customerAddressDataGridViewTextBoxColumn.Name = "customerAddressDataGridViewTextBoxColumn";
-            this.customerAddressDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // customerTownDataGridViewTextBoxColumn
-            // 
-            this.customerTownDataGridViewTextBoxColumn.DataPropertyName = "CustomerTown";
-            this.customerTownDataGridViewTextBoxColumn.HeaderText = "CustomerTown";
-            this.customerTownDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.customerTownDataGridViewTextBoxColumn.Name = "customerTownDataGridViewTextBoxColumn";
-            this.customerTownDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // customerPhoneDataGridViewTextBoxColumn
-            // 
-            this.customerPhoneDataGridViewTextBoxColumn.DataPropertyName = "CustomerPhone";
-            this.customerPhoneDataGridViewTextBoxColumn.HeaderText = "CustomerPhone";
-            this.customerPhoneDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.customerPhoneDataGridViewTextBoxColumn.Name = "customerPhoneDataGridViewTextBoxColumn";
-            this.customerPhoneDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // customerDOBDataGridViewTextBoxColumn
-            // 
-            this.customerDOBDataGridViewTextBoxColumn.DataPropertyName = "CustomerDOB";
-            this.customerDOBDataGridViewTextBoxColumn.HeaderText = "CustomerDOB";
-            this.customerDOBDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.customerDOBDataGridViewTextBoxColumn.Name = "customerDOBDataGridViewTextBoxColumn";
-            this.customerDOBDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // customerSpecialReqsDataGridViewTextBoxColumn
-            // 
-            this.customerSpecialReqsDataGridViewTextBoxColumn.DataPropertyName = "CustomerSpecialReqs";
-            this.customerSpecialReqsDataGridViewTextBoxColumn.HeaderText = "CustomerSpecialReqs";
-            this.customerSpecialReqsDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.customerSpecialReqsDataGridViewTextBoxColumn.Name = "customerSpecialReqsDataGridViewTextBoxColumn";
-            this.customerSpecialReqsDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // customerBindingSource
-            // 
-            this.customerBindingSource.DataMember = "Customer";
-            this.customerBindingSource.DataSource = this.lakeside9320CustDataSet;
-            // 
-            // lakeside9320CustDataSet
-            // 
-            this.lakeside9320CustDataSet.DataSetName = "Lakeside9320CustDataSet";
-            this.lakeside9320CustDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // ViewCustIDLbl
             // 
@@ -234,10 +145,6 @@
             this.DeleteCourseBtn.Text = "Delete Customer";
             this.DeleteCourseBtn.UseVisualStyleBackColor = true;
             this.DeleteCourseBtn.Click += new System.EventHandler(this.DeleteCustBtn_Click);
-            // 
-            // customerTableAdapter
-            // 
-            this.customerTableAdapter.ClearBeforeFill = true;
             // 
             // LLMenuLbl
             // 
@@ -739,11 +646,73 @@
             this.sidebarTimer.Interval = 10;
             this.sidebarTimer.Tick += new System.EventHandler(this.sidebarTimer_Tick);
             // 
+            // lakeside9320SearchDataSet
+            // 
+            this.lakeside9320SearchDataSet.DataSetName = "Lakeside9320SearchDataSet";
+            this.lakeside9320SearchDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // customerTableAdapter1
+            // 
+            this.customerTableAdapter1.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CustomerTableAdapter = this.customerTableAdapter1;
+            this.tableAdapterManager.UpdateOrder = _9320RyanMillerDatabase.Lakeside9320SearchDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // customerNumDataGridViewTextBoxColumn
+            // 
+            this.customerNumDataGridViewTextBoxColumn.DataPropertyName = "CustomerNum";
+            this.customerNumDataGridViewTextBoxColumn.HeaderText = "CustomerNum";
+            this.customerNumDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.customerNumDataGridViewTextBoxColumn.Name = "customerNumDataGridViewTextBoxColumn";
+            this.customerNumDataGridViewTextBoxColumn.ReadOnly = true;
+            this.customerNumDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // customerForenameDataGridViewTextBoxColumn
+            // 
+            this.customerForenameDataGridViewTextBoxColumn.DataPropertyName = "CustomerForename";
+            this.customerForenameDataGridViewTextBoxColumn.HeaderText = "CustomerForename";
+            this.customerForenameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.customerForenameDataGridViewTextBoxColumn.Name = "customerForenameDataGridViewTextBoxColumn";
+            this.customerForenameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // customerSurnameDataGridViewTextBoxColumn
+            // 
+            this.customerSurnameDataGridViewTextBoxColumn.DataPropertyName = "CustomerSurname";
+            this.customerSurnameDataGridViewTextBoxColumn.HeaderText = "CustomerSurname";
+            this.customerSurnameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.customerSurnameDataGridViewTextBoxColumn.Name = "customerSurnameDataGridViewTextBoxColumn";
+            this.customerSurnameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // customerPhoneDataGridViewTextBoxColumn
+            // 
+            this.customerPhoneDataGridViewTextBoxColumn.DataPropertyName = "CustomerPhone";
+            this.customerPhoneDataGridViewTextBoxColumn.HeaderText = "CustomerPhone";
+            this.customerPhoneDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.customerPhoneDataGridViewTextBoxColumn.Name = "customerPhoneDataGridViewTextBoxColumn";
+            this.customerPhoneDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // customerBindingSource
+            // 
+            this.customerBindingSource.DataMember = "Customer";
+            this.customerBindingSource.DataSource = this.lakeside9320CustDataSet;
+            // 
+            // lakeside9320CustDataSet
+            // 
+            this.lakeside9320CustDataSet.DataSetName = "Lakeside9320CustDataSet";
+            this.lakeside9320CustDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // customerTableAdapter
+            // 
+            this.customerTableAdapter.ClearBeforeFill = true;
+            // 
             // DeleteCustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 500);
+            this.ClientSize = new System.Drawing.Size(1000, 520);
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.DeleteCourseBtn);
@@ -756,8 +725,6 @@
             this.Text = "Delete Customer";
             this.Load += new System.EventHandler(this.ViewCustomer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.CustDeleteDGV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320CustDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -775,6 +742,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).EndInit();
             this.ReportsContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320SearchDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320CustDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -835,5 +805,8 @@
         private System.Windows.Forms.Timer CourseSideTimer;
         private System.Windows.Forms.Timer BookSideTimer;
         private System.Windows.Forms.Timer sidebarTimer;
+        private Lakeside9320SearchDataSet lakeside9320SearchDataSet;
+        private Lakeside9320SearchDataSetTableAdapters.CustomerTableAdapter customerTableAdapter1;
+        private Lakeside9320SearchDataSetTableAdapters.TableAdapterManager tableAdapterManager;
     }
 }

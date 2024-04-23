@@ -17,6 +17,7 @@ namespace _9320RyanMillerDatabase
         {
             CenterToScreen();
             InitializeComponent();
+            G2SaveDetailsBtn.Visible = false;
         }
 
         DataRowView DFRowSelect;
@@ -51,9 +52,9 @@ namespace _9320RyanMillerDatabase
             DFRowSelect = EFCustDGV.CurrentRow != null ? (DataRowView)EFCustDGV.CurrentRow.DataBoundItem : null;
         }
 
-        
+       
         // Code that sends the details of the selected customer into the text boxes, allowing them to be edited.
-        private void EFCustEditBtn_Click(object sender, EventArgs e)
+        private void G2EditCustBtn_Click(object sender, EventArgs e)
         {
             if (DFRowSelect != null)
             {
@@ -64,15 +65,20 @@ namespace _9320RyanMillerDatabase
                 EFCustPostcodeTB.Text = Convert.ToString(DFRowSelect["CustomerPostcode"]);
                 EFCustAddressTB.Text = Convert.ToString(DFRowSelect["CustomerAddress"]);
                 EFCustTownTB.Text = Convert.ToString(DFRowSelect["CustomerTown"]);
-                EditCustDTP.Text = Convert.ToString(DFRowSelect["CustomerDOB"]); // this is broken
+                DTTextBox.Text = Convert.ToString(DFRowSelect["CustomerDOB"]);
                 EFCustPhoneTB.Text = Convert.ToString(DFRowSelect["CustomerPhone"]);
                 EFCustSpecialReqTB.Text = Convert.ToString(DFRowSelect["CustomerSpecialReqs"]);
+
+                G2SaveDetailsBtn.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("Please select a customer to edit", "Error");
             }
         }
 
-        
-        // Code that will allow us to make changes 
-        private void EFCustSNDBtn_Click(object sender, EventArgs e)
+        // Code that will write the new details through the DAL.
+        private void G2SaveDetailsBtn_Click(object sender, EventArgs e)
         {
             string custidhold = EFCustIDTB.Text;
             int customerid = Convert.ToInt32(custidhold);
@@ -82,8 +88,8 @@ namespace _9320RyanMillerDatabase
             string postcode = EFCustPostcodeTB.Text;
             string town = EFCustTownTB.Text;
             string phone = EFCustPhoneTB.Text;
-            DateTime bdate = EditCustDTP.Value;
-            string specialreqs = EFCustSpecialReqTB.Text;                        
+            string bdate = DTTextBox.Text;
+            string specialreqs = EFCustSpecialReqTB.Text;
 
             CustomerModel existingcustomers = new CustomerModel(customerid, forename, surname, address, postcode, town, phone, bdate, specialreqs);
 
@@ -93,7 +99,7 @@ namespace _9320RyanMillerDatabase
             {
                 MessageBox.Show("Customer has been edited successfully", "Success");
                 CustomerTableRefresh();
-                
+
             }
             else
             {
@@ -101,6 +107,8 @@ namespace _9320RyanMillerDatabase
                 CustomerTableRefresh();
             }
         }
+
+
         #region sidebar controls
         private void G2HomeSideBtn_Click(object sender, EventArgs e)
         {
@@ -305,5 +313,7 @@ namespace _9320RyanMillerDatabase
             }
         }
         #endregion
+
+
     }
 }   

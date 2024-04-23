@@ -287,11 +287,15 @@ namespace _9320RyanMillerDatabase {
             
             private global::System.Data.DataColumn columnCustomerPhone;
             
-            private global::System.Data.DataColumn columnBookingID;
+            private global::System.Data.DataColumn columnCustomerPostcode;
             
-            private global::System.Data.DataColumn columnBookingDate;
+            private global::System.Data.DataColumn columnCustomerAddress;
             
-            private global::System.Data.DataColumn columnPaid;
+            private global::System.Data.DataColumn columnCustomerTown;
+            
+            private global::System.Data.DataColumn columnCustomerDOB;
+            
+            private global::System.Data.DataColumn columnCustomerSpecialReqs;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -360,25 +364,41 @@ namespace _9320RyanMillerDatabase {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn BookingIDColumn {
+            public global::System.Data.DataColumn CustomerPostcodeColumn {
                 get {
-                    return this.columnBookingID;
+                    return this.columnCustomerPostcode;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn BookingDateColumn {
+            public global::System.Data.DataColumn CustomerAddressColumn {
                 get {
-                    return this.columnBookingDate;
+                    return this.columnCustomerAddress;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn PaidColumn {
+            public global::System.Data.DataColumn CustomerTownColumn {
                 get {
-                    return this.columnPaid;
+                    return this.columnCustomerTown;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn CustomerDOBColumn {
+                get {
+                    return this.columnCustomerDOB;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn CustomerSpecialReqsColumn {
+                get {
+                    return this.columnCustomerSpecialReqs;
                 }
             }
             
@@ -419,16 +439,18 @@ namespace _9320RyanMillerDatabase {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CustomerRow AddCustomerRow(string CustomerForename, string CustomerSurname, string CustomerPhone, System.DateTime BookingDate, bool Paid) {
+            public CustomerRow AddCustomerRow(string CustomerForename, string CustomerSurname, string CustomerPhone, string CustomerPostcode, string CustomerAddress, string CustomerTown, string CustomerDOB, string CustomerSpecialReqs) {
                 CustomerRow rowCustomerRow = ((CustomerRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         CustomerForename,
                         CustomerSurname,
                         CustomerPhone,
-                        null,
-                        BookingDate,
-                        Paid};
+                        CustomerPostcode,
+                        CustomerAddress,
+                        CustomerTown,
+                        CustomerDOB,
+                        CustomerSpecialReqs};
                 rowCustomerRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCustomerRow);
                 return rowCustomerRow;
@@ -462,9 +484,11 @@ namespace _9320RyanMillerDatabase {
                 this.columnCustomerForename = base.Columns["CustomerForename"];
                 this.columnCustomerSurname = base.Columns["CustomerSurname"];
                 this.columnCustomerPhone = base.Columns["CustomerPhone"];
-                this.columnBookingID = base.Columns["BookingID"];
-                this.columnBookingDate = base.Columns["BookingDate"];
-                this.columnPaid = base.Columns["Paid"];
+                this.columnCustomerPostcode = base.Columns["CustomerPostcode"];
+                this.columnCustomerAddress = base.Columns["CustomerAddress"];
+                this.columnCustomerTown = base.Columns["CustomerTown"];
+                this.columnCustomerDOB = base.Columns["CustomerDOB"];
+                this.columnCustomerSpecialReqs = base.Columns["CustomerSpecialReqs"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -478,12 +502,16 @@ namespace _9320RyanMillerDatabase {
                 base.Columns.Add(this.columnCustomerSurname);
                 this.columnCustomerPhone = new global::System.Data.DataColumn("CustomerPhone", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCustomerPhone);
-                this.columnBookingID = new global::System.Data.DataColumn("BookingID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBookingID);
-                this.columnBookingDate = new global::System.Data.DataColumn("BookingDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBookingDate);
-                this.columnPaid = new global::System.Data.DataColumn("Paid", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPaid);
+                this.columnCustomerPostcode = new global::System.Data.DataColumn("CustomerPostcode", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCustomerPostcode);
+                this.columnCustomerAddress = new global::System.Data.DataColumn("CustomerAddress", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCustomerAddress);
+                this.columnCustomerTown = new global::System.Data.DataColumn("CustomerTown", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCustomerTown);
+                this.columnCustomerDOB = new global::System.Data.DataColumn("CustomerDOB", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCustomerDOB);
+                this.columnCustomerSpecialReqs = new global::System.Data.DataColumn("CustomerSpecialReqs", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCustomerSpecialReqs);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCustomerNum}, true));
                 this.columnCustomerNum.AutoIncrement = true;
@@ -498,11 +526,15 @@ namespace _9320RyanMillerDatabase {
                 this.columnCustomerSurname.MaxLength = 50;
                 this.columnCustomerPhone.AllowDBNull = false;
                 this.columnCustomerPhone.MaxLength = 50;
-                this.columnBookingID.AutoIncrement = true;
-                this.columnBookingID.AutoIncrementSeed = -1;
-                this.columnBookingID.AutoIncrementStep = -1;
-                this.columnBookingID.AllowDBNull = false;
-                this.columnBookingID.ReadOnly = true;
+                this.columnCustomerPostcode.AllowDBNull = false;
+                this.columnCustomerPostcode.MaxLength = 50;
+                this.columnCustomerAddress.AllowDBNull = false;
+                this.columnCustomerAddress.MaxLength = 50;
+                this.columnCustomerTown.AllowDBNull = false;
+                this.columnCustomerTown.MaxLength = 50;
+                this.columnCustomerDOB.AllowDBNull = false;
+                this.columnCustomerDOB.MaxLength = 50;
+                this.columnCustomerSpecialReqs.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -689,69 +721,74 @@ namespace _9320RyanMillerDatabase {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int BookingID {
+            public string CustomerPostcode {
                 get {
-                    return ((int)(this[this.tableCustomer.BookingIDColumn]));
+                    return ((string)(this[this.tableCustomer.CustomerPostcodeColumn]));
                 }
                 set {
-                    this[this.tableCustomer.BookingIDColumn] = value;
+                    this[this.tableCustomer.CustomerPostcodeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public System.DateTime BookingDate {
+            public string CustomerAddress {
+                get {
+                    return ((string)(this[this.tableCustomer.CustomerAddressColumn]));
+                }
+                set {
+                    this[this.tableCustomer.CustomerAddressColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string CustomerTown {
+                get {
+                    return ((string)(this[this.tableCustomer.CustomerTownColumn]));
+                }
+                set {
+                    this[this.tableCustomer.CustomerTownColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string CustomerDOB {
+                get {
+                    return ((string)(this[this.tableCustomer.CustomerDOBColumn]));
+                }
+                set {
+                    this[this.tableCustomer.CustomerDOBColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string CustomerSpecialReqs {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableCustomer.BookingDateColumn]));
+                        return ((string)(this[this.tableCustomer.CustomerSpecialReqsColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'BookingDate\' in table \'Customer\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'CustomerSpecialReqs\' in table \'Customer\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableCustomer.BookingDateColumn] = value;
+                    this[this.tableCustomer.CustomerSpecialReqsColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Paid {
-                get {
-                    try {
-                        return ((bool)(this[this.tableCustomer.PaidColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Paid\' in table \'Customer\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCustomer.PaidColumn] = value;
-                }
+            public bool IsCustomerSpecialReqsNull() {
+                return this.IsNull(this.tableCustomer.CustomerSpecialReqsColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsBookingDateNull() {
-                return this.IsNull(this.tableCustomer.BookingDateColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetBookingDateNull() {
-                this[this.tableCustomer.BookingDateColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsPaidNull() {
-                return this.IsNull(this.tableCustomer.PaidColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetPaidNull() {
-                this[this.tableCustomer.PaidColumn] = global::System.Convert.DBNull;
+            public void SetCustomerSpecialReqsNull() {
+                this[this.tableCustomer.CustomerSpecialReqsColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -918,9 +955,11 @@ namespace _9320RyanMillerDatabase.Lakeside9320CustDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("CustomerForename", "CustomerForename");
             tableMapping.ColumnMappings.Add("CustomerSurname", "CustomerSurname");
             tableMapping.ColumnMappings.Add("CustomerPhone", "CustomerPhone");
-            tableMapping.ColumnMappings.Add("BookingID", "BookingID");
-            tableMapping.ColumnMappings.Add("BookingDate", "BookingDate");
-            tableMapping.ColumnMappings.Add("Paid", "Paid");
+            tableMapping.ColumnMappings.Add("CustomerPostcode", "CustomerPostcode");
+            tableMapping.ColumnMappings.Add("CustomerAddress", "CustomerAddress");
+            tableMapping.ColumnMappings.Add("CustomerTown", "CustomerTown");
+            tableMapping.ColumnMappings.Add("CustomerDOB", "CustomerDOB");
+            tableMapping.ColumnMappings.Add("CustomerSpecialReqs", "CustomerSpecialReqs");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -986,14 +1025,19 @@ SELECT CustomerNum, CustomerForename, CustomerSurname, CustomerPostcode, Custome
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT Customer.CustomerNum, Customer.CustomerForename, Customer.CustomerSurname, Customer.CustomerPhone, Booking.BookingID, Booking.BookingDate, Booking.Paid
-FROM     Customer INNER JOIN
-                  Booking ON Customer.CustomerNum = Booking.CustomerNum
-WHERE  (Booking.Paid = 0)";
+            this._commandCollection[0].CommandText = "SELECT CustomerNum, CustomerForename, CustomerSurname, CustomerPostcode, Customer" +
+                "Address, CustomerTown, CustomerPhone, CustomerDOB, CustomerSpecialReqs FROM dbo." +
+                "Customer";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT CustomerNum, CustomerForename, CustomerSurname, CustomerPostcode, Customer" +
+                "Address, CustomerTown, CustomerPhone, CustomerDOB, CustomerSpecialReqs FROM dbo." +
+                "Customer";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1023,6 +1067,19 @@ WHERE  (Booking.Paid = 0)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy(Lakeside9320CustDataSet.CustomerDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(Lakeside9320CustDataSet.CustomerDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
@@ -1047,311 +1104,6 @@ WHERE  (Booking.Paid = 0)";
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(global::System.Data.DataRow[] dataRows) {
             return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_CustomerNum, string Original_CustomerForename, string Original_CustomerSurname, string Original_CustomerPostcode, string Original_CustomerAddress, string Original_CustomerTown, string Original_CustomerPhone, string Original_CustomerDOB, string Original_CustomerSpecialReqs) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_CustomerNum));
-            if ((Original_CustomerForename == null)) {
-                throw new global::System.ArgumentNullException("Original_CustomerForename");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_CustomerForename));
-            }
-            if ((Original_CustomerSurname == null)) {
-                throw new global::System.ArgumentNullException("Original_CustomerSurname");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_CustomerSurname));
-            }
-            if ((Original_CustomerPostcode == null)) {
-                throw new global::System.ArgumentNullException("Original_CustomerPostcode");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_CustomerPostcode));
-            }
-            if ((Original_CustomerAddress == null)) {
-                throw new global::System.ArgumentNullException("Original_CustomerAddress");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_CustomerAddress));
-            }
-            if ((Original_CustomerTown == null)) {
-                throw new global::System.ArgumentNullException("Original_CustomerTown");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_CustomerTown));
-            }
-            if ((Original_CustomerPhone == null)) {
-                throw new global::System.ArgumentNullException("Original_CustomerPhone");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_CustomerPhone));
-            }
-            if ((Original_CustomerDOB == null)) {
-                throw new global::System.ArgumentNullException("Original_CustomerDOB");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_CustomerDOB));
-            }
-            if ((Original_CustomerSpecialReqs == null)) {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((string)(Original_CustomerSpecialReqs));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string CustomerForename, string CustomerSurname, string CustomerPostcode, string CustomerAddress, string CustomerTown, string CustomerPhone, string CustomerDOB, string CustomerSpecialReqs) {
-            if ((CustomerForename == null)) {
-                throw new global::System.ArgumentNullException("CustomerForename");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(CustomerForename));
-            }
-            if ((CustomerSurname == null)) {
-                throw new global::System.ArgumentNullException("CustomerSurname");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(CustomerSurname));
-            }
-            if ((CustomerPostcode == null)) {
-                throw new global::System.ArgumentNullException("CustomerPostcode");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(CustomerPostcode));
-            }
-            if ((CustomerAddress == null)) {
-                throw new global::System.ArgumentNullException("CustomerAddress");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(CustomerAddress));
-            }
-            if ((CustomerTown == null)) {
-                throw new global::System.ArgumentNullException("CustomerTown");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(CustomerTown));
-            }
-            if ((CustomerPhone == null)) {
-                throw new global::System.ArgumentNullException("CustomerPhone");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(CustomerPhone));
-            }
-            if ((CustomerDOB == null)) {
-                throw new global::System.ArgumentNullException("CustomerDOB");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(CustomerDOB));
-            }
-            if ((CustomerSpecialReqs == null)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(CustomerSpecialReqs));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    string CustomerForename, 
-                    string CustomerSurname, 
-                    string CustomerPostcode, 
-                    string CustomerAddress, 
-                    string CustomerTown, 
-                    string CustomerPhone, 
-                    string CustomerDOB, 
-                    string CustomerSpecialReqs, 
-                    int Original_CustomerNum, 
-                    string Original_CustomerForename, 
-                    string Original_CustomerSurname, 
-                    string Original_CustomerPostcode, 
-                    string Original_CustomerAddress, 
-                    string Original_CustomerTown, 
-                    string Original_CustomerPhone, 
-                    string Original_CustomerDOB, 
-                    string Original_CustomerSpecialReqs, 
-                    int CustomerNum) {
-            if ((CustomerForename == null)) {
-                throw new global::System.ArgumentNullException("CustomerForename");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(CustomerForename));
-            }
-            if ((CustomerSurname == null)) {
-                throw new global::System.ArgumentNullException("CustomerSurname");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(CustomerSurname));
-            }
-            if ((CustomerPostcode == null)) {
-                throw new global::System.ArgumentNullException("CustomerPostcode");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(CustomerPostcode));
-            }
-            if ((CustomerAddress == null)) {
-                throw new global::System.ArgumentNullException("CustomerAddress");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(CustomerAddress));
-            }
-            if ((CustomerTown == null)) {
-                throw new global::System.ArgumentNullException("CustomerTown");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(CustomerTown));
-            }
-            if ((CustomerPhone == null)) {
-                throw new global::System.ArgumentNullException("CustomerPhone");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(CustomerPhone));
-            }
-            if ((CustomerDOB == null)) {
-                throw new global::System.ArgumentNullException("CustomerDOB");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(CustomerDOB));
-            }
-            if ((CustomerSpecialReqs == null)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(CustomerSpecialReqs));
-            }
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_CustomerNum));
-            if ((Original_CustomerForename == null)) {
-                throw new global::System.ArgumentNullException("Original_CustomerForename");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_CustomerForename));
-            }
-            if ((Original_CustomerSurname == null)) {
-                throw new global::System.ArgumentNullException("Original_CustomerSurname");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_CustomerSurname));
-            }
-            if ((Original_CustomerPostcode == null)) {
-                throw new global::System.ArgumentNullException("Original_CustomerPostcode");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_CustomerPostcode));
-            }
-            if ((Original_CustomerAddress == null)) {
-                throw new global::System.ArgumentNullException("Original_CustomerAddress");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_CustomerAddress));
-            }
-            if ((Original_CustomerTown == null)) {
-                throw new global::System.ArgumentNullException("Original_CustomerTown");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_CustomerTown));
-            }
-            if ((Original_CustomerPhone == null)) {
-                throw new global::System.ArgumentNullException("Original_CustomerPhone");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_CustomerPhone));
-            }
-            if ((Original_CustomerDOB == null)) {
-                throw new global::System.ArgumentNullException("Original_CustomerDOB");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_CustomerDOB));
-            }
-            if ((Original_CustomerSpecialReqs == null)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_CustomerSpecialReqs));
-            }
-            this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(CustomerNum));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    string CustomerForename, 
-                    string CustomerSurname, 
-                    string CustomerPostcode, 
-                    string CustomerAddress, 
-                    string CustomerTown, 
-                    string CustomerPhone, 
-                    string CustomerDOB, 
-                    string CustomerSpecialReqs, 
-                    int Original_CustomerNum, 
-                    string Original_CustomerForename, 
-                    string Original_CustomerSurname, 
-                    string Original_CustomerPostcode, 
-                    string Original_CustomerAddress, 
-                    string Original_CustomerTown, 
-                    string Original_CustomerPhone, 
-                    string Original_CustomerDOB, 
-                    string Original_CustomerSpecialReqs) {
-            return this.Update(CustomerForename, CustomerSurname, CustomerPostcode, CustomerAddress, CustomerTown, CustomerPhone, CustomerDOB, CustomerSpecialReqs, Original_CustomerNum, Original_CustomerForename, Original_CustomerSurname, Original_CustomerPostcode, Original_CustomerAddress, Original_CustomerTown, Original_CustomerPhone, Original_CustomerDOB, Original_CustomerSpecialReqs, Original_CustomerNum);
         }
     }
     

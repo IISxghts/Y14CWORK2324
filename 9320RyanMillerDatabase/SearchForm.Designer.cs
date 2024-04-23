@@ -110,7 +110,7 @@
             // CustomerInfoDGV
             // 
             this.CustomerInfoDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CustomerInfoDGV.Location = new System.Drawing.Point(221, 195);
+            this.CustomerInfoDGV.Location = new System.Drawing.Point(174, 195);
             this.CustomerInfoDGV.Name = "CustomerInfoDGV";
             this.CustomerInfoDGV.RowHeadersWidth = 51;
             this.CustomerInfoDGV.RowTemplate.Height = 24;
@@ -160,7 +160,7 @@
             this.LLMenuLbl.AutoSize = true;
             this.LLMenuLbl.Font = new System.Drawing.Font("Segoe UI Black", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LLMenuLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
-            this.LLMenuLbl.Location = new System.Drawing.Point(479, 10);
+            this.LLMenuLbl.Location = new System.Drawing.Point(404, 9);
             this.LLMenuLbl.Name = "LLMenuLbl";
             this.LLMenuLbl.Size = new System.Drawing.Size(414, 38);
             this.LLMenuLbl.TabIndex = 1;
@@ -170,7 +170,7 @@
             // 
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(324, 4);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(249, 3);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(144, 51);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

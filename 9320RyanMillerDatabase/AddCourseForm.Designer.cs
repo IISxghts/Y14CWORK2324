@@ -34,7 +34,6 @@
             this.CourseCapacityBox = new System.Windows.Forms.TextBox();
             this.custPhoneLbl = new System.Windows.Forms.Label();
             this.custPostLbl = new System.Windows.Forms.Label();
-            this.CoursePriceBox = new System.Windows.Forms.TextBox();
             this.custTownLbl = new System.Windows.Forms.Label();
             this.custSurLbl = new System.Windows.Forms.Label();
             this.custAddressLbl = new System.Windows.Forms.Label();
@@ -82,7 +81,7 @@
             this.CourseSideTimer = new System.Windows.Forms.Timer(this.components);
             this.BookSideTimer = new System.Windows.Forms.Timer(this.components);
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
-            this.DiscountSelectBox = new System.Windows.Forms.NumericUpDown();
+            this.CoursePriceBox = new System.Windows.Forms.NumericUpDown();
             this.StaffSideTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -99,7 +98,7 @@
             this.coursesContainer.SuspendLayout();
             this.bookingContainer.SuspendLayout();
             this.ReportsContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DiscountSelectBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CoursePriceBox)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -142,14 +141,6 @@
             this.custPostLbl.Size = new System.Drawing.Size(159, 28);
             this.custPostLbl.TabIndex = 50;
             this.custPostLbl.Text = "Enter Start Hour";
-            // 
-            // CoursePriceBox
-            // 
-            this.CoursePriceBox.Location = new System.Drawing.Point(794, 108);
-            this.CoursePriceBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.CoursePriceBox.Name = "CoursePriceBox";
-            this.CoursePriceBox.Size = new System.Drawing.Size(172, 22);
-            this.CoursePriceBox.TabIndex = 49;
             // 
             // custTownLbl
             // 
@@ -767,23 +758,23 @@
             this.sidebarTimer.Interval = 10;
             this.sidebarTimer.Tick += new System.EventHandler(this.sidebarTimer_Tick);
             // 
-            // DiscountSelectBox
+            // CoursePriceBox
             // 
-            this.DiscountSelectBox.Increment = new decimal(new int[] {
+            this.CoursePriceBox.Increment = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            this.DiscountSelectBox.Location = new System.Drawing.Point(673, 275);
-            this.DiscountSelectBox.Minimum = new decimal(new int[] {
+            this.CoursePriceBox.Location = new System.Drawing.Point(794, 101);
+            this.CoursePriceBox.Minimum = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            this.DiscountSelectBox.Name = "DiscountSelectBox";
-            this.DiscountSelectBox.Size = new System.Drawing.Size(120, 22);
-            this.DiscountSelectBox.TabIndex = 69;
-            this.DiscountSelectBox.Value = new decimal(new int[] {
+            this.CoursePriceBox.Name = "CoursePriceBox";
+            this.CoursePriceBox.Size = new System.Drawing.Size(120, 22);
+            this.CoursePriceBox.TabIndex = 69;
+            this.CoursePriceBox.Value = new decimal(new int[] {
             10,
             0,
             0,
@@ -798,7 +789,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 500);
-            this.Controls.Add(this.DiscountSelectBox);
+            this.Controls.Add(this.CoursePriceBox);
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.G2AddCourseBtn);
             this.Controls.Add(this.panel3);
@@ -812,7 +803,6 @@
             this.Controls.Add(this.CourseCapacityBox);
             this.Controls.Add(this.custPhoneLbl);
             this.Controls.Add(this.custPostLbl);
-            this.Controls.Add(this.CoursePriceBox);
             this.Controls.Add(this.custTownLbl);
             this.Controls.Add(this.custSurLbl);
             this.Controls.Add(this.custAddressLbl);
@@ -838,7 +828,7 @@
             this.coursesContainer.ResumeLayout(false);
             this.bookingContainer.ResumeLayout(false);
             this.ReportsContainer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DiscountSelectBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CoursePriceBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -849,7 +839,6 @@
         private System.Windows.Forms.TextBox CourseCapacityBox;
         private System.Windows.Forms.Label custPhoneLbl;
         private System.Windows.Forms.Label custPostLbl;
-        private System.Windows.Forms.TextBox CoursePriceBox;
         private System.Windows.Forms.Label custTownLbl;
         private System.Windows.Forms.Label custSurLbl;
         private System.Windows.Forms.Label custAddressLbl;
@@ -897,7 +886,7 @@
         private System.Windows.Forms.Timer CourseSideTimer;
         private System.Windows.Forms.Timer BookSideTimer;
         private System.Windows.Forms.Timer sidebarTimer;
-        private System.Windows.Forms.NumericUpDown DiscountSelectBox;
+        private System.Windows.Forms.NumericUpDown CoursePriceBox;
         private System.Windows.Forms.Timer StaffSideTimer;
     }
 }

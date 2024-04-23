@@ -58,26 +58,31 @@
             this.G2AddBookBtnS = new Guna.UI2.WinForms.Guna2Button();
             this.G2DeleteBookBtnS = new Guna.UI2.WinForms.Guna2Button();
             this.G2EditBookBtnS = new Guna.UI2.WinForms.Guna2Button();
-            this.staffContainer = new System.Windows.Forms.Panel();
-            this.AddStaffBtnS = new Guna.UI2.WinForms.Guna2Button();
-            this.DeleteStaffBtnS = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.EditStaffBtnS = new Guna.UI2.WinForms.Guna2Button();
-            this.G2StaffSideBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.ReportSideTimer = new System.Windows.Forms.Timer(this.components);
-            this.CustSideTimer = new System.Windows.Forms.Timer(this.components);
-            this.CourseSideTimer = new System.Windows.Forms.Timer(this.components);
-            this.BookSideTimer = new System.Windows.Forms.Timer(this.components);
-            this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
-            this.CustDeleteDGV = new System.Windows.Forms.DataGridView();
-            this.DeleteBookingBtn = new System.Windows.Forms.Button();
-            this.ViewCourseIDBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.ReportsContainer = new System.Windows.Forms.Panel();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.G2CustListBtnS = new Guna.UI2.WinForms.Guna2Button();
             this.G2UnpaidBtn = new Guna.UI2.WinForms.Guna2Button();
             this.G2ReportsBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.ReportSideTimer = new System.Windows.Forms.Timer(this.components);
+            this.CustSideTimer = new System.Windows.Forms.Timer(this.components);
+            this.CourseSideTimer = new System.Windows.Forms.Timer(this.components);
+            this.BookSideTimer = new System.Windows.Forms.Timer(this.components);
+            this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
+            this.BookDeleteDGV = new System.Windows.Forms.DataGridView();
+            this.bookingIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.courseIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookingDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.discountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.discountPercentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerQuantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.paidDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.bookingBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lakeside9320DeleteBookingDataSet = new _9320RyanMillerDatabase.Lakeside9320DeleteBookingDataSet();
+            this.DeleteBookingBtn = new System.Windows.Forms.Button();
+            this.ViewBookingIDBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.bookingTableAdapter = new _9320RyanMillerDatabase.Lakeside9320DeleteBookingDataSetTableAdapters.BookingTableAdapter();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox10)).BeginInit();
@@ -91,11 +96,11 @@
             this.customerContainer.SuspendLayout();
             this.coursesContainer.SuspendLayout();
             this.bookingContainer.SuspendLayout();
-            this.staffContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CustDeleteDGV)).BeginInit();
             this.ReportsContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BookDeleteDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookingBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320DeleteBookingDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // LLMenuLbl
@@ -261,7 +266,6 @@
             this.sidebar.Controls.Add(this.customerContainer);
             this.sidebar.Controls.Add(this.coursesContainer);
             this.sidebar.Controls.Add(this.bookingContainer);
-            this.sidebar.Controls.Add(this.staffContainer);
             this.sidebar.Controls.Add(this.ReportsContainer);
             this.sidebar.Location = new System.Drawing.Point(0, 0);
             this.sidebar.MaximumSize = new System.Drawing.Size(215, 500);
@@ -513,170 +517,13 @@
             this.G2EditBookBtnS.UseTransparentBackground = true;
             this.G2EditBookBtnS.Click += new System.EventHandler(this.G2EditBookBtnS_Click);
             // 
-            // staffContainer
-            // 
-            this.staffContainer.Controls.Add(this.AddStaffBtnS);
-            this.staffContainer.Controls.Add(this.DeleteStaffBtnS);
-            this.staffContainer.Controls.Add(this.guna2PictureBox3);
-            this.staffContainer.Controls.Add(this.EditStaffBtnS);
-            this.staffContainer.Controls.Add(this.G2StaffSideBtn);
-            this.staffContainer.Location = new System.Drawing.Point(3, 289);
-            this.staffContainer.MaximumSize = new System.Drawing.Size(215, 155);
-            this.staffContainer.MinimumSize = new System.Drawing.Size(215, 50);
-            this.staffContainer.Name = "staffContainer";
-            this.staffContainer.Size = new System.Drawing.Size(215, 50);
-            this.staffContainer.TabIndex = 75;
-            // 
-            // AddStaffBtnS
-            // 
-            this.AddStaffBtnS.Animated = true;
-            this.AddStaffBtnS.BackColor = System.Drawing.Color.Transparent;
-            this.AddStaffBtnS.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.AddStaffBtnS.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.AddStaffBtnS.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.AddStaffBtnS.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.AddStaffBtnS.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(38)))), ((int)(((byte)(99)))));
-            this.AddStaffBtnS.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.AddStaffBtnS.ForeColor = System.Drawing.Color.White;
-            this.AddStaffBtnS.Location = new System.Drawing.Point(0, 50);
-            this.AddStaffBtnS.Name = "AddStaffBtnS";
-            this.AddStaffBtnS.Size = new System.Drawing.Size(215, 35);
-            this.AddStaffBtnS.TabIndex = 20;
-            this.AddStaffBtnS.Text = "Add Staff";
-            this.AddStaffBtnS.UseTransparentBackground = true;
-            this.AddStaffBtnS.Click += new System.EventHandler(this.AddStaffBtnS_Click);
-            // 
-            // DeleteStaffBtnS
-            // 
-            this.DeleteStaffBtnS.Animated = true;
-            this.DeleteStaffBtnS.BackColor = System.Drawing.Color.Transparent;
-            this.DeleteStaffBtnS.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.DeleteStaffBtnS.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.DeleteStaffBtnS.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.DeleteStaffBtnS.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.DeleteStaffBtnS.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(38)))), ((int)(((byte)(99)))));
-            this.DeleteStaffBtnS.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.DeleteStaffBtnS.ForeColor = System.Drawing.Color.White;
-            this.DeleteStaffBtnS.Location = new System.Drawing.Point(0, 120);
-            this.DeleteStaffBtnS.Name = "DeleteStaffBtnS";
-            this.DeleteStaffBtnS.Size = new System.Drawing.Size(215, 35);
-            this.DeleteStaffBtnS.TabIndex = 21;
-            this.DeleteStaffBtnS.Text = "Delete Staff";
-            this.DeleteStaffBtnS.UseTransparentBackground = true;
-            this.DeleteStaffBtnS.Click += new System.EventHandler(this.DeleteStaffBtnS_Click);
-            // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
-            this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(-3, 0);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(64, 52);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox3.TabIndex = 12;
-            this.guna2PictureBox3.TabStop = false;
-            // 
-            // EditStaffBtnS
-            // 
-            this.EditStaffBtnS.Animated = true;
-            this.EditStaffBtnS.BackColor = System.Drawing.Color.Transparent;
-            this.EditStaffBtnS.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.EditStaffBtnS.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.EditStaffBtnS.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.EditStaffBtnS.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.EditStaffBtnS.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(38)))), ((int)(((byte)(99)))));
-            this.EditStaffBtnS.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.EditStaffBtnS.ForeColor = System.Drawing.Color.White;
-            this.EditStaffBtnS.Location = new System.Drawing.Point(0, 85);
-            this.EditStaffBtnS.Name = "EditStaffBtnS";
-            this.EditStaffBtnS.Size = new System.Drawing.Size(215, 35);
-            this.EditStaffBtnS.TabIndex = 19;
-            this.EditStaffBtnS.Text = "Edit Staff";
-            this.EditStaffBtnS.UseTransparentBackground = true;
-            this.EditStaffBtnS.Click += new System.EventHandler(this.EditStaffBtnS_Click);
-            // 
-            // G2StaffSideBtn
-            // 
-            this.G2StaffSideBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.G2StaffSideBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.G2StaffSideBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.G2StaffSideBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.G2StaffSideBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
-            this.G2StaffSideBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.G2StaffSideBtn.ForeColor = System.Drawing.Color.White;
-            this.G2StaffSideBtn.Location = new System.Drawing.Point(3, 0);
-            this.G2StaffSideBtn.Name = "G2StaffSideBtn";
-            this.G2StaffSideBtn.Size = new System.Drawing.Size(215, 50);
-            this.G2StaffSideBtn.TabIndex = 13;
-            this.G2StaffSideBtn.Text = "Staff";
-            // 
-            // ReportSideTimer
-            // 
-            this.ReportSideTimer.Interval = 10;
-            this.ReportSideTimer.Tick += new System.EventHandler(this.ReportSideTimer_Tick);
-            // 
-            // CustSideTimer
-            // 
-            this.CustSideTimer.Interval = 10;
-            this.CustSideTimer.Tick += new System.EventHandler(this.CustSideTimer_Tick);
-            // 
-            // CourseSideTimer
-            // 
-            this.CourseSideTimer.Interval = 10;
-            this.CourseSideTimer.Tick += new System.EventHandler(this.CourseSideTimer_Tick);
-            // 
-            // BookSideTimer
-            // 
-            this.BookSideTimer.Interval = 10;
-            this.BookSideTimer.Tick += new System.EventHandler(this.BookSideTimer_Tick);
-            // 
-            // sidebarTimer
-            // 
-            this.sidebarTimer.Interval = 10;
-            this.sidebarTimer.Tick += new System.EventHandler(this.sidebarTimer_Tick);
-            // 
-            // CustDeleteDGV
-            // 
-            this.CustDeleteDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CustDeleteDGV.Location = new System.Drawing.Point(178, 107);
-            this.CustDeleteDGV.Name = "CustDeleteDGV";
-            this.CustDeleteDGV.RowHeadersWidth = 51;
-            this.CustDeleteDGV.RowTemplate.Height = 24;
-            this.CustDeleteDGV.Size = new System.Drawing.Size(620, 307);
-            this.CustDeleteDGV.TabIndex = 70;
-            // 
-            // DeleteBookingBtn
-            // 
-            this.DeleteBookingBtn.Location = new System.Drawing.Point(804, 154);
-            this.DeleteBookingBtn.Name = "DeleteBookingBtn";
-            this.DeleteBookingBtn.Size = new System.Drawing.Size(100, 52);
-            this.DeleteBookingBtn.TabIndex = 73;
-            this.DeleteBookingBtn.Text = "Delete Booking";
-            this.DeleteBookingBtn.UseVisualStyleBackColor = true;
-            // 
-            // ViewCourseIDBox
-            // 
-            this.ViewCourseIDBox.Location = new System.Drawing.Point(804, 126);
-            this.ViewCourseIDBox.Name = "ViewCourseIDBox";
-            this.ViewCourseIDBox.Size = new System.Drawing.Size(100, 22);
-            this.ViewCourseIDBox.TabIndex = 72;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(804, 107);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 16);
-            this.label1.TabIndex = 74;
-            this.label1.Text = "Booking ID";
-            // 
             // ReportsContainer
             // 
             this.ReportsContainer.Controls.Add(this.guna2PictureBox2);
             this.ReportsContainer.Controls.Add(this.G2CustListBtnS);
             this.ReportsContainer.Controls.Add(this.G2UnpaidBtn);
             this.ReportsContainer.Controls.Add(this.G2ReportsBtn);
-            this.ReportsContainer.Location = new System.Drawing.Point(3, 345);
+            this.ReportsContainer.Location = new System.Drawing.Point(3, 289);
             this.ReportsContainer.MaximumSize = new System.Drawing.Size(209, 110);
             this.ReportsContainer.MinimumSize = new System.Drawing.Size(209, 50);
             this.ReportsContainer.Name = "ReportsContainer";
@@ -749,6 +596,159 @@
             this.G2ReportsBtn.Text = "Reports";
             this.G2ReportsBtn.UseTransparentBackground = true;
             // 
+            // ReportSideTimer
+            // 
+            this.ReportSideTimer.Interval = 10;
+            this.ReportSideTimer.Tick += new System.EventHandler(this.ReportSideTimer_Tick);
+            // 
+            // CustSideTimer
+            // 
+            this.CustSideTimer.Interval = 10;
+            this.CustSideTimer.Tick += new System.EventHandler(this.CustSideTimer_Tick);
+            // 
+            // CourseSideTimer
+            // 
+            this.CourseSideTimer.Interval = 10;
+            this.CourseSideTimer.Tick += new System.EventHandler(this.CourseSideTimer_Tick);
+            // 
+            // BookSideTimer
+            // 
+            this.BookSideTimer.Interval = 10;
+            this.BookSideTimer.Tick += new System.EventHandler(this.BookSideTimer_Tick);
+            // 
+            // sidebarTimer
+            // 
+            this.sidebarTimer.Interval = 10;
+            this.sidebarTimer.Tick += new System.EventHandler(this.sidebarTimer_Tick);
+            // 
+            // BookDeleteDGV
+            // 
+            this.BookDeleteDGV.AutoGenerateColumns = false;
+            this.BookDeleteDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.BookDeleteDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.bookingIDDataGridViewTextBoxColumn,
+            this.courseIDDataGridViewTextBoxColumn,
+            this.bookingDateDataGridViewTextBoxColumn,
+            this.discountDataGridViewTextBoxColumn,
+            this.discountPercentDataGridViewTextBoxColumn,
+            this.customerNumDataGridViewTextBoxColumn,
+            this.customerQuantityDataGridViewTextBoxColumn,
+            this.paidDataGridViewCheckBoxColumn});
+            this.BookDeleteDGV.DataSource = this.bookingBindingSource;
+            this.BookDeleteDGV.Location = new System.Drawing.Point(178, 107);
+            this.BookDeleteDGV.Name = "BookDeleteDGV";
+            this.BookDeleteDGV.RowHeadersWidth = 51;
+            this.BookDeleteDGV.RowTemplate.Height = 24;
+            this.BookDeleteDGV.Size = new System.Drawing.Size(620, 307);
+            this.BookDeleteDGV.TabIndex = 70;
+            this.BookDeleteDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.BookDeleteDGV_CellClick);
+            // 
+            // bookingIDDataGridViewTextBoxColumn
+            // 
+            this.bookingIDDataGridViewTextBoxColumn.DataPropertyName = "BookingID";
+            this.bookingIDDataGridViewTextBoxColumn.HeaderText = "BookingID";
+            this.bookingIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.bookingIDDataGridViewTextBoxColumn.Name = "bookingIDDataGridViewTextBoxColumn";
+            this.bookingIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bookingIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // courseIDDataGridViewTextBoxColumn
+            // 
+            this.courseIDDataGridViewTextBoxColumn.DataPropertyName = "CourseID";
+            this.courseIDDataGridViewTextBoxColumn.HeaderText = "CourseID";
+            this.courseIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.courseIDDataGridViewTextBoxColumn.Name = "courseIDDataGridViewTextBoxColumn";
+            this.courseIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // bookingDateDataGridViewTextBoxColumn
+            // 
+            this.bookingDateDataGridViewTextBoxColumn.DataPropertyName = "BookingDate";
+            this.bookingDateDataGridViewTextBoxColumn.HeaderText = "BookingDate";
+            this.bookingDateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.bookingDateDataGridViewTextBoxColumn.Name = "bookingDateDataGridViewTextBoxColumn";
+            this.bookingDateDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // discountDataGridViewTextBoxColumn
+            // 
+            this.discountDataGridViewTextBoxColumn.DataPropertyName = "Discount";
+            this.discountDataGridViewTextBoxColumn.HeaderText = "Discount";
+            this.discountDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.discountDataGridViewTextBoxColumn.Name = "discountDataGridViewTextBoxColumn";
+            this.discountDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // discountPercentDataGridViewTextBoxColumn
+            // 
+            this.discountPercentDataGridViewTextBoxColumn.DataPropertyName = "DiscountPercent";
+            this.discountPercentDataGridViewTextBoxColumn.HeaderText = "DiscountPercent";
+            this.discountPercentDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.discountPercentDataGridViewTextBoxColumn.Name = "discountPercentDataGridViewTextBoxColumn";
+            this.discountPercentDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // customerNumDataGridViewTextBoxColumn
+            // 
+            this.customerNumDataGridViewTextBoxColumn.DataPropertyName = "CustomerNum";
+            this.customerNumDataGridViewTextBoxColumn.HeaderText = "CustomerNum";
+            this.customerNumDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.customerNumDataGridViewTextBoxColumn.Name = "customerNumDataGridViewTextBoxColumn";
+            this.customerNumDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // customerQuantityDataGridViewTextBoxColumn
+            // 
+            this.customerQuantityDataGridViewTextBoxColumn.DataPropertyName = "CustomerQuantity";
+            this.customerQuantityDataGridViewTextBoxColumn.HeaderText = "CustomerQuantity";
+            this.customerQuantityDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.customerQuantityDataGridViewTextBoxColumn.Name = "customerQuantityDataGridViewTextBoxColumn";
+            this.customerQuantityDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // paidDataGridViewCheckBoxColumn
+            // 
+            this.paidDataGridViewCheckBoxColumn.DataPropertyName = "Paid";
+            this.paidDataGridViewCheckBoxColumn.HeaderText = "Paid";
+            this.paidDataGridViewCheckBoxColumn.MinimumWidth = 6;
+            this.paidDataGridViewCheckBoxColumn.Name = "paidDataGridViewCheckBoxColumn";
+            this.paidDataGridViewCheckBoxColumn.Width = 125;
+            // 
+            // bookingBindingSource
+            // 
+            this.bookingBindingSource.DataMember = "Booking";
+            this.bookingBindingSource.DataSource = this.lakeside9320DeleteBookingDataSet;
+            // 
+            // lakeside9320DeleteBookingDataSet
+            // 
+            this.lakeside9320DeleteBookingDataSet.DataSetName = "Lakeside9320DeleteBookingDataSet";
+            this.lakeside9320DeleteBookingDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // DeleteBookingBtn
+            // 
+            this.DeleteBookingBtn.Location = new System.Drawing.Point(804, 154);
+            this.DeleteBookingBtn.Name = "DeleteBookingBtn";
+            this.DeleteBookingBtn.Size = new System.Drawing.Size(100, 52);
+            this.DeleteBookingBtn.TabIndex = 73;
+            this.DeleteBookingBtn.Text = "Delete Booking";
+            this.DeleteBookingBtn.UseVisualStyleBackColor = true;
+            this.DeleteBookingBtn.Click += new System.EventHandler(this.DeleteBookingBtn_Click);
+            // 
+            // ViewBookingIDBox
+            // 
+            this.ViewBookingIDBox.Location = new System.Drawing.Point(804, 126);
+            this.ViewBookingIDBox.Name = "ViewBookingIDBox";
+            this.ViewBookingIDBox.ReadOnly = true;
+            this.ViewBookingIDBox.Size = new System.Drawing.Size(100, 22);
+            this.ViewBookingIDBox.TabIndex = 72;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(804, 107);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 16);
+            this.label1.TabIndex = 74;
+            this.label1.Text = "Booking ID";
+            // 
+            // bookingTableAdapter
+            // 
+            this.bookingTableAdapter.ClearBeforeFill = true;
+            // 
             // DeleteBookingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -756,14 +756,15 @@
             this.ClientSize = new System.Drawing.Size(1000, 500);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DeleteBookingBtn);
-            this.Controls.Add(this.ViewCourseIDBox);
+            this.Controls.Add(this.ViewBookingIDBox);
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.CustDeleteDGV);
+            this.Controls.Add(this.BookDeleteDGV);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DeleteBookingForm";
             this.Text = "DeleteBookingForm";
+            this.Load += new System.EventHandler(this.DeleteBookingForm_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
@@ -779,11 +780,11 @@
             this.customerContainer.ResumeLayout(false);
             this.coursesContainer.ResumeLayout(false);
             this.bookingContainer.ResumeLayout(false);
-            this.staffContainer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CustDeleteDGV)).EndInit();
             this.ReportsContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BookDeleteDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookingBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320DeleteBookingDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -824,20 +825,25 @@
         private System.Windows.Forms.Timer CourseSideTimer;
         private System.Windows.Forms.Timer BookSideTimer;
         private System.Windows.Forms.Timer sidebarTimer;
-        private System.Windows.Forms.DataGridView CustDeleteDGV;
+        private System.Windows.Forms.DataGridView BookDeleteDGV;
         private System.Windows.Forms.Button DeleteBookingBtn;
-        private System.Windows.Forms.TextBox ViewCourseIDBox;
+        private System.Windows.Forms.TextBox ViewBookingIDBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel staffContainer;
-        private Guna.UI2.WinForms.Guna2Button AddStaffBtnS;
-        private Guna.UI2.WinForms.Guna2Button DeleteStaffBtnS;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
-        private Guna.UI2.WinForms.Guna2Button EditStaffBtnS;
-        private Guna.UI2.WinForms.Guna2Button G2StaffSideBtn;
         private System.Windows.Forms.Panel ReportsContainer;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Guna.UI2.WinForms.Guna2Button G2CustListBtnS;
         private Guna.UI2.WinForms.Guna2Button G2UnpaidBtn;
         private Guna.UI2.WinForms.Guna2Button G2ReportsBtn;
+        private Lakeside9320DeleteBookingDataSet lakeside9320DeleteBookingDataSet;
+        private System.Windows.Forms.BindingSource bookingBindingSource;
+        private Lakeside9320DeleteBookingDataSetTableAdapters.BookingTableAdapter bookingTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bookingIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn courseIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bookingDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn discountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn discountPercentDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerNumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerQuantityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn paidDataGridViewCheckBoxColumn;
     }
 }

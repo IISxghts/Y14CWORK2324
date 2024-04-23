@@ -20,6 +20,7 @@ namespace _9320RyanMillerDatabase
         {
             InitializeComponent();
             CenterToScreen();
+            LLMenuGreetLbl.Text = DateTime.Now.Date.ToString();
         }
          
 
@@ -35,52 +36,39 @@ namespace _9320RyanMillerDatabase
 
         private void G2BtnCustomer_Click(object sender, EventArgs e)
         {
-            UC_CustomerStaff customer = new UC_CustomerStaff();
+            UC_Customer customer = new UC_Customer();
             AddUserControls(customer);
         }
 
         private void G2BtnCourses_Click(object sender, EventArgs e)
         {
-            UC_CoursesStaff courses = new UC_CoursesStaff();
+            UC_Courses courses = new UC_Courses();
             AddUserControls(courses);
         }
 
         private void G2BtnBookings_Click(object sender, EventArgs e)
         {
              
-            UC_BookingsStaff bookings = new UC_BookingsStaff();
+            UC_Booking bookings = new UC_Booking();
             AddUserControls(bookings);
         }
 
         private void G2BtnReports_Click(object sender, EventArgs e)
         {
-            UC_ReportsStaff reports = new UC_ReportsStaff();
+            UC_Reports reports = new UC_Reports();
             AddUserControls(reports);
         }
         private void G2SettingsBtn_Click(object sender, EventArgs e)
         {
-            UC_Staff settings = new UC_Staff();
-            AddUserControls(settings);
+
+            UC_Other other = new UC_Other();
+            AddUserControls(other);
         }
         #endregion
+       
         private void ExitLbl_Click(object sender, EventArgs e)
         {
-            
-            CenterToScreen();
-            
-            MessageBoxResult confirmResult = System.Windows.MessageBox.Show("Are you sure you want to exit?", "Confirm Exit", MessageBoxButton.OKCancel);
-
-            // if the user selects ok, exit the system
-           
-            if (confirmResult == MessageBoxResult.OK)
-            {
-                Environment.Exit(0); 
-            }
-            else
-            {
-                System.Windows.MessageBox.Show("Exit cancelled", "Notification");
-            }
-
+            Environment.Exit(0);
         }
 
 

@@ -239,7 +239,7 @@
             this.custDTP.MaxDate = new System.DateTime(2100, 9, 1, 0, 0, 0, 0);
             this.custDTP.MinDate = new System.DateTime(1923, 9, 1, 0, 0, 0, 0);
             this.custDTP.Name = "custDTP";
-            this.custDTP.Size = new System.Drawing.Size(90, 25);
+            this.custDTP.Size = new System.Drawing.Size(172, 25);
             this.custDTP.TabIndex = 40;
             this.custDTP.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             // 

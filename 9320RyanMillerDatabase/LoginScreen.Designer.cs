@@ -81,7 +81,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
-            this.label2.Location = new System.Drawing.Point(3, 381);
+            this.label2.Location = new System.Drawing.Point(12, 381);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(285, 18);
             this.label2.TabIndex = 7;
@@ -98,7 +98,7 @@
             this.G2BtnRegister.FillColor = System.Drawing.Color.Empty;
             this.G2BtnRegister.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.G2BtnRegister.ForeColor = System.Drawing.Color.White;
-            this.G2BtnRegister.Location = new System.Drawing.Point(83, 402);
+            this.G2BtnRegister.Location = new System.Drawing.Point(88, 402);
             this.G2BtnRegister.Name = "G2BtnRegister";
             this.G2BtnRegister.Size = new System.Drawing.Size(111, 36);
             this.G2BtnRegister.TabIndex = 6;

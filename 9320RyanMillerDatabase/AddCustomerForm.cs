@@ -38,7 +38,7 @@ namespace _9320RyanMillerDatabase
                 string postcode = custPostcodeBox.Text;
                 string town = custTownBox.Text;
                 string phone = custPhoneBox.Text;
-                DateTime bdate = custDTP.Value;
+                string bdate = custDTP.Text;
                 string specialreqs = custReqRTB.Text;
 
                 CustomerModel newcustomer = new CustomerModel(forename, surname, address, postcode, town, phone, bdate, specialreqs);

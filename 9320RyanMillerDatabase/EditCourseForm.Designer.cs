@@ -35,16 +35,14 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.EFCustSNDBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.EFCustDOBTB = new System.Windows.Forms.TextBox();
+            this.EFCourseCapTB = new System.Windows.Forms.TextBox();
             this.EFCustEditBtn = new System.Windows.Forms.Button();
-            this.EFCustSpecReqLbl = new System.Windows.Forms.Label();
-            this.EFCustSpecialReqTB = new System.Windows.Forms.TextBox();
             this.EFCustPhoneLbl = new System.Windows.Forms.Label();
-            this.EFCustPhoneTB = new System.Windows.Forms.TextBox();
+            this.EFCourseMTB = new System.Windows.Forms.TextBox();
             this.EFCustPostcodeLbl = new System.Windows.Forms.Label();
-            this.EFCustPostcodeTB = new System.Windows.Forms.TextBox();
+            this.EFCoursePriceTB = new System.Windows.Forms.TextBox();
             this.EFCustTownLbl = new System.Windows.Forms.Label();
-            this.EFCustTownTB = new System.Windows.Forms.TextBox();
+            this.EFCourseTimeTB = new System.Windows.Forms.TextBox();
             this.EFCustAddressLbl = new System.Windows.Forms.Label();
             this.EFEndDateTB = new System.Windows.Forms.TextBox();
             this.EFCustSurnameLbl = new System.Windows.Forms.Label();
@@ -124,7 +122,7 @@
             this.LLMenuLbl.AutoSize = true;
             this.LLMenuLbl.Font = new System.Drawing.Font("Segoe UI Black", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LLMenuLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
-            this.LLMenuLbl.Location = new System.Drawing.Point(487, 10);
+            this.LLMenuLbl.Location = new System.Drawing.Point(342, 10);
             this.LLMenuLbl.Name = "LLMenuLbl";
             this.LLMenuLbl.Size = new System.Drawing.Size(501, 38);
             this.LLMenuLbl.TabIndex = 1;
@@ -134,7 +132,7 @@
             // 
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(332, 10);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(187, 10);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(144, 51);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -165,18 +163,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(364, 386);
+            this.label1.Location = new System.Drawing.Point(462, 384);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 16);
+            this.label1.Size = new System.Drawing.Size(60, 16);
             this.label1.TabIndex = 87;
-            this.label1.Text = "Date of Birth";
+            this.label1.Text = "Capacity";
             // 
-            // EFCustDOBTB
+            // EFCourseCapTB
             // 
-            this.EFCustDOBTB.Location = new System.Drawing.Point(449, 383);
-            this.EFCustDOBTB.Name = "EFCustDOBTB";
-            this.EFCustDOBTB.Size = new System.Drawing.Size(106, 22);
-            this.EFCustDOBTB.TabIndex = 86;
+            this.EFCourseCapTB.Location = new System.Drawing.Point(544, 378);
+            this.EFCourseCapTB.Name = "EFCourseCapTB";
+            this.EFCourseCapTB.Size = new System.Drawing.Size(106, 22);
+            this.EFCourseCapTB.TabIndex = 86;
             // 
             // EFCustEditBtn
             // 
@@ -188,75 +186,58 @@
             this.EFCustEditBtn.UseVisualStyleBackColor = true;
             this.EFCustEditBtn.Click += new System.EventHandler(this.EFCustEditBtn_Click);
             // 
-            // EFCustSpecReqLbl
-            // 
-            this.EFCustSpecReqLbl.AutoSize = true;
-            this.EFCustSpecReqLbl.Location = new System.Drawing.Point(558, 330);
-            this.EFCustSpecReqLbl.Name = "EFCustSpecReqLbl";
-            this.EFCustSpecReqLbl.Size = new System.Drawing.Size(140, 16);
-            this.EFCustSpecReqLbl.TabIndex = 84;
-            this.EFCustSpecReqLbl.Text = "Special Requirements";
-            // 
-            // EFCustSpecialReqTB
-            // 
-            this.EFCustSpecialReqTB.Location = new System.Drawing.Point(561, 350);
-            this.EFCustSpecialReqTB.Multiline = true;
-            this.EFCustSpecialReqTB.Name = "EFCustSpecialReqTB";
-            this.EFCustSpecialReqTB.Size = new System.Drawing.Size(332, 83);
-            this.EFCustSpecialReqTB.TabIndex = 83;
-            // 
             // EFCustPhoneLbl
             // 
             this.EFCustPhoneLbl.AutoSize = true;
-            this.EFCustPhoneLbl.Location = new System.Drawing.Point(346, 414);
+            this.EFCustPhoneLbl.Location = new System.Drawing.Point(431, 409);
             this.EFCustPhoneLbl.Name = "EFCustPhoneLbl";
-            this.EFCustPhoneLbl.Size = new System.Drawing.Size(97, 16);
+            this.EFCustPhoneLbl.Size = new System.Drawing.Size(107, 16);
             this.EFCustPhoneLbl.TabIndex = 82;
-            this.EFCustPhoneLbl.Text = "Phone Number";
+            this.EFCustPhoneLbl.Text = "Course Manager";
             // 
-            // EFCustPhoneTB
+            // EFCourseMTB
             // 
-            this.EFCustPhoneTB.Location = new System.Drawing.Point(449, 411);
-            this.EFCustPhoneTB.Name = "EFCustPhoneTB";
-            this.EFCustPhoneTB.Size = new System.Drawing.Size(106, 22);
-            this.EFCustPhoneTB.TabIndex = 81;
+            this.EFCourseMTB.Location = new System.Drawing.Point(544, 406);
+            this.EFCourseMTB.Name = "EFCourseMTB";
+            this.EFCourseMTB.Size = new System.Drawing.Size(106, 22);
+            this.EFCourseMTB.TabIndex = 81;
             // 
             // EFCustPostcodeLbl
             // 
             this.EFCustPostcodeLbl.AutoSize = true;
-            this.EFCustPostcodeLbl.Location = new System.Drawing.Point(364, 361);
+            this.EFCustPostcodeLbl.Location = new System.Drawing.Point(484, 356);
             this.EFCustPostcodeLbl.Name = "EFCustPostcodeLbl";
-            this.EFCustPostcodeLbl.Size = new System.Drawing.Size(65, 16);
+            this.EFCustPostcodeLbl.Size = new System.Drawing.Size(38, 16);
             this.EFCustPostcodeLbl.TabIndex = 80;
-            this.EFCustPostcodeLbl.Text = "Postcode";
+            this.EFCustPostcodeLbl.Text = "Price";
             // 
-            // EFCustPostcodeTB
+            // EFCoursePriceTB
             // 
-            this.EFCustPostcodeTB.Location = new System.Drawing.Point(449, 355);
-            this.EFCustPostcodeTB.Name = "EFCustPostcodeTB";
-            this.EFCustPostcodeTB.Size = new System.Drawing.Size(106, 22);
-            this.EFCustPostcodeTB.TabIndex = 79;
+            this.EFCoursePriceTB.Location = new System.Drawing.Point(544, 350);
+            this.EFCoursePriceTB.Name = "EFCoursePriceTB";
+            this.EFCoursePriceTB.Size = new System.Drawing.Size(106, 22);
+            this.EFCoursePriceTB.TabIndex = 79;
             // 
             // EFCustTownLbl
             // 
             this.EFCustTownLbl.AutoSize = true;
-            this.EFCustTownLbl.Location = new System.Drawing.Point(389, 333);
+            this.EFCustTownLbl.Location = new System.Drawing.Point(484, 328);
             this.EFCustTownLbl.Name = "EFCustTownLbl";
-            this.EFCustTownLbl.Size = new System.Drawing.Size(40, 16);
+            this.EFCustTownLbl.Size = new System.Drawing.Size(38, 16);
             this.EFCustTownLbl.TabIndex = 78;
-            this.EFCustTownLbl.Text = "Town";
+            this.EFCustTownLbl.Text = "Time";
             // 
-            // EFCustTownTB
+            // EFCourseTimeTB
             // 
-            this.EFCustTownTB.Location = new System.Drawing.Point(449, 327);
-            this.EFCustTownTB.Name = "EFCustTownTB";
-            this.EFCustTownTB.Size = new System.Drawing.Size(106, 22);
-            this.EFCustTownTB.TabIndex = 77;
+            this.EFCourseTimeTB.Location = new System.Drawing.Point(544, 322);
+            this.EFCourseTimeTB.Name = "EFCourseTimeTB";
+            this.EFCourseTimeTB.Size = new System.Drawing.Size(106, 22);
+            this.EFCourseTimeTB.TabIndex = 77;
             // 
             // EFCustAddressLbl
             // 
             this.EFCustAddressLbl.AutoSize = true;
-            this.EFCustAddressLbl.Location = new System.Drawing.Point(125, 417);
+            this.EFCustAddressLbl.Location = new System.Drawing.Point(220, 412);
             this.EFCustAddressLbl.Name = "EFCustAddressLbl";
             this.EFCustAddressLbl.Size = new System.Drawing.Size(63, 16);
             this.EFCustAddressLbl.TabIndex = 76;
@@ -264,7 +245,7 @@
             // 
             // EFEndDateTB
             // 
-            this.EFEndDateTB.Location = new System.Drawing.Point(207, 411);
+            this.EFEndDateTB.Location = new System.Drawing.Point(302, 406);
             this.EFEndDateTB.Name = "EFEndDateTB";
             this.EFEndDateTB.Size = new System.Drawing.Size(98, 22);
             this.EFEndDateTB.TabIndex = 75;
@@ -272,7 +253,7 @@
             // EFCustSurnameLbl
             // 
             this.EFCustSurnameLbl.AutoSize = true;
-            this.EFCustSurnameLbl.Location = new System.Drawing.Point(125, 386);
+            this.EFCustSurnameLbl.Location = new System.Drawing.Point(220, 381);
             this.EFCustSurnameLbl.Name = "EFCustSurnameLbl";
             this.EFCustSurnameLbl.Size = new System.Drawing.Size(66, 16);
             this.EFCustSurnameLbl.TabIndex = 74;
@@ -280,7 +261,7 @@
             // 
             // EFCustSurnameTB
             // 
-            this.EFCustSurnameTB.Location = new System.Drawing.Point(207, 383);
+            this.EFCustSurnameTB.Location = new System.Drawing.Point(302, 378);
             this.EFCustSurnameTB.Name = "EFCustSurnameTB";
             this.EFCustSurnameTB.Size = new System.Drawing.Size(98, 22);
             this.EFCustSurnameTB.TabIndex = 73;
@@ -288,7 +269,7 @@
             // EFCourseTitleLbl
             // 
             this.EFCourseTitleLbl.AutoSize = true;
-            this.EFCourseTitleLbl.Location = new System.Drawing.Point(125, 361);
+            this.EFCourseTitleLbl.Location = new System.Drawing.Point(220, 356);
             this.EFCourseTitleLbl.Name = "EFCourseTitleLbl";
             this.EFCourseTitleLbl.Size = new System.Drawing.Size(79, 16);
             this.EFCourseTitleLbl.TabIndex = 72;
@@ -296,7 +277,7 @@
             // 
             // EFCourseTitleTB
             // 
-            this.EFCourseTitleTB.Location = new System.Drawing.Point(207, 355);
+            this.EFCourseTitleTB.Location = new System.Drawing.Point(302, 350);
             this.EFCourseTitleTB.Name = "EFCourseTitleTB";
             this.EFCourseTitleTB.Size = new System.Drawing.Size(98, 22);
             this.EFCourseTitleTB.TabIndex = 71;
@@ -304,7 +285,7 @@
             // EFCourseIDLbl
             // 
             this.EFCourseIDLbl.AutoSize = true;
-            this.EFCourseIDLbl.Location = new System.Drawing.Point(131, 336);
+            this.EFCourseIDLbl.Location = new System.Drawing.Point(226, 331);
             this.EFCourseIDLbl.Name = "EFCourseIDLbl";
             this.EFCourseIDLbl.Size = new System.Drawing.Size(66, 16);
             this.EFCourseIDLbl.TabIndex = 70;
@@ -312,7 +293,7 @@
             // 
             // EFCourseIDTB
             // 
-            this.EFCourseIDTB.Location = new System.Drawing.Point(207, 330);
+            this.EFCourseIDTB.Location = new System.Drawing.Point(302, 325);
             this.EFCourseIDTB.Name = "EFCourseIDTB";
             this.EFCourseIDTB.ReadOnly = true;
             this.EFCourseIDTB.Size = new System.Drawing.Size(98, 22);
@@ -893,16 +874,14 @@
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.EFCustSNDBtn);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.EFCustDOBTB);
+            this.Controls.Add(this.EFCourseCapTB);
             this.Controls.Add(this.EFCustEditBtn);
-            this.Controls.Add(this.EFCustSpecReqLbl);
-            this.Controls.Add(this.EFCustSpecialReqTB);
             this.Controls.Add(this.EFCustPhoneLbl);
-            this.Controls.Add(this.EFCustPhoneTB);
+            this.Controls.Add(this.EFCourseMTB);
             this.Controls.Add(this.EFCustPostcodeLbl);
-            this.Controls.Add(this.EFCustPostcodeTB);
+            this.Controls.Add(this.EFCoursePriceTB);
             this.Controls.Add(this.EFCustTownLbl);
-            this.Controls.Add(this.EFCustTownTB);
+            this.Controls.Add(this.EFCourseTimeTB);
             this.Controls.Add(this.EFCustAddressLbl);
             this.Controls.Add(this.EFEndDateTB);
             this.Controls.Add(this.EFCustSurnameLbl);
@@ -950,16 +929,14 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button EFCustSNDBtn;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox EFCustDOBTB;
+        private System.Windows.Forms.TextBox EFCourseCapTB;
         private System.Windows.Forms.Button EFCustEditBtn;
-        private System.Windows.Forms.Label EFCustSpecReqLbl;
-        private System.Windows.Forms.TextBox EFCustSpecialReqTB;
         private System.Windows.Forms.Label EFCustPhoneLbl;
-        private System.Windows.Forms.TextBox EFCustPhoneTB;
+        private System.Windows.Forms.TextBox EFCourseMTB;
         private System.Windows.Forms.Label EFCustPostcodeLbl;
-        private System.Windows.Forms.TextBox EFCustPostcodeTB;
+        private System.Windows.Forms.TextBox EFCoursePriceTB;
         private System.Windows.Forms.Label EFCustTownLbl;
-        private System.Windows.Forms.TextBox EFCustTownTB;
+        private System.Windows.Forms.TextBox EFCourseTimeTB;
         private System.Windows.Forms.Label EFCustAddressLbl;
         private System.Windows.Forms.TextBox EFEndDateTB;
         private System.Windows.Forms.Label EFCustSurnameLbl;

@@ -41,6 +41,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.DTPBookLbl = new System.Windows.Forms.Label();
             this.DGVCustomer = new System.Windows.Forms.DataGridView();
+            this.customerNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerForenameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerSurnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerPostcodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerTownDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerPhoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerDOBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerSpecialReqsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lakeside9320CustomerSelectDataSet = new _9320RyanMillerDatabase.Lakeside9320CustomerSelectDataSet();
             this.DGVCourse = new System.Windows.Forms.DataGridView();
             this.DiscountCheckBox = new System.Windows.Forms.CheckBox();
             this.DiscountSelectBox = new System.Windows.Forms.NumericUpDown();
@@ -78,33 +89,17 @@
             this.guna2PictureBox8 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.G2EditBookBtnS = new Guna.UI2.WinForms.Guna2Button();
             this.G2BookSideBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.staffContainer = new System.Windows.Forms.Panel();
-            this.AddStaffBtnS = new Guna.UI2.WinForms.Guna2Button();
-            this.DeleteStaffBtnS = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.EditStaffBtnS = new Guna.UI2.WinForms.Guna2Button();
-            this.G2StaffSideBtn = new Guna.UI2.WinForms.Guna2Button();
             this.ReportsContainer = new System.Windows.Forms.Panel();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.G2UnpaidBtn = new Guna.UI2.WinForms.Guna2Button();
             this.G2ReportsBtn = new Guna.UI2.WinForms.Guna2Button();
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
-            this.StaffSideTimer = new System.Windows.Forms.Timer(this.components);
-            this.customerNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerForenameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerSurnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerPostcodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerTownDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerPhoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerDOBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerSpecialReqsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lakeside9320CustomerSelectDataSet = new _9320RyanMillerDatabase.Lakeside9320CustomerSelectDataSet();
             this.customerTableAdapter = new _9320RyanMillerDatabase.Lakeside9320CustomerSelectDataSetTableAdapters.CustomerTableAdapter();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVCustomer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320CustomerSelectDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVCourse)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DiscountSelectBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.QuantitySelectBox)).BeginInit();
@@ -119,12 +114,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).BeginInit();
             this.bookingContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).BeginInit();
-            this.staffContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.ReportsContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320CustomerSelectDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // LLMenuLbl
@@ -275,6 +266,89 @@
             this.DGVCustomer.Size = new System.Drawing.Size(535, 150);
             this.DGVCustomer.TabIndex = 19;
             // 
+            // customerNumDataGridViewTextBoxColumn
+            // 
+            this.customerNumDataGridViewTextBoxColumn.DataPropertyName = "CustomerNum";
+            this.customerNumDataGridViewTextBoxColumn.HeaderText = "CustomerNum";
+            this.customerNumDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.customerNumDataGridViewTextBoxColumn.Name = "customerNumDataGridViewTextBoxColumn";
+            this.customerNumDataGridViewTextBoxColumn.ReadOnly = true;
+            this.customerNumDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // customerForenameDataGridViewTextBoxColumn
+            // 
+            this.customerForenameDataGridViewTextBoxColumn.DataPropertyName = "CustomerForename";
+            this.customerForenameDataGridViewTextBoxColumn.HeaderText = "CustomerForename";
+            this.customerForenameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.customerForenameDataGridViewTextBoxColumn.Name = "customerForenameDataGridViewTextBoxColumn";
+            this.customerForenameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // customerSurnameDataGridViewTextBoxColumn
+            // 
+            this.customerSurnameDataGridViewTextBoxColumn.DataPropertyName = "CustomerSurname";
+            this.customerSurnameDataGridViewTextBoxColumn.HeaderText = "CustomerSurname";
+            this.customerSurnameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.customerSurnameDataGridViewTextBoxColumn.Name = "customerSurnameDataGridViewTextBoxColumn";
+            this.customerSurnameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // customerPostcodeDataGridViewTextBoxColumn
+            // 
+            this.customerPostcodeDataGridViewTextBoxColumn.DataPropertyName = "CustomerPostcode";
+            this.customerPostcodeDataGridViewTextBoxColumn.HeaderText = "CustomerPostcode";
+            this.customerPostcodeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.customerPostcodeDataGridViewTextBoxColumn.Name = "customerPostcodeDataGridViewTextBoxColumn";
+            this.customerPostcodeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // customerAddressDataGridViewTextBoxColumn
+            // 
+            this.customerAddressDataGridViewTextBoxColumn.DataPropertyName = "CustomerAddress";
+            this.customerAddressDataGridViewTextBoxColumn.HeaderText = "CustomerAddress";
+            this.customerAddressDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.customerAddressDataGridViewTextBoxColumn.Name = "customerAddressDataGridViewTextBoxColumn";
+            this.customerAddressDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // customerTownDataGridViewTextBoxColumn
+            // 
+            this.customerTownDataGridViewTextBoxColumn.DataPropertyName = "CustomerTown";
+            this.customerTownDataGridViewTextBoxColumn.HeaderText = "CustomerTown";
+            this.customerTownDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.customerTownDataGridViewTextBoxColumn.Name = "customerTownDataGridViewTextBoxColumn";
+            this.customerTownDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // customerPhoneDataGridViewTextBoxColumn
+            // 
+            this.customerPhoneDataGridViewTextBoxColumn.DataPropertyName = "CustomerPhone";
+            this.customerPhoneDataGridViewTextBoxColumn.HeaderText = "CustomerPhone";
+            this.customerPhoneDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.customerPhoneDataGridViewTextBoxColumn.Name = "customerPhoneDataGridViewTextBoxColumn";
+            this.customerPhoneDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // customerDOBDataGridViewTextBoxColumn
+            // 
+            this.customerDOBDataGridViewTextBoxColumn.DataPropertyName = "CustomerDOB";
+            this.customerDOBDataGridViewTextBoxColumn.HeaderText = "CustomerDOB";
+            this.customerDOBDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.customerDOBDataGridViewTextBoxColumn.Name = "customerDOBDataGridViewTextBoxColumn";
+            this.customerDOBDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // customerSpecialReqsDataGridViewTextBoxColumn
+            // 
+            this.customerSpecialReqsDataGridViewTextBoxColumn.DataPropertyName = "CustomerSpecialReqs";
+            this.customerSpecialReqsDataGridViewTextBoxColumn.HeaderText = "CustomerSpecialReqs";
+            this.customerSpecialReqsDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.customerSpecialReqsDataGridViewTextBoxColumn.Name = "customerSpecialReqsDataGridViewTextBoxColumn";
+            this.customerSpecialReqsDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // customerBindingSource
+            // 
+            this.customerBindingSource.DataMember = "Customer";
+            this.customerBindingSource.DataSource = this.lakeside9320CustomerSelectDataSet;
+            // 
+            // lakeside9320CustomerSelectDataSet
+            // 
+            this.lakeside9320CustomerSelectDataSet.DataSetName = "Lakeside9320CustomerSelectDataSet";
+            this.lakeside9320CustomerSelectDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // DGVCourse
             // 
             this.DGVCourse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -408,7 +482,6 @@
             this.sidebar.Controls.Add(this.customerContainer);
             this.sidebar.Controls.Add(this.coursesContainer);
             this.sidebar.Controls.Add(this.bookingContainer);
-            this.sidebar.Controls.Add(this.staffContainer);
             this.sidebar.Controls.Add(this.ReportsContainer);
             this.sidebar.Location = new System.Drawing.Point(0, 0);
             this.sidebar.MaximumSize = new System.Drawing.Size(215, 500);
@@ -782,110 +855,12 @@
             this.G2BookSideBtn.Text = "Bookings";
             this.G2BookSideBtn.Click += new System.EventHandler(this.G2BookSideBtn_Click);
             // 
-            // staffContainer
-            // 
-            this.staffContainer.Controls.Add(this.AddStaffBtnS);
-            this.staffContainer.Controls.Add(this.DeleteStaffBtnS);
-            this.staffContainer.Controls.Add(this.guna2PictureBox3);
-            this.staffContainer.Controls.Add(this.EditStaffBtnS);
-            this.staffContainer.Controls.Add(this.G2StaffSideBtn);
-            this.staffContainer.Location = new System.Drawing.Point(3, 289);
-            this.staffContainer.MaximumSize = new System.Drawing.Size(215, 155);
-            this.staffContainer.MinimumSize = new System.Drawing.Size(215, 50);
-            this.staffContainer.Name = "staffContainer";
-            this.staffContainer.Size = new System.Drawing.Size(215, 50);
-            this.staffContainer.TabIndex = 59;
-            // 
-            // AddStaffBtnS
-            // 
-            this.AddStaffBtnS.Animated = true;
-            this.AddStaffBtnS.BackColor = System.Drawing.Color.Transparent;
-            this.AddStaffBtnS.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.AddStaffBtnS.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.AddStaffBtnS.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.AddStaffBtnS.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.AddStaffBtnS.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(38)))), ((int)(((byte)(99)))));
-            this.AddStaffBtnS.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.AddStaffBtnS.ForeColor = System.Drawing.Color.White;
-            this.AddStaffBtnS.Location = new System.Drawing.Point(0, 50);
-            this.AddStaffBtnS.Name = "AddStaffBtnS";
-            this.AddStaffBtnS.Size = new System.Drawing.Size(215, 35);
-            this.AddStaffBtnS.TabIndex = 20;
-            this.AddStaffBtnS.Text = "Add Staff";
-            this.AddStaffBtnS.UseTransparentBackground = true;
-            this.AddStaffBtnS.Click += new System.EventHandler(this.AddStaffBtnS_Click);
-            // 
-            // DeleteStaffBtnS
-            // 
-            this.DeleteStaffBtnS.Animated = true;
-            this.DeleteStaffBtnS.BackColor = System.Drawing.Color.Transparent;
-            this.DeleteStaffBtnS.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.DeleteStaffBtnS.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.DeleteStaffBtnS.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.DeleteStaffBtnS.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.DeleteStaffBtnS.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(38)))), ((int)(((byte)(99)))));
-            this.DeleteStaffBtnS.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.DeleteStaffBtnS.ForeColor = System.Drawing.Color.White;
-            this.DeleteStaffBtnS.Location = new System.Drawing.Point(0, 120);
-            this.DeleteStaffBtnS.Name = "DeleteStaffBtnS";
-            this.DeleteStaffBtnS.Size = new System.Drawing.Size(215, 35);
-            this.DeleteStaffBtnS.TabIndex = 21;
-            this.DeleteStaffBtnS.Text = "Delete Staff";
-            this.DeleteStaffBtnS.UseTransparentBackground = true;
-            this.DeleteStaffBtnS.Click += new System.EventHandler(this.DeleteStaffBtnS_Click);
-            // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
-            this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(-3, 0);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(64, 52);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox3.TabIndex = 12;
-            this.guna2PictureBox3.TabStop = false;
-            // 
-            // EditStaffBtnS
-            // 
-            this.EditStaffBtnS.Animated = true;
-            this.EditStaffBtnS.BackColor = System.Drawing.Color.Transparent;
-            this.EditStaffBtnS.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.EditStaffBtnS.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.EditStaffBtnS.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.EditStaffBtnS.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.EditStaffBtnS.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(38)))), ((int)(((byte)(99)))));
-            this.EditStaffBtnS.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.EditStaffBtnS.ForeColor = System.Drawing.Color.White;
-            this.EditStaffBtnS.Location = new System.Drawing.Point(0, 85);
-            this.EditStaffBtnS.Name = "EditStaffBtnS";
-            this.EditStaffBtnS.Size = new System.Drawing.Size(215, 35);
-            this.EditStaffBtnS.TabIndex = 19;
-            this.EditStaffBtnS.Text = "Edit Staff";
-            this.EditStaffBtnS.UseTransparentBackground = true;
-            this.EditStaffBtnS.Click += new System.EventHandler(this.EditStaffBtnS_Click);
-            // 
-            // G2StaffSideBtn
-            // 
-            this.G2StaffSideBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.G2StaffSideBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.G2StaffSideBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.G2StaffSideBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.G2StaffSideBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
-            this.G2StaffSideBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.G2StaffSideBtn.ForeColor = System.Drawing.Color.White;
-            this.G2StaffSideBtn.Location = new System.Drawing.Point(3, 0);
-            this.G2StaffSideBtn.Name = "G2StaffSideBtn";
-            this.G2StaffSideBtn.Size = new System.Drawing.Size(215, 50);
-            this.G2StaffSideBtn.TabIndex = 13;
-            this.G2StaffSideBtn.Text = "Staff";
-            this.G2StaffSideBtn.Click += new System.EventHandler(this.G2StaffSideBtn_Click);
-            // 
             // ReportsContainer
             // 
             this.ReportsContainer.Controls.Add(this.guna2PictureBox2);
             this.ReportsContainer.Controls.Add(this.G2UnpaidBtn);
             this.ReportsContainer.Controls.Add(this.G2ReportsBtn);
-            this.ReportsContainer.Location = new System.Drawing.Point(3, 345);
+            this.ReportsContainer.Location = new System.Drawing.Point(3, 289);
             this.ReportsContainer.MaximumSize = new System.Drawing.Size(209, 84);
             this.ReportsContainer.MinimumSize = new System.Drawing.Size(209, 46);
             this.ReportsContainer.Name = "ReportsContainer";
@@ -946,94 +921,6 @@
             this.sidebarTimer.Interval = 10;
             this.sidebarTimer.Tick += new System.EventHandler(this.sidebarTimer_Tick);
             // 
-            // StaffSideTimer
-            // 
-            this.StaffSideTimer.Interval = 10;
-            this.StaffSideTimer.Tick += new System.EventHandler(this.StaffSideTimer_Tick);
-            // 
-            // customerNumDataGridViewTextBoxColumn
-            // 
-            this.customerNumDataGridViewTextBoxColumn.DataPropertyName = "CustomerNum";
-            this.customerNumDataGridViewTextBoxColumn.HeaderText = "CustomerNum";
-            this.customerNumDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.customerNumDataGridViewTextBoxColumn.Name = "customerNumDataGridViewTextBoxColumn";
-            this.customerNumDataGridViewTextBoxColumn.ReadOnly = true;
-            this.customerNumDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // customerForenameDataGridViewTextBoxColumn
-            // 
-            this.customerForenameDataGridViewTextBoxColumn.DataPropertyName = "CustomerForename";
-            this.customerForenameDataGridViewTextBoxColumn.HeaderText = "CustomerForename";
-            this.customerForenameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.customerForenameDataGridViewTextBoxColumn.Name = "customerForenameDataGridViewTextBoxColumn";
-            this.customerForenameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // customerSurnameDataGridViewTextBoxColumn
-            // 
-            this.customerSurnameDataGridViewTextBoxColumn.DataPropertyName = "CustomerSurname";
-            this.customerSurnameDataGridViewTextBoxColumn.HeaderText = "CustomerSurname";
-            this.customerSurnameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.customerSurnameDataGridViewTextBoxColumn.Name = "customerSurnameDataGridViewTextBoxColumn";
-            this.customerSurnameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // customerPostcodeDataGridViewTextBoxColumn
-            // 
-            this.customerPostcodeDataGridViewTextBoxColumn.DataPropertyName = "CustomerPostcode";
-            this.customerPostcodeDataGridViewTextBoxColumn.HeaderText = "CustomerPostcode";
-            this.customerPostcodeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.customerPostcodeDataGridViewTextBoxColumn.Name = "customerPostcodeDataGridViewTextBoxColumn";
-            this.customerPostcodeDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // customerAddressDataGridViewTextBoxColumn
-            // 
-            this.customerAddressDataGridViewTextBoxColumn.DataPropertyName = "CustomerAddress";
-            this.customerAddressDataGridViewTextBoxColumn.HeaderText = "CustomerAddress";
-            this.customerAddressDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.customerAddressDataGridViewTextBoxColumn.Name = "customerAddressDataGridViewTextBoxColumn";
-            this.customerAddressDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // customerTownDataGridViewTextBoxColumn
-            // 
-            this.customerTownDataGridViewTextBoxColumn.DataPropertyName = "CustomerTown";
-            this.customerTownDataGridViewTextBoxColumn.HeaderText = "CustomerTown";
-            this.customerTownDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.customerTownDataGridViewTextBoxColumn.Name = "customerTownDataGridViewTextBoxColumn";
-            this.customerTownDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // customerPhoneDataGridViewTextBoxColumn
-            // 
-            this.customerPhoneDataGridViewTextBoxColumn.DataPropertyName = "CustomerPhone";
-            this.customerPhoneDataGridViewTextBoxColumn.HeaderText = "CustomerPhone";
-            this.customerPhoneDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.customerPhoneDataGridViewTextBoxColumn.Name = "customerPhoneDataGridViewTextBoxColumn";
-            this.customerPhoneDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // customerDOBDataGridViewTextBoxColumn
-            // 
-            this.customerDOBDataGridViewTextBoxColumn.DataPropertyName = "CustomerDOB";
-            this.customerDOBDataGridViewTextBoxColumn.HeaderText = "CustomerDOB";
-            this.customerDOBDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.customerDOBDataGridViewTextBoxColumn.Name = "customerDOBDataGridViewTextBoxColumn";
-            this.customerDOBDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // customerSpecialReqsDataGridViewTextBoxColumn
-            // 
-            this.customerSpecialReqsDataGridViewTextBoxColumn.DataPropertyName = "CustomerSpecialReqs";
-            this.customerSpecialReqsDataGridViewTextBoxColumn.HeaderText = "CustomerSpecialReqs";
-            this.customerSpecialReqsDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.customerSpecialReqsDataGridViewTextBoxColumn.Name = "customerSpecialReqsDataGridViewTextBoxColumn";
-            this.customerSpecialReqsDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // customerBindingSource
-            // 
-            this.customerBindingSource.DataMember = "Customer";
-            this.customerBindingSource.DataSource = this.lakeside9320CustomerSelectDataSet;
-            // 
-            // lakeside9320CustomerSelectDataSet
-            // 
-            this.lakeside9320CustomerSelectDataSet.DataSetName = "Lakeside9320CustomerSelectDataSet";
-            this.lakeside9320CustomerSelectDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // customerTableAdapter
             // 
             this.customerTableAdapter.ClearBeforeFill = true;
@@ -1070,6 +957,8 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVCustomer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320CustomerSelectDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVCourse)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DiscountSelectBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.QuantitySelectBox)).EndInit();
@@ -1085,12 +974,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).EndInit();
             this.bookingContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).EndInit();
-            this.staffContainer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             this.ReportsContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320CustomerSelectDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1163,12 +1048,5 @@
         private Guna.UI2.WinForms.Guna2Button G2UnpaidBtn;
         private Guna.UI2.WinForms.Guna2Button G2ReportsBtn;
         private System.Windows.Forms.Timer sidebarTimer;
-        private System.Windows.Forms.Panel staffContainer;
-        private Guna.UI2.WinForms.Guna2Button AddStaffBtnS;
-        private Guna.UI2.WinForms.Guna2Button DeleteStaffBtnS;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
-        private Guna.UI2.WinForms.Guna2Button EditStaffBtnS;
-        private Guna.UI2.WinForms.Guna2Button G2StaffSideBtn;
-        private System.Windows.Forms.Timer StaffSideTimer;
     }
 }

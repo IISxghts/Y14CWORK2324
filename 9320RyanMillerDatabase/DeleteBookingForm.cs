@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Forms;
 
 namespace _9320RyanMillerDatabase
@@ -18,12 +19,95 @@ namespace _9320RyanMillerDatabase
             CenterToScreen();
         }
 
+        DataRowView DFRowSelectBooking;
+
         bool sidebarExpand;
         bool sidebarReportsExpand;
         bool sidebarCourseExpand;
         bool sidebarCustExpand;
-        bool sidebarBookExpand;
+        bool sidebarBookExpand;        
+        
+        private void RowChoose()
+        {
+            DFRowSelectBooking = BookDeleteDGV.CurrentRow != null ? (DataRowView)BookDeleteDGV.CurrentRow.DataBoundItem : null;
+            
+            ViewBookingIDBox.Text = Convert.ToString(DFRowSelectBooking["BookingID"]);
+        }
+        private void DeleteBookingForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'lakeside9320DeleteBookingDataSet.Booking' table. You can move, or remove it, as needed.
+            this.bookingTableAdapter.Fill(this.lakeside9320DeleteBookingDataSet.Booking);
+        }
 
+        private void BookDeleteDGV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            RowChoose();
+        }
+
+        private void DeleteBookingBtn_Click(object sender, EventArgs e)
+        {
+
+            int Book = Convert.ToInt32(DFRowSelectBooking["BookingID"]);
+
+            ViewBookingIDBox.Text = Convert.ToString(DFRowSelectBooking["BookingID"]);
+
+            string cusNum = Convert.ToString(DFRowSelectBooking["CustomerNum"]);
+
+            if (DFRowSelectBooking != null)
+            {
+                if (BookingDAL.UnpaidCheck(Book).Count == 0)
+                {
+                    
+                    MessageBoxResult confirmResult = System.Windows.MessageBox.Show("Are you sure to delete this booking with ID: " + ViewBookingIDBox.Text + " belonging to customer with ID: " + cusNum, "Confirm Deletion", MessageBoxButton.OKCancel);
+
+                    if(!this.CanFocus)
+                    {
+                        this.WindowState = FormWindowState.Normal;
+                    }
+
+                    if (confirmResult == MessageBoxResult.OK)
+                    {
+                        int rowingsAffected = BookingDAL.DeleteBookingOfDisloyalCustomer(Convert.ToInt32(DFRowSelectBooking["BookingID"]));
+
+                        if (rowingsAffected > 0)
+                        {
+                            System.Windows.MessageBox.Show("Customer has successfully been deleted", "Completed");
+                            CustomerTableRefresh();
+                            ViewBookingIDBox.Text = "";
+                        }
+                        else
+                        {
+                            System.Windows.MessageBox.Show("An error has occured", "Error");
+                        }
+                    }
+                    else
+                    {
+                        System.Windows.MessageBox.Show("Deletion cancelled.");
+                        CustomerTableRefresh();
+                        ViewBookingIDBox.Text = "";
+                    }
+                }
+                else
+                {
+                    System.Windows.MessageBox.Show("Booking not paid yet", "Deletion cancelled");
+                    CustomerTableRefresh();
+                }
+            }
+            else
+            {
+                System.Windows.MessageBox.Show("Please choose a booking", "Error");
+                CustomerTableRefresh();
+            }
+            
+        
+        }
+        private void CustomerTableRefresh()
+        {
+            this.bookingTableAdapter.Fill(this.lakeside9320DeleteBookingDataSet.Booking);
+        }
+
+
+        #region sidebar
         private void ReportSideTimer_Tick(object sender, EventArgs e)
         {
             if (sidebarReportsExpand)
@@ -246,6 +330,8 @@ namespace _9320RyanMillerDatabase
             Hide();
             new DeleteStaffForm().Show();
         }
+
+        #endregion
 
 
     }

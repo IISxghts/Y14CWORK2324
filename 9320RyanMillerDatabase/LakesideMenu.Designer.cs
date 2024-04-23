@@ -103,7 +103,7 @@
             this.LLMenuGreetLbl.AutoSize = true;
             this.LLMenuGreetLbl.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LLMenuGreetLbl.ForeColor = System.Drawing.Color.White;
-            this.LLMenuGreetLbl.Location = new System.Drawing.Point(473, 30);
+            this.LLMenuGreetLbl.Location = new System.Drawing.Point(826, 46);
             this.LLMenuGreetLbl.Name = "LLMenuGreetLbl";
             this.LLMenuGreetLbl.Size = new System.Drawing.Size(171, 23);
             this.LLMenuGreetLbl.TabIndex = 4;
@@ -158,11 +158,11 @@
             this.G2StaffBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.G2StaffBtn.ForeColor = System.Drawing.Color.White;
             this.G2StaffBtn.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(215)))), ((int)(((byte)(150)))));
-            this.G2StaffBtn.Location = new System.Drawing.Point(576, 3);
+            this.G2StaffBtn.Location = new System.Drawing.Point(767, 3);
             this.G2StaffBtn.Name = "G2StaffBtn";
             this.G2StaffBtn.Size = new System.Drawing.Size(185, 67);
             this.G2StaffBtn.TabIndex = 5;
-            this.G2StaffBtn.Text = "Staff";
+            this.G2StaffBtn.Text = "Other";
             this.G2StaffBtn.Click += new System.EventHandler(this.G2SettingsBtn_Click);
             // 
             // G2BtnBookings
@@ -198,7 +198,7 @@
             this.G2BtnReports.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.G2BtnReports.ForeColor = System.Drawing.Color.White;
             this.G2BtnReports.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(215)))), ((int)(((byte)(150)))));
-            this.G2BtnReports.Location = new System.Drawing.Point(765, 3);
+            this.G2BtnReports.Location = new System.Drawing.Point(576, 3);
             this.G2BtnReports.Name = "G2BtnReports";
             this.G2BtnReports.Size = new System.Drawing.Size(185, 67);
             this.G2BtnReports.TabIndex = 4;

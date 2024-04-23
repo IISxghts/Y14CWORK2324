@@ -58,14 +58,10 @@
             this.EFCustTownTB = new System.Windows.Forms.TextBox();
             this.EFCustSpecReqLbl = new System.Windows.Forms.Label();
             this.EFCustSpecialReqTB = new System.Windows.Forms.TextBox();
-            this.EFCustEditBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.EFCustSNDBtn = new System.Windows.Forms.Button();
-            this.customerTableAdapter = new _9320RyanMillerDatabase.Lakeside9320CEDataSetTableAdapters.CustomerTableAdapter();
             this.LLMenuLbl = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.EditCustDTP = new System.Windows.Forms.DateTimePicker();
             this.G2HomeSideBtn = new Guna.UI2.WinForms.Guna2Button();
             this.G2CustSideBtn = new Guna.UI2.WinForms.Guna2Button();
             this.G2CourseSideBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -100,6 +96,10 @@
             this.CourseSideTimer = new System.Windows.Forms.Timer(this.components);
             this.BookSideTimer = new System.Windows.Forms.Timer(this.components);
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
+            this.DTTextBox = new System.Windows.Forms.TextBox();
+            this.customerTableAdapter = new _9320RyanMillerDatabase.Lakeside9320CEDataSetTableAdapters.CustomerTableAdapter();
+            this.G2EditCustBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.G2SaveDetailsBtn = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.EFCustDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lakeside9320CEDataSet)).BeginInit();
@@ -135,7 +135,7 @@
             this.customerDOBDataGridViewTextBoxColumn,
             this.customerSpecialReqsDataGridViewTextBoxColumn});
             this.EFCustDGV.DataSource = this.customerBindingSource;
-            this.EFCustDGV.Location = new System.Drawing.Point(227, 79);
+            this.EFCustDGV.Location = new System.Drawing.Point(176, 67);
             this.EFCustDGV.Name = "EFCustDGV";
             this.EFCustDGV.RowHeadersWidth = 51;
             this.EFCustDGV.RowTemplate.Height = 24;
@@ -228,7 +228,7 @@
             // 
             // EFCustIDTB
             // 
-            this.EFCustIDTB.Location = new System.Drawing.Point(416, 340);
+            this.EFCustIDTB.Location = new System.Drawing.Point(356, 331);
             this.EFCustIDTB.Name = "EFCustIDTB";
             this.EFCustIDTB.ReadOnly = true;
             this.EFCustIDTB.Size = new System.Drawing.Size(98, 22);
@@ -237,16 +237,16 @@
             // EFCustIDLbl
             // 
             this.EFCustIDLbl.AutoSize = true;
-            this.EFCustIDLbl.Location = new System.Drawing.Point(233, 340);
+            this.EFCustIDLbl.Location = new System.Drawing.Point(173, 331);
             this.EFCustIDLbl.Name = "EFCustIDLbl";
-            this.EFCustIDLbl.Size = new System.Drawing.Size(77, 16);
+            this.EFCustIDLbl.Size = new System.Drawing.Size(80, 16);
             this.EFCustIDLbl.TabIndex = 2;
-            this.EFCustIDLbl.Text = "CustomerID";
+            this.EFCustIDLbl.Text = "Customer ID";
             // 
             // EFCustForenameLbl
             // 
             this.EFCustForenameLbl.AutoSize = true;
-            this.EFCustForenameLbl.Location = new System.Drawing.Point(233, 365);
+            this.EFCustForenameLbl.Location = new System.Drawing.Point(173, 356);
             this.EFCustForenameLbl.Name = "EFCustForenameLbl";
             this.EFCustForenameLbl.Size = new System.Drawing.Size(69, 16);
             this.EFCustForenameLbl.TabIndex = 4;
@@ -254,7 +254,7 @@
             // 
             // EFCustForenameTB
             // 
-            this.EFCustForenameTB.Location = new System.Drawing.Point(408, 368);
+            this.EFCustForenameTB.Location = new System.Drawing.Point(348, 359);
             this.EFCustForenameTB.Name = "EFCustForenameTB";
             this.EFCustForenameTB.Size = new System.Drawing.Size(98, 22);
             this.EFCustForenameTB.TabIndex = 3;
@@ -262,7 +262,7 @@
             // EFCustAddressLbl
             // 
             this.EFCustAddressLbl.AutoSize = true;
-            this.EFCustAddressLbl.Location = new System.Drawing.Point(239, 424);
+            this.EFCustAddressLbl.Location = new System.Drawing.Point(179, 415);
             this.EFCustAddressLbl.Name = "EFCustAddressLbl";
             this.EFCustAddressLbl.Size = new System.Drawing.Size(58, 16);
             this.EFCustAddressLbl.TabIndex = 8;
@@ -270,7 +270,7 @@
             // 
             // EFCustAddressTB
             // 
-            this.EFCustAddressTB.Location = new System.Drawing.Point(408, 424);
+            this.EFCustAddressTB.Location = new System.Drawing.Point(348, 415);
             this.EFCustAddressTB.Name = "EFCustAddressTB";
             this.EFCustAddressTB.Size = new System.Drawing.Size(98, 22);
             this.EFCustAddressTB.TabIndex = 7;
@@ -278,7 +278,7 @@
             // EFCustSurnameLbl
             // 
             this.EFCustSurnameLbl.AutoSize = true;
-            this.EFCustSurnameLbl.Location = new System.Drawing.Point(239, 393);
+            this.EFCustSurnameLbl.Location = new System.Drawing.Point(179, 384);
             this.EFCustSurnameLbl.Name = "EFCustSurnameLbl";
             this.EFCustSurnameLbl.Size = new System.Drawing.Size(61, 16);
             this.EFCustSurnameLbl.TabIndex = 6;
@@ -286,7 +286,7 @@
             // 
             // EFCustSurnameTB
             // 
-            this.EFCustSurnameTB.Location = new System.Drawing.Point(408, 396);
+            this.EFCustSurnameTB.Location = new System.Drawing.Point(348, 387);
             this.EFCustSurnameTB.Name = "EFCustSurnameTB";
             this.EFCustSurnameTB.Size = new System.Drawing.Size(98, 22);
             this.EFCustSurnameTB.TabIndex = 5;
@@ -294,7 +294,7 @@
             // EFCustPhoneLbl
             // 
             this.EFCustPhoneLbl.AutoSize = true;
-            this.EFCustPhoneLbl.Location = new System.Drawing.Point(516, 427);
+            this.EFCustPhoneLbl.Location = new System.Drawing.Point(456, 418);
             this.EFCustPhoneLbl.Name = "EFCustPhoneLbl";
             this.EFCustPhoneLbl.Size = new System.Drawing.Size(97, 16);
             this.EFCustPhoneLbl.TabIndex = 14;
@@ -302,7 +302,7 @@
             // 
             // EFCustPhoneTB
             // 
-            this.EFCustPhoneTB.Location = new System.Drawing.Point(619, 424);
+            this.EFCustPhoneTB.Location = new System.Drawing.Point(559, 415);
             this.EFCustPhoneTB.Name = "EFCustPhoneTB";
             this.EFCustPhoneTB.Size = new System.Drawing.Size(102, 22);
             this.EFCustPhoneTB.TabIndex = 13;
@@ -310,7 +310,7 @@
             // EFCustPostcodeLbl
             // 
             this.EFCustPostcodeLbl.AutoSize = true;
-            this.EFCustPostcodeLbl.Location = new System.Drawing.Point(520, 374);
+            this.EFCustPostcodeLbl.Location = new System.Drawing.Point(460, 365);
             this.EFCustPostcodeLbl.Name = "EFCustPostcodeLbl";
             this.EFCustPostcodeLbl.Size = new System.Drawing.Size(65, 16);
             this.EFCustPostcodeLbl.TabIndex = 12;
@@ -318,7 +318,7 @@
             // 
             // EFCustPostcodeTB
             // 
-            this.EFCustPostcodeTB.Location = new System.Drawing.Point(619, 368);
+            this.EFCustPostcodeTB.Location = new System.Drawing.Point(559, 359);
             this.EFCustPostcodeTB.Name = "EFCustPostcodeTB";
             this.EFCustPostcodeTB.Size = new System.Drawing.Size(102, 22);
             this.EFCustPostcodeTB.TabIndex = 11;
@@ -326,7 +326,7 @@
             // EFCustTownLbl
             // 
             this.EFCustTownLbl.AutoSize = true;
-            this.EFCustTownLbl.Location = new System.Drawing.Point(520, 346);
+            this.EFCustTownLbl.Location = new System.Drawing.Point(460, 337);
             this.EFCustTownLbl.Name = "EFCustTownLbl";
             this.EFCustTownLbl.Size = new System.Drawing.Size(40, 16);
             this.EFCustTownLbl.TabIndex = 10;
@@ -334,7 +334,7 @@
             // 
             // EFCustTownTB
             // 
-            this.EFCustTownTB.Location = new System.Drawing.Point(619, 340);
+            this.EFCustTownTB.Location = new System.Drawing.Point(559, 331);
             this.EFCustTownTB.Name = "EFCustTownTB";
             this.EFCustTownTB.Size = new System.Drawing.Size(102, 22);
             this.EFCustTownTB.TabIndex = 9;
@@ -342,7 +342,7 @@
             // EFCustSpecReqLbl
             // 
             this.EFCustSpecReqLbl.AutoSize = true;
-            this.EFCustSpecReqLbl.Location = new System.Drawing.Point(762, 340);
+            this.EFCustSpecReqLbl.Location = new System.Drawing.Point(702, 331);
             this.EFCustSpecReqLbl.Name = "EFCustSpecReqLbl";
             this.EFCustSpecReqLbl.Size = new System.Drawing.Size(140, 16);
             this.EFCustSpecReqLbl.TabIndex = 17;
@@ -350,51 +350,27 @@
             // 
             // EFCustSpecialReqTB
             // 
-            this.EFCustSpecialReqTB.Location = new System.Drawing.Point(765, 362);
+            this.EFCustSpecialReqTB.Location = new System.Drawing.Point(705, 353);
             this.EFCustSpecialReqTB.Multiline = true;
             this.EFCustSpecialReqTB.Name = "EFCustSpecialReqTB";
             this.EFCustSpecialReqTB.Size = new System.Drawing.Size(232, 84);
             this.EFCustSpecialReqTB.TabIndex = 16;
             // 
-            // EFCustEditBtn
-            // 
-            this.EFCustEditBtn.Location = new System.Drawing.Point(236, 455);
-            this.EFCustEditBtn.Name = "EFCustEditBtn";
-            this.EFCustEditBtn.Size = new System.Drawing.Size(108, 41);
-            this.EFCustEditBtn.TabIndex = 18;
-            this.EFCustEditBtn.Text = "Edit Customer";
-            this.EFCustEditBtn.UseVisualStyleBackColor = true;
-            this.EFCustEditBtn.Click += new System.EventHandler(this.EFCustEditBtn_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(520, 399);
+            this.label1.Location = new System.Drawing.Point(460, 390);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 16);
             this.label1.TabIndex = 20;
             this.label1.Text = "Date of Birth";
-            // 
-            // EFCustSNDBtn
-            // 
-            this.EFCustSNDBtn.Location = new System.Drawing.Point(352, 455);
-            this.EFCustSNDBtn.Name = "EFCustSNDBtn";
-            this.EFCustSNDBtn.Size = new System.Drawing.Size(108, 42);
-            this.EFCustSNDBtn.TabIndex = 21;
-            this.EFCustSNDBtn.Text = "Save New Details";
-            this.EFCustSNDBtn.UseVisualStyleBackColor = true;
-            this.EFCustSNDBtn.Click += new System.EventHandler(this.EFCustSNDBtn_Click);
-            // 
-            // customerTableAdapter
-            // 
-            this.customerTableAdapter.ClearBeforeFill = true;
             // 
             // LLMenuLbl
             // 
             this.LLMenuLbl.AutoSize = true;
             this.LLMenuLbl.Font = new System.Drawing.Font("Segoe UI Black", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LLMenuLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
-            this.LLMenuLbl.Location = new System.Drawing.Point(466, 9);
+            this.LLMenuLbl.Location = new System.Drawing.Point(311, 10);
             this.LLMenuLbl.Name = "LLMenuLbl";
             this.LLMenuLbl.Size = new System.Drawing.Size(531, 38);
             this.LLMenuLbl.TabIndex = 1;
@@ -404,7 +380,7 @@
             // 
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(316, 9);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(161, 10);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(144, 51);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -421,13 +397,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1000, 63);
             this.panel3.TabIndex = 23;
-            // 
-            // EditCustDTP
-            // 
-            this.EditCustDTP.Location = new System.Drawing.Point(619, 396);
-            this.EditCustDTP.Name = "EditCustDTP";
-            this.EditCustDTP.Size = new System.Drawing.Size(140, 22);
-            this.EditCustDTP.TabIndex = 24;
             // 
             // G2HomeSideBtn
             // 
@@ -896,17 +865,66 @@
             this.sidebarTimer.Interval = 10;
             this.sidebarTimer.Tick += new System.EventHandler(this.sidebarTimer_Tick);
             // 
+            // DTTextBox
+            // 
+            this.DTTextBox.Location = new System.Drawing.Point(559, 387);
+            this.DTTextBox.Name = "DTTextBox";
+            this.DTTextBox.Size = new System.Drawing.Size(102, 22);
+            this.DTTextBox.TabIndex = 91;
+            // 
+            // customerTableAdapter
+            // 
+            this.customerTableAdapter.ClearBeforeFill = true;
+            // 
+            // G2EditCustBtn
+            // 
+            this.G2EditCustBtn.AutoRoundedCorners = true;
+            this.G2EditCustBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.G2EditCustBtn.BorderRadius = 21;
+            this.G2EditCustBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.G2EditCustBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.G2EditCustBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.G2EditCustBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.G2EditCustBtn.FillColor = System.Drawing.Color.Empty;
+            this.G2EditCustBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.G2EditCustBtn.ForeColor = System.Drawing.Color.White;
+            this.G2EditCustBtn.Location = new System.Drawing.Point(189, 443);
+            this.G2EditCustBtn.Name = "G2EditCustBtn";
+            this.G2EditCustBtn.Size = new System.Drawing.Size(226, 45);
+            this.G2EditCustBtn.TabIndex = 92;
+            this.G2EditCustBtn.Text = "Edit Details";
+            this.G2EditCustBtn.Click += new System.EventHandler(this.G2EditCustBtn_Click);
+            // 
+            // G2SaveDetailsBtn
+            // 
+            this.G2SaveDetailsBtn.AutoRoundedCorners = true;
+            this.G2SaveDetailsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.G2SaveDetailsBtn.BorderRadius = 21;
+            this.G2SaveDetailsBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.G2SaveDetailsBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.G2SaveDetailsBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.G2SaveDetailsBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.G2SaveDetailsBtn.FillColor = System.Drawing.Color.Empty;
+            this.G2SaveDetailsBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.G2SaveDetailsBtn.ForeColor = System.Drawing.Color.White;
+            this.G2SaveDetailsBtn.Location = new System.Drawing.Point(435, 443);
+            this.G2SaveDetailsBtn.Name = "G2SaveDetailsBtn";
+            this.G2SaveDetailsBtn.Size = new System.Drawing.Size(226, 45);
+            this.G2SaveDetailsBtn.TabIndex = 93;
+            this.G2SaveDetailsBtn.Text = "Save Details";
+            this.G2SaveDetailsBtn.Click += new System.EventHandler(this.G2SaveDetailsBtn_Click);
+            // 
             // EditCustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 500);
+            this.Controls.Add(this.G2SaveDetailsBtn);
+            this.Controls.Add(this.G2EditCustBtn);
+            this.Controls.Add(this.DTTextBox);
             this.Controls.Add(this.sidebar);
-            this.Controls.Add(this.EditCustDTP);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.EFCustSNDBtn);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.EFCustEditBtn);
             this.Controls.Add(this.EFCustSpecReqLbl);
             this.Controls.Add(this.EFCustSpecialReqTB);
             this.Controls.Add(this.EFCustPhoneLbl);
@@ -984,13 +1002,10 @@
         private System.Windows.Forms.TextBox EFCustTownTB;
         private System.Windows.Forms.Label EFCustSpecReqLbl;
         private System.Windows.Forms.TextBox EFCustSpecialReqTB;
-        private System.Windows.Forms.Button EFCustEditBtn;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button EFCustSNDBtn;
         private System.Windows.Forms.Label LLMenuLbl;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DateTimePicker EditCustDTP;
         private Guna.UI2.WinForms.Guna2Button G2HomeSideBtn;
         private Guna.UI2.WinForms.Guna2Button G2CustSideBtn;
         private Guna.UI2.WinForms.Guna2Button G2CourseSideBtn;
@@ -1025,5 +1040,8 @@
         private System.Windows.Forms.Timer CourseSideTimer;
         private System.Windows.Forms.Timer BookSideTimer;
         private System.Windows.Forms.Timer sidebarTimer;
+        private System.Windows.Forms.TextBox DTTextBox;
+        private Guna.UI2.WinForms.Guna2Button G2EditCustBtn;
+        private Guna.UI2.WinForms.Guna2Button G2SaveDetailsBtn;
     }
 }

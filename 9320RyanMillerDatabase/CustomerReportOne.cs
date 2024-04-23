@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.WebSockets;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using Microsoft.Reporting.WinForms;
+using System.Configuration;
 
 namespace _9320RyanMillerDatabase
 {
@@ -44,7 +47,7 @@ namespace _9320RyanMillerDatabase
         {
             FirstReportViewer.Visible = true;
         }
-
+        #region sidebar
         private void SidebarPB_Click(object sender, EventArgs e)
         {
             sidebarTimer.Start();
@@ -246,5 +249,6 @@ namespace _9320RyanMillerDatabase
             Hide();
             new DeleteCourseForm().Show();
         }
+        #endregion
     }
 }

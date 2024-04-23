@@ -8,6 +8,7 @@ using System.Data.SqlClient;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System.Data;
 using System.ComponentModel.Design;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 
 
 namespace _9320RyanMillerDatabase
@@ -171,6 +172,52 @@ namespace _9320RyanMillerDatabase
                 connection.Close();
 
                 return dt;
+            }
+        }
+
+        public static int DeleteBookingOfDisloyalCustomer(int BookingID)
+        {
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+                string sqlQuery = string.Format("DELETE FROM Booking WHERE BookingID = '{0}'", BookingID);
+
+                SqlCommand custDelCommand = new SqlCommand(sqlQuery, connection);
+
+                int rowsAffected = custDelCommand.ExecuteNonQuery();
+
+                connection.Close();
+
+                return rowsAffected;
+            }
+        }
+
+        public static List<int> UnpaidCheck(int BookingID)
+        {
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+
+                List<int> bookIDs = new List<int>();
+                connection.Open();
+
+                string SQLQuery = string.Format("SELECT * FROM Booking WHERE BookingID = {0} AND Paid = 0", BookingID);
+
+                SqlCommand megaCommand = new SqlCommand(SQLQuery, connection);
+
+                SqlDataReader dataReader = megaCommand.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    int bookID = (int)dataReader["BookingID"];
+
+                    bookIDs.Add(bookID);
+
+                }
+
+                connection.Close();
+
+                return bookIDs;
+
             }
         }
     }
