@@ -42,13 +42,7 @@
             this.TableLbl = new System.Windows.Forms.Label();
             this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lakeside9320SearchDataSet = new _9320RyanMillerDatabase.Lakeside9320SearchDataSet();
-            this.bookingBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lakeside9320SearchBookingDataSet = new _9320RyanMillerDatabase.Lakeside9320SearchBookingDataSet();
             this.customerTableAdapter = new _9320RyanMillerDatabase.Lakeside9320SearchDataSetTableAdapters.CustomerTableAdapter();
-            this.lakeside9320SearchCoursesDataSet = new _9320RyanMillerDatabase.Lakeside9320SearchCoursesDataSet();
-            this.coursesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.coursesTableAdapter = new _9320RyanMillerDatabase.Lakeside9320SearchCoursesDataSetTableAdapters.CoursesTableAdapter();
-            this.bookingTableAdapter = new _9320RyanMillerDatabase.Lakeside9320SearchBookingDataSetTableAdapters.BookingTableAdapter();
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.MenuSideLbl = new System.Windows.Forms.Label();
@@ -90,15 +84,17 @@
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.SearchDataBtnS = new Guna.UI2.WinForms.Guna2Button();
             this.G2OtherSideBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.bookingBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lakeside9320SearchBookingDataSet = new _9320RyanMillerDatabase.Lakeside9320SearchBookingDataSet();
+            this.lakeside9320SearchCoursesDataSet = new _9320RyanMillerDatabase.Lakeside9320SearchCoursesDataSet();
+            this.coursesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.coursesTableAdapter = new _9320RyanMillerDatabase.Lakeside9320SearchCoursesDataSetTableAdapters.CoursesTableAdapter();
+            this.bookingTableAdapter = new _9320RyanMillerDatabase.Lakeside9320SearchBookingDataSetTableAdapters.BookingTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.CustomerInfoDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lakeside9320SearchDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookingBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320SearchBookingDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320SearchCoursesDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.coursesBindingSource)).BeginInit();
             this.sidebar.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SidebarPB)).BeginInit();
@@ -114,6 +110,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.otherContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookingBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320SearchBookingDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320SearchCoursesDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coursesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // CustomerInfoDGV
@@ -130,6 +130,7 @@
             // 
             this.CriteriaLbl.AutoSize = true;
             this.CriteriaLbl.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CriteriaLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
             this.CriteriaLbl.Location = new System.Drawing.Point(267, 148);
             this.CriteriaLbl.Name = "CriteriaLbl";
             this.CriteriaLbl.Size = new System.Drawing.Size(126, 21);
@@ -158,6 +159,7 @@
             // 
             this.SearchLbl.AutoSize = true;
             this.SearchLbl.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
             this.SearchLbl.Location = new System.Drawing.Point(594, 130);
             this.SearchLbl.Name = "SearchLbl";
             this.SearchLbl.Size = new System.Drawing.Size(67, 21);
@@ -215,6 +217,7 @@
             // 
             this.TableLbl.AutoSize = true;
             this.TableLbl.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TableLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
             this.TableLbl.Location = new System.Drawing.Point(267, 104);
             this.TableLbl.Name = "TableLbl";
             this.TableLbl.Size = new System.Drawing.Size(112, 21);
@@ -231,37 +234,9 @@
             this.lakeside9320SearchDataSet.DataSetName = "Lakeside9320SearchDataSet";
             this.lakeside9320SearchDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // bookingBindingSource
-            // 
-            this.bookingBindingSource.DataMember = "Booking";
-            this.bookingBindingSource.DataSource = this.lakeside9320SearchBookingDataSet;
-            // 
-            // lakeside9320SearchBookingDataSet
-            // 
-            this.lakeside9320SearchBookingDataSet.DataSetName = "Lakeside9320SearchBookingDataSet";
-            this.lakeside9320SearchBookingDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // customerTableAdapter
             // 
             this.customerTableAdapter.ClearBeforeFill = true;
-            // 
-            // lakeside9320SearchCoursesDataSet
-            // 
-            this.lakeside9320SearchCoursesDataSet.DataSetName = "Lakeside9320SearchCoursesDataSet";
-            this.lakeside9320SearchCoursesDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // coursesBindingSource
-            // 
-            this.coursesBindingSource.DataMember = "Courses";
-            this.coursesBindingSource.DataSource = this.lakeside9320SearchCoursesDataSet;
-            // 
-            // coursesTableAdapter
-            // 
-            this.coursesTableAdapter.ClearBeforeFill = true;
-            // 
-            // bookingTableAdapter
-            // 
-            this.bookingTableAdapter.ClearBeforeFill = true;
             // 
             // sidebar
             // 
@@ -272,6 +247,7 @@
             this.sidebar.Controls.Add(this.coursesContainer);
             this.sidebar.Controls.Add(this.bookingContainer);
             this.sidebar.Controls.Add(this.ReportsContainer);
+            this.sidebar.Controls.Add(this.otherContainer);
             this.sidebar.Location = new System.Drawing.Point(0, 0);
             this.sidebar.MaximumSize = new System.Drawing.Size(215, 500);
             this.sidebar.MinimumSize = new System.Drawing.Size(70, 500);
@@ -760,11 +736,11 @@
             this.otherContainer.Controls.Add(this.guna2PictureBox3);
             this.otherContainer.Controls.Add(this.SearchDataBtnS);
             this.otherContainer.Controls.Add(this.G2OtherSideBtn);
-            this.otherContainer.Location = new System.Drawing.Point(393, 190);
+            this.otherContainer.Location = new System.Drawing.Point(3, 345);
             this.otherContainer.MaximumSize = new System.Drawing.Size(215, 120);
             this.otherContainer.MinimumSize = new System.Drawing.Size(215, 50);
             this.otherContainer.Name = "otherContainer";
-            this.otherContainer.Size = new System.Drawing.Size(215, 120);
+            this.otherContainer.Size = new System.Drawing.Size(215, 50);
             this.otherContainer.TabIndex = 91;
             // 
             // ViewDataBtnS
@@ -832,12 +808,39 @@
             this.G2OtherSideBtn.Text = "Other";
             this.G2OtherSideBtn.Click += new System.EventHandler(this.G2OtherSideBtn_Click);
             // 
+            // bookingBindingSource
+            // 
+            this.bookingBindingSource.DataMember = "Booking";
+            this.bookingBindingSource.DataSource = this.lakeside9320SearchBookingDataSet;
+            // 
+            // lakeside9320SearchBookingDataSet
+            // 
+            this.lakeside9320SearchBookingDataSet.DataSetName = "Lakeside9320SearchBookingDataSet";
+            this.lakeside9320SearchBookingDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // lakeside9320SearchCoursesDataSet
+            // 
+            this.lakeside9320SearchCoursesDataSet.DataSetName = "Lakeside9320SearchCoursesDataSet";
+            this.lakeside9320SearchCoursesDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // coursesBindingSource
+            // 
+            this.coursesBindingSource.DataMember = "Courses";
+            this.coursesBindingSource.DataSource = this.lakeside9320SearchCoursesDataSet;
+            // 
+            // coursesTableAdapter
+            // 
+            this.coursesTableAdapter.ClearBeforeFill = true;
+            // 
+            // bookingTableAdapter
+            // 
+            this.bookingTableAdapter.ClearBeforeFill = true;
+            // 
             // SearchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 500);
-            this.Controls.Add(this.otherContainer);
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.TableSelectBox);
             this.Controls.Add(this.TableLbl);
@@ -857,10 +860,6 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lakeside9320SearchDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookingBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320SearchBookingDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320SearchCoursesDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.coursesBindingSource)).EndInit();
             this.sidebar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -877,6 +876,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.otherContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookingBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320SearchBookingDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320SearchCoursesDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coursesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

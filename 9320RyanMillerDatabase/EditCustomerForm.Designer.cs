@@ -87,16 +87,6 @@
             this.G2DeleteBookBtnS = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox8 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.G2EditBookBtnS = new Guna.UI2.WinForms.Guna2Button();
-            this.ReportSideTimer = new System.Windows.Forms.Timer(this.components);
-            this.CustSideTimer = new System.Windows.Forms.Timer(this.components);
-            this.CourseSideTimer = new System.Windows.Forms.Timer(this.components);
-            this.BookSideTimer = new System.Windows.Forms.Timer(this.components);
-            this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
-            this.DTTextBox = new System.Windows.Forms.TextBox();
-            this.customerTableAdapter = new _9320RyanMillerDatabase.Lakeside9320CEDataSetTableAdapters.CustomerTableAdapter();
-            this.G2EditCustBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.G2SaveDetailsBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.OtherSideTimer = new System.Windows.Forms.Timer(this.components);
             this.ReportsContainer = new System.Windows.Forms.Panel();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.G2UnpaidBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -107,6 +97,16 @@
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.SearchDataBtnS = new Guna.UI2.WinForms.Guna2Button();
             this.G2OtherSideBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.ReportSideTimer = new System.Windows.Forms.Timer(this.components);
+            this.CustSideTimer = new System.Windows.Forms.Timer(this.components);
+            this.CourseSideTimer = new System.Windows.Forms.Timer(this.components);
+            this.BookSideTimer = new System.Windows.Forms.Timer(this.components);
+            this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
+            this.DTTextBox = new System.Windows.Forms.TextBox();
+            this.customerTableAdapter = new _9320RyanMillerDatabase.Lakeside9320CEDataSetTableAdapters.CustomerTableAdapter();
+            this.G2EditCustBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.G2SaveDetailsBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.OtherSideTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.EFCustDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lakeside9320CEDataSet)).BeginInit();
@@ -313,7 +313,7 @@
             this.EFCustPhoneLbl.AutoSize = true;
             this.EFCustPhoneLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EFCustPhoneLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
-            this.EFCustPhoneLbl.Location = new System.Drawing.Point(426, 415);
+            this.EFCustPhoneLbl.Location = new System.Drawing.Point(412, 415);
             this.EFCustPhoneLbl.Name = "EFCustPhoneLbl";
             this.EFCustPhoneLbl.Size = new System.Drawing.Size(127, 23);
             this.EFCustPhoneLbl.TabIndex = 14;
@@ -807,85 +807,6 @@
             this.G2EditBookBtnS.UseTransparentBackground = true;
             this.G2EditBookBtnS.Click += new System.EventHandler(this.G2EditBookBtnS_Click);
             // 
-            // ReportSideTimer
-            // 
-            this.ReportSideTimer.Interval = 10;
-            this.ReportSideTimer.Tick += new System.EventHandler(this.ReportSideTimer_Tick);
-            // 
-            // CustSideTimer
-            // 
-            this.CustSideTimer.Interval = 10;
-            this.CustSideTimer.Tick += new System.EventHandler(this.CustSideTimer_Tick);
-            // 
-            // CourseSideTimer
-            // 
-            this.CourseSideTimer.Interval = 10;
-            this.CourseSideTimer.Tick += new System.EventHandler(this.CourseSideTimer_Tick);
-            // 
-            // BookSideTimer
-            // 
-            this.BookSideTimer.Interval = 10;
-            this.BookSideTimer.Tick += new System.EventHandler(this.BookSideTimer_Tick);
-            // 
-            // sidebarTimer
-            // 
-            this.sidebarTimer.Interval = 10;
-            this.sidebarTimer.Tick += new System.EventHandler(this.sidebarTimer_Tick);
-            // 
-            // DTTextBox
-            // 
-            this.DTTextBox.Location = new System.Drawing.Point(559, 387);
-            this.DTTextBox.Name = "DTTextBox";
-            this.DTTextBox.Size = new System.Drawing.Size(102, 22);
-            this.DTTextBox.TabIndex = 91;
-            // 
-            // customerTableAdapter
-            // 
-            this.customerTableAdapter.ClearBeforeFill = true;
-            // 
-            // G2EditCustBtn
-            // 
-            this.G2EditCustBtn.AutoRoundedCorners = true;
-            this.G2EditCustBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
-            this.G2EditCustBtn.BorderRadius = 21;
-            this.G2EditCustBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.G2EditCustBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.G2EditCustBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.G2EditCustBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.G2EditCustBtn.FillColor = System.Drawing.Color.Empty;
-            this.G2EditCustBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.G2EditCustBtn.ForeColor = System.Drawing.Color.White;
-            this.G2EditCustBtn.Location = new System.Drawing.Point(189, 443);
-            this.G2EditCustBtn.Name = "G2EditCustBtn";
-            this.G2EditCustBtn.Size = new System.Drawing.Size(226, 45);
-            this.G2EditCustBtn.TabIndex = 92;
-            this.G2EditCustBtn.Text = "Edit Details";
-            this.G2EditCustBtn.Click += new System.EventHandler(this.G2EditCustBtn_Click);
-            // 
-            // G2SaveDetailsBtn
-            // 
-            this.G2SaveDetailsBtn.AutoRoundedCorners = true;
-            this.G2SaveDetailsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
-            this.G2SaveDetailsBtn.BorderRadius = 21;
-            this.G2SaveDetailsBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.G2SaveDetailsBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.G2SaveDetailsBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.G2SaveDetailsBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.G2SaveDetailsBtn.FillColor = System.Drawing.Color.Empty;
-            this.G2SaveDetailsBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.G2SaveDetailsBtn.ForeColor = System.Drawing.Color.White;
-            this.G2SaveDetailsBtn.Location = new System.Drawing.Point(435, 443);
-            this.G2SaveDetailsBtn.Name = "G2SaveDetailsBtn";
-            this.G2SaveDetailsBtn.Size = new System.Drawing.Size(226, 45);
-            this.G2SaveDetailsBtn.TabIndex = 93;
-            this.G2SaveDetailsBtn.Text = "Save Details";
-            this.G2SaveDetailsBtn.Click += new System.EventHandler(this.G2SaveDetailsBtn_Click);
-            // 
-            // OtherSideTimer
-            // 
-            this.OtherSideTimer.Interval = 10;
-            this.OtherSideTimer.Tick += new System.EventHandler(this.OtherSideTimer_Tick);
-            // 
             // ReportsContainer
             // 
             this.ReportsContainer.Controls.Add(this.guna2PictureBox2);
@@ -1044,6 +965,85 @@
             this.G2OtherSideBtn.Text = "Other";
             this.G2OtherSideBtn.Click += new System.EventHandler(this.G2OtherSideBtn_Click);
             // 
+            // ReportSideTimer
+            // 
+            this.ReportSideTimer.Interval = 10;
+            this.ReportSideTimer.Tick += new System.EventHandler(this.ReportSideTimer_Tick);
+            // 
+            // CustSideTimer
+            // 
+            this.CustSideTimer.Interval = 10;
+            this.CustSideTimer.Tick += new System.EventHandler(this.CustSideTimer_Tick);
+            // 
+            // CourseSideTimer
+            // 
+            this.CourseSideTimer.Interval = 10;
+            this.CourseSideTimer.Tick += new System.EventHandler(this.CourseSideTimer_Tick);
+            // 
+            // BookSideTimer
+            // 
+            this.BookSideTimer.Interval = 10;
+            this.BookSideTimer.Tick += new System.EventHandler(this.BookSideTimer_Tick);
+            // 
+            // sidebarTimer
+            // 
+            this.sidebarTimer.Interval = 10;
+            this.sidebarTimer.Tick += new System.EventHandler(this.sidebarTimer_Tick);
+            // 
+            // DTTextBox
+            // 
+            this.DTTextBox.Location = new System.Drawing.Point(559, 387);
+            this.DTTextBox.Name = "DTTextBox";
+            this.DTTextBox.Size = new System.Drawing.Size(102, 22);
+            this.DTTextBox.TabIndex = 91;
+            // 
+            // customerTableAdapter
+            // 
+            this.customerTableAdapter.ClearBeforeFill = true;
+            // 
+            // G2EditCustBtn
+            // 
+            this.G2EditCustBtn.AutoRoundedCorners = true;
+            this.G2EditCustBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.G2EditCustBtn.BorderRadius = 21;
+            this.G2EditCustBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.G2EditCustBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.G2EditCustBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.G2EditCustBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.G2EditCustBtn.FillColor = System.Drawing.Color.Empty;
+            this.G2EditCustBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.G2EditCustBtn.ForeColor = System.Drawing.Color.White;
+            this.G2EditCustBtn.Location = new System.Drawing.Point(189, 443);
+            this.G2EditCustBtn.Name = "G2EditCustBtn";
+            this.G2EditCustBtn.Size = new System.Drawing.Size(226, 45);
+            this.G2EditCustBtn.TabIndex = 92;
+            this.G2EditCustBtn.Text = "Edit Details";
+            this.G2EditCustBtn.Click += new System.EventHandler(this.G2EditCustBtn_Click);
+            // 
+            // G2SaveDetailsBtn
+            // 
+            this.G2SaveDetailsBtn.AutoRoundedCorners = true;
+            this.G2SaveDetailsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.G2SaveDetailsBtn.BorderRadius = 21;
+            this.G2SaveDetailsBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.G2SaveDetailsBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.G2SaveDetailsBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.G2SaveDetailsBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.G2SaveDetailsBtn.FillColor = System.Drawing.Color.Empty;
+            this.G2SaveDetailsBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.G2SaveDetailsBtn.ForeColor = System.Drawing.Color.White;
+            this.G2SaveDetailsBtn.Location = new System.Drawing.Point(435, 443);
+            this.G2SaveDetailsBtn.Name = "G2SaveDetailsBtn";
+            this.G2SaveDetailsBtn.Size = new System.Drawing.Size(226, 45);
+            this.G2SaveDetailsBtn.TabIndex = 93;
+            this.G2SaveDetailsBtn.Text = "Save Details";
+            this.G2SaveDetailsBtn.Click += new System.EventHandler(this.G2SaveDetailsBtn_Click);
+            // 
+            // OtherSideTimer
+            // 
+            this.OtherSideTimer.Interval = 10;
+            this.OtherSideTimer.Tick += new System.EventHandler(this.OtherSideTimer_Tick);
+            // 
             // EditCustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1073,6 +1073,7 @@
             this.Controls.Add(this.EFCustIDTB);
             this.Controls.Add(this.EFCustDGV);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EditCustomerForm";
             this.Text = "EditCustomerForm";
             this.Load += new System.EventHandler(this.EditCustomerForm_Load);
