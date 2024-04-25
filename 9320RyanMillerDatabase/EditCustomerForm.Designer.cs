@@ -31,17 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditCustomerForm));
             this.EFCustDGV = new System.Windows.Forms.DataGridView();
-            this.customerNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerForenameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerSurnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerPostcodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerTownDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerPhoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerDOBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerSpecialReqsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lakeside9320CEDataSet = new _9320RyanMillerDatabase.Lakeside9320CEDataSet();
             this.EFCustIDTB = new System.Windows.Forms.TextBox();
             this.EFCustIDLbl = new System.Windows.Forms.Label();
             this.EFCustForenameLbl = new System.Windows.Forms.Label();
@@ -103,13 +92,22 @@
             this.BookSideTimer = new System.Windows.Forms.Timer(this.components);
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.DTTextBox = new System.Windows.Forms.TextBox();
-            this.customerTableAdapter = new _9320RyanMillerDatabase.Lakeside9320CEDataSetTableAdapters.CustomerTableAdapter();
             this.G2EditCustBtn = new Guna.UI2.WinForms.Guna2Button();
             this.G2SaveDetailsBtn = new Guna.UI2.WinForms.Guna2Button();
             this.OtherSideTimer = new System.Windows.Forms.Timer(this.components);
+            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lakeside9320CEDataSet = new _9320RyanMillerDatabase.Lakeside9320CEDataSet();
+            this.customerTableAdapter = new _9320RyanMillerDatabase.Lakeside9320CEDataSetTableAdapters.CustomerTableAdapter();
+            this.customerNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerForenameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerSurnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerPostcodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerTownDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerPhoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerDOBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerSpecialReqsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.EFCustDGV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320CEDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.sidebar.SuspendLayout();
@@ -127,6 +125,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.otherContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320CEDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // EFCustDGV
@@ -151,89 +151,6 @@
             this.EFCustDGV.Size = new System.Drawing.Size(679, 258);
             this.EFCustDGV.TabIndex = 0;
             this.EFCustDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.EFCustDGV_CellClick);
-            // 
-            // customerNumDataGridViewTextBoxColumn
-            // 
-            this.customerNumDataGridViewTextBoxColumn.DataPropertyName = "CustomerNum";
-            this.customerNumDataGridViewTextBoxColumn.HeaderText = "CustomerNum";
-            this.customerNumDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.customerNumDataGridViewTextBoxColumn.Name = "customerNumDataGridViewTextBoxColumn";
-            this.customerNumDataGridViewTextBoxColumn.ReadOnly = true;
-            this.customerNumDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // customerForenameDataGridViewTextBoxColumn
-            // 
-            this.customerForenameDataGridViewTextBoxColumn.DataPropertyName = "CustomerForename";
-            this.customerForenameDataGridViewTextBoxColumn.HeaderText = "CustomerForename";
-            this.customerForenameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.customerForenameDataGridViewTextBoxColumn.Name = "customerForenameDataGridViewTextBoxColumn";
-            this.customerForenameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // customerSurnameDataGridViewTextBoxColumn
-            // 
-            this.customerSurnameDataGridViewTextBoxColumn.DataPropertyName = "CustomerSurname";
-            this.customerSurnameDataGridViewTextBoxColumn.HeaderText = "CustomerSurname";
-            this.customerSurnameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.customerSurnameDataGridViewTextBoxColumn.Name = "customerSurnameDataGridViewTextBoxColumn";
-            this.customerSurnameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // customerPostcodeDataGridViewTextBoxColumn
-            // 
-            this.customerPostcodeDataGridViewTextBoxColumn.DataPropertyName = "CustomerPostcode";
-            this.customerPostcodeDataGridViewTextBoxColumn.HeaderText = "CustomerPostcode";
-            this.customerPostcodeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.customerPostcodeDataGridViewTextBoxColumn.Name = "customerPostcodeDataGridViewTextBoxColumn";
-            this.customerPostcodeDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // customerAddressDataGridViewTextBoxColumn
-            // 
-            this.customerAddressDataGridViewTextBoxColumn.DataPropertyName = "CustomerAddress";
-            this.customerAddressDataGridViewTextBoxColumn.HeaderText = "CustomerAddress";
-            this.customerAddressDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.customerAddressDataGridViewTextBoxColumn.Name = "customerAddressDataGridViewTextBoxColumn";
-            this.customerAddressDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // customerTownDataGridViewTextBoxColumn
-            // 
-            this.customerTownDataGridViewTextBoxColumn.DataPropertyName = "CustomerTown";
-            this.customerTownDataGridViewTextBoxColumn.HeaderText = "CustomerTown";
-            this.customerTownDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.customerTownDataGridViewTextBoxColumn.Name = "customerTownDataGridViewTextBoxColumn";
-            this.customerTownDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // customerPhoneDataGridViewTextBoxColumn
-            // 
-            this.customerPhoneDataGridViewTextBoxColumn.DataPropertyName = "CustomerPhone";
-            this.customerPhoneDataGridViewTextBoxColumn.HeaderText = "CustomerPhone";
-            this.customerPhoneDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.customerPhoneDataGridViewTextBoxColumn.Name = "customerPhoneDataGridViewTextBoxColumn";
-            this.customerPhoneDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // customerDOBDataGridViewTextBoxColumn
-            // 
-            this.customerDOBDataGridViewTextBoxColumn.DataPropertyName = "CustomerDOB";
-            this.customerDOBDataGridViewTextBoxColumn.HeaderText = "CustomerDOB";
-            this.customerDOBDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.customerDOBDataGridViewTextBoxColumn.Name = "customerDOBDataGridViewTextBoxColumn";
-            this.customerDOBDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // customerSpecialReqsDataGridViewTextBoxColumn
-            // 
-            this.customerSpecialReqsDataGridViewTextBoxColumn.DataPropertyName = "CustomerSpecialReqs";
-            this.customerSpecialReqsDataGridViewTextBoxColumn.HeaderText = "CustomerSpecialReqs";
-            this.customerSpecialReqsDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.customerSpecialReqsDataGridViewTextBoxColumn.Name = "customerSpecialReqsDataGridViewTextBoxColumn";
-            this.customerSpecialReqsDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // customerBindingSource
-            // 
-            this.customerBindingSource.DataMember = "Customer";
-            this.customerBindingSource.DataSource = this.lakeside9320CEDataSet;
-            // 
-            // lakeside9320CEDataSet
-            // 
-            this.lakeside9320CEDataSet.DataSetName = "Lakeside9320CEDataSet";
-            this.lakeside9320CEDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // EFCustIDTB
             // 
@@ -997,10 +914,6 @@
             this.DTTextBox.Size = new System.Drawing.Size(102, 22);
             this.DTTextBox.TabIndex = 91;
             // 
-            // customerTableAdapter
-            // 
-            this.customerTableAdapter.ClearBeforeFill = true;
-            // 
             // G2EditCustBtn
             // 
             this.G2EditCustBtn.AutoRoundedCorners = true;
@@ -1044,6 +957,93 @@
             this.OtherSideTimer.Interval = 10;
             this.OtherSideTimer.Tick += new System.EventHandler(this.OtherSideTimer_Tick);
             // 
+            // customerBindingSource
+            // 
+            this.customerBindingSource.DataMember = "Customer";
+            this.customerBindingSource.DataSource = this.lakeside9320CEDataSet;
+            // 
+            // lakeside9320CEDataSet
+            // 
+            this.lakeside9320CEDataSet.DataSetName = "Lakeside9320CEDataSet";
+            this.lakeside9320CEDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // customerTableAdapter
+            // 
+            this.customerTableAdapter.ClearBeforeFill = true;
+            // 
+            // customerNumDataGridViewTextBoxColumn
+            // 
+            this.customerNumDataGridViewTextBoxColumn.DataPropertyName = "CustomerNum";
+            this.customerNumDataGridViewTextBoxColumn.HeaderText = "Customer ID";
+            this.customerNumDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.customerNumDataGridViewTextBoxColumn.Name = "customerNumDataGridViewTextBoxColumn";
+            this.customerNumDataGridViewTextBoxColumn.ReadOnly = true;
+            this.customerNumDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // customerForenameDataGridViewTextBoxColumn
+            // 
+            this.customerForenameDataGridViewTextBoxColumn.DataPropertyName = "CustomerForename";
+            this.customerForenameDataGridViewTextBoxColumn.HeaderText = "Forename";
+            this.customerForenameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.customerForenameDataGridViewTextBoxColumn.Name = "customerForenameDataGridViewTextBoxColumn";
+            this.customerForenameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // customerSurnameDataGridViewTextBoxColumn
+            // 
+            this.customerSurnameDataGridViewTextBoxColumn.DataPropertyName = "CustomerSurname";
+            this.customerSurnameDataGridViewTextBoxColumn.HeaderText = "Surname";
+            this.customerSurnameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.customerSurnameDataGridViewTextBoxColumn.Name = "customerSurnameDataGridViewTextBoxColumn";
+            this.customerSurnameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // customerPostcodeDataGridViewTextBoxColumn
+            // 
+            this.customerPostcodeDataGridViewTextBoxColumn.DataPropertyName = "CustomerPostcode";
+            this.customerPostcodeDataGridViewTextBoxColumn.HeaderText = "Postcode";
+            this.customerPostcodeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.customerPostcodeDataGridViewTextBoxColumn.Name = "customerPostcodeDataGridViewTextBoxColumn";
+            this.customerPostcodeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // customerAddressDataGridViewTextBoxColumn
+            // 
+            this.customerAddressDataGridViewTextBoxColumn.DataPropertyName = "CustomerAddress";
+            this.customerAddressDataGridViewTextBoxColumn.HeaderText = "Address";
+            this.customerAddressDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.customerAddressDataGridViewTextBoxColumn.Name = "customerAddressDataGridViewTextBoxColumn";
+            this.customerAddressDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // customerTownDataGridViewTextBoxColumn
+            // 
+            this.customerTownDataGridViewTextBoxColumn.DataPropertyName = "CustomerTown";
+            this.customerTownDataGridViewTextBoxColumn.HeaderText = "Town";
+            this.customerTownDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.customerTownDataGridViewTextBoxColumn.Name = "customerTownDataGridViewTextBoxColumn";
+            this.customerTownDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // customerPhoneDataGridViewTextBoxColumn
+            // 
+            this.customerPhoneDataGridViewTextBoxColumn.DataPropertyName = "CustomerPhone";
+            this.customerPhoneDataGridViewTextBoxColumn.HeaderText = "Phone";
+            this.customerPhoneDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.customerPhoneDataGridViewTextBoxColumn.Name = "customerPhoneDataGridViewTextBoxColumn";
+            this.customerPhoneDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // customerDOBDataGridViewTextBoxColumn
+            // 
+            this.customerDOBDataGridViewTextBoxColumn.DataPropertyName = "CustomerDOB";
+            this.customerDOBDataGridViewTextBoxColumn.HeaderText = "Date of Birth";
+            this.customerDOBDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.customerDOBDataGridViewTextBoxColumn.Name = "customerDOBDataGridViewTextBoxColumn";
+            this.customerDOBDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // customerSpecialReqsDataGridViewTextBoxColumn
+            // 
+            this.customerSpecialReqsDataGridViewTextBoxColumn.DataPropertyName = "CustomerSpecialReqs";
+            this.customerSpecialReqsDataGridViewTextBoxColumn.HeaderText = "Special Needs";
+            this.customerSpecialReqsDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.customerSpecialReqsDataGridViewTextBoxColumn.Name = "customerSpecialReqsDataGridViewTextBoxColumn";
+            this.customerSpecialReqsDataGridViewTextBoxColumn.Width = 125;
+            // 
             // EditCustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1078,8 +1078,6 @@
             this.Text = "EditCustomerForm";
             this.Load += new System.EventHandler(this.EditCustomerForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.EFCustDGV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320CEDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -1099,6 +1097,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.otherContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320CEDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1110,15 +1110,6 @@
         private Lakeside9320CEDataSet lakeside9320CEDataSet;
         private System.Windows.Forms.BindingSource customerBindingSource;
         private Lakeside9320CEDataSetTableAdapters.CustomerTableAdapter customerTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn customerNumDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn customerForenameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn customerSurnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn customerPostcodeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn customerAddressDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn customerTownDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn customerPhoneDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn customerDOBDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn customerSpecialReqsDataGridViewTextBoxColumn;
         private System.Windows.Forms.TextBox EFCustIDTB;
         private System.Windows.Forms.Label EFCustIDLbl;
         private System.Windows.Forms.Label EFCustForenameLbl;
@@ -1183,5 +1174,14 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
         private Guna.UI2.WinForms.Guna2Button SearchDataBtnS;
         private Guna.UI2.WinForms.Guna2Button G2OtherSideBtn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerNumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerForenameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerSurnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerPostcodeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerAddressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerTownDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerPhoneDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerDOBDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerSpecialReqsDataGridViewTextBoxColumn;
     }
 }

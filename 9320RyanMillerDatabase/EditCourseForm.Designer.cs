@@ -92,6 +92,10 @@
             this.CourseSNDBtn = new Guna.UI2.WinForms.Guna2Button();
             this.EditCourseBtn = new Guna.UI2.WinForms.Guna2Button();
             this.EFCourseDGV = new System.Windows.Forms.DataGridView();
+            this.OtherSideTimer = new System.Windows.Forms.Timer(this.components);
+            this.coursesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lakeside9320ActualCourseEditDataSet = new _9320RyanMillerDatabase.Lakeside9320ActualCourseEditDataSet();
+            this.coursesTableAdapter = new _9320RyanMillerDatabase.Lakeside9320ActualCourseEditDataSetTableAdapters.CoursesTableAdapter();
             this.courseIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.courseTitleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.startDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -100,10 +104,6 @@
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.capacityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.staffIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coursesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lakeside9320ActualCourseEditDataSet = new _9320RyanMillerDatabase.Lakeside9320ActualCourseEditDataSet();
-            this.coursesTableAdapter = new _9320RyanMillerDatabase.Lakeside9320ActualCourseEditDataSetTableAdapters.CoursesTableAdapter();
-            this.OtherSideTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.sidebar.SuspendLayout();
@@ -931,10 +931,29 @@
             this.EFCourseDGV.TabIndex = 92;
             this.EFCourseDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.EFCourseDGV_CellClick);
             // 
+            // OtherSideTimer
+            // 
+            this.OtherSideTimer.Interval = 10;
+            this.OtherSideTimer.Tick += new System.EventHandler(this.OtherSideTimer_Tick);
+            // 
+            // coursesBindingSource
+            // 
+            this.coursesBindingSource.DataMember = "Courses";
+            this.coursesBindingSource.DataSource = this.lakeside9320ActualCourseEditDataSet;
+            // 
+            // lakeside9320ActualCourseEditDataSet
+            // 
+            this.lakeside9320ActualCourseEditDataSet.DataSetName = "Lakeside9320ActualCourseEditDataSet";
+            this.lakeside9320ActualCourseEditDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // coursesTableAdapter
+            // 
+            this.coursesTableAdapter.ClearBeforeFill = true;
+            // 
             // courseIDDataGridViewTextBoxColumn
             // 
             this.courseIDDataGridViewTextBoxColumn.DataPropertyName = "CourseID";
-            this.courseIDDataGridViewTextBoxColumn.HeaderText = "CourseID";
+            this.courseIDDataGridViewTextBoxColumn.HeaderText = "Course ID";
             this.courseIDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.courseIDDataGridViewTextBoxColumn.Name = "courseIDDataGridViewTextBoxColumn";
             this.courseIDDataGridViewTextBoxColumn.ReadOnly = true;
@@ -943,7 +962,7 @@
             // courseTitleDataGridViewTextBoxColumn
             // 
             this.courseTitleDataGridViewTextBoxColumn.DataPropertyName = "CourseTitle";
-            this.courseTitleDataGridViewTextBoxColumn.HeaderText = "CourseTitle";
+            this.courseTitleDataGridViewTextBoxColumn.HeaderText = "Course Name";
             this.courseTitleDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.courseTitleDataGridViewTextBoxColumn.Name = "courseTitleDataGridViewTextBoxColumn";
             this.courseTitleDataGridViewTextBoxColumn.Width = 125;
@@ -951,7 +970,7 @@
             // startDateDataGridViewTextBoxColumn
             // 
             this.startDateDataGridViewTextBoxColumn.DataPropertyName = "StartDate";
-            this.startDateDataGridViewTextBoxColumn.HeaderText = "StartDate";
+            this.startDateDataGridViewTextBoxColumn.HeaderText = "Start Date";
             this.startDateDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.startDateDataGridViewTextBoxColumn.Name = "startDateDataGridViewTextBoxColumn";
             this.startDateDataGridViewTextBoxColumn.Width = 125;
@@ -959,7 +978,7 @@
             // endDateDataGridViewTextBoxColumn
             // 
             this.endDateDataGridViewTextBoxColumn.DataPropertyName = "EndDate";
-            this.endDateDataGridViewTextBoxColumn.HeaderText = "EndDate";
+            this.endDateDataGridViewTextBoxColumn.HeaderText = "End Date";
             this.endDateDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.endDateDataGridViewTextBoxColumn.Name = "endDateDataGridViewTextBoxColumn";
             this.endDateDataGridViewTextBoxColumn.Width = 125;
@@ -967,7 +986,7 @@
             // timingDataGridViewTextBoxColumn
             // 
             this.timingDataGridViewTextBoxColumn.DataPropertyName = "Timing";
-            this.timingDataGridViewTextBoxColumn.HeaderText = "Timing";
+            this.timingDataGridViewTextBoxColumn.HeaderText = "Start Hour";
             this.timingDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.timingDataGridViewTextBoxColumn.Name = "timingDataGridViewTextBoxColumn";
             this.timingDataGridViewTextBoxColumn.Width = 125;
@@ -991,29 +1010,10 @@
             // staffIDDataGridViewTextBoxColumn
             // 
             this.staffIDDataGridViewTextBoxColumn.DataPropertyName = "StaffID";
-            this.staffIDDataGridViewTextBoxColumn.HeaderText = "StaffID";
+            this.staffIDDataGridViewTextBoxColumn.HeaderText = "Staff ID";
             this.staffIDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.staffIDDataGridViewTextBoxColumn.Name = "staffIDDataGridViewTextBoxColumn";
             this.staffIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // coursesBindingSource
-            // 
-            this.coursesBindingSource.DataMember = "Courses";
-            this.coursesBindingSource.DataSource = this.lakeside9320ActualCourseEditDataSet;
-            // 
-            // lakeside9320ActualCourseEditDataSet
-            // 
-            this.lakeside9320ActualCourseEditDataSet.DataSetName = "Lakeside9320ActualCourseEditDataSet";
-            this.lakeside9320ActualCourseEditDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // coursesTableAdapter
-            // 
-            this.coursesTableAdapter.ClearBeforeFill = true;
-            // 
-            // OtherSideTimer
-            // 
-            this.OtherSideTimer.Interval = 10;
-            this.OtherSideTimer.Tick += new System.EventHandler(this.OtherSideTimer_Tick);
             // 
             // EditCourseForm
             // 
@@ -1131,14 +1131,6 @@
         private Lakeside9320ActualCourseEditDataSet lakeside9320ActualCourseEditDataSet;
         private System.Windows.Forms.BindingSource coursesBindingSource;
         private Lakeside9320ActualCourseEditDataSetTableAdapters.CoursesTableAdapter coursesTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn courseIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn courseTitleDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn startDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn endDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn timingDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn capacityDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn staffIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.Timer OtherSideTimer;
         private System.Windows.Forms.Panel ReportsContainer;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
@@ -1150,5 +1142,13 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
         private Guna.UI2.WinForms.Guna2Button SearchDataBtnS;
         private Guna.UI2.WinForms.Guna2Button G2OtherSideBtn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn courseIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn courseTitleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn startDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn endDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn timingDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn capacityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn staffIDDataGridViewTextBoxColumn;
     }
 }

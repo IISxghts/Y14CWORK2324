@@ -41,17 +41,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.DTPBookLbl = new System.Windows.Forms.Label();
             this.DGVCustomer = new System.Windows.Forms.DataGridView();
-            this.customerNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerForenameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerSurnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerPostcodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerTownDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerPhoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerDOBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerSpecialReqsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lakeside9320CustomerSelectDataSet = new _9320RyanMillerDatabase.Lakeside9320CustomerSelectDataSet();
             this.DGVCourse = new System.Windows.Forms.DataGridView();
             this.DiscountCheckBox = new System.Windows.Forms.CheckBox();
             this.DiscountSelectBox = new System.Windows.Forms.NumericUpDown();
@@ -89,24 +78,33 @@
             this.guna2PictureBox8 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.G2EditBookBtnS = new Guna.UI2.WinForms.Guna2Button();
             this.G2BookSideBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
-            this.customerTableAdapter = new _9320RyanMillerDatabase.Lakeside9320CustomerSelectDataSetTableAdapters.CustomerTableAdapter();
-            this.otherContainer = new System.Windows.Forms.Panel();
-            this.ViewDataBtnS = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.SearchDataBtnS = new Guna.UI2.WinForms.Guna2Button();
-            this.G2OtherSideBtn = new Guna.UI2.WinForms.Guna2Button();
             this.ReportsContainer = new System.Windows.Forms.Panel();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.G2UnpaidBtn = new Guna.UI2.WinForms.Guna2Button();
             this.G2ReportsBtn = new Guna.UI2.WinForms.Guna2Button();
             this.G2CustListBtnS = new Guna.UI2.WinForms.Guna2Button();
+            this.otherContainer = new System.Windows.Forms.Panel();
+            this.ViewDataBtnS = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.SearchDataBtnS = new Guna.UI2.WinForms.Guna2Button();
+            this.G2OtherSideBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.OtherSideTimer = new System.Windows.Forms.Timer(this.components);
+            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lakeside9320CustomerSelectDataSet = new _9320RyanMillerDatabase.Lakeside9320CustomerSelectDataSet();
+            this.customerTableAdapter = new _9320RyanMillerDatabase.Lakeside9320CustomerSelectDataSetTableAdapters.CustomerTableAdapter();
+            this.customerNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerForenameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerSurnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerPostcodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerTownDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerPhoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerDOBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerSpecialReqsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVCustomer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320CustomerSelectDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVCourse)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DiscountSelectBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.QuantitySelectBox)).BeginInit();
@@ -121,10 +119,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).BeginInit();
             this.bookingContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).BeginInit();
-            this.otherContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.ReportsContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            this.otherContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320CustomerSelectDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // LLMenuLbl
@@ -275,97 +275,6 @@
             this.DGVCustomer.RowTemplate.Height = 24;
             this.DGVCustomer.Size = new System.Drawing.Size(535, 150);
             this.DGVCustomer.TabIndex = 19;
-            // 
-            // customerNumDataGridViewTextBoxColumn
-            // 
-            this.customerNumDataGridViewTextBoxColumn.DataPropertyName = "CustomerNum";
-            this.customerNumDataGridViewTextBoxColumn.HeaderText = "CustomerNum";
-            this.customerNumDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.customerNumDataGridViewTextBoxColumn.Name = "customerNumDataGridViewTextBoxColumn";
-            this.customerNumDataGridViewTextBoxColumn.ReadOnly = true;
-            this.customerNumDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // customerForenameDataGridViewTextBoxColumn
-            // 
-            this.customerForenameDataGridViewTextBoxColumn.DataPropertyName = "CustomerForename";
-            this.customerForenameDataGridViewTextBoxColumn.HeaderText = "CustomerForename";
-            this.customerForenameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.customerForenameDataGridViewTextBoxColumn.Name = "customerForenameDataGridViewTextBoxColumn";
-            this.customerForenameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.customerForenameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // customerSurnameDataGridViewTextBoxColumn
-            // 
-            this.customerSurnameDataGridViewTextBoxColumn.DataPropertyName = "CustomerSurname";
-            this.customerSurnameDataGridViewTextBoxColumn.HeaderText = "CustomerSurname";
-            this.customerSurnameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.customerSurnameDataGridViewTextBoxColumn.Name = "customerSurnameDataGridViewTextBoxColumn";
-            this.customerSurnameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.customerSurnameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // customerPostcodeDataGridViewTextBoxColumn
-            // 
-            this.customerPostcodeDataGridViewTextBoxColumn.DataPropertyName = "CustomerPostcode";
-            this.customerPostcodeDataGridViewTextBoxColumn.HeaderText = "CustomerPostcode";
-            this.customerPostcodeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.customerPostcodeDataGridViewTextBoxColumn.Name = "customerPostcodeDataGridViewTextBoxColumn";
-            this.customerPostcodeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.customerPostcodeDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // customerAddressDataGridViewTextBoxColumn
-            // 
-            this.customerAddressDataGridViewTextBoxColumn.DataPropertyName = "CustomerAddress";
-            this.customerAddressDataGridViewTextBoxColumn.HeaderText = "CustomerAddress";
-            this.customerAddressDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.customerAddressDataGridViewTextBoxColumn.Name = "customerAddressDataGridViewTextBoxColumn";
-            this.customerAddressDataGridViewTextBoxColumn.ReadOnly = true;
-            this.customerAddressDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // customerTownDataGridViewTextBoxColumn
-            // 
-            this.customerTownDataGridViewTextBoxColumn.DataPropertyName = "CustomerTown";
-            this.customerTownDataGridViewTextBoxColumn.HeaderText = "CustomerTown";
-            this.customerTownDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.customerTownDataGridViewTextBoxColumn.Name = "customerTownDataGridViewTextBoxColumn";
-            this.customerTownDataGridViewTextBoxColumn.ReadOnly = true;
-            this.customerTownDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // customerPhoneDataGridViewTextBoxColumn
-            // 
-            this.customerPhoneDataGridViewTextBoxColumn.DataPropertyName = "CustomerPhone";
-            this.customerPhoneDataGridViewTextBoxColumn.HeaderText = "CustomerPhone";
-            this.customerPhoneDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.customerPhoneDataGridViewTextBoxColumn.Name = "customerPhoneDataGridViewTextBoxColumn";
-            this.customerPhoneDataGridViewTextBoxColumn.ReadOnly = true;
-            this.customerPhoneDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // customerDOBDataGridViewTextBoxColumn
-            // 
-            this.customerDOBDataGridViewTextBoxColumn.DataPropertyName = "CustomerDOB";
-            this.customerDOBDataGridViewTextBoxColumn.HeaderText = "CustomerDOB";
-            this.customerDOBDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.customerDOBDataGridViewTextBoxColumn.Name = "customerDOBDataGridViewTextBoxColumn";
-            this.customerDOBDataGridViewTextBoxColumn.ReadOnly = true;
-            this.customerDOBDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // customerSpecialReqsDataGridViewTextBoxColumn
-            // 
-            this.customerSpecialReqsDataGridViewTextBoxColumn.DataPropertyName = "CustomerSpecialReqs";
-            this.customerSpecialReqsDataGridViewTextBoxColumn.HeaderText = "CustomerSpecialReqs";
-            this.customerSpecialReqsDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.customerSpecialReqsDataGridViewTextBoxColumn.Name = "customerSpecialReqsDataGridViewTextBoxColumn";
-            this.customerSpecialReqsDataGridViewTextBoxColumn.ReadOnly = true;
-            this.customerSpecialReqsDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // customerBindingSource
-            // 
-            this.customerBindingSource.DataMember = "Customer";
-            this.customerBindingSource.DataSource = this.lakeside9320CustomerSelectDataSet;
-            // 
-            // lakeside9320CustomerSelectDataSet
-            // 
-            this.lakeside9320CustomerSelectDataSet.DataSetName = "Lakeside9320CustomerSelectDataSet";
-            this.lakeside9320CustomerSelectDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // DGVCourse
             // 
@@ -875,93 +784,6 @@
             this.G2BookSideBtn.Text = "Bookings";
             this.G2BookSideBtn.Click += new System.EventHandler(this.G2BookSideBtn_Click);
             // 
-            // sidebarTimer
-            // 
-            this.sidebarTimer.Interval = 10;
-            this.sidebarTimer.Tick += new System.EventHandler(this.sidebarTimer_Tick);
-            // 
-            // customerTableAdapter
-            // 
-            this.customerTableAdapter.ClearBeforeFill = true;
-            // 
-            // otherContainer
-            // 
-            this.otherContainer.Controls.Add(this.ViewDataBtnS);
-            this.otherContainer.Controls.Add(this.guna2PictureBox2);
-            this.otherContainer.Controls.Add(this.SearchDataBtnS);
-            this.otherContainer.Controls.Add(this.G2OtherSideBtn);
-            this.otherContainer.Location = new System.Drawing.Point(3, 345);
-            this.otherContainer.MaximumSize = new System.Drawing.Size(215, 120);
-            this.otherContainer.MinimumSize = new System.Drawing.Size(215, 50);
-            this.otherContainer.Name = "otherContainer";
-            this.otherContainer.Size = new System.Drawing.Size(215, 50);
-            this.otherContainer.TabIndex = 59;
-            // 
-            // ViewDataBtnS
-            // 
-            this.ViewDataBtnS.Animated = true;
-            this.ViewDataBtnS.BackColor = System.Drawing.Color.Transparent;
-            this.ViewDataBtnS.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.ViewDataBtnS.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.ViewDataBtnS.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.ViewDataBtnS.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.ViewDataBtnS.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(38)))), ((int)(((byte)(99)))));
-            this.ViewDataBtnS.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ViewDataBtnS.ForeColor = System.Drawing.Color.White;
-            this.ViewDataBtnS.Location = new System.Drawing.Point(0, 50);
-            this.ViewDataBtnS.Name = "ViewDataBtnS";
-            this.ViewDataBtnS.Size = new System.Drawing.Size(215, 35);
-            this.ViewDataBtnS.TabIndex = 20;
-            this.ViewDataBtnS.Text = "View Data";
-            this.ViewDataBtnS.UseTransparentBackground = true;
-            this.ViewDataBtnS.Click += new System.EventHandler(this.ViewDataBtnS_Click);
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(-3, 0);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(64, 52);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox2.TabIndex = 12;
-            this.guna2PictureBox2.TabStop = false;
-            // 
-            // SearchDataBtnS
-            // 
-            this.SearchDataBtnS.Animated = true;
-            this.SearchDataBtnS.BackColor = System.Drawing.Color.Transparent;
-            this.SearchDataBtnS.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.SearchDataBtnS.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.SearchDataBtnS.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.SearchDataBtnS.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.SearchDataBtnS.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(38)))), ((int)(((byte)(99)))));
-            this.SearchDataBtnS.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.SearchDataBtnS.ForeColor = System.Drawing.Color.White;
-            this.SearchDataBtnS.Location = new System.Drawing.Point(0, 85);
-            this.SearchDataBtnS.Name = "SearchDataBtnS";
-            this.SearchDataBtnS.Size = new System.Drawing.Size(215, 35);
-            this.SearchDataBtnS.TabIndex = 19;
-            this.SearchDataBtnS.Text = "Search Data";
-            this.SearchDataBtnS.UseTransparentBackground = true;
-            this.SearchDataBtnS.Click += new System.EventHandler(this.SearchDataBtnS_Click);
-            // 
-            // G2OtherSideBtn
-            // 
-            this.G2OtherSideBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.G2OtherSideBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.G2OtherSideBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.G2OtherSideBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.G2OtherSideBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
-            this.G2OtherSideBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.G2OtherSideBtn.ForeColor = System.Drawing.Color.White;
-            this.G2OtherSideBtn.Location = new System.Drawing.Point(3, 0);
-            this.G2OtherSideBtn.Name = "G2OtherSideBtn";
-            this.G2OtherSideBtn.Size = new System.Drawing.Size(215, 50);
-            this.G2OtherSideBtn.TabIndex = 13;
-            this.G2OtherSideBtn.Text = "Other";
-            this.G2OtherSideBtn.Click += new System.EventHandler(this.G2OtherSideBtn_Click);
-            // 
             // ReportsContainer
             // 
             this.ReportsContainer.Controls.Add(this.guna2PictureBox3);
@@ -1042,10 +864,188 @@
             this.G2CustListBtnS.UseTransparentBackground = true;
             this.G2CustListBtnS.Click += new System.EventHandler(this.G2CustListBtnS_Click);
             // 
+            // otherContainer
+            // 
+            this.otherContainer.Controls.Add(this.ViewDataBtnS);
+            this.otherContainer.Controls.Add(this.guna2PictureBox2);
+            this.otherContainer.Controls.Add(this.SearchDataBtnS);
+            this.otherContainer.Controls.Add(this.G2OtherSideBtn);
+            this.otherContainer.Location = new System.Drawing.Point(3, 345);
+            this.otherContainer.MaximumSize = new System.Drawing.Size(215, 120);
+            this.otherContainer.MinimumSize = new System.Drawing.Size(215, 50);
+            this.otherContainer.Name = "otherContainer";
+            this.otherContainer.Size = new System.Drawing.Size(215, 50);
+            this.otherContainer.TabIndex = 59;
+            // 
+            // ViewDataBtnS
+            // 
+            this.ViewDataBtnS.Animated = true;
+            this.ViewDataBtnS.BackColor = System.Drawing.Color.Transparent;
+            this.ViewDataBtnS.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.ViewDataBtnS.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.ViewDataBtnS.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.ViewDataBtnS.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.ViewDataBtnS.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(38)))), ((int)(((byte)(99)))));
+            this.ViewDataBtnS.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ViewDataBtnS.ForeColor = System.Drawing.Color.White;
+            this.ViewDataBtnS.Location = new System.Drawing.Point(0, 50);
+            this.ViewDataBtnS.Name = "ViewDataBtnS";
+            this.ViewDataBtnS.Size = new System.Drawing.Size(215, 35);
+            this.ViewDataBtnS.TabIndex = 20;
+            this.ViewDataBtnS.Text = "View Data";
+            this.ViewDataBtnS.UseTransparentBackground = true;
+            this.ViewDataBtnS.Click += new System.EventHandler(this.ViewDataBtnS_Click);
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(-3, 0);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(64, 52);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox2.TabIndex = 12;
+            this.guna2PictureBox2.TabStop = false;
+            // 
+            // SearchDataBtnS
+            // 
+            this.SearchDataBtnS.Animated = true;
+            this.SearchDataBtnS.BackColor = System.Drawing.Color.Transparent;
+            this.SearchDataBtnS.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.SearchDataBtnS.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.SearchDataBtnS.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.SearchDataBtnS.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.SearchDataBtnS.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(38)))), ((int)(((byte)(99)))));
+            this.SearchDataBtnS.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.SearchDataBtnS.ForeColor = System.Drawing.Color.White;
+            this.SearchDataBtnS.Location = new System.Drawing.Point(0, 85);
+            this.SearchDataBtnS.Name = "SearchDataBtnS";
+            this.SearchDataBtnS.Size = new System.Drawing.Size(215, 35);
+            this.SearchDataBtnS.TabIndex = 19;
+            this.SearchDataBtnS.Text = "Search Data";
+            this.SearchDataBtnS.UseTransparentBackground = true;
+            this.SearchDataBtnS.Click += new System.EventHandler(this.SearchDataBtnS_Click);
+            // 
+            // G2OtherSideBtn
+            // 
+            this.G2OtherSideBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.G2OtherSideBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.G2OtherSideBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.G2OtherSideBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.G2OtherSideBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.G2OtherSideBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.G2OtherSideBtn.ForeColor = System.Drawing.Color.White;
+            this.G2OtherSideBtn.Location = new System.Drawing.Point(3, 0);
+            this.G2OtherSideBtn.Name = "G2OtherSideBtn";
+            this.G2OtherSideBtn.Size = new System.Drawing.Size(215, 50);
+            this.G2OtherSideBtn.TabIndex = 13;
+            this.G2OtherSideBtn.Text = "Other";
+            this.G2OtherSideBtn.Click += new System.EventHandler(this.G2OtherSideBtn_Click);
+            // 
+            // sidebarTimer
+            // 
+            this.sidebarTimer.Interval = 10;
+            this.sidebarTimer.Tick += new System.EventHandler(this.sidebarTimer_Tick);
+            // 
             // OtherSideTimer
             // 
             this.OtherSideTimer.Interval = 10;
             this.OtherSideTimer.Tick += new System.EventHandler(this.OtherSideTimer_Tick);
+            // 
+            // customerBindingSource
+            // 
+            this.customerBindingSource.DataMember = "Customer";
+            this.customerBindingSource.DataSource = this.lakeside9320CustomerSelectDataSet;
+            // 
+            // lakeside9320CustomerSelectDataSet
+            // 
+            this.lakeside9320CustomerSelectDataSet.DataSetName = "Lakeside9320CustomerSelectDataSet";
+            this.lakeside9320CustomerSelectDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // customerTableAdapter
+            // 
+            this.customerTableAdapter.ClearBeforeFill = true;
+            // 
+            // customerNumDataGridViewTextBoxColumn
+            // 
+            this.customerNumDataGridViewTextBoxColumn.DataPropertyName = "CustomerNum";
+            this.customerNumDataGridViewTextBoxColumn.HeaderText = "Customer ID";
+            this.customerNumDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.customerNumDataGridViewTextBoxColumn.Name = "customerNumDataGridViewTextBoxColumn";
+            this.customerNumDataGridViewTextBoxColumn.ReadOnly = true;
+            this.customerNumDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // customerForenameDataGridViewTextBoxColumn
+            // 
+            this.customerForenameDataGridViewTextBoxColumn.DataPropertyName = "CustomerForename";
+            this.customerForenameDataGridViewTextBoxColumn.HeaderText = "Forename";
+            this.customerForenameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.customerForenameDataGridViewTextBoxColumn.Name = "customerForenameDataGridViewTextBoxColumn";
+            this.customerForenameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.customerForenameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // customerSurnameDataGridViewTextBoxColumn
+            // 
+            this.customerSurnameDataGridViewTextBoxColumn.DataPropertyName = "CustomerSurname";
+            this.customerSurnameDataGridViewTextBoxColumn.HeaderText = "Surname";
+            this.customerSurnameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.customerSurnameDataGridViewTextBoxColumn.Name = "customerSurnameDataGridViewTextBoxColumn";
+            this.customerSurnameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.customerSurnameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // customerPostcodeDataGridViewTextBoxColumn
+            // 
+            this.customerPostcodeDataGridViewTextBoxColumn.DataPropertyName = "CustomerPostcode";
+            this.customerPostcodeDataGridViewTextBoxColumn.HeaderText = "Postcode";
+            this.customerPostcodeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.customerPostcodeDataGridViewTextBoxColumn.Name = "customerPostcodeDataGridViewTextBoxColumn";
+            this.customerPostcodeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.customerPostcodeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // customerAddressDataGridViewTextBoxColumn
+            // 
+            this.customerAddressDataGridViewTextBoxColumn.DataPropertyName = "CustomerAddress";
+            this.customerAddressDataGridViewTextBoxColumn.HeaderText = "Address";
+            this.customerAddressDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.customerAddressDataGridViewTextBoxColumn.Name = "customerAddressDataGridViewTextBoxColumn";
+            this.customerAddressDataGridViewTextBoxColumn.ReadOnly = true;
+            this.customerAddressDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // customerTownDataGridViewTextBoxColumn
+            // 
+            this.customerTownDataGridViewTextBoxColumn.DataPropertyName = "CustomerTown";
+            this.customerTownDataGridViewTextBoxColumn.HeaderText = "Town";
+            this.customerTownDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.customerTownDataGridViewTextBoxColumn.Name = "customerTownDataGridViewTextBoxColumn";
+            this.customerTownDataGridViewTextBoxColumn.ReadOnly = true;
+            this.customerTownDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // customerPhoneDataGridViewTextBoxColumn
+            // 
+            this.customerPhoneDataGridViewTextBoxColumn.DataPropertyName = "CustomerPhone";
+            this.customerPhoneDataGridViewTextBoxColumn.HeaderText = "Phone Number";
+            this.customerPhoneDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.customerPhoneDataGridViewTextBoxColumn.Name = "customerPhoneDataGridViewTextBoxColumn";
+            this.customerPhoneDataGridViewTextBoxColumn.ReadOnly = true;
+            this.customerPhoneDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // customerDOBDataGridViewTextBoxColumn
+            // 
+            this.customerDOBDataGridViewTextBoxColumn.DataPropertyName = "CustomerDOB";
+            this.customerDOBDataGridViewTextBoxColumn.HeaderText = "Date of Birth";
+            this.customerDOBDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.customerDOBDataGridViewTextBoxColumn.Name = "customerDOBDataGridViewTextBoxColumn";
+            this.customerDOBDataGridViewTextBoxColumn.ReadOnly = true;
+            this.customerDOBDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // customerSpecialReqsDataGridViewTextBoxColumn
+            // 
+            this.customerSpecialReqsDataGridViewTextBoxColumn.DataPropertyName = "CustomerSpecialReqs";
+            this.customerSpecialReqsDataGridViewTextBoxColumn.HeaderText = "Special Needs";
+            this.customerSpecialReqsDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.customerSpecialReqsDataGridViewTextBoxColumn.Name = "customerSpecialReqsDataGridViewTextBoxColumn";
+            this.customerSpecialReqsDataGridViewTextBoxColumn.ReadOnly = true;
+            this.customerSpecialReqsDataGridViewTextBoxColumn.Width = 125;
             // 
             // BookingForm
             // 
@@ -1079,8 +1079,6 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVCustomer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320CustomerSelectDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVCourse)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DiscountSelectBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.QuantitySelectBox)).EndInit();
@@ -1096,10 +1094,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).EndInit();
             this.bookingContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).EndInit();
-            this.otherContainer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.ReportsContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            this.otherContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320CustomerSelectDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1122,15 +1122,6 @@
         private Lakeside9320CustomerSelectDataSet lakeside9320CustomerSelectDataSet;
         private System.Windows.Forms.BindingSource customerBindingSource;
         private Lakeside9320CustomerSelectDataSetTableAdapters.CustomerTableAdapter customerTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn customerNumDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn customerForenameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn customerSurnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn customerPostcodeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn customerAddressDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn customerTownDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn customerPhoneDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn customerDOBDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn customerSpecialReqsDataGridViewTextBoxColumn;
         private System.Windows.Forms.CheckBox DiscountCheckBox;
         private System.Windows.Forms.NumericUpDown DiscountSelectBox;
         private System.Windows.Forms.Label DiscountBookingLbl;
@@ -1179,5 +1170,14 @@
         private Guna.UI2.WinForms.Guna2Button G2ReportsBtn;
         private Guna.UI2.WinForms.Guna2Button G2CustListBtnS;
         private System.Windows.Forms.Timer OtherSideTimer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerNumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerForenameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerSurnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerPostcodeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerAddressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerTownDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerPhoneDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerDOBDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerSpecialReqsDataGridViewTextBoxColumn;
     }
 }
