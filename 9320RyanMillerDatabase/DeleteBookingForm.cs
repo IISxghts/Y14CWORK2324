@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.CodeAnalysis.CSharp.Syntax;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,7 +26,8 @@ namespace _9320RyanMillerDatabase
         bool sidebarReportsExpand;
         bool sidebarCourseExpand;
         bool sidebarCustExpand;
-        bool sidebarBookExpand;        
+        bool sidebarBookExpand;
+        bool sidebarOtherExpand;
         
         private void RowChoose()
         {
@@ -44,70 +46,60 @@ namespace _9320RyanMillerDatabase
             RowChoose();
         }
 
-        private void DeleteBookingBtn_Click(object sender, EventArgs e)
+        private void BookingTableRefresh()
+        {
+            this.bookingTableAdapter.Fill(this.lakeside9320DeleteBookingDataSet.Booking);
+        }
+        private void DelBookingBtn_Click(object sender, EventArgs e)
         {
 
-            int Book = Convert.ToInt32(DFRowSelectBooking["BookingID"]);
+            object paidCellValue = BookDeleteDGV.CurrentRow.Cells[7].Value;
+
+
+            if (paidCellValue != null && Convert.ToBoolean(paidCellValue) == false)
+            {
+                System.Windows.MessageBox.Show("This booking is unpaid. Please make sure it is paid before deletion.", "Unpaid Booking");
+                return; 
+            }
 
             ViewBookingIDBox.Text = Convert.ToString(DFRowSelectBooking["BookingID"]);
-
             string cusNum = Convert.ToString(DFRowSelectBooking["CustomerNum"]);
 
             if (DFRowSelectBooking != null)
             {
-                if (BookingDAL.UnpaidCheck(Book).Count == 0)
+                MessageBoxResult confirmResult = System.Windows.MessageBox.Show("Are you sure you want to delete this booking with ID: " + ViewBookingIDBox.Text + " belonging to customer with ID: " + cusNum, "Confirm Deletion", MessageBoxButton.OKCancel);
+
+                if (confirmResult == MessageBoxResult.OK)
                 {
-                    
-                    MessageBoxResult confirmResult = System.Windows.MessageBox.Show("Are you sure to delete this booking with ID: " + ViewBookingIDBox.Text + " belonging to customer with ID: " + cusNum, "Confirm Deletion", MessageBoxButton.OKCancel);
+                    int rowsAffected = BookingDAL.DeleteBookingOfDisloyalCustomer(Convert.ToInt32(DFRowSelectBooking["BookingID"]));
 
-                    if(!this.CanFocus)
+                    if (rowsAffected > 0)
                     {
-                        this.WindowState = FormWindowState.Normal;
-                    }
-
-                    if (confirmResult == MessageBoxResult.OK)
-                    {
-                        int rowingsAffected = BookingDAL.DeleteBookingOfDisloyalCustomer(Convert.ToInt32(DFRowSelectBooking["BookingID"]));
-
-                        if (rowingsAffected > 0)
-                        {
-                            System.Windows.MessageBox.Show("Customer has successfully been deleted", "Completed");
-                            CustomerTableRefresh();
-                            ViewBookingIDBox.Text = "";
-                        }
-                        else
-                        {
-                            System.Windows.MessageBox.Show("An error has occured", "Error");
-                        }
+                        System.Windows.MessageBox.Show("Booking has successfully been deleted", "Completed");
+                        BookingTableRefresh();
+                        ViewBookingIDBox.Text = "";
                     }
                     else
                     {
-                        System.Windows.MessageBox.Show("Deletion cancelled.");
-                        CustomerTableRefresh();
-                        ViewBookingIDBox.Text = "";
+                        System.Windows.MessageBox.Show("An error has occurred", "Error");
+                        BookingTableRefresh();
                     }
                 }
                 else
                 {
-                    System.Windows.MessageBox.Show("Booking not paid yet", "Deletion cancelled");
-                    CustomerTableRefresh();
+                    System.Windows.MessageBox.Show("Deletion cancelled.");
+                    BookingTableRefresh();
+                    ViewBookingIDBox.Text = "";
                 }
             }
             else
             {
-                System.Windows.MessageBox.Show("Please choose a booking", "Error");
-                CustomerTableRefresh();
+                System.Windows.MessageBox.Show("Please select a booking to delete", "Error");
             }
-            
-        
-        }
-        private void CustomerTableRefresh()
-        {
-            this.bookingTableAdapter.Fill(this.lakeside9320DeleteBookingDataSet.Booking);
+
         }
 
-
-        #region sidebar
+        #region sidebar controls
         private void ReportSideTimer_Tick(object sender, EventArgs e)
         {
             if (sidebarReportsExpand)
@@ -313,26 +305,47 @@ namespace _9320RyanMillerDatabase
             Hide();
             new CustomerReportTwo().Show();
         }
-        private void AddStaffBtnS_Click(object sender, EventArgs e)
+
+        private void G2OtherSideBtn_Click(object sender, EventArgs e)
         {
-            Hide();
-            new AddStaffForm().Show();
+            OtherSideTimer.Start();
         }
 
-        private void EditStaffBtnS_Click(object sender, EventArgs e)
+        private void ViewDataBtnS_Click(object sender, EventArgs e)
         {
             Hide();
-            new EditStaffForm().Show(); 
+            new ViewDataForm().Show();
         }
 
-        private void DeleteStaffBtnS_Click(object sender, EventArgs e)
+        private void SearchDataBtnS_Click(object sender, EventArgs e)
         {
             Hide();
-            new DeleteStaffForm().Show();
+            new SearchForm().Show();
+        }
+
+        private void OtherSideTimer_Tick(object sender, EventArgs e)
+        {
+            if (sidebarOtherExpand)
+            {
+                otherContainer.Height += 10;
+                if (otherContainer.Height == otherContainer.MaximumSize.Height)
+                {
+                    sidebarOtherExpand = false;
+                    OtherSideTimer.Stop();
+                }
+            }
+            else
+            {
+                otherContainer.Height -= 10;
+                if (otherContainer.Height == otherContainer.MinimumSize.Height)
+                {
+                    sidebarOtherExpand = true;
+                    OtherSideTimer.Stop();
+                }
+            }
         }
 
         #endregion
-
 
     }
 }

@@ -66,7 +66,6 @@
             this.G2CustSideBtn = new Guna.UI2.WinForms.Guna2Button();
             this.G2CourseSideBtn = new Guna.UI2.WinForms.Guna2Button();
             this.G2BookSideBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.G2ReportsBtn = new Guna.UI2.WinForms.Guna2Button();
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.MenuSideLbl = new System.Windows.Forms.Label();
@@ -88,9 +87,6 @@
             this.G2DeleteBookBtnS = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox8 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.G2EditBookBtnS = new Guna.UI2.WinForms.Guna2Button();
-            this.ReportsContainer = new System.Windows.Forms.Panel();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.G2UnpaidBtn = new Guna.UI2.WinForms.Guna2Button();
             this.ReportSideTimer = new System.Windows.Forms.Timer(this.components);
             this.CustSideTimer = new System.Windows.Forms.Timer(this.components);
             this.CourseSideTimer = new System.Windows.Forms.Timer(this.components);
@@ -100,6 +96,17 @@
             this.customerTableAdapter = new _9320RyanMillerDatabase.Lakeside9320CEDataSetTableAdapters.CustomerTableAdapter();
             this.G2EditCustBtn = new Guna.UI2.WinForms.Guna2Button();
             this.G2SaveDetailsBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.OtherSideTimer = new System.Windows.Forms.Timer(this.components);
+            this.ReportsContainer = new System.Windows.Forms.Panel();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.G2UnpaidBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.G2ReportsBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.G2CustListBtnS = new Guna.UI2.WinForms.Guna2Button();
+            this.otherContainer = new System.Windows.Forms.Panel();
+            this.ViewDataBtnS = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.SearchDataBtnS = new Guna.UI2.WinForms.Guna2Button();
+            this.G2OtherSideBtn = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.EFCustDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lakeside9320CEDataSet)).BeginInit();
@@ -118,6 +125,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).BeginInit();
             this.ReportsContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            this.otherContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // EFCustDGV
@@ -228,7 +237,7 @@
             // 
             // EFCustIDTB
             // 
-            this.EFCustIDTB.Location = new System.Drawing.Point(356, 331);
+            this.EFCustIDTB.Location = new System.Drawing.Point(295, 331);
             this.EFCustIDTB.Name = "EFCustIDTB";
             this.EFCustIDTB.ReadOnly = true;
             this.EFCustIDTB.Size = new System.Drawing.Size(98, 22);
@@ -237,24 +246,28 @@
             // EFCustIDLbl
             // 
             this.EFCustIDLbl.AutoSize = true;
-            this.EFCustIDLbl.Location = new System.Drawing.Point(173, 331);
+            this.EFCustIDLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EFCustIDLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.EFCustIDLbl.Location = new System.Drawing.Point(172, 331);
             this.EFCustIDLbl.Name = "EFCustIDLbl";
-            this.EFCustIDLbl.Size = new System.Drawing.Size(80, 16);
+            this.EFCustIDLbl.Size = new System.Drawing.Size(106, 23);
             this.EFCustIDLbl.TabIndex = 2;
             this.EFCustIDLbl.Text = "Customer ID";
             // 
             // EFCustForenameLbl
             // 
             this.EFCustForenameLbl.AutoSize = true;
-            this.EFCustForenameLbl.Location = new System.Drawing.Point(173, 356);
+            this.EFCustForenameLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EFCustForenameLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.EFCustForenameLbl.Location = new System.Drawing.Point(172, 356);
             this.EFCustForenameLbl.Name = "EFCustForenameLbl";
-            this.EFCustForenameLbl.Size = new System.Drawing.Size(69, 16);
+            this.EFCustForenameLbl.Size = new System.Drawing.Size(87, 23);
             this.EFCustForenameLbl.TabIndex = 4;
             this.EFCustForenameLbl.Text = "Forename";
             // 
             // EFCustForenameTB
             // 
-            this.EFCustForenameTB.Location = new System.Drawing.Point(348, 359);
+            this.EFCustForenameTB.Location = new System.Drawing.Point(295, 359);
             this.EFCustForenameTB.Name = "EFCustForenameTB";
             this.EFCustForenameTB.Size = new System.Drawing.Size(98, 22);
             this.EFCustForenameTB.TabIndex = 3;
@@ -262,15 +275,17 @@
             // EFCustAddressLbl
             // 
             this.EFCustAddressLbl.AutoSize = true;
-            this.EFCustAddressLbl.Location = new System.Drawing.Point(179, 415);
+            this.EFCustAddressLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EFCustAddressLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.EFCustAddressLbl.Location = new System.Drawing.Point(172, 415);
             this.EFCustAddressLbl.Name = "EFCustAddressLbl";
-            this.EFCustAddressLbl.Size = new System.Drawing.Size(58, 16);
+            this.EFCustAddressLbl.Size = new System.Drawing.Size(70, 23);
             this.EFCustAddressLbl.TabIndex = 8;
             this.EFCustAddressLbl.Text = "Address";
             // 
             // EFCustAddressTB
             // 
-            this.EFCustAddressTB.Location = new System.Drawing.Point(348, 415);
+            this.EFCustAddressTB.Location = new System.Drawing.Point(295, 415);
             this.EFCustAddressTB.Name = "EFCustAddressTB";
             this.EFCustAddressTB.Size = new System.Drawing.Size(98, 22);
             this.EFCustAddressTB.TabIndex = 7;
@@ -278,15 +293,17 @@
             // EFCustSurnameLbl
             // 
             this.EFCustSurnameLbl.AutoSize = true;
-            this.EFCustSurnameLbl.Location = new System.Drawing.Point(179, 384);
+            this.EFCustSurnameLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EFCustSurnameLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.EFCustSurnameLbl.Location = new System.Drawing.Point(172, 385);
             this.EFCustSurnameLbl.Name = "EFCustSurnameLbl";
-            this.EFCustSurnameLbl.Size = new System.Drawing.Size(61, 16);
+            this.EFCustSurnameLbl.Size = new System.Drawing.Size(78, 23);
             this.EFCustSurnameLbl.TabIndex = 6;
             this.EFCustSurnameLbl.Text = "Surname";
             // 
             // EFCustSurnameTB
             // 
-            this.EFCustSurnameTB.Location = new System.Drawing.Point(348, 387);
+            this.EFCustSurnameTB.Location = new System.Drawing.Point(295, 387);
             this.EFCustSurnameTB.Name = "EFCustSurnameTB";
             this.EFCustSurnameTB.Size = new System.Drawing.Size(98, 22);
             this.EFCustSurnameTB.TabIndex = 5;
@@ -294,9 +311,11 @@
             // EFCustPhoneLbl
             // 
             this.EFCustPhoneLbl.AutoSize = true;
-            this.EFCustPhoneLbl.Location = new System.Drawing.Point(456, 418);
+            this.EFCustPhoneLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EFCustPhoneLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.EFCustPhoneLbl.Location = new System.Drawing.Point(426, 415);
             this.EFCustPhoneLbl.Name = "EFCustPhoneLbl";
-            this.EFCustPhoneLbl.Size = new System.Drawing.Size(97, 16);
+            this.EFCustPhoneLbl.Size = new System.Drawing.Size(127, 23);
             this.EFCustPhoneLbl.TabIndex = 14;
             this.EFCustPhoneLbl.Text = "Phone Number";
             // 
@@ -310,9 +329,11 @@
             // EFCustPostcodeLbl
             // 
             this.EFCustPostcodeLbl.AutoSize = true;
-            this.EFCustPostcodeLbl.Location = new System.Drawing.Point(460, 365);
+            this.EFCustPostcodeLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EFCustPostcodeLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.EFCustPostcodeLbl.Location = new System.Drawing.Point(431, 359);
             this.EFCustPostcodeLbl.Name = "EFCustPostcodeLbl";
-            this.EFCustPostcodeLbl.Size = new System.Drawing.Size(65, 16);
+            this.EFCustPostcodeLbl.Size = new System.Drawing.Size(79, 23);
             this.EFCustPostcodeLbl.TabIndex = 12;
             this.EFCustPostcodeLbl.Text = "Postcode";
             // 
@@ -326,9 +347,11 @@
             // EFCustTownLbl
             // 
             this.EFCustTownLbl.AutoSize = true;
-            this.EFCustTownLbl.Location = new System.Drawing.Point(460, 337);
+            this.EFCustTownLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EFCustTownLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.EFCustTownLbl.Location = new System.Drawing.Point(431, 331);
             this.EFCustTownLbl.Name = "EFCustTownLbl";
-            this.EFCustTownLbl.Size = new System.Drawing.Size(40, 16);
+            this.EFCustTownLbl.Size = new System.Drawing.Size(50, 23);
             this.EFCustTownLbl.TabIndex = 10;
             this.EFCustTownLbl.Text = "Town";
             // 
@@ -342,9 +365,11 @@
             // EFCustSpecReqLbl
             // 
             this.EFCustSpecReqLbl.AutoSize = true;
+            this.EFCustSpecReqLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EFCustSpecReqLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
             this.EFCustSpecReqLbl.Location = new System.Drawing.Point(702, 331);
             this.EFCustSpecReqLbl.Name = "EFCustSpecReqLbl";
-            this.EFCustSpecReqLbl.Size = new System.Drawing.Size(140, 16);
+            this.EFCustSpecReqLbl.Size = new System.Drawing.Size(174, 23);
             this.EFCustSpecReqLbl.TabIndex = 17;
             this.EFCustSpecReqLbl.Text = "Special Requirements";
             // 
@@ -359,9 +384,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(460, 390);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.label1.Location = new System.Drawing.Point(431, 387);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 16);
+            this.label1.Size = new System.Drawing.Size(108, 23);
             this.label1.TabIndex = 20;
             this.label1.Text = "Date of Birth";
             // 
@@ -465,25 +492,6 @@
             this.G2BookSideBtn.Text = "Bookings";
             this.G2BookSideBtn.Click += new System.EventHandler(this.G2BookSideBtn_Click);
             // 
-            // G2ReportsBtn
-            // 
-            this.G2ReportsBtn.Animated = true;
-            this.G2ReportsBtn.BackColor = System.Drawing.Color.Transparent;
-            this.G2ReportsBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.G2ReportsBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.G2ReportsBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.G2ReportsBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.G2ReportsBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
-            this.G2ReportsBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.G2ReportsBtn.ForeColor = System.Drawing.Color.White;
-            this.G2ReportsBtn.Location = new System.Drawing.Point(0, 0);
-            this.G2ReportsBtn.Name = "G2ReportsBtn";
-            this.G2ReportsBtn.Size = new System.Drawing.Size(215, 50);
-            this.G2ReportsBtn.TabIndex = 15;
-            this.G2ReportsBtn.Text = "Reports";
-            this.G2ReportsBtn.UseTransparentBackground = true;
-            this.G2ReportsBtn.Click += new System.EventHandler(this.G2ReportsBtn_Click);
-            // 
             // sidebar
             // 
             this.sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
@@ -493,6 +501,7 @@
             this.sidebar.Controls.Add(this.coursesContainer);
             this.sidebar.Controls.Add(this.bookingContainer);
             this.sidebar.Controls.Add(this.ReportsContainer);
+            this.sidebar.Controls.Add(this.otherContainer);
             this.sidebar.Location = new System.Drawing.Point(0, 0);
             this.sidebar.MaximumSize = new System.Drawing.Size(215, 500);
             this.sidebar.MinimumSize = new System.Drawing.Size(70, 500);
@@ -798,48 +807,6 @@
             this.G2EditBookBtnS.UseTransparentBackground = true;
             this.G2EditBookBtnS.Click += new System.EventHandler(this.G2EditBookBtnS_Click);
             // 
-            // ReportsContainer
-            // 
-            this.ReportsContainer.Controls.Add(this.guna2PictureBox2);
-            this.ReportsContainer.Controls.Add(this.G2UnpaidBtn);
-            this.ReportsContainer.Controls.Add(this.G2ReportsBtn);
-            this.ReportsContainer.Location = new System.Drawing.Point(3, 289);
-            this.ReportsContainer.MaximumSize = new System.Drawing.Size(209, 84);
-            this.ReportsContainer.MinimumSize = new System.Drawing.Size(209, 46);
-            this.ReportsContainer.Name = "ReportsContainer";
-            this.ReportsContainer.Size = new System.Drawing.Size(209, 46);
-            this.ReportsContainer.TabIndex = 9;
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.Image = global::_9320RyanMillerDatabase.Properties.Resources.DocIconFinal;
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(61, 46);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox2.TabIndex = 14;
-            this.guna2PictureBox2.TabStop = false;
-            // 
-            // G2UnpaidBtn
-            // 
-            this.G2UnpaidBtn.Animated = true;
-            this.G2UnpaidBtn.BackColor = System.Drawing.Color.Transparent;
-            this.G2UnpaidBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.G2UnpaidBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.G2UnpaidBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.G2UnpaidBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.G2UnpaidBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(38)))), ((int)(((byte)(99)))));
-            this.G2UnpaidBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.G2UnpaidBtn.ForeColor = System.Drawing.Color.White;
-            this.G2UnpaidBtn.Location = new System.Drawing.Point(0, 48);
-            this.G2UnpaidBtn.Name = "G2UnpaidBtn";
-            this.G2UnpaidBtn.Size = new System.Drawing.Size(215, 35);
-            this.G2UnpaidBtn.TabIndex = 14;
-            this.G2UnpaidBtn.Text = "Unpaid Orders";
-            this.G2UnpaidBtn.UseTransparentBackground = true;
-            this.G2UnpaidBtn.Click += new System.EventHandler(this.G2UnpaidBtn_Click);
-            // 
             // ReportSideTimer
             // 
             this.ReportSideTimer.Interval = 10;
@@ -914,6 +881,169 @@
             this.G2SaveDetailsBtn.Text = "Save Details";
             this.G2SaveDetailsBtn.Click += new System.EventHandler(this.G2SaveDetailsBtn_Click);
             // 
+            // OtherSideTimer
+            // 
+            this.OtherSideTimer.Interval = 10;
+            this.OtherSideTimer.Tick += new System.EventHandler(this.OtherSideTimer_Tick);
+            // 
+            // ReportsContainer
+            // 
+            this.ReportsContainer.Controls.Add(this.guna2PictureBox2);
+            this.ReportsContainer.Controls.Add(this.G2UnpaidBtn);
+            this.ReportsContainer.Controls.Add(this.G2ReportsBtn);
+            this.ReportsContainer.Controls.Add(this.G2CustListBtnS);
+            this.ReportsContainer.Location = new System.Drawing.Point(3, 289);
+            this.ReportsContainer.MaximumSize = new System.Drawing.Size(209, 120);
+            this.ReportsContainer.MinimumSize = new System.Drawing.Size(209, 50);
+            this.ReportsContainer.Name = "ReportsContainer";
+            this.ReportsContainer.Size = new System.Drawing.Size(209, 50);
+            this.ReportsContainer.TabIndex = 94;
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Image = global::_9320RyanMillerDatabase.Properties.Resources.DocIconFinal;
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(61, 50);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox2.TabIndex = 14;
+            this.guna2PictureBox2.TabStop = false;
+            // 
+            // G2UnpaidBtn
+            // 
+            this.G2UnpaidBtn.Animated = true;
+            this.G2UnpaidBtn.BackColor = System.Drawing.Color.Transparent;
+            this.G2UnpaidBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.G2UnpaidBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.G2UnpaidBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.G2UnpaidBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.G2UnpaidBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(38)))), ((int)(((byte)(99)))));
+            this.G2UnpaidBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.G2UnpaidBtn.ForeColor = System.Drawing.Color.White;
+            this.G2UnpaidBtn.Location = new System.Drawing.Point(0, 50);
+            this.G2UnpaidBtn.Name = "G2UnpaidBtn";
+            this.G2UnpaidBtn.Size = new System.Drawing.Size(209, 35);
+            this.G2UnpaidBtn.TabIndex = 14;
+            this.G2UnpaidBtn.Text = "Unpaid Orders";
+            this.G2UnpaidBtn.UseTransparentBackground = true;
+            // 
+            // G2ReportsBtn
+            // 
+            this.G2ReportsBtn.Animated = true;
+            this.G2ReportsBtn.BackColor = System.Drawing.Color.Transparent;
+            this.G2ReportsBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.G2ReportsBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.G2ReportsBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.G2ReportsBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.G2ReportsBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.G2ReportsBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.G2ReportsBtn.ForeColor = System.Drawing.Color.White;
+            this.G2ReportsBtn.Location = new System.Drawing.Point(0, 0);
+            this.G2ReportsBtn.Name = "G2ReportsBtn";
+            this.G2ReportsBtn.Size = new System.Drawing.Size(209, 50);
+            this.G2ReportsBtn.TabIndex = 15;
+            this.G2ReportsBtn.Text = "Reports";
+            this.G2ReportsBtn.UseTransparentBackground = true;
+            this.G2ReportsBtn.Click += new System.EventHandler(this.G2ReportsBtn_Click);
+            // 
+            // G2CustListBtnS
+            // 
+            this.G2CustListBtnS.Animated = true;
+            this.G2CustListBtnS.BackColor = System.Drawing.Color.Transparent;
+            this.G2CustListBtnS.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.G2CustListBtnS.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.G2CustListBtnS.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.G2CustListBtnS.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.G2CustListBtnS.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(38)))), ((int)(((byte)(99)))));
+            this.G2CustListBtnS.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.G2CustListBtnS.ForeColor = System.Drawing.Color.White;
+            this.G2CustListBtnS.Location = new System.Drawing.Point(0, 85);
+            this.G2CustListBtnS.Name = "G2CustListBtnS";
+            this.G2CustListBtnS.Size = new System.Drawing.Size(209, 35);
+            this.G2CustListBtnS.TabIndex = 16;
+            this.G2CustListBtnS.Text = "List of Customers";
+            this.G2CustListBtnS.UseTransparentBackground = true;
+            this.G2CustListBtnS.Click += new System.EventHandler(this.G2CustListBtnS_Click);
+            // 
+            // otherContainer
+            // 
+            this.otherContainer.Controls.Add(this.ViewDataBtnS);
+            this.otherContainer.Controls.Add(this.guna2PictureBox3);
+            this.otherContainer.Controls.Add(this.SearchDataBtnS);
+            this.otherContainer.Controls.Add(this.G2OtherSideBtn);
+            this.otherContainer.Location = new System.Drawing.Point(3, 345);
+            this.otherContainer.MaximumSize = new System.Drawing.Size(215, 120);
+            this.otherContainer.MinimumSize = new System.Drawing.Size(215, 50);
+            this.otherContainer.Name = "otherContainer";
+            this.otherContainer.Size = new System.Drawing.Size(215, 50);
+            this.otherContainer.TabIndex = 94;
+            // 
+            // ViewDataBtnS
+            // 
+            this.ViewDataBtnS.Animated = true;
+            this.ViewDataBtnS.BackColor = System.Drawing.Color.Transparent;
+            this.ViewDataBtnS.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.ViewDataBtnS.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.ViewDataBtnS.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.ViewDataBtnS.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.ViewDataBtnS.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(38)))), ((int)(((byte)(99)))));
+            this.ViewDataBtnS.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ViewDataBtnS.ForeColor = System.Drawing.Color.White;
+            this.ViewDataBtnS.Location = new System.Drawing.Point(0, 50);
+            this.ViewDataBtnS.Name = "ViewDataBtnS";
+            this.ViewDataBtnS.Size = new System.Drawing.Size(215, 35);
+            this.ViewDataBtnS.TabIndex = 20;
+            this.ViewDataBtnS.Text = "View Data";
+            this.ViewDataBtnS.UseTransparentBackground = true;
+            this.ViewDataBtnS.Click += new System.EventHandler(this.ViewDataBtnS_Click);
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(-3, 0);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(64, 52);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox3.TabIndex = 12;
+            this.guna2PictureBox3.TabStop = false;
+            // 
+            // SearchDataBtnS
+            // 
+            this.SearchDataBtnS.Animated = true;
+            this.SearchDataBtnS.BackColor = System.Drawing.Color.Transparent;
+            this.SearchDataBtnS.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.SearchDataBtnS.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.SearchDataBtnS.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.SearchDataBtnS.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.SearchDataBtnS.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(38)))), ((int)(((byte)(99)))));
+            this.SearchDataBtnS.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.SearchDataBtnS.ForeColor = System.Drawing.Color.White;
+            this.SearchDataBtnS.Location = new System.Drawing.Point(0, 85);
+            this.SearchDataBtnS.Name = "SearchDataBtnS";
+            this.SearchDataBtnS.Size = new System.Drawing.Size(215, 35);
+            this.SearchDataBtnS.TabIndex = 19;
+            this.SearchDataBtnS.Text = "Search Data";
+            this.SearchDataBtnS.UseTransparentBackground = true;
+            this.SearchDataBtnS.Click += new System.EventHandler(this.SearchDataBtnS_Click);
+            // 
+            // G2OtherSideBtn
+            // 
+            this.G2OtherSideBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.G2OtherSideBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.G2OtherSideBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.G2OtherSideBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.G2OtherSideBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.G2OtherSideBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.G2OtherSideBtn.ForeColor = System.Drawing.Color.White;
+            this.G2OtherSideBtn.Location = new System.Drawing.Point(3, 0);
+            this.G2OtherSideBtn.Name = "G2OtherSideBtn";
+            this.G2OtherSideBtn.Size = new System.Drawing.Size(215, 50);
+            this.G2OtherSideBtn.TabIndex = 13;
+            this.G2OtherSideBtn.Text = "Other";
+            this.G2OtherSideBtn.Click += new System.EventHandler(this.G2OtherSideBtn_Click);
+            // 
             // EditCustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -966,6 +1096,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).EndInit();
             this.ReportsContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            this.otherContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1010,7 +1142,6 @@
         private Guna.UI2.WinForms.Guna2Button G2CustSideBtn;
         private Guna.UI2.WinForms.Guna2Button G2CourseSideBtn;
         private Guna.UI2.WinForms.Guna2Button G2BookSideBtn;
-        private Guna.UI2.WinForms.Guna2Button G2ReportsBtn;
         private System.Windows.Forms.FlowLayoutPanel sidebar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label MenuSideLbl;
@@ -1032,9 +1163,6 @@
         private Guna.UI2.WinForms.Guna2Button G2DeleteBookBtnS;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox8;
         private Guna.UI2.WinForms.Guna2Button G2EditBookBtnS;
-        private System.Windows.Forms.Panel ReportsContainer;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
-        private Guna.UI2.WinForms.Guna2Button G2UnpaidBtn;
         private System.Windows.Forms.Timer ReportSideTimer;
         private System.Windows.Forms.Timer CustSideTimer;
         private System.Windows.Forms.Timer CourseSideTimer;
@@ -1043,5 +1171,16 @@
         private System.Windows.Forms.TextBox DTTextBox;
         private Guna.UI2.WinForms.Guna2Button G2EditCustBtn;
         private Guna.UI2.WinForms.Guna2Button G2SaveDetailsBtn;
+        private System.Windows.Forms.Timer OtherSideTimer;
+        private System.Windows.Forms.Panel ReportsContainer;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private Guna.UI2.WinForms.Guna2Button G2UnpaidBtn;
+        private Guna.UI2.WinForms.Guna2Button G2ReportsBtn;
+        private Guna.UI2.WinForms.Guna2Button G2CustListBtnS;
+        private System.Windows.Forms.Panel otherContainer;
+        private Guna.UI2.WinForms.Guna2Button ViewDataBtnS;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
+        private Guna.UI2.WinForms.Guna2Button SearchDataBtnS;
+        private Guna.UI2.WinForms.Guna2Button G2OtherSideBtn;
     }
 }

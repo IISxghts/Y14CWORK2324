@@ -114,7 +114,7 @@
             this.G2ViewBookBtn.Text = "View Booking";
             this.G2ViewBookBtn.Click += new System.EventHandler(this.G2ViewBookBtn_Click);
             // 
-            // UC_BookingsStaff
+            // UC_Booking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -124,7 +124,7 @@
             this.Controls.Add(this.G2BtnDeleteBook);
             this.Controls.Add(this.G2BtnNewBook);
             this.Controls.Add(this.LLBookingsLbl);
-            this.Name = "UC_BookingsStaff";
+            this.Name = "UC_Booking";
             this.Size = new System.Drawing.Size(953, 340);
             this.ResumeLayout(false);
             this.PerformLayout();

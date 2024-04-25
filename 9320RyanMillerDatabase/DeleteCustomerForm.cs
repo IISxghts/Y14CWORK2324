@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.CodeAnalysis;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,47 +25,57 @@ namespace _9320RyanMillerDatabase
         bool sidebarCourseExpand;
         bool sidebarCustExpand;
         bool sidebarBookExpand;
+        bool sidebarOtherExpand;
 
         // this part of the code will refresh the table automatically once a change has been made
         private void ViewCustomer_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'lakeside9320CustDataSet.Customer' table. You can move, or remove it, as needed.
-            this.customerTableAdapter.Fill(this.lakeside9320CustDataSet.Customer);
+            this.customerTableAdapter.Fill(this.lakeside9320ActualCustDeleteDataSet.Customer);
         }
 
         private void CustomerTableRefresh()
         {
-            customerTableAdapter.Fill(lakeside9320CustDataSet.Customer);
+            this.customerTableAdapter.Fill(this.lakeside9320ActualCustDeleteDataSet.Customer);
         }
 
-        private void DeleteCustBtn_Click(object sender, EventArgs e)
+        private void DelCustBtn_Click(object sender, EventArgs e)
         {
-            ViewCourseIDBox.Text = Convert.ToString(rowselect["CustomerNum"]);
-
-            MessageBoxResult confirmResult = System.Windows.MessageBox.Show("Are you sure to delete this customer with ID:" + ViewCourseIDBox.Text, "Confirm Deletion", MessageBoxButton.OKCancel);
-
-            if (confirmResult == MessageBoxResult.OK)
+            if (CustomerDAL.UnpaidChecker().Count == 0)
             {
-                int rowingsAffected = CustomerDAL.DeleteDisloyalCustomer(Convert.ToInt32(rowselect["CustomerNum"]));
-                if (rowingsAffected > 0)
+
+                MessageBoxResult confirmResult = System.Windows.MessageBox.Show("Are you sure to delete this Customer with ID:" + ViewCustIDBox.Text, "Confirm Deletion", MessageBoxButton.OKCancel);
+
+                if (confirmResult == MessageBoxResult.OK)
                 {
-                    System.Windows.MessageBox.Show("Customer has successfully been deleted", "Completed");
-                    CustomerTableRefresh();
-                    ViewCourseIDBox.Text = "";
+                    int rowingsAffected = CustomerDAL.DeleteDisloyalCustomer(Convert.ToInt32(rowselect["CustomerNum"]));
+                    if (rowingsAffected > 0)
+                    {
+                        System.Windows.MessageBox.Show("Customer has successfully been deleted", "Completed");
+                        CustomerTableRefresh();
+                        ViewCustIDBox.Text = "";
+                    }
+                    else
+                    {
+                        System.Windows.MessageBox.Show("An error has occured in deletion", "Error");
+                        CustomerTableRefresh();
+                        ViewCustIDBox.Text = "";
+                    }
                 }
                 else
                 {
-                    System.Windows.MessageBox.Show("An error has occured", "Error");
+                    System.Windows.MessageBox.Show("Deletion cancelled.");
+                    CustomerTableRefresh();
+                    ViewCustIDBox.Text = "";
                 }
+
             }
             else
             {
-                System.Windows.MessageBox.Show("Deletion cancelled.");
+                System.Windows.MessageBox.Show("Customer has outwithstanding payments due", "Deletion Cancelled");
                 CustomerTableRefresh();
-                ViewCourseIDBox.Text = "";
+                ViewCustIDBox.Text = "";
             }
         }
-
         private void CustDeleteDGV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             ChooseTheRow();
@@ -72,10 +83,12 @@ namespace _9320RyanMillerDatabase
         private void ChooseTheRow()
         {
             rowselect = CustDeleteDGV.CurrentRow != null ? (DataRowView)CustDeleteDGV.CurrentRow.DataBoundItem : null;
+
+            ViewCustIDBox.Text = Convert.ToString(rowselect["CustomerNum"]);
         }
 
 
-        #region ///sidebar\\\
+        #region ///sidebar controls\\\
 
         private void G2HomeSideBtn_Click(object sender, EventArgs e)
         {
@@ -260,7 +273,7 @@ namespace _9320RyanMillerDatabase
         private void G2DeleteCustBtnS_Click(object sender, EventArgs e)
         {
             Hide();
-            new DeleteCustomerForm().Show();    
+            new DeleteCustomerForm().Show();
         }
 
         private void AddCourseBtnS_Click(object sender, EventArgs e)
@@ -280,45 +293,51 @@ namespace _9320RyanMillerDatabase
             Hide();
             new DeleteCourseForm().Show();
         }
+        private void G2CustListBtnS_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new CustomerReportTwo().Show();
+        }
+
+        private void G2OtherSideBtn_Click(object sender, EventArgs e)
+        {
+            OtherSideTimer.Start();
+        }
+
+        private void ViewDataBtnS_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new ViewDataForm().Show();
+        }
+
+        private void SearchDataBtnS_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new SearchForm().Show();
+        }       
+
+        private void OtherSideTimer_Tick(object sender, EventArgs e)
+        {      
+                if (sidebarOtherExpand)
+                {
+                    otherContainer.Height += 10;
+                    if (otherContainer.Height == otherContainer.MaximumSize.Height)
+                    {
+                        sidebarOtherExpand = false;
+                        OtherSideTimer.Stop();
+                    }
+                }
+                else
+                {
+                    otherContainer.Height -= 10;
+                    if (otherContainer.Height == otherContainer.MinimumSize.Height)
+                    {
+                        sidebarOtherExpand = true;
+                        OtherSideTimer.Stop();
+                    }
+                }
+        }
+
         #endregion
-
-        private void fillByToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.customerTableAdapter1.FillBy(this.lakeside9320SearchDataSet.Customer);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
-        private void fillByToolStripButton_Click_1(object sender, EventArgs e)
-        {
-            try
-            {
-                this.customerTableAdapter.FillBy(this.lakeside9320CustDataSet.Customer);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
-        private void fillBy1ToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.customerTableAdapter.FillBy(this.lakeside9320CustDataSet.Customer);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
     }
 }

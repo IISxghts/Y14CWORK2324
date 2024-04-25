@@ -17,7 +17,7 @@ namespace _9320RyanMillerDatabase
     {
         public static string _connectionString = ConfigurationManager.ConnectionStrings["LakesideConnection"].ConnectionString;
         public static bool Check;
-        public static DataTable GetLessonsFromBooking(DateTime date)
+        public static DataTable GetLessonsFromBooking()
         {
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
@@ -192,33 +192,24 @@ namespace _9320RyanMillerDatabase
             }
         }
 
-        public static List<int> UnpaidCheck(int BookingID)
+        public static int EditBooking(BookingModel booking)
         {
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
-
-                List<int> bookIDs = new List<int>();
                 connection.Open();
+                string sqlQuery = string.Format("UPDATE Booking SET CourseID = {0}, BookingDate = {1}, Discount = '{2}', DiscountPercent = {3}, CustomerNum = {4}, CustomerQuantity = {5}, Paid = {6} WHERE BookingID = {7}", booking._CourseID, booking._BookingDate, booking._DiscountYN, booking._DiscountPercent, booking._CustomerNum, booking._CustomerQuantity, booking._Paid, booking._BookingID);
 
-                string SQLQuery = string.Format("SELECT * FROM Booking WHERE BookingID = {0} AND Paid = 0", BookingID);
+                SqlCommand custDelCommand = new SqlCommand(sqlQuery, connection);
 
-                SqlCommand megaCommand = new SqlCommand(SQLQuery, connection);
-
-                SqlDataReader dataReader = megaCommand.ExecuteReader();
-
-                while (dataReader.Read())
-                {
-                    int bookID = (int)dataReader["BookingID"];
-
-                    bookIDs.Add(bookID);
-
-                }
+                int rowsAffected = custDelCommand.ExecuteNonQuery();
 
                 connection.Close();
 
-                return bookIDs;
-
+                return rowsAffected;
             }
         }
+
+
+
     }
 }

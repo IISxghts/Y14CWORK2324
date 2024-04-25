@@ -10,7 +10,7 @@ namespace _9320RyanMillerDatabase
     {
         public int _BookingID;
         public int _CourseID;
-        public DateTime _BookingDate;
+        public string _BookingDate;
         public string _DiscountYN;
         public decimal _DiscountPercent;
         public int _CustomerNum;
@@ -27,7 +27,7 @@ namespace _9320RyanMillerDatabase
             get { return _CourseID; }
             set { _CourseID = value; }
         }
-        public DateTime BookingDate
+        public string BookingDate
         { 
             get { return _BookingDate; }           
             set { _BookingDate = value; } 
@@ -61,7 +61,7 @@ namespace _9320RyanMillerDatabase
         {
 
         }
-        public BookingModel(int BookingID, int CourseID, DateTime BookingDate, string Discount, decimal DiscountPercent, int CustomerNum, int Quantity, int Paid )
+        public BookingModel(int BookingID, int CourseID, string BookingDate, string Discount, decimal DiscountPercent, int CustomerNum, int Quantity, int Paid )
         {
             // WITH ID
             this.BookingID = BookingID;
@@ -73,7 +73,7 @@ namespace _9320RyanMillerDatabase
             this.CustomerQuantity = Quantity;
             this.Paid = Paid;
         }
-        public BookingModel(int CourseID, DateTime BookingDate, string Discount, decimal DiscountPercent, int CustomerNum, int Quantity, int Paid)
+        public BookingModel(int CourseID, string BookingDate, string Discount, decimal DiscountPercent, int CustomerNum, int Quantity, int Paid)
         {
             //WITHOUT ID
             this.CourseID = CourseID;

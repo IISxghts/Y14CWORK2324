@@ -711,10 +711,6 @@ C:\Users\IISXG\Source\Repos\Y14CWORK2324\9320RyanMillerDatabase\obj\Debug\_9320R
 C:\Users\IISXG\Source\Repos\Y14CWORK2324\9320RyanMillerDatabase\obj\Debug\_9320RyanMillerDatabase.DeleteCourseForm.resources
 C:\Users\IISXG\Source\Repos\Y14CWORK2324\9320RyanMillerDatabase\obj\Debug\_9320RyanMillerDatabase.EditCourseForm.resources
 C:\Users\IISXG\Source\Repos\Y14CWORK2324\9320RyanMillerDatabase\obj\Debug\_9320RyanMillerDatabase.CustomerReportTwo.resources
-C:\Users\IISXG\Source\Repos\Y14CWORK2324\9320RyanMillerDatabase\obj\Debug\_9320RyanMillerDatabase.AddStaffForm.resources
-C:\Users\IISXG\Source\Repos\Y14CWORK2324\9320RyanMillerDatabase\obj\Debug\_9320RyanMillerDatabase.DeleteStaffForm.resources
-C:\Users\IISXG\Source\Repos\Y14CWORK2324\9320RyanMillerDatabase\obj\Debug\_9320RyanMillerDatabase.EditStaffForm.resources
-C:\Users\IISXG\Source\Repos\Y14CWORK2324\9320RyanMillerDatabase\obj\Debug\_9320RyanMillerDatabase.SidebarForms.resources
 C:\Users\IISXG\Source\Repos\Y14CWORK2324\9320RyanMillerDatabase\obj\Debug\_9320RyanMillerDatabase.UserControls.UC_Booking.resources
 C:\Users\IISXG\Source\Repos\Y14CWORK2324\9320RyanMillerDatabase\obj\Debug\_9320RyanMillerDatabase.UserControls.UC_Courses.resources
 C:\Users\IISXG\Source\Repos\Y14CWORK2324\9320RyanMillerDatabase\obj\Debug\_9320RyanMillerDatabase.UserControlsMMStaff.UC_Customer.resources

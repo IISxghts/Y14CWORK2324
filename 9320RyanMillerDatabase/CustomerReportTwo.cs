@@ -18,13 +18,20 @@ namespace _9320RyanMillerDatabase
         bool sidebarCourseExpand;
         bool sidebarCustExpand;
         bool sidebarBookExpand;
+        bool sidebarOtherExpand;
         public CustomerReportTwo()
         {
             InitializeComponent();
             CenterToScreen();
             SecondReportViewer.Visible = false;
         }
+        private void CustomerReportTwo_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'lakeside9320ListReportDataSet.Customer' table. You can move, or remove it, as needed.
+            this.customerTableAdapter.Fill(this.lakeside9320ListReportDataSet.Customer);
 
+            this.SecondReportViewer.RefreshReport();
+        }
 
         #region ////sidebar mechanics\\\\ 
         private void sidebarTimer_Tick(object sender, EventArgs e)
@@ -218,19 +225,57 @@ namespace _9320RyanMillerDatabase
             Hide();
             new DeleteCourseForm().Show();
         }
-        #endregion
-
-        private void CustomerReportTwo_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'lakeside9320ListReportDataSet.Customer' table. You can move, or remove it, as needed.
-            this.customerTableAdapter.Fill(this.lakeside9320ListReportDataSet.Customer);
-
-            this.SecondReportViewer.RefreshReport();
-        }
-
+        
         private void showReportBtn_Click(object sender, EventArgs e)
         {
             SecondReportViewer.Visible = true;
         }
+
+        private void G2OtherSideBtn_Click(object sender, EventArgs e)
+        {
+            OtherSideTimer.Start();
+        }
+
+        private void ViewDataBtnS_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new ViewDataForm().Show();
+        }
+
+        private void SearchDataBtnS_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new SearchForm().Show();
+        }
+
+        private void G2CustListBtnS_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new CustomerReportTwo().Show();
+        }
+
+        private void OtherSideTimer_Tick(object sender, EventArgs e)
+        {
+            if (sidebarOtherExpand)
+            {
+                otherContainer.Height += 10;
+                if (otherContainer.Height == otherContainer.MaximumSize.Height)
+                {
+                    sidebarOtherExpand = false;
+                    OtherSideTimer.Stop();
+                }
+            }
+            else
+            {
+                otherContainer.Height -= 10;
+                if (otherContainer.Height == otherContainer.MinimumSize.Height)
+                {
+                    sidebarOtherExpand = true;
+                    OtherSideTimer.Stop();
+                }
+            }
+        }
+
+        #endregion
     }
 }

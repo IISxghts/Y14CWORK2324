@@ -35,5 +35,10 @@ namespace _9320RyanMillerDatabase.UserControls
             new DeleteCourseForm().Show();
         }
 
+        private void G2ViewCoursesBtn_Click(object sender, EventArgs e)
+        {
+            ((LakesideMenu)this.TopLevelControl).Hide();
+            new ViewDataForm().Show();
+        }
     }
 }

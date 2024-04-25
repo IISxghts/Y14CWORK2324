@@ -18,20 +18,18 @@ namespace _9320RyanMillerDatabase
         {
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
-
-
                 connection.Open();
 
                 SqlCommand command = new SqlCommand();
 
-                string sqlQuery = @"SELECT BookingID, Booking.CustomerNum, Courses.CourseID, CustomerForename, CustomerSurname, CourseTitle, Price, StartDate, EndDate FROM Booking
-                                    JOIN Courses on Courses.CourseID = Booking.CourseID JOIN Customer on Customer.CustomerNum = Booking.CustomerNum
-                                     WHERE Booking.BookingID = @BookingID";
+                string sqlQuery = @"SELECT Customer.CustomerNum, Customer.CustomerForename, Customer.CustomerSurname, Customer.CustomerPhone, Customer.CustomerPostcode, Booking.BookingID, Booking.BookingDate
+                                    FROM Customer
+                                          INNER JOIN Booking ON Customer.CustomerNum = Booking.CustomerNum
+                                              WHERE Booking.BookingID = @BookingID;";
 
                 command.CommandText = sqlQuery;
                 command.Connection = connection;
-                command.Parameters.AddWithValue("@BookingID", BookingID);
-
+                command.Parameters.AddWithValue("@BookingID", BookingID); 
 
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
                 DataTable dt = new DataTable();
@@ -41,6 +39,7 @@ namespace _9320RyanMillerDatabase
 
                 return dt;
             }
+
         }
 
         public static DataTable ViewCourse(int courseID)
@@ -80,7 +79,7 @@ namespace _9320RyanMillerDatabase
 
                 SqlCommand command = new SqlCommand();
 
-                string sqlQuery = @"SELECT Booking.BookingID, Booking.BookingDate, Customer.CustomerNum, Customer.CustomerForename, Customer.CustomerSurname, Customer.CustomerPhone, Courses.CourseID, Courses.CourseTitle
+                string sqlQuery = @"SELECT Customer.CustomerNum, Customer.CustomerForename, Customer.CustomerSurname, Customer.CustomerPhone, Courses.CourseID, Courses.CourseTitle, Booking.BookingID, Booking.BookingDate
                                      FROM Booking
                                      INNER JOIN Customer ON Booking.CustomerNum = Customer.CustomerNum
                                      INNER JOIN Courses ON Booking.CourseID = Courses.CourseID

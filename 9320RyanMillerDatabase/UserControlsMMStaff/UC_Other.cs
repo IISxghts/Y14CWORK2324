@@ -23,5 +23,17 @@ namespace _9320RyanMillerDatabase.UserControlsMMStaff
             ((LakesideMenu)this.TopLevelControl).Hide();
             new ViewDataForm().Show();
         }
+
+        private void G2LogoutBtn_Click(object sender, EventArgs e)
+        {
+            ((LakesideMenu)this.TopLevelControl).Hide();
+            new LoginScreen().Show();
+        }
+
+        private void G2SearchFormBtn_Click(object sender, EventArgs e)
+        {
+            ((LakesideMenu)this.TopLevelControl).Hide();
+            new SearchForm().Show();
+        }
     }
 }

@@ -30,6 +30,8 @@
         {
             this.LLOtherLbl = new System.Windows.Forms.Label();
             this.G2BtnViewData = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.G2LogoutBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.G2SearchFormBtn = new Guna.UI2.WinForms.Guna2CircleButton();
             this.SuspendLayout();
             // 
             // LLOtherLbl
@@ -60,10 +62,47 @@
             this.G2BtnViewData.Text = "View Data";
             this.G2BtnViewData.Click += new System.EventHandler(this.G2BtnViewData_Click);
             // 
+            // G2LogoutBtn
+            // 
+            this.G2LogoutBtn.AutoRoundedCorners = true;
+            this.G2LogoutBtn.BorderRadius = 35;
+            this.G2LogoutBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.G2LogoutBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.G2LogoutBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.G2LogoutBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.G2LogoutBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(215)))), ((int)(((byte)(150)))));
+            this.G2LogoutBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.G2LogoutBtn.ForeColor = System.Drawing.Color.White;
+            this.G2LogoutBtn.Location = new System.Drawing.Point(720, 251);
+            this.G2LogoutBtn.Name = "G2LogoutBtn";
+            this.G2LogoutBtn.Size = new System.Drawing.Size(216, 72);
+            this.G2LogoutBtn.TabIndex = 10;
+            this.G2LogoutBtn.Text = "Logout";
+            this.G2LogoutBtn.Click += new System.EventHandler(this.G2LogoutBtn_Click);
+            // 
+            // G2SearchFormBtn
+            // 
+            this.G2SearchFormBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.G2SearchFormBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.G2SearchFormBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.G2SearchFormBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.G2SearchFormBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(215)))), ((int)(((byte)(150)))));
+            this.G2SearchFormBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.G2SearchFormBtn.ForeColor = System.Drawing.Color.White;
+            this.G2SearchFormBtn.Location = new System.Drawing.Point(206, 84);
+            this.G2SearchFormBtn.Name = "G2SearchFormBtn";
+            this.G2SearchFormBtn.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.G2SearchFormBtn.Size = new System.Drawing.Size(150, 150);
+            this.G2SearchFormBtn.TabIndex = 11;
+            this.G2SearchFormBtn.Text = "Search";
+            this.G2SearchFormBtn.Click += new System.EventHandler(this.G2SearchFormBtn_Click);
+            // 
             // UC_Other
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.G2SearchFormBtn);
+            this.Controls.Add(this.G2LogoutBtn);
             this.Controls.Add(this.G2BtnViewData);
             this.Controls.Add(this.LLOtherLbl);
             this.Name = "UC_Other";
@@ -77,5 +116,7 @@
 
         private System.Windows.Forms.Label LLOtherLbl;
         private Guna.UI2.WinForms.Guna2CircleButton G2BtnViewData;
+        private Guna.UI2.WinForms.Guna2Button G2LogoutBtn;
+        private Guna.UI2.WinForms.Guna2CircleButton G2SearchFormBtn;
     }
 }

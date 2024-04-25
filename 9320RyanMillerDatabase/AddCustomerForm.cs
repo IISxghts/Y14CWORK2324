@@ -18,8 +18,8 @@ namespace _9320RyanMillerDatabase
             CenterToScreen();
             custReqRTB.Visible = false;
             custPSLbl.Visible = false;
-            DateTime today = DateTime.Now.Date;
-            custDTP.Value = today; 
+            string today = DateTime.Now.Date.ToShortDateString();
+            custDTP.Text = today; 
         }
        
         bool sidebarExpand;
@@ -27,6 +27,7 @@ namespace _9320RyanMillerDatabase
         bool sidebarCourseExpand;
         bool sidebarCustExpand;
         bool sidebarBookExpand;
+        bool sidebarOtherExpand;
         
         private void AddCustBtn_Click(object sender, EventArgs e)
         {
@@ -40,6 +41,15 @@ namespace _9320RyanMillerDatabase
                 string phone = custPhoneBox.Text;
                 string bdate = custDTP.Text;
                 string specialreqs = custReqRTB.Text;
+
+                if (specialReqCB.Checked == true)
+                {
+                    // poggers
+                }
+                else if (specialReqCB.Checked == false)
+                {
+                    custReqRTB.Text = "N/A";
+                }
 
                 CustomerModel newcustomer = new CustomerModel(forename, surname, address, postcode, town, phone, bdate, specialreqs);
 
@@ -119,7 +129,7 @@ namespace _9320RyanMillerDatabase
 
         #region sidebar 
 
-        #endregion
+       
 
         private void SidebarPB_Click(object sender, EventArgs e)
         {
@@ -324,6 +334,51 @@ namespace _9320RyanMillerDatabase
             new CustomerReportOne().Show();
         }
 
-        
+        private void OtherSideTimer_Tick(object sender, EventArgs e)
+        {
+            if (sidebarOtherExpand)
+            {
+                otherContainer.Height += 10;
+                if (otherContainer.Height == otherContainer.MaximumSize.Height)
+                {
+                    sidebarOtherExpand = false;
+                    OtherSideTimer.Stop();
+                }
+            }
+            else
+            {
+                otherContainer.Height -= 10;
+                if (otherContainer.Height == otherContainer.MinimumSize.Height)
+                {
+                    sidebarOtherExpand = true;
+                    OtherSideTimer.Stop();
+                }
+            }
+        }
+
+        private void G2OtherSideBtn_Click(object sender, EventArgs e)
+        {
+            OtherSideTimer.Start();
+        }
+
+        private void ViewDataBtnS_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new ViewDataForm().Show();
+        }
+
+        private void SearchDataBtnS_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new SearchForm().Show();
+        }
+
+        private void G2CustListBtnS_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new CustomerReportTwo().Show();
+        }
+
+        #endregion
     }
 }

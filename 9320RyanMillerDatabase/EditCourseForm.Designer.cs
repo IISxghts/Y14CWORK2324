@@ -33,12 +33,10 @@
             this.LLMenuLbl = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.EFCustSNDBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.EFCourseCapTB = new System.Windows.Forms.TextBox();
-            this.EFCustEditBtn = new System.Windows.Forms.Button();
             this.EFCustPhoneLbl = new System.Windows.Forms.Label();
-            this.EFCourseMTB = new System.Windows.Forms.TextBox();
+            this.EFStaffIDTB = new System.Windows.Forms.TextBox();
             this.EFCustPostcodeLbl = new System.Windows.Forms.Label();
             this.EFCoursePriceTB = new System.Windows.Forms.TextBox();
             this.EFCustTownLbl = new System.Windows.Forms.Label();
@@ -46,23 +44,11 @@
             this.EFCustAddressLbl = new System.Windows.Forms.Label();
             this.EFEndDateTB = new System.Windows.Forms.TextBox();
             this.EFCustSurnameLbl = new System.Windows.Forms.Label();
-            this.EFCustSurnameTB = new System.Windows.Forms.TextBox();
+            this.EFCourseStartDateTB = new System.Windows.Forms.TextBox();
             this.EFCourseTitleLbl = new System.Windows.Forms.Label();
             this.EFCourseTitleTB = new System.Windows.Forms.TextBox();
             this.EFCourseIDLbl = new System.Windows.Forms.Label();
             this.EFCourseIDTB = new System.Windows.Forms.TextBox();
-            this.EFCustDGV = new System.Windows.Forms.DataGridView();
-            this.courseIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.courseTitleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.startDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.endDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.capacityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cManagerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coursesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lakeside9320CoursesEditDataSet = new _9320RyanMillerDatabase.Lakeside9320CoursesEditDataSet();
-            this.coursesTableAdapter = new _9320RyanMillerDatabase.Lakeside9320CoursesEditDataSetTableAdapters.CoursesTableAdapter();
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.MenuSideLbl = new System.Windows.Forms.Label();
@@ -92,16 +78,34 @@
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.G2UnpaidBtn = new Guna.UI2.WinForms.Guna2Button();
             this.G2ReportsBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.G2CustListBtnS = new Guna.UI2.WinForms.Guna2Button();
             this.ReportSideTimer = new System.Windows.Forms.Timer(this.components);
             this.CustSideTimer = new System.Windows.Forms.Timer(this.components);
             this.CourseSideTimer = new System.Windows.Forms.Timer(this.components);
             this.BookSideTimer = new System.Windows.Forms.Timer(this.components);
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
+            this.CourseSNDBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.EditCourseBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.EFCourseDGV = new System.Windows.Forms.DataGridView();
+            this.courseIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.courseTitleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.startDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.endDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.capacityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.staffIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coursesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lakeside9320ActualCourseEditDataSet = new _9320RyanMillerDatabase.Lakeside9320ActualCourseEditDataSet();
+            this.coursesTableAdapter = new _9320RyanMillerDatabase.Lakeside9320ActualCourseEditDataSetTableAdapters.CoursesTableAdapter();
+            this.OtherSideTimer = new System.Windows.Forms.Timer(this.components);
+            this.otherContainer = new System.Windows.Forms.Panel();
+            this.ViewDataBtnS = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.SearchDataBtnS = new Guna.UI2.WinForms.Guna2Button();
+            this.G2OtherSideBtn = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.EFCustDGV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.coursesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320CoursesEditDataSet)).BeginInit();
             this.sidebar.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SidebarPB)).BeginInit();
@@ -115,6 +119,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).BeginInit();
             this.ReportsContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EFCourseDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coursesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320ActualCourseEditDataSet)).BeginInit();
+            this.otherContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // LLMenuLbl
@@ -122,7 +131,7 @@
             this.LLMenuLbl.AutoSize = true;
             this.LLMenuLbl.Font = new System.Drawing.Font("Segoe UI Black", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LLMenuLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
-            this.LLMenuLbl.Location = new System.Drawing.Point(342, 10);
+            this.LLMenuLbl.Location = new System.Drawing.Point(327, 6);
             this.LLMenuLbl.Name = "LLMenuLbl";
             this.LLMenuLbl.Size = new System.Drawing.Size(501, 38);
             this.LLMenuLbl.TabIndex = 1;
@@ -132,7 +141,7 @@
             // 
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(187, 10);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(172, 6);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(144, 51);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -150,70 +159,58 @@
             this.panel3.Size = new System.Drawing.Size(1000, 63);
             this.panel3.TabIndex = 67;
             // 
-            // EFCustSNDBtn
-            // 
-            this.EFCustSNDBtn.Location = new System.Drawing.Point(732, 454);
-            this.EFCustSNDBtn.Name = "EFCustSNDBtn";
-            this.EFCustSNDBtn.Size = new System.Drawing.Size(108, 46);
-            this.EFCustSNDBtn.TabIndex = 88;
-            this.EFCustSNDBtn.Text = "Save New Details";
-            this.EFCustSNDBtn.UseVisualStyleBackColor = true;
-            this.EFCustSNDBtn.Click += new System.EventHandler(this.EFCustSNDBtn_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(462, 384);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.label1.Location = new System.Drawing.Point(663, 393);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 16);
+            this.label1.Size = new System.Drawing.Size(76, 23);
             this.label1.TabIndex = 87;
             this.label1.Text = "Capacity";
             // 
             // EFCourseCapTB
             // 
-            this.EFCourseCapTB.Location = new System.Drawing.Point(544, 378);
+            this.EFCourseCapTB.Location = new System.Drawing.Point(775, 391);
             this.EFCourseCapTB.Name = "EFCourseCapTB";
+            this.EFCourseCapTB.ReadOnly = true;
             this.EFCourseCapTB.Size = new System.Drawing.Size(106, 22);
             this.EFCourseCapTB.TabIndex = 86;
-            // 
-            // EFCustEditBtn
-            // 
-            this.EFCustEditBtn.Location = new System.Drawing.Point(601, 454);
-            this.EFCustEditBtn.Name = "EFCustEditBtn";
-            this.EFCustEditBtn.Size = new System.Drawing.Size(104, 45);
-            this.EFCustEditBtn.TabIndex = 85;
-            this.EFCustEditBtn.Text = "Edit";
-            this.EFCustEditBtn.UseVisualStyleBackColor = true;
-            this.EFCustEditBtn.Click += new System.EventHandler(this.EFCustEditBtn_Click);
             // 
             // EFCustPhoneLbl
             // 
             this.EFCustPhoneLbl.AutoSize = true;
-            this.EFCustPhoneLbl.Location = new System.Drawing.Point(431, 409);
+            this.EFCustPhoneLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EFCustPhoneLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.EFCustPhoneLbl.Location = new System.Drawing.Point(663, 418);
             this.EFCustPhoneLbl.Name = "EFCustPhoneLbl";
-            this.EFCustPhoneLbl.Size = new System.Drawing.Size(107, 16);
+            this.EFCustPhoneLbl.Size = new System.Drawing.Size(68, 23);
             this.EFCustPhoneLbl.TabIndex = 82;
-            this.EFCustPhoneLbl.Text = "Course Manager";
+            this.EFCustPhoneLbl.Text = "Staff ID";
             // 
-            // EFCourseMTB
+            // EFStaffIDTB
             // 
-            this.EFCourseMTB.Location = new System.Drawing.Point(544, 406);
-            this.EFCourseMTB.Name = "EFCourseMTB";
-            this.EFCourseMTB.Size = new System.Drawing.Size(106, 22);
-            this.EFCourseMTB.TabIndex = 81;
+            this.EFStaffIDTB.Location = new System.Drawing.Point(775, 420);
+            this.EFStaffIDTB.Name = "EFStaffIDTB";
+            this.EFStaffIDTB.ReadOnly = true;
+            this.EFStaffIDTB.Size = new System.Drawing.Size(106, 22);
+            this.EFStaffIDTB.TabIndex = 81;
             // 
             // EFCustPostcodeLbl
             // 
             this.EFCustPostcodeLbl.AutoSize = true;
-            this.EFCustPostcodeLbl.Location = new System.Drawing.Point(484, 356);
+            this.EFCustPostcodeLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EFCustPostcodeLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.EFCustPostcodeLbl.Location = new System.Drawing.Point(685, 365);
             this.EFCustPostcodeLbl.Name = "EFCustPostcodeLbl";
-            this.EFCustPostcodeLbl.Size = new System.Drawing.Size(38, 16);
+            this.EFCustPostcodeLbl.Size = new System.Drawing.Size(47, 23);
             this.EFCustPostcodeLbl.TabIndex = 80;
             this.EFCustPostcodeLbl.Text = "Price";
             // 
             // EFCoursePriceTB
             // 
-            this.EFCoursePriceTB.Location = new System.Drawing.Point(544, 350);
+            this.EFCoursePriceTB.Location = new System.Drawing.Point(775, 359);
             this.EFCoursePriceTB.Name = "EFCoursePriceTB";
             this.EFCoursePriceTB.Size = new System.Drawing.Size(106, 22);
             this.EFCoursePriceTB.TabIndex = 79;
@@ -221,15 +218,17 @@
             // EFCustTownLbl
             // 
             this.EFCustTownLbl.AutoSize = true;
-            this.EFCustTownLbl.Location = new System.Drawing.Point(484, 328);
+            this.EFCustTownLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EFCustTownLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.EFCustTownLbl.Location = new System.Drawing.Point(685, 337);
             this.EFCustTownLbl.Name = "EFCustTownLbl";
-            this.EFCustTownLbl.Size = new System.Drawing.Size(38, 16);
+            this.EFCustTownLbl.Size = new System.Drawing.Size(47, 23);
             this.EFCustTownLbl.TabIndex = 78;
             this.EFCustTownLbl.Text = "Time";
             // 
             // EFCourseTimeTB
             // 
-            this.EFCourseTimeTB.Location = new System.Drawing.Point(544, 322);
+            this.EFCourseTimeTB.Location = new System.Drawing.Point(775, 331);
             this.EFCourseTimeTB.Name = "EFCourseTimeTB";
             this.EFCourseTimeTB.Size = new System.Drawing.Size(106, 22);
             this.EFCourseTimeTB.TabIndex = 77;
@@ -237,47 +236,53 @@
             // EFCustAddressLbl
             // 
             this.EFCustAddressLbl.AutoSize = true;
-            this.EFCustAddressLbl.Location = new System.Drawing.Point(220, 412);
+            this.EFCustAddressLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EFCustAddressLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.EFCustAddressLbl.Location = new System.Drawing.Point(211, 418);
             this.EFCustAddressLbl.Name = "EFCustAddressLbl";
-            this.EFCustAddressLbl.Size = new System.Drawing.Size(63, 16);
+            this.EFCustAddressLbl.Size = new System.Drawing.Size(80, 23);
             this.EFCustAddressLbl.TabIndex = 76;
             this.EFCustAddressLbl.Text = "End Date";
             // 
             // EFEndDateTB
             // 
-            this.EFEndDateTB.Location = new System.Drawing.Point(302, 406);
+            this.EFEndDateTB.Location = new System.Drawing.Point(330, 418);
             this.EFEndDateTB.Name = "EFEndDateTB";
-            this.EFEndDateTB.Size = new System.Drawing.Size(98, 22);
+            this.EFEndDateTB.Size = new System.Drawing.Size(155, 22);
             this.EFEndDateTB.TabIndex = 75;
             // 
             // EFCustSurnameLbl
             // 
             this.EFCustSurnameLbl.AutoSize = true;
-            this.EFCustSurnameLbl.Location = new System.Drawing.Point(220, 381);
+            this.EFCustSurnameLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EFCustSurnameLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.EFCustSurnameLbl.Location = new System.Drawing.Point(211, 392);
             this.EFCustSurnameLbl.Name = "EFCustSurnameLbl";
-            this.EFCustSurnameLbl.Size = new System.Drawing.Size(66, 16);
+            this.EFCustSurnameLbl.Size = new System.Drawing.Size(87, 23);
             this.EFCustSurnameLbl.TabIndex = 74;
             this.EFCustSurnameLbl.Text = "Start Date";
             // 
-            // EFCustSurnameTB
+            // EFCourseStartDateTB
             // 
-            this.EFCustSurnameTB.Location = new System.Drawing.Point(302, 378);
-            this.EFCustSurnameTB.Name = "EFCustSurnameTB";
-            this.EFCustSurnameTB.Size = new System.Drawing.Size(98, 22);
-            this.EFCustSurnameTB.TabIndex = 73;
+            this.EFCourseStartDateTB.Location = new System.Drawing.Point(330, 390);
+            this.EFCourseStartDateTB.Name = "EFCourseStartDateTB";
+            this.EFCourseStartDateTB.Size = new System.Drawing.Size(155, 22);
+            this.EFCourseStartDateTB.TabIndex = 73;
             // 
             // EFCourseTitleLbl
             // 
             this.EFCourseTitleLbl.AutoSize = true;
-            this.EFCourseTitleLbl.Location = new System.Drawing.Point(220, 356);
+            this.EFCourseTitleLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EFCourseTitleLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.EFCourseTitleLbl.Location = new System.Drawing.Point(211, 365);
             this.EFCourseTitleLbl.Name = "EFCourseTitleLbl";
-            this.EFCourseTitleLbl.Size = new System.Drawing.Size(79, 16);
+            this.EFCourseTitleLbl.Size = new System.Drawing.Size(100, 23);
             this.EFCourseTitleLbl.TabIndex = 72;
             this.EFCourseTitleLbl.Text = "Course Title";
             // 
             // EFCourseTitleTB
             // 
-            this.EFCourseTitleTB.Location = new System.Drawing.Point(302, 350);
+            this.EFCourseTitleTB.Location = new System.Drawing.Point(330, 362);
             this.EFCourseTitleTB.Name = "EFCourseTitleTB";
             this.EFCourseTitleTB.Size = new System.Drawing.Size(98, 22);
             this.EFCourseTitleTB.TabIndex = 71;
@@ -285,119 +290,21 @@
             // EFCourseIDLbl
             // 
             this.EFCourseIDLbl.AutoSize = true;
-            this.EFCourseIDLbl.Location = new System.Drawing.Point(226, 331);
+            this.EFCourseIDLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EFCourseIDLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.EFCourseIDLbl.Location = new System.Drawing.Point(213, 339);
             this.EFCourseIDLbl.Name = "EFCourseIDLbl";
-            this.EFCourseIDLbl.Size = new System.Drawing.Size(66, 16);
+            this.EFCourseIDLbl.Size = new System.Drawing.Size(85, 23);
             this.EFCourseIDLbl.TabIndex = 70;
             this.EFCourseIDLbl.Text = "Course ID";
             // 
             // EFCourseIDTB
             // 
-            this.EFCourseIDTB.Location = new System.Drawing.Point(302, 325);
+            this.EFCourseIDTB.Location = new System.Drawing.Point(330, 337);
             this.EFCourseIDTB.Name = "EFCourseIDTB";
             this.EFCourseIDTB.ReadOnly = true;
             this.EFCourseIDTB.Size = new System.Drawing.Size(98, 22);
             this.EFCourseIDTB.TabIndex = 69;
-            // 
-            // EFCustDGV
-            // 
-            this.EFCustDGV.AutoGenerateColumns = false;
-            this.EFCustDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.EFCustDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.courseIDDataGridViewTextBoxColumn,
-            this.courseTitleDataGridViewTextBoxColumn,
-            this.startDateDataGridViewTextBoxColumn,
-            this.endDateDataGridViewTextBoxColumn,
-            this.timingDataGridViewTextBoxColumn,
-            this.priceDataGridViewTextBoxColumn,
-            this.capacityDataGridViewTextBoxColumn,
-            this.cManagerNameDataGridViewTextBoxColumn});
-            this.EFCustDGV.DataSource = this.coursesBindingSource;
-            this.EFCustDGV.Location = new System.Drawing.Point(219, 98);
-            this.EFCustDGV.Name = "EFCustDGV";
-            this.EFCustDGV.RowHeadersWidth = 51;
-            this.EFCustDGV.RowTemplate.Height = 24;
-            this.EFCustDGV.Size = new System.Drawing.Size(662, 210);
-            this.EFCustDGV.TabIndex = 68;
-            // 
-            // courseIDDataGridViewTextBoxColumn
-            // 
-            this.courseIDDataGridViewTextBoxColumn.DataPropertyName = "CourseID";
-            this.courseIDDataGridViewTextBoxColumn.HeaderText = "CourseID";
-            this.courseIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.courseIDDataGridViewTextBoxColumn.Name = "courseIDDataGridViewTextBoxColumn";
-            this.courseIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.courseIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // courseTitleDataGridViewTextBoxColumn
-            // 
-            this.courseTitleDataGridViewTextBoxColumn.DataPropertyName = "CourseTitle";
-            this.courseTitleDataGridViewTextBoxColumn.HeaderText = "CourseTitle";
-            this.courseTitleDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.courseTitleDataGridViewTextBoxColumn.Name = "courseTitleDataGridViewTextBoxColumn";
-            this.courseTitleDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // startDateDataGridViewTextBoxColumn
-            // 
-            this.startDateDataGridViewTextBoxColumn.DataPropertyName = "StartDate";
-            this.startDateDataGridViewTextBoxColumn.HeaderText = "StartDate";
-            this.startDateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.startDateDataGridViewTextBoxColumn.Name = "startDateDataGridViewTextBoxColumn";
-            this.startDateDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // endDateDataGridViewTextBoxColumn
-            // 
-            this.endDateDataGridViewTextBoxColumn.DataPropertyName = "EndDate";
-            this.endDateDataGridViewTextBoxColumn.HeaderText = "EndDate";
-            this.endDateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.endDateDataGridViewTextBoxColumn.Name = "endDateDataGridViewTextBoxColumn";
-            this.endDateDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // timingDataGridViewTextBoxColumn
-            // 
-            this.timingDataGridViewTextBoxColumn.DataPropertyName = "Timing";
-            this.timingDataGridViewTextBoxColumn.HeaderText = "Timing";
-            this.timingDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.timingDataGridViewTextBoxColumn.Name = "timingDataGridViewTextBoxColumn";
-            this.timingDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
-            this.priceDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            this.priceDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // capacityDataGridViewTextBoxColumn
-            // 
-            this.capacityDataGridViewTextBoxColumn.DataPropertyName = "Capacity";
-            this.capacityDataGridViewTextBoxColumn.HeaderText = "Capacity";
-            this.capacityDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.capacityDataGridViewTextBoxColumn.Name = "capacityDataGridViewTextBoxColumn";
-            this.capacityDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // cManagerNameDataGridViewTextBoxColumn
-            // 
-            this.cManagerNameDataGridViewTextBoxColumn.DataPropertyName = "CManagerName";
-            this.cManagerNameDataGridViewTextBoxColumn.HeaderText = "CManagerName";
-            this.cManagerNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.cManagerNameDataGridViewTextBoxColumn.Name = "cManagerNameDataGridViewTextBoxColumn";
-            this.cManagerNameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // coursesBindingSource
-            // 
-            this.coursesBindingSource.DataMember = "Courses";
-            this.coursesBindingSource.DataSource = this.lakeside9320CoursesEditDataSet;
-            // 
-            // lakeside9320CoursesEditDataSet
-            // 
-            this.lakeside9320CoursesEditDataSet.DataSetName = "Lakeside9320CoursesEditDataSet";
-            this.lakeside9320CoursesEditDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // coursesTableAdapter
-            // 
-            this.coursesTableAdapter.ClearBeforeFill = true;
             // 
             // sidebar
             // 
@@ -408,6 +315,7 @@
             this.sidebar.Controls.Add(this.coursesContainer);
             this.sidebar.Controls.Add(this.bookingContainer);
             this.sidebar.Controls.Add(this.ReportsContainer);
+            this.sidebar.Controls.Add(this.otherContainer);
             this.sidebar.Location = new System.Drawing.Point(0, 0);
             this.sidebar.MaximumSize = new System.Drawing.Size(215, 500);
             this.sidebar.MinimumSize = new System.Drawing.Size(70, 500);
@@ -785,12 +693,13 @@
             this.ReportsContainer.Controls.Add(this.guna2PictureBox2);
             this.ReportsContainer.Controls.Add(this.G2UnpaidBtn);
             this.ReportsContainer.Controls.Add(this.G2ReportsBtn);
+            this.ReportsContainer.Controls.Add(this.G2CustListBtnS);
             this.ReportsContainer.Location = new System.Drawing.Point(3, 289);
-            this.ReportsContainer.MaximumSize = new System.Drawing.Size(209, 84);
-            this.ReportsContainer.MinimumSize = new System.Drawing.Size(209, 46);
+            this.ReportsContainer.MaximumSize = new System.Drawing.Size(209, 120);
+            this.ReportsContainer.MinimumSize = new System.Drawing.Size(209, 50);
             this.ReportsContainer.Name = "ReportsContainer";
-            this.ReportsContainer.Size = new System.Drawing.Size(209, 46);
-            this.ReportsContainer.TabIndex = 9;
+            this.ReportsContainer.Size = new System.Drawing.Size(209, 50);
+            this.ReportsContainer.TabIndex = 93;
             // 
             // guna2PictureBox2
             // 
@@ -798,7 +707,7 @@
             this.guna2PictureBox2.ImageRotate = 0F;
             this.guna2PictureBox2.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(61, 46);
+            this.guna2PictureBox2.Size = new System.Drawing.Size(61, 50);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox2.TabIndex = 14;
             this.guna2PictureBox2.TabStop = false;
@@ -814,13 +723,12 @@
             this.G2UnpaidBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(38)))), ((int)(((byte)(99)))));
             this.G2UnpaidBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.G2UnpaidBtn.ForeColor = System.Drawing.Color.White;
-            this.G2UnpaidBtn.Location = new System.Drawing.Point(0, 48);
+            this.G2UnpaidBtn.Location = new System.Drawing.Point(0, 50);
             this.G2UnpaidBtn.Name = "G2UnpaidBtn";
-            this.G2UnpaidBtn.Size = new System.Drawing.Size(215, 35);
+            this.G2UnpaidBtn.Size = new System.Drawing.Size(209, 35);
             this.G2UnpaidBtn.TabIndex = 14;
             this.G2UnpaidBtn.Text = "Unpaid Orders";
             this.G2UnpaidBtn.UseTransparentBackground = true;
-            this.G2UnpaidBtn.Click += new System.EventHandler(this.G2UnpaidBtn_Click);
             // 
             // G2ReportsBtn
             // 
@@ -835,11 +743,30 @@
             this.G2ReportsBtn.ForeColor = System.Drawing.Color.White;
             this.G2ReportsBtn.Location = new System.Drawing.Point(0, 0);
             this.G2ReportsBtn.Name = "G2ReportsBtn";
-            this.G2ReportsBtn.Size = new System.Drawing.Size(215, 50);
+            this.G2ReportsBtn.Size = new System.Drawing.Size(209, 50);
             this.G2ReportsBtn.TabIndex = 15;
             this.G2ReportsBtn.Text = "Reports";
             this.G2ReportsBtn.UseTransparentBackground = true;
             this.G2ReportsBtn.Click += new System.EventHandler(this.G2ReportsBtn_Click);
+            // 
+            // G2CustListBtnS
+            // 
+            this.G2CustListBtnS.Animated = true;
+            this.G2CustListBtnS.BackColor = System.Drawing.Color.Transparent;
+            this.G2CustListBtnS.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.G2CustListBtnS.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.G2CustListBtnS.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.G2CustListBtnS.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.G2CustListBtnS.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(38)))), ((int)(((byte)(99)))));
+            this.G2CustListBtnS.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.G2CustListBtnS.ForeColor = System.Drawing.Color.White;
+            this.G2CustListBtnS.Location = new System.Drawing.Point(0, 85);
+            this.G2CustListBtnS.Name = "G2CustListBtnS";
+            this.G2CustListBtnS.Size = new System.Drawing.Size(209, 35);
+            this.G2CustListBtnS.TabIndex = 16;
+            this.G2CustListBtnS.Text = "List of Customers";
+            this.G2CustListBtnS.UseTransparentBackground = true;
+            this.G2CustListBtnS.Click += new System.EventHandler(this.G2CustListBtnS_Click);
             // 
             // ReportSideTimer
             // 
@@ -866,18 +793,241 @@
             this.sidebarTimer.Interval = 10;
             this.sidebarTimer.Tick += new System.EventHandler(this.sidebarTimer_Tick);
             // 
+            // CourseSNDBtn
+            // 
+            this.CourseSNDBtn.AutoRoundedCorners = true;
+            this.CourseSNDBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.CourseSNDBtn.BorderRadius = 21;
+            this.CourseSNDBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.CourseSNDBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.CourseSNDBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.CourseSNDBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.CourseSNDBtn.FillColor = System.Drawing.Color.Empty;
+            this.CourseSNDBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.CourseSNDBtn.ForeColor = System.Drawing.Color.White;
+            this.CourseSNDBtn.Location = new System.Drawing.Point(655, 448);
+            this.CourseSNDBtn.Name = "CourseSNDBtn";
+            this.CourseSNDBtn.Size = new System.Drawing.Size(226, 45);
+            this.CourseSNDBtn.TabIndex = 90;
+            this.CourseSNDBtn.Text = "Save Details";
+            this.CourseSNDBtn.Click += new System.EventHandler(this.CourseSNDBtn_Click);
+            // 
+            // EditCourseBtn
+            // 
+            this.EditCourseBtn.AutoRoundedCorners = true;
+            this.EditCourseBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.EditCourseBtn.BorderRadius = 21;
+            this.EditCourseBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.EditCourseBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.EditCourseBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.EditCourseBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.EditCourseBtn.FillColor = System.Drawing.Color.Empty;
+            this.EditCourseBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.EditCourseBtn.ForeColor = System.Drawing.Color.White;
+            this.EditCourseBtn.Location = new System.Drawing.Point(202, 448);
+            this.EditCourseBtn.Name = "EditCourseBtn";
+            this.EditCourseBtn.Size = new System.Drawing.Size(226, 45);
+            this.EditCourseBtn.TabIndex = 91;
+            this.EditCourseBtn.Text = "Edit Details";
+            this.EditCourseBtn.Click += new System.EventHandler(this.EditCourseBtn_Click);
+            // 
+            // EFCourseDGV
+            // 
+            this.EFCourseDGV.AutoGenerateColumns = false;
+            this.EFCourseDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.EFCourseDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.courseIDDataGridViewTextBoxColumn,
+            this.courseTitleDataGridViewTextBoxColumn,
+            this.startDateDataGridViewTextBoxColumn,
+            this.endDateDataGridViewTextBoxColumn,
+            this.timingDataGridViewTextBoxColumn,
+            this.priceDataGridViewTextBoxColumn,
+            this.capacityDataGridViewTextBoxColumn,
+            this.staffIDDataGridViewTextBoxColumn});
+            this.EFCourseDGV.DataSource = this.coursesBindingSource;
+            this.EFCourseDGV.Location = new System.Drawing.Point(202, 67);
+            this.EFCourseDGV.Name = "EFCourseDGV";
+            this.EFCourseDGV.RowHeadersWidth = 51;
+            this.EFCourseDGV.RowTemplate.Height = 24;
+            this.EFCourseDGV.Size = new System.Drawing.Size(679, 258);
+            this.EFCourseDGV.TabIndex = 92;
+            this.EFCourseDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.EFCourseDGV_CellClick);
+            // 
+            // courseIDDataGridViewTextBoxColumn
+            // 
+            this.courseIDDataGridViewTextBoxColumn.DataPropertyName = "CourseID";
+            this.courseIDDataGridViewTextBoxColumn.HeaderText = "CourseID";
+            this.courseIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.courseIDDataGridViewTextBoxColumn.Name = "courseIDDataGridViewTextBoxColumn";
+            this.courseIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.courseIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // courseTitleDataGridViewTextBoxColumn
+            // 
+            this.courseTitleDataGridViewTextBoxColumn.DataPropertyName = "CourseTitle";
+            this.courseTitleDataGridViewTextBoxColumn.HeaderText = "CourseTitle";
+            this.courseTitleDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.courseTitleDataGridViewTextBoxColumn.Name = "courseTitleDataGridViewTextBoxColumn";
+            this.courseTitleDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // startDateDataGridViewTextBoxColumn
+            // 
+            this.startDateDataGridViewTextBoxColumn.DataPropertyName = "StartDate";
+            this.startDateDataGridViewTextBoxColumn.HeaderText = "StartDate";
+            this.startDateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.startDateDataGridViewTextBoxColumn.Name = "startDateDataGridViewTextBoxColumn";
+            this.startDateDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // endDateDataGridViewTextBoxColumn
+            // 
+            this.endDateDataGridViewTextBoxColumn.DataPropertyName = "EndDate";
+            this.endDateDataGridViewTextBoxColumn.HeaderText = "EndDate";
+            this.endDateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.endDateDataGridViewTextBoxColumn.Name = "endDateDataGridViewTextBoxColumn";
+            this.endDateDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // timingDataGridViewTextBoxColumn
+            // 
+            this.timingDataGridViewTextBoxColumn.DataPropertyName = "Timing";
+            this.timingDataGridViewTextBoxColumn.HeaderText = "Timing";
+            this.timingDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.timingDataGridViewTextBoxColumn.Name = "timingDataGridViewTextBoxColumn";
+            this.timingDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
+            this.priceDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            this.priceDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // capacityDataGridViewTextBoxColumn
+            // 
+            this.capacityDataGridViewTextBoxColumn.DataPropertyName = "Capacity";
+            this.capacityDataGridViewTextBoxColumn.HeaderText = "Capacity";
+            this.capacityDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.capacityDataGridViewTextBoxColumn.Name = "capacityDataGridViewTextBoxColumn";
+            this.capacityDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // staffIDDataGridViewTextBoxColumn
+            // 
+            this.staffIDDataGridViewTextBoxColumn.DataPropertyName = "StaffID";
+            this.staffIDDataGridViewTextBoxColumn.HeaderText = "StaffID";
+            this.staffIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.staffIDDataGridViewTextBoxColumn.Name = "staffIDDataGridViewTextBoxColumn";
+            this.staffIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // coursesBindingSource
+            // 
+            this.coursesBindingSource.DataMember = "Courses";
+            this.coursesBindingSource.DataSource = this.lakeside9320ActualCourseEditDataSet;
+            // 
+            // lakeside9320ActualCourseEditDataSet
+            // 
+            this.lakeside9320ActualCourseEditDataSet.DataSetName = "Lakeside9320ActualCourseEditDataSet";
+            this.lakeside9320ActualCourseEditDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // coursesTableAdapter
+            // 
+            this.coursesTableAdapter.ClearBeforeFill = true;
+            // 
+            // OtherSideTimer
+            // 
+            this.OtherSideTimer.Interval = 10;
+            this.OtherSideTimer.Tick += new System.EventHandler(this.OtherSideTimer_Tick);
+            // 
+            // otherContainer
+            // 
+            this.otherContainer.Controls.Add(this.ViewDataBtnS);
+            this.otherContainer.Controls.Add(this.guna2PictureBox3);
+            this.otherContainer.Controls.Add(this.SearchDataBtnS);
+            this.otherContainer.Controls.Add(this.G2OtherSideBtn);
+            this.otherContainer.Location = new System.Drawing.Point(3, 345);
+            this.otherContainer.MaximumSize = new System.Drawing.Size(215, 120);
+            this.otherContainer.MinimumSize = new System.Drawing.Size(215, 50);
+            this.otherContainer.Name = "otherContainer";
+            this.otherContainer.Size = new System.Drawing.Size(215, 50);
+            this.otherContainer.TabIndex = 93;
+            // 
+            // ViewDataBtnS
+            // 
+            this.ViewDataBtnS.Animated = true;
+            this.ViewDataBtnS.BackColor = System.Drawing.Color.Transparent;
+            this.ViewDataBtnS.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.ViewDataBtnS.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.ViewDataBtnS.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.ViewDataBtnS.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.ViewDataBtnS.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(38)))), ((int)(((byte)(99)))));
+            this.ViewDataBtnS.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ViewDataBtnS.ForeColor = System.Drawing.Color.White;
+            this.ViewDataBtnS.Location = new System.Drawing.Point(0, 50);
+            this.ViewDataBtnS.Name = "ViewDataBtnS";
+            this.ViewDataBtnS.Size = new System.Drawing.Size(215, 35);
+            this.ViewDataBtnS.TabIndex = 20;
+            this.ViewDataBtnS.Text = "View Data";
+            this.ViewDataBtnS.UseTransparentBackground = true;
+            this.ViewDataBtnS.Click += new System.EventHandler(this.ViewDataBtnS_Click);
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(-3, 0);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(64, 52);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox3.TabIndex = 12;
+            this.guna2PictureBox3.TabStop = false;
+            // 
+            // SearchDataBtnS
+            // 
+            this.SearchDataBtnS.Animated = true;
+            this.SearchDataBtnS.BackColor = System.Drawing.Color.Transparent;
+            this.SearchDataBtnS.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.SearchDataBtnS.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.SearchDataBtnS.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.SearchDataBtnS.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.SearchDataBtnS.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(38)))), ((int)(((byte)(99)))));
+            this.SearchDataBtnS.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.SearchDataBtnS.ForeColor = System.Drawing.Color.White;
+            this.SearchDataBtnS.Location = new System.Drawing.Point(0, 85);
+            this.SearchDataBtnS.Name = "SearchDataBtnS";
+            this.SearchDataBtnS.Size = new System.Drawing.Size(215, 35);
+            this.SearchDataBtnS.TabIndex = 19;
+            this.SearchDataBtnS.Text = "Search Data";
+            this.SearchDataBtnS.UseTransparentBackground = true;
+            this.SearchDataBtnS.Click += new System.EventHandler(this.SearchDataBtnS_Click);
+            // 
+            // G2OtherSideBtn
+            // 
+            this.G2OtherSideBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.G2OtherSideBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.G2OtherSideBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.G2OtherSideBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.G2OtherSideBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.G2OtherSideBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.G2OtherSideBtn.ForeColor = System.Drawing.Color.White;
+            this.G2OtherSideBtn.Location = new System.Drawing.Point(3, 0);
+            this.G2OtherSideBtn.Name = "G2OtherSideBtn";
+            this.G2OtherSideBtn.Size = new System.Drawing.Size(215, 50);
+            this.G2OtherSideBtn.TabIndex = 13;
+            this.G2OtherSideBtn.Text = "Other";
+            this.G2OtherSideBtn.Click += new System.EventHandler(this.G2OtherSideBtn_Click);
+            // 
             // EditCourseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 500);
+            this.Controls.Add(this.EFCourseDGV);
+            this.Controls.Add(this.EditCourseBtn);
+            this.Controls.Add(this.CourseSNDBtn);
             this.Controls.Add(this.sidebar);
-            this.Controls.Add(this.EFCustSNDBtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.EFCourseCapTB);
-            this.Controls.Add(this.EFCustEditBtn);
             this.Controls.Add(this.EFCustPhoneLbl);
-            this.Controls.Add(this.EFCourseMTB);
+            this.Controls.Add(this.EFStaffIDTB);
             this.Controls.Add(this.EFCustPostcodeLbl);
             this.Controls.Add(this.EFCoursePriceTB);
             this.Controls.Add(this.EFCustTownLbl);
@@ -885,13 +1035,13 @@
             this.Controls.Add(this.EFCustAddressLbl);
             this.Controls.Add(this.EFEndDateTB);
             this.Controls.Add(this.EFCustSurnameLbl);
-            this.Controls.Add(this.EFCustSurnameTB);
+            this.Controls.Add(this.EFCourseStartDateTB);
             this.Controls.Add(this.EFCourseTitleLbl);
             this.Controls.Add(this.EFCourseTitleTB);
             this.Controls.Add(this.EFCourseIDLbl);
             this.Controls.Add(this.EFCourseIDTB);
-            this.Controls.Add(this.EFCustDGV);
             this.Controls.Add(this.panel3);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EditCourseForm";
@@ -900,9 +1050,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.EFCustDGV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.coursesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320CoursesEditDataSet)).EndInit();
             this.sidebar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -917,6 +1064,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).EndInit();
             this.ReportsContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EFCourseDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coursesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320ActualCourseEditDataSet)).EndInit();
+            this.otherContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -927,12 +1079,10 @@
         private System.Windows.Forms.Label LLMenuLbl;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button EFCustSNDBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox EFCourseCapTB;
-        private System.Windows.Forms.Button EFCustEditBtn;
         private System.Windows.Forms.Label EFCustPhoneLbl;
-        private System.Windows.Forms.TextBox EFCourseMTB;
+        private System.Windows.Forms.TextBox EFStaffIDTB;
         private System.Windows.Forms.Label EFCustPostcodeLbl;
         private System.Windows.Forms.TextBox EFCoursePriceTB;
         private System.Windows.Forms.Label EFCustTownLbl;
@@ -940,23 +1090,11 @@
         private System.Windows.Forms.Label EFCustAddressLbl;
         private System.Windows.Forms.TextBox EFEndDateTB;
         private System.Windows.Forms.Label EFCustSurnameLbl;
-        private System.Windows.Forms.TextBox EFCustSurnameTB;
+        private System.Windows.Forms.TextBox EFCourseStartDateTB;
         private System.Windows.Forms.Label EFCourseTitleLbl;
         private System.Windows.Forms.TextBox EFCourseTitleTB;
         private System.Windows.Forms.Label EFCourseIDLbl;
         private System.Windows.Forms.TextBox EFCourseIDTB;
-        private System.Windows.Forms.DataGridView EFCustDGV;
-        private Lakeside9320CoursesEditDataSet lakeside9320CoursesEditDataSet;
-        private System.Windows.Forms.BindingSource coursesBindingSource;
-        private Lakeside9320CoursesEditDataSetTableAdapters.CoursesTableAdapter coursesTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn courseIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn courseTitleDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn startDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn endDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn timingDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn capacityDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cManagerNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.FlowLayoutPanel sidebar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label MenuSideLbl;
@@ -982,14 +1120,35 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox8;
         private Guna.UI2.WinForms.Guna2Button G2EditBookBtnS;
         private Guna.UI2.WinForms.Guna2Button G2BookSideBtn;
-        private System.Windows.Forms.Panel ReportsContainer;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
-        private Guna.UI2.WinForms.Guna2Button G2UnpaidBtn;
-        private Guna.UI2.WinForms.Guna2Button G2ReportsBtn;
         private System.Windows.Forms.Timer ReportSideTimer;
         private System.Windows.Forms.Timer CustSideTimer;
         private System.Windows.Forms.Timer CourseSideTimer;
         private System.Windows.Forms.Timer BookSideTimer;
         private System.Windows.Forms.Timer sidebarTimer;
+        private Guna.UI2.WinForms.Guna2Button CourseSNDBtn;
+        private Guna.UI2.WinForms.Guna2Button EditCourseBtn;
+        private System.Windows.Forms.DataGridView EFCourseDGV;
+        private Lakeside9320ActualCourseEditDataSet lakeside9320ActualCourseEditDataSet;
+        private System.Windows.Forms.BindingSource coursesBindingSource;
+        private Lakeside9320ActualCourseEditDataSetTableAdapters.CoursesTableAdapter coursesTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn courseIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn courseTitleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn startDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn endDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn timingDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn capacityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn staffIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Timer OtherSideTimer;
+        private System.Windows.Forms.Panel ReportsContainer;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private Guna.UI2.WinForms.Guna2Button G2UnpaidBtn;
+        private Guna.UI2.WinForms.Guna2Button G2ReportsBtn;
+        private Guna.UI2.WinForms.Guna2Button G2CustListBtnS;
+        private System.Windows.Forms.Panel otherContainer;
+        private Guna.UI2.WinForms.Guna2Button ViewDataBtnS;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
+        private Guna.UI2.WinForms.Guna2Button SearchDataBtnS;
+        private Guna.UI2.WinForms.Guna2Button G2OtherSideBtn;
     }
 }

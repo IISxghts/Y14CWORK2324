@@ -27,6 +27,7 @@ namespace _9320RyanMillerDatabase
         bool sidebarCourseExpand;
         bool sidebarCustExpand;
         bool sidebarBookExpand;
+        bool sidebarOtherExpand;
 
         private void G2AddCourseBtn_Click(object sender, EventArgs e)
         {
@@ -35,26 +36,38 @@ namespace _9320RyanMillerDatabase
 
                 string CourseName = CourseNameBox.Text;
                 string StartHour = StartHourDTP.Text;
-                string StartDate = StartDateDTP.Text;
-                string EndDate = EndDateDTP.Text;
+                string StartDate = StartDateDTP.Value.Date.ToShortDateString();
+                string EndDate = EndDateDTP.Value.Date.ToShortDateString();
                 string holdprice = CoursePriceBox.Text;
                 decimal price = Convert.ToDecimal(holdprice);
                 string holdcapacity = CourseCapacityBox.Text;
                 int capacity = Convert.ToInt32(holdcapacity);
-                string CourseManagerName = CManagerNameBox.Text;
+                string staffIDHold = CourseStaffIDTB.Text;
+                int staffID = Convert.ToInt32(staffIDHold);
 
-                CourseModel newcourse = new CourseModel(CourseName, StartDate, EndDate, StartHour, price, capacity, CourseManagerName);
+                if (CourseDAL.StaffIDValid(staffID).Count != 0)
+                {                
+                    
+                    CourseModel newcourse = new CourseModel(CourseName, StartDate, EndDate, StartHour, price, capacity, staffID);
 
-                int rowsThatDothBeAffected = CourseDAL.AddCourse(newcourse);
+                    int rowsThatDothBeAffected = CourseDAL.AddCourse(newcourse);
 
-                if (rowsThatDothBeAffected > 0)
-                {
-                    MessageBox.Show("Course has been successfully added", "Success");
+                    if (rowsThatDothBeAffected > 0)
+                    {
+                        MessageBox.Show("Course has been successfully added", "Success");
+                    }
+                    else
+                    {
+                    MessageBox.Show("An error has occured in adding the course", "Failure");
+                    }
+
                 }
                 else
                 {
-                    MessageBox.Show("An error has occured in adding the course", "Failure");
+                    MessageBox.Show("Staff ID not valid", "Error");
                 }
+
+
             }
         }
 
@@ -86,9 +99,9 @@ namespace _9320RyanMillerDatabase
             {
                 sb.AppendLine("You must enter a capacity.");
             }
-            if (string.IsNullOrEmpty(CManagerNameBox.Text))
+            if (string.IsNullOrEmpty(CourseStaffIDTB.Text))
             {
-                sb.AppendLine("You must enter a course manager name.");
+                sb.AppendLine("You must enter a staff ID.");
             }
             if (string.IsNullOrEmpty(sb.ToString()))
             {
@@ -312,6 +325,52 @@ namespace _9320RyanMillerDatabase
             Hide();
             new CustomerReportOne().Show();
         }
-            #endregion
-    }        
+
+        private void G2OtherSideBtn_Click(object sender, EventArgs e)
+        {
+            OtherSideTimer.Start();
+        }
+
+        private void ViewDataBtnS_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new ViewDataForm().Show();
+        }
+
+        private void SearchDataBtnS_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new SearchForm().Show();
+        }
+
+        private void G2CustListBtnS_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new CustomerReportTwo().Show();
+        }
+
+        private void OtherSideTimer_Tick(object sender, EventArgs e)
+        {
+            if (sidebarOtherExpand)
+            {
+                otherContainer.Height += 10;
+                if (otherContainer.Height == otherContainer.MaximumSize.Height)
+                {
+                    sidebarOtherExpand = false;
+                    OtherSideTimer.Stop();
+                }
+            }
+            else
+            {
+                otherContainer.Height -= 10;
+                if (otherContainer.Height == otherContainer.MinimumSize.Height)
+                {
+                    sidebarOtherExpand = true;
+                    OtherSideTimer.Stop();
+                }
+            }
+        }
+
+        #endregion
+    }
 }

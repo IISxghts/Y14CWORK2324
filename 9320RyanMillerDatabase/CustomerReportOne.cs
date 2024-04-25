@@ -23,16 +23,37 @@ namespace _9320RyanMillerDatabase
             FirstReportViewer.Visible = false;
         }
 
+        public static string _connectionString = ConfigurationManager.ConnectionStrings["LakesideConnection"].ConnectionString;
+
         bool sidebarExpand;
         bool sidebarReportsExpand;
         bool sidebarCourseExpand;
         bool sidebarCustExpand;
         bool sidebarBookExpand;
+        bool sidebarOtherExpand;
 
         private void CustomerReportOne_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'lakeside9320CustDataSet.Customer' table. You can move, or remove it, as needed.
-            this.customerTableAdapter.Fill(this.lakeside9320CustDataSet.Customer);
+        {            
+            
+            unpaid_ds report_ds = new unpaid_ds();
+
+            string query = @"SELECT Customer.CustomerNum, Customer.CustomerForename, Customer.CustomerSurname, Customer.CustomerPhone, Booking.BookingID, Booking.BookingDate, Booking.Paid 
+                            FROM Customer 
+                            INNER JOIN Booking ON Customer.CustomerNum = Booking.CustomerNum 
+                            WHERE Booking.Paid = 0;";
+
+            SqlConnection connection = new SqlConnection(_connectionString);
+            SqlDataAdapter sqlData = new SqlDataAdapter(query, connection);
+
+            sqlData.Fill(report_ds, report_ds.Tables[0].TableName);
+
+            ReportDataSource rds = new ReportDataSource("ActualUnpaidOrderDS", report_ds.Tables[0]);
+
+            this.FirstReportViewer.LocalReport.DataSources.Clear();
+
+            this.FirstReportViewer.LocalReport.DataSources.Add(rds);
+
+            this.FirstReportViewer.LocalReport.Refresh();
 
             this.FirstReportViewer.RefreshReport();
         }
@@ -211,7 +232,8 @@ namespace _9320RyanMillerDatabase
 
         private void G2UnpaidBtn_Click(object sender, EventArgs e)
         {
-            
+            Hide();
+            new CustomerReportOne().Show();
         }
 
         private void G2AddCustBtnS_Click(object sender, EventArgs e)
@@ -249,6 +271,55 @@ namespace _9320RyanMillerDatabase
             Hide();
             new DeleteCourseForm().Show();
         }
+
+
+        private void OtherSideTimer_Tick(object sender, EventArgs e)
+        {
+            if (sidebarOtherExpand)
+            {
+                otherContainer.Height += 10;
+                if (otherContainer.Height == otherContainer.MaximumSize.Height)
+                {
+                    sidebarOtherExpand = false;
+                    OtherSideTimer.Stop();
+                }
+            }
+            else
+            {
+                otherContainer.Height -= 10;
+                if (otherContainer.Height == otherContainer.MinimumSize.Height)
+                {
+                    sidebarOtherExpand = true;
+                    OtherSideTimer.Stop();
+                }
+            }
+        }
+
+        private void G2OtherSideBtn_Click(object sender, EventArgs e)
+        {
+            OtherSideTimer.Start();
+        }
+
+        private void ViewDataBtnS_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new ViewDataForm().Show();
+        }
+
+        private void SearchDataBtnS_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new SearchForm().Show();
+        }
+
+        private void G2CustListBtnS_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new CustomerReportTwo();
+        }
+        
         #endregion
+
+
     }
 }

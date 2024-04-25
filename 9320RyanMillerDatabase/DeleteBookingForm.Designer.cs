@@ -58,11 +58,6 @@
             this.G2AddBookBtnS = new Guna.UI2.WinForms.Guna2Button();
             this.G2DeleteBookBtnS = new Guna.UI2.WinForms.Guna2Button();
             this.G2EditBookBtnS = new Guna.UI2.WinForms.Guna2Button();
-            this.ReportsContainer = new System.Windows.Forms.Panel();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.G2CustListBtnS = new Guna.UI2.WinForms.Guna2Button();
-            this.G2UnpaidBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.G2ReportsBtn = new Guna.UI2.WinForms.Guna2Button();
             this.ReportSideTimer = new System.Windows.Forms.Timer(this.components);
             this.CustSideTimer = new System.Windows.Forms.Timer(this.components);
             this.CourseSideTimer = new System.Windows.Forms.Timer(this.components);
@@ -79,10 +74,21 @@
             this.paidDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.bookingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lakeside9320DeleteBookingDataSet = new _9320RyanMillerDatabase.Lakeside9320DeleteBookingDataSet();
-            this.DeleteBookingBtn = new System.Windows.Forms.Button();
             this.ViewBookingIDBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.bookingTableAdapter = new _9320RyanMillerDatabase.Lakeside9320DeleteBookingDataSetTableAdapters.BookingTableAdapter();
+            this.DelBookingBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.OtherSideTimer = new System.Windows.Forms.Timer(this.components);
+            this.ReportsContainer = new System.Windows.Forms.Panel();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.G2UnpaidBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.G2ReportsBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.G2CustListBtnS = new Guna.UI2.WinForms.Guna2Button();
+            this.otherContainer = new System.Windows.Forms.Panel();
+            this.ViewDataBtnS = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.SearchDataBtnS = new Guna.UI2.WinForms.Guna2Button();
+            this.G2OtherSideBtn = new Guna.UI2.WinForms.Guna2Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox10)).BeginInit();
@@ -96,11 +102,13 @@
             this.customerContainer.SuspendLayout();
             this.coursesContainer.SuspendLayout();
             this.bookingContainer.SuspendLayout();
-            this.ReportsContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BookDeleteDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lakeside9320DeleteBookingDataSet)).BeginInit();
+            this.ReportsContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            this.otherContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // LLMenuLbl
@@ -267,6 +275,7 @@
             this.sidebar.Controls.Add(this.coursesContainer);
             this.sidebar.Controls.Add(this.bookingContainer);
             this.sidebar.Controls.Add(this.ReportsContainer);
+            this.sidebar.Controls.Add(this.otherContainer);
             this.sidebar.Location = new System.Drawing.Point(0, 0);
             this.sidebar.MaximumSize = new System.Drawing.Size(215, 500);
             this.sidebar.MinimumSize = new System.Drawing.Size(70, 500);
@@ -517,85 +526,6 @@
             this.G2EditBookBtnS.UseTransparentBackground = true;
             this.G2EditBookBtnS.Click += new System.EventHandler(this.G2EditBookBtnS_Click);
             // 
-            // ReportsContainer
-            // 
-            this.ReportsContainer.Controls.Add(this.guna2PictureBox2);
-            this.ReportsContainer.Controls.Add(this.G2CustListBtnS);
-            this.ReportsContainer.Controls.Add(this.G2UnpaidBtn);
-            this.ReportsContainer.Controls.Add(this.G2ReportsBtn);
-            this.ReportsContainer.Location = new System.Drawing.Point(3, 289);
-            this.ReportsContainer.MaximumSize = new System.Drawing.Size(209, 110);
-            this.ReportsContainer.MinimumSize = new System.Drawing.Size(209, 50);
-            this.ReportsContainer.Name = "ReportsContainer";
-            this.ReportsContainer.Size = new System.Drawing.Size(209, 50);
-            this.ReportsContainer.TabIndex = 75;
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.Image = global::_9320RyanMillerDatabase.Properties.Resources.DocIconFinal;
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(61, 50);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox2.TabIndex = 14;
-            this.guna2PictureBox2.TabStop = false;
-            // 
-            // G2CustListBtnS
-            // 
-            this.G2CustListBtnS.Animated = true;
-            this.G2CustListBtnS.BackColor = System.Drawing.Color.Transparent;
-            this.G2CustListBtnS.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.G2CustListBtnS.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.G2CustListBtnS.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.G2CustListBtnS.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.G2CustListBtnS.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(38)))), ((int)(((byte)(99)))));
-            this.G2CustListBtnS.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.G2CustListBtnS.ForeColor = System.Drawing.Color.White;
-            this.G2CustListBtnS.Location = new System.Drawing.Point(0, 75);
-            this.G2CustListBtnS.Name = "G2CustListBtnS";
-            this.G2CustListBtnS.Size = new System.Drawing.Size(209, 35);
-            this.G2CustListBtnS.TabIndex = 16;
-            this.G2CustListBtnS.Text = "List of Customers";
-            this.G2CustListBtnS.UseTransparentBackground = true;
-            this.G2CustListBtnS.Click += new System.EventHandler(this.G2CustListBtnS_Click);
-            // 
-            // G2UnpaidBtn
-            // 
-            this.G2UnpaidBtn.Animated = true;
-            this.G2UnpaidBtn.BackColor = System.Drawing.Color.Transparent;
-            this.G2UnpaidBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.G2UnpaidBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.G2UnpaidBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.G2UnpaidBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.G2UnpaidBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(38)))), ((int)(((byte)(99)))));
-            this.G2UnpaidBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.G2UnpaidBtn.ForeColor = System.Drawing.Color.White;
-            this.G2UnpaidBtn.Location = new System.Drawing.Point(0, 48);
-            this.G2UnpaidBtn.Name = "G2UnpaidBtn";
-            this.G2UnpaidBtn.Size = new System.Drawing.Size(215, 35);
-            this.G2UnpaidBtn.TabIndex = 14;
-            this.G2UnpaidBtn.Text = "Unpaid Orders";
-            this.G2UnpaidBtn.UseTransparentBackground = true;
-            // 
-            // G2ReportsBtn
-            // 
-            this.G2ReportsBtn.Animated = true;
-            this.G2ReportsBtn.BackColor = System.Drawing.Color.Transparent;
-            this.G2ReportsBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.G2ReportsBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.G2ReportsBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.G2ReportsBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.G2ReportsBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
-            this.G2ReportsBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.G2ReportsBtn.ForeColor = System.Drawing.Color.White;
-            this.G2ReportsBtn.Location = new System.Drawing.Point(0, 0);
-            this.G2ReportsBtn.Name = "G2ReportsBtn";
-            this.G2ReportsBtn.Size = new System.Drawing.Size(209, 50);
-            this.G2ReportsBtn.TabIndex = 15;
-            this.G2ReportsBtn.Text = "Reports";
-            this.G2ReportsBtn.UseTransparentBackground = true;
-            // 
             // ReportSideTimer
             // 
             this.ReportSideTimer.Interval = 10;
@@ -635,11 +565,12 @@
             this.customerQuantityDataGridViewTextBoxColumn,
             this.paidDataGridViewCheckBoxColumn});
             this.BookDeleteDGV.DataSource = this.bookingBindingSource;
-            this.BookDeleteDGV.Location = new System.Drawing.Point(178, 107);
+            this.BookDeleteDGV.Location = new System.Drawing.Point(77, 72);
             this.BookDeleteDGV.Name = "BookDeleteDGV";
+            this.BookDeleteDGV.ReadOnly = true;
             this.BookDeleteDGV.RowHeadersWidth = 51;
             this.BookDeleteDGV.RowTemplate.Height = 24;
-            this.BookDeleteDGV.Size = new System.Drawing.Size(620, 307);
+            this.BookDeleteDGV.Size = new System.Drawing.Size(897, 307);
             this.BookDeleteDGV.TabIndex = 70;
             this.BookDeleteDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.BookDeleteDGV_CellClick);
             // 
@@ -658,6 +589,7 @@
             this.courseIDDataGridViewTextBoxColumn.HeaderText = "CourseID";
             this.courseIDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.courseIDDataGridViewTextBoxColumn.Name = "courseIDDataGridViewTextBoxColumn";
+            this.courseIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.courseIDDataGridViewTextBoxColumn.Width = 125;
             // 
             // bookingDateDataGridViewTextBoxColumn
@@ -666,6 +598,7 @@
             this.bookingDateDataGridViewTextBoxColumn.HeaderText = "BookingDate";
             this.bookingDateDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.bookingDateDataGridViewTextBoxColumn.Name = "bookingDateDataGridViewTextBoxColumn";
+            this.bookingDateDataGridViewTextBoxColumn.ReadOnly = true;
             this.bookingDateDataGridViewTextBoxColumn.Width = 125;
             // 
             // discountDataGridViewTextBoxColumn
@@ -674,6 +607,7 @@
             this.discountDataGridViewTextBoxColumn.HeaderText = "Discount";
             this.discountDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.discountDataGridViewTextBoxColumn.Name = "discountDataGridViewTextBoxColumn";
+            this.discountDataGridViewTextBoxColumn.ReadOnly = true;
             this.discountDataGridViewTextBoxColumn.Width = 125;
             // 
             // discountPercentDataGridViewTextBoxColumn
@@ -682,6 +616,7 @@
             this.discountPercentDataGridViewTextBoxColumn.HeaderText = "DiscountPercent";
             this.discountPercentDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.discountPercentDataGridViewTextBoxColumn.Name = "discountPercentDataGridViewTextBoxColumn";
+            this.discountPercentDataGridViewTextBoxColumn.ReadOnly = true;
             this.discountPercentDataGridViewTextBoxColumn.Width = 125;
             // 
             // customerNumDataGridViewTextBoxColumn
@@ -690,6 +625,7 @@
             this.customerNumDataGridViewTextBoxColumn.HeaderText = "CustomerNum";
             this.customerNumDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.customerNumDataGridViewTextBoxColumn.Name = "customerNumDataGridViewTextBoxColumn";
+            this.customerNumDataGridViewTextBoxColumn.ReadOnly = true;
             this.customerNumDataGridViewTextBoxColumn.Width = 125;
             // 
             // customerQuantityDataGridViewTextBoxColumn
@@ -698,6 +634,7 @@
             this.customerQuantityDataGridViewTextBoxColumn.HeaderText = "CustomerQuantity";
             this.customerQuantityDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.customerQuantityDataGridViewTextBoxColumn.Name = "customerQuantityDataGridViewTextBoxColumn";
+            this.customerQuantityDataGridViewTextBoxColumn.ReadOnly = true;
             this.customerQuantityDataGridViewTextBoxColumn.Width = 125;
             // 
             // paidDataGridViewCheckBoxColumn
@@ -706,6 +643,7 @@
             this.paidDataGridViewCheckBoxColumn.HeaderText = "Paid";
             this.paidDataGridViewCheckBoxColumn.MinimumWidth = 6;
             this.paidDataGridViewCheckBoxColumn.Name = "paidDataGridViewCheckBoxColumn";
+            this.paidDataGridViewCheckBoxColumn.ReadOnly = true;
             this.paidDataGridViewCheckBoxColumn.Width = 125;
             // 
             // bookingBindingSource
@@ -718,30 +656,23 @@
             this.lakeside9320DeleteBookingDataSet.DataSetName = "Lakeside9320DeleteBookingDataSet";
             this.lakeside9320DeleteBookingDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // DeleteBookingBtn
-            // 
-            this.DeleteBookingBtn.Location = new System.Drawing.Point(804, 154);
-            this.DeleteBookingBtn.Name = "DeleteBookingBtn";
-            this.DeleteBookingBtn.Size = new System.Drawing.Size(100, 52);
-            this.DeleteBookingBtn.TabIndex = 73;
-            this.DeleteBookingBtn.Text = "Delete Booking";
-            this.DeleteBookingBtn.UseVisualStyleBackColor = true;
-            this.DeleteBookingBtn.Click += new System.EventHandler(this.DeleteBookingBtn_Click);
-            // 
             // ViewBookingIDBox
             // 
-            this.ViewBookingIDBox.Location = new System.Drawing.Point(804, 126);
+            this.ViewBookingIDBox.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ViewBookingIDBox.Location = new System.Drawing.Point(77, 417);
             this.ViewBookingIDBox.Name = "ViewBookingIDBox";
             this.ViewBookingIDBox.ReadOnly = true;
-            this.ViewBookingIDBox.Size = new System.Drawing.Size(100, 22);
+            this.ViewBookingIDBox.Size = new System.Drawing.Size(100, 25);
             this.ViewBookingIDBox.TabIndex = 72;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(804, 107);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.label1.Location = new System.Drawing.Point(76, 391);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 16);
+            this.label1.Size = new System.Drawing.Size(95, 23);
             this.label1.TabIndex = 74;
             this.label1.Text = "Booking ID";
             // 
@@ -749,16 +680,199 @@
             // 
             this.bookingTableAdapter.ClearBeforeFill = true;
             // 
+            // DelBookingBtn
+            // 
+            this.DelBookingBtn.AutoRoundedCorners = true;
+            this.DelBookingBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.DelBookingBtn.BorderRadius = 21;
+            this.DelBookingBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.DelBookingBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.DelBookingBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.DelBookingBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.DelBookingBtn.FillColor = System.Drawing.Color.Empty;
+            this.DelBookingBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.DelBookingBtn.ForeColor = System.Drawing.Color.White;
+            this.DelBookingBtn.Location = new System.Drawing.Point(77, 448);
+            this.DelBookingBtn.Name = "DelBookingBtn";
+            this.DelBookingBtn.Size = new System.Drawing.Size(226, 45);
+            this.DelBookingBtn.TabIndex = 92;
+            this.DelBookingBtn.Text = "Delete Booking";
+            this.DelBookingBtn.Click += new System.EventHandler(this.DelBookingBtn_Click);
+            // 
+            // OtherSideTimer
+            // 
+            this.OtherSideTimer.Interval = 10;
+            this.OtherSideTimer.Tick += new System.EventHandler(this.OtherSideTimer_Tick);
+            // 
+            // ReportsContainer
+            // 
+            this.ReportsContainer.Controls.Add(this.guna2PictureBox2);
+            this.ReportsContainer.Controls.Add(this.G2UnpaidBtn);
+            this.ReportsContainer.Controls.Add(this.G2ReportsBtn);
+            this.ReportsContainer.Controls.Add(this.G2CustListBtnS);
+            this.ReportsContainer.Location = new System.Drawing.Point(3, 289);
+            this.ReportsContainer.MaximumSize = new System.Drawing.Size(209, 120);
+            this.ReportsContainer.MinimumSize = new System.Drawing.Size(209, 50);
+            this.ReportsContainer.Name = "ReportsContainer";
+            this.ReportsContainer.Size = new System.Drawing.Size(209, 50);
+            this.ReportsContainer.TabIndex = 93;
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Image = global::_9320RyanMillerDatabase.Properties.Resources.DocIconFinal;
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(61, 50);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox2.TabIndex = 14;
+            this.guna2PictureBox2.TabStop = false;
+            // 
+            // G2UnpaidBtn
+            // 
+            this.G2UnpaidBtn.Animated = true;
+            this.G2UnpaidBtn.BackColor = System.Drawing.Color.Transparent;
+            this.G2UnpaidBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.G2UnpaidBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.G2UnpaidBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.G2UnpaidBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.G2UnpaidBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(38)))), ((int)(((byte)(99)))));
+            this.G2UnpaidBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.G2UnpaidBtn.ForeColor = System.Drawing.Color.White;
+            this.G2UnpaidBtn.Location = new System.Drawing.Point(0, 50);
+            this.G2UnpaidBtn.Name = "G2UnpaidBtn";
+            this.G2UnpaidBtn.Size = new System.Drawing.Size(209, 35);
+            this.G2UnpaidBtn.TabIndex = 14;
+            this.G2UnpaidBtn.Text = "Unpaid Orders";
+            this.G2UnpaidBtn.UseTransparentBackground = true;
+            this.G2UnpaidBtn.Click += new System.EventHandler(this.G2UnpaidBtn_Click);
+            // 
+            // G2ReportsBtn
+            // 
+            this.G2ReportsBtn.Animated = true;
+            this.G2ReportsBtn.BackColor = System.Drawing.Color.Transparent;
+            this.G2ReportsBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.G2ReportsBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.G2ReportsBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.G2ReportsBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.G2ReportsBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.G2ReportsBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.G2ReportsBtn.ForeColor = System.Drawing.Color.White;
+            this.G2ReportsBtn.Location = new System.Drawing.Point(0, 0);
+            this.G2ReportsBtn.Name = "G2ReportsBtn";
+            this.G2ReportsBtn.Size = new System.Drawing.Size(209, 50);
+            this.G2ReportsBtn.TabIndex = 15;
+            this.G2ReportsBtn.Text = "Reports";
+            this.G2ReportsBtn.UseTransparentBackground = true;
+            this.G2ReportsBtn.Click += new System.EventHandler(this.G2ReportsBtn_Click);
+            // 
+            // G2CustListBtnS
+            // 
+            this.G2CustListBtnS.Animated = true;
+            this.G2CustListBtnS.BackColor = System.Drawing.Color.Transparent;
+            this.G2CustListBtnS.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.G2CustListBtnS.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.G2CustListBtnS.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.G2CustListBtnS.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.G2CustListBtnS.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(38)))), ((int)(((byte)(99)))));
+            this.G2CustListBtnS.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.G2CustListBtnS.ForeColor = System.Drawing.Color.White;
+            this.G2CustListBtnS.Location = new System.Drawing.Point(0, 85);
+            this.G2CustListBtnS.Name = "G2CustListBtnS";
+            this.G2CustListBtnS.Size = new System.Drawing.Size(209, 35);
+            this.G2CustListBtnS.TabIndex = 16;
+            this.G2CustListBtnS.Text = "List of Customers";
+            this.G2CustListBtnS.UseTransparentBackground = true;
+            this.G2CustListBtnS.Click += new System.EventHandler(this.G2CustListBtnS_Click);
+            // 
+            // otherContainer
+            // 
+            this.otherContainer.Controls.Add(this.ViewDataBtnS);
+            this.otherContainer.Controls.Add(this.guna2PictureBox3);
+            this.otherContainer.Controls.Add(this.SearchDataBtnS);
+            this.otherContainer.Controls.Add(this.G2OtherSideBtn);
+            this.otherContainer.Location = new System.Drawing.Point(3, 345);
+            this.otherContainer.MaximumSize = new System.Drawing.Size(215, 120);
+            this.otherContainer.MinimumSize = new System.Drawing.Size(215, 50);
+            this.otherContainer.Name = "otherContainer";
+            this.otherContainer.Size = new System.Drawing.Size(215, 50);
+            this.otherContainer.TabIndex = 94;
+            // 
+            // ViewDataBtnS
+            // 
+            this.ViewDataBtnS.Animated = true;
+            this.ViewDataBtnS.BackColor = System.Drawing.Color.Transparent;
+            this.ViewDataBtnS.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.ViewDataBtnS.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.ViewDataBtnS.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.ViewDataBtnS.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.ViewDataBtnS.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(38)))), ((int)(((byte)(99)))));
+            this.ViewDataBtnS.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ViewDataBtnS.ForeColor = System.Drawing.Color.White;
+            this.ViewDataBtnS.Location = new System.Drawing.Point(0, 50);
+            this.ViewDataBtnS.Name = "ViewDataBtnS";
+            this.ViewDataBtnS.Size = new System.Drawing.Size(215, 35);
+            this.ViewDataBtnS.TabIndex = 20;
+            this.ViewDataBtnS.Text = "View Data";
+            this.ViewDataBtnS.UseTransparentBackground = true;
+            this.ViewDataBtnS.Click += new System.EventHandler(this.ViewDataBtnS_Click);
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(-3, 0);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(64, 52);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox3.TabIndex = 12;
+            this.guna2PictureBox3.TabStop = false;
+            // 
+            // SearchDataBtnS
+            // 
+            this.SearchDataBtnS.Animated = true;
+            this.SearchDataBtnS.BackColor = System.Drawing.Color.Transparent;
+            this.SearchDataBtnS.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.SearchDataBtnS.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.SearchDataBtnS.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.SearchDataBtnS.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.SearchDataBtnS.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(38)))), ((int)(((byte)(99)))));
+            this.SearchDataBtnS.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.SearchDataBtnS.ForeColor = System.Drawing.Color.White;
+            this.SearchDataBtnS.Location = new System.Drawing.Point(0, 85);
+            this.SearchDataBtnS.Name = "SearchDataBtnS";
+            this.SearchDataBtnS.Size = new System.Drawing.Size(215, 35);
+            this.SearchDataBtnS.TabIndex = 19;
+            this.SearchDataBtnS.Text = "Search Data";
+            this.SearchDataBtnS.UseTransparentBackground = true;
+            this.SearchDataBtnS.Click += new System.EventHandler(this.SearchDataBtnS_Click);
+            // 
+            // G2OtherSideBtn
+            // 
+            this.G2OtherSideBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.G2OtherSideBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.G2OtherSideBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.G2OtherSideBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.G2OtherSideBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.G2OtherSideBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.G2OtherSideBtn.ForeColor = System.Drawing.Color.White;
+            this.G2OtherSideBtn.Location = new System.Drawing.Point(3, 0);
+            this.G2OtherSideBtn.Name = "G2OtherSideBtn";
+            this.G2OtherSideBtn.Size = new System.Drawing.Size(215, 50);
+            this.G2OtherSideBtn.TabIndex = 13;
+            this.G2OtherSideBtn.Text = "Other";
+            this.G2OtherSideBtn.Click += new System.EventHandler(this.G2OtherSideBtn_Click);
+            // 
             // DeleteBookingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 500);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.DeleteBookingBtn);
-            this.Controls.Add(this.ViewBookingIDBox);
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.DelBookingBtn);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.ViewBookingIDBox);
             this.Controls.Add(this.BookDeleteDGV);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -780,11 +894,13 @@
             this.customerContainer.ResumeLayout(false);
             this.coursesContainer.ResumeLayout(false);
             this.bookingContainer.ResumeLayout(false);
-            this.ReportsContainer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BookDeleteDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lakeside9320DeleteBookingDataSet)).EndInit();
+            this.ReportsContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            this.otherContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -826,14 +942,8 @@
         private System.Windows.Forms.Timer BookSideTimer;
         private System.Windows.Forms.Timer sidebarTimer;
         private System.Windows.Forms.DataGridView BookDeleteDGV;
-        private System.Windows.Forms.Button DeleteBookingBtn;
         private System.Windows.Forms.TextBox ViewBookingIDBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel ReportsContainer;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
-        private Guna.UI2.WinForms.Guna2Button G2CustListBtnS;
-        private Guna.UI2.WinForms.Guna2Button G2UnpaidBtn;
-        private Guna.UI2.WinForms.Guna2Button G2ReportsBtn;
         private Lakeside9320DeleteBookingDataSet lakeside9320DeleteBookingDataSet;
         private System.Windows.Forms.BindingSource bookingBindingSource;
         private Lakeside9320DeleteBookingDataSetTableAdapters.BookingTableAdapter bookingTableAdapter;
@@ -845,5 +955,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn customerNumDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn customerQuantityDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn paidDataGridViewCheckBoxColumn;
+        private Guna.UI2.WinForms.Guna2Button DelBookingBtn;
+        private System.Windows.Forms.Timer OtherSideTimer;
+        private System.Windows.Forms.Panel ReportsContainer;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private Guna.UI2.WinForms.Guna2Button G2UnpaidBtn;
+        private Guna.UI2.WinForms.Guna2Button G2ReportsBtn;
+        private Guna.UI2.WinForms.Guna2Button G2CustListBtnS;
+        private System.Windows.Forms.Panel otherContainer;
+        private Guna.UI2.WinForms.Guna2Button ViewDataBtnS;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
+        private Guna.UI2.WinForms.Guna2Button SearchDataBtnS;
+        private Guna.UI2.WinForms.Guna2Button G2OtherSideBtn;
     }
 }

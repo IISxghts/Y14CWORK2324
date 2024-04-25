@@ -32,14 +32,14 @@ namespace _9320RyanMillerDatabase
                 insertProjectCommand.Parameters.Add(new SqlParameter("@Timing", course._Timing));
                 insertProjectCommand.Parameters.Add(new SqlParameter("@Price", course._Price));
                 insertProjectCommand.Parameters.Add(new SqlParameter("@Capacity", course._Capacity));
-                insertProjectCommand.Parameters.Add(new SqlParameter("@CManagerName", course._Managername));
+                insertProjectCommand.Parameters.Add(new SqlParameter("@StaffID", course._staffID));
 
                 int rowsAffected = insertProjectCommand.ExecuteNonQuery();
 
                 connection.Close();
                 return rowsAffected;
             }
-            
+
         }
         public static int DeleteCourse(int CourseID)
         {
@@ -79,7 +79,7 @@ namespace _9320RyanMillerDatabase
                 insertProjectCommand.Parameters.Add(new SqlParameter("@Timing", course._Timing));
                 insertProjectCommand.Parameters.Add(new SqlParameter("@Price", course._Price));
                 insertProjectCommand.Parameters.Add(new SqlParameter("@Capacity", course._Capacity));
-                insertProjectCommand.Parameters.Add(new SqlParameter("@CManagerName", course._Managername));
+                insertProjectCommand.Parameters.Add(new SqlParameter("@StaffID", course.StaffID));
 
                 int rowsAffected = insertProjectCommand.ExecuteNonQuery();
 
@@ -108,6 +108,64 @@ namespace _9320RyanMillerDatabase
                 connection.Close();
 
                 return dt;
+            }
+        }
+
+        public static List<int> StaffIDValid(int StaffID)
+        {
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                List<int> staffIDs = new List<int>();
+
+                connection.Open();
+
+                string sqlQuery = string.Format("SELECT * FROM Staff WHERE StaffID = {0}", StaffID);
+
+                SqlCommand bookCommand = new SqlCommand(sqlQuery, connection);
+
+                SqlDataReader dataReader = bookCommand.ExecuteReader();
+
+
+                while (dataReader.Read())
+                {
+                    int staffID = (int)dataReader["StaffID"];
+
+                    staffIDs.Add(staffID);
+
+                }
+
+                connection.Close();
+
+                return staffIDs;
+            }
+        }
+
+        public static List<int> CustomerBookCheck(int CourseID)
+        {
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                List<int> courseIDs = new List<int>();
+
+                connection.Open();
+
+                string sqlQuery = string.Format("SELECT DISTINCT CustomerNum FROM Booking WHERE CourseID = {0}", CourseID);
+
+                SqlCommand bookCommand = new SqlCommand(sqlQuery, connection);
+
+                SqlDataReader dataReader = bookCommand.ExecuteReader();
+
+
+                while (dataReader.Read())
+                {
+                    int courseID = (int)dataReader["CustomerNum"];
+
+                    courseIDs.Add(courseID);
+
+                }
+
+                connection.Close();
+
+                return courseIDs;
             }
         }
     }

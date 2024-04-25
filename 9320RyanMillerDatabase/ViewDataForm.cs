@@ -27,6 +27,7 @@ namespace _9320RyanMillerDatabase
         bool sidebarCourseExpand;
         bool sidebarCustExpand;
         bool sidebarBookExpand;
+        bool sidebarOtherExpand;
 
         public static string _connectionString = ConfigurationManager.ConnectionStrings["LakesideConnection"].ConnectionString;
 
@@ -54,10 +55,10 @@ namespace _9320RyanMillerDatabase
             {
                 MessageBox.Show("Please select an option first", "Error");
             }
-            
-
-            
+                       
         }     
+
+
 
         private void CourseView()
         {
@@ -79,7 +80,7 @@ namespace _9320RyanMillerDatabase
         {
             int BookIDChosen = Convert.ToInt32(IDTb.Text);
 
-          //  BookingViewDGV.DataSource = ViewDAL.ViewBook();
+            BookingViewDGV.DataSource = ViewDAL.ViewBook(BookIDChosen);
         }
 
         private void Formatting()
@@ -90,7 +91,46 @@ namespace _9320RyanMillerDatabase
             IDTb.Visible = false;
         }
         
-        #region sidebar
+        private void ChosenComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            ViewChosenBtn.Visible = true;
+            
+            if (ChosenComboBox.Text != null)
+            {
+                switch (ChosenComboBox.SelectedItem)
+                {
+                    case "Booking Information":
+                        IDLbl.Visible = true;
+                        IDTb.Visible = true;
+                        IDTb.Text = string.Empty;
+                        IDLbl.Text = "Enter ID of Booking to retrieve Customer Info: ";
+                        BookingViewDGV.DataSource = null;
+                        break;
+                    case "Course Information":
+                        IDLbl.Visible = true;
+                        IDTb.Visible = true;
+                        IDTb.Text = string.Empty;
+                        IDLbl.Text = "Enter ID of Course to retrieve reservations: ";
+                        BookingViewDGV.DataSource = null;
+                        break;
+                    case "Customer Information":
+                        IDLbl.Visible = true;
+                        IDTb.Visible = true;
+                        IDTb.Text = string.Empty;
+                        IDLbl.Text = "Enter ID of Customer to retrieve Bookings made: ";
+                        BookingViewDGV.DataSource = null;
+                        break;
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select an option first", "Error");
+            }
+        }
+
+        #region sidebar controls
         private void SidebarPB_Click(object sender, EventArgs e)
         {
             sidebarTimer.Start();
@@ -293,35 +333,52 @@ namespace _9320RyanMillerDatabase
             Hide();
             new CustomerReportOne().Show();
         }
-
-        #endregion
-
-        private void ChosenComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void G2CustListBtnS_Click(object sender, EventArgs e)
         {
+            Hide();
+            new CustomerReportTwo().Show();
+        }
+        
+        private void G2OtherSideBtn_Click(object sender, EventArgs e)
+        {
+            OtherSideTimer.Start();
+        }
 
-            ViewChosenBtn.Visible = true;
-            
-            if (ChosenComboBox.Text != null)
+        private void ViewDataBtnS_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new ViewDataForm().Show();
+        }
+
+        private void SearchDataBtnS_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new SearchForm().Hide();
+        }
+
+        private void OtherSideTimer_Tick(object sender, EventArgs e)
+        {
+            if (sidebarOtherExpand)
             {
-                switch (ChosenComboBox.SelectedItem)
+                otherContainer.Height += 10;
+                if (otherContainer.Height == otherContainer.MaximumSize.Height)
                 {
-                    case "Booking Information":
-
-                        break;
-                    case "Course Information":
-                        IDLbl.Visible = true;
-                        IDTb.Visible = true;
-                        break;
-                    case "Customer Information":
-
-                        break;
-
+                    sidebarOtherExpand = false;
+                    OtherSideTimer.Stop();
                 }
             }
             else
             {
-                MessageBox.Show("Please select an option first", "Error");
+                otherContainer.Height -= 10;
+                if (otherContainer.Height == otherContainer.MinimumSize.Height)
+                {
+                    sidebarOtherExpand = true;
+                    OtherSideTimer.Stop();
+                }
             }
+        
+        #endregion 
+
         }
     }
 }

@@ -10,27 +10,19 @@ namespace _9320RyanMillerDatabase
     public class CourseModel
     {
         public int _Courseid;
-        public int _Managerid;
         public string _Coursename;
         public string _StartDate;
         public string _EndDate;
         public string _Timing;
         public decimal _Price;
-        public string _Managername;
         public int _Capacity;
+        public int _staffID;
 
         public int CourseId
         {
             get { return _Courseid; }
             set { _Courseid = value; }
         }
-
-        public int ManagerId
-        {
-            get { return _Managerid; }
-            set { _Managerid = value; }
-        }
-
 
         public int Capacity
         {
@@ -64,25 +56,27 @@ namespace _9320RyanMillerDatabase
             get { return _Price; }
             set { _Price = value; }
         }
-        public string ManagerName
+
+        public int StaffID
         {
-            get { return _Managername; }
-            set { _Managername = value; }
+            get { return _staffID; }
+            set { _staffID = value; }
         }
 
-        public CourseModel(int courseID, int managerID, string courseName, string courseSD, string courseED, decimal Price, string time, int capacity)
+        public CourseModel(int courseID, string courseName, string courseSD, string courseED, decimal Price, string time, int capacity, int staffID)
         {
             // WITH ID
             this._Courseid = courseID;
-            this._Managerid = managerID;
             this._Coursename = courseName;
             this._StartDate = courseSD;
             this._EndDate = courseED;
             this._Capacity = capacity;
             this._Price = Price;
             this._Timing = time;
+            this._staffID = staffID;
+
         }
-        public CourseModel(string courseName, string courseSD, string courseED, string timing, decimal Price, int capacity, string ManagerName)
+        public CourseModel(string courseName, string courseSD, string courseED, string timing, decimal Price, int capacity, int staffID)
         {
             // NO ID
 
@@ -92,7 +86,7 @@ namespace _9320RyanMillerDatabase
             this._Capacity = capacity;
             this._Price = Price;
             this._Timing = timing;
-            this._Managername = ManagerName;
+            this._staffID = staffID;
         }
         public CourseModel()
         {

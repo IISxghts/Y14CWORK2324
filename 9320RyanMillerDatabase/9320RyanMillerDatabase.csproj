@@ -305,6 +305,26 @@
     </Compile>
     <Compile Include="BookingDAL.cs" />
     <Compile Include="BookingModel.cs" />
+    <Compile Include="Lakeside9320ActualCourseEditDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Lakeside9320ActualCourseEditDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Lakeside9320ActualCustDeleteDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Lakeside9320ActualCustDeleteDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Lakeside9320ActualDeleteCoursesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Lakeside9320ActualDeleteCoursesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Lakeside9320BookingEditDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Lakeside9320BookingEditDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Lakeside9320CustDataSet.cs">
       <DependentUpon>Lakeside9320CustDataSet.xsd</DependentUpon>
     </Compile>
@@ -486,11 +506,10 @@
     <Compile Include="BookingForm.Designer.cs">
       <DependentUpon>BookingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SidebarForms.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SidebarForms.Designer.cs">
-      <DependentUpon>SidebarForms.cs</DependentUpon>
+    <Compile Include="unpaid_ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>unpaid_ds.xsd</DependentUpon>
     </Compile>
     <Compile Include="UserControlsMMStaff\UC_Booking.cs">
       <SubType>UserControl</SubType>
@@ -595,9 +614,6 @@
     <EmbeddedResource Include="BookingForm.resx">
       <DependentUpon>BookingForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SidebarForms.resx">
-      <DependentUpon>SidebarForms.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserControlsMMStaff\UC_Booking.resx">
       <DependentUpon>UC_Booking.cs</DependentUpon>
     </EmbeddedResource>
@@ -616,6 +632,39 @@
     <EmbeddedResource Include="ViewDataForm.resx">
       <DependentUpon>ViewDataForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Lakeside9320ActualCourseEditDataSet.xsc">
+      <DependentUpon>Lakeside9320ActualCourseEditDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Lakeside9320ActualCourseEditDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Lakeside9320ActualCourseEditDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Lakeside9320ActualCourseEditDataSet.xss">
+      <DependentUpon>Lakeside9320ActualCourseEditDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Lakeside9320ActualCustDeleteDataSet.xsc">
+      <DependentUpon>Lakeside9320ActualCustDeleteDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Lakeside9320ActualCustDeleteDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Lakeside9320ActualCustDeleteDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Lakeside9320ActualCustDeleteDataSet.xss">
+      <DependentUpon>Lakeside9320ActualCustDeleteDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Lakeside9320ActualDeleteCoursesDataSet.xsc">
+      <DependentUpon>Lakeside9320ActualDeleteCoursesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Lakeside9320ActualDeleteCoursesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Lakeside9320ActualDeleteCoursesDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Lakeside9320ActualDeleteCoursesDataSet.xss">
+      <DependentUpon>Lakeside9320ActualDeleteCoursesDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Lakeside9320BookForm1DataSet.xsc">
       <DependentUpon>Lakeside9320BookForm1DataSet.xsd</DependentUpon>
     </None>
@@ -626,6 +675,17 @@
     </None>
     <None Include="Lakeside9320BookForm1DataSet.xss">
       <DependentUpon>Lakeside9320BookForm1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Lakeside9320BookingEditDataSet.xsc">
+      <DependentUpon>Lakeside9320BookingEditDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Lakeside9320BookingEditDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Lakeside9320BookingEditDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Lakeside9320BookingEditDataSet.xss">
+      <DependentUpon>Lakeside9320BookingEditDataSet.xsd</DependentUpon>
     </None>
     <None Include="Lakeside9320BookingForm2DataSet.xsc">
       <DependentUpon>Lakeside9320BookingForm2DataSet.xsd</DependentUpon>
@@ -791,6 +851,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="unpaid_ds.xsc">
+      <DependentUpon>unpaid_ds.xsd</DependentUpon>
+    </None>
+    <None Include="unpaid_ds.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>unpaid_ds.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="unpaid_ds.xss">
+      <DependentUpon>unpaid_ds.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

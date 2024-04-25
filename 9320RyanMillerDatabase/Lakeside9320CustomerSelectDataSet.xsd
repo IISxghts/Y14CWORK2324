@@ -89,70 +89,79 @@ SELECT CustomerNum, CustomerForename, CustomerSurname, CustomerPostcode, Custome
               <Mapping SourceColumn="CustomerDOB" DataSetColumn="CustomerDOB" />
               <Mapping SourceColumn="CustomerSpecialReqs" DataSetColumn="CustomerSpecialReqs" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="Lakeside9320SelectBooking (Settings)" DbObjectName="dbo.Customer" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT CustomerNum, CustomerForename, CustomerSurname, CustomerPostcode, CustomerAddress, CustomerTown, CustomerPhone, CustomerDOB, CustomerSpecialReqs FROM dbo.Customer</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="Lakeside9320CustomerSelectDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="Lakeside9320CustomerSelectDataSet" msprop:Generator_DataSetName="Lakeside9320CustomerSelectDataSet">
+  <xs:element name="Lakeside9320CustomerSelectDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Lakeside9320CustomerSelectDataSet" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Lakeside9320CustomerSelectDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Customer" msprop:Generator_RowEvHandlerName="CustomerRowChangeEventHandler" msprop:Generator_RowDeletedName="CustomerRowDeleted" msprop:Generator_RowDeletingName="CustomerRowDeleting" msprop:Generator_RowEvArgName="CustomerRowChangeEvent" msprop:Generator_TablePropName="Customer" msprop:Generator_RowChangedName="CustomerRowChanged" msprop:Generator_RowChangingName="CustomerRowChanging" msprop:Generator_TableClassName="CustomerDataTable" msprop:Generator_RowClassName="CustomerRow" msprop:Generator_TableVarName="tableCustomer" msprop:Generator_UserTableName="Customer">
+        <xs:element name="Customer" msprop:Generator_RowClassName="CustomerRow" msprop:Generator_RowEvHandlerName="CustomerRowChangeEventHandler" msprop:Generator_RowDeletedName="CustomerRowDeleted" msprop:Generator_RowDeletingName="CustomerRowDeleting" msprop:Generator_RowEvArgName="CustomerRowChangeEvent" msprop:Generator_TablePropName="Customer" msprop:Generator_RowChangedName="CustomerRowChanged" msprop:Generator_UserTableName="Customer" msprop:Generator_RowChangingName="CustomerRowChanging" msprop:Generator_TableClassName="CustomerDataTable" msprop:Generator_TableVarName="tableCustomer">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="CustomerNum" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="CustomerNum" msprop:Generator_ColumnPropNameInTable="CustomerNumColumn" msprop:Generator_ColumnVarNameInTable="columnCustomerNum" msprop:Generator_UserColumnName="CustomerNum" type="xs:int" />
-              <xs:element name="CustomerForename" msprop:Generator_ColumnPropNameInRow="CustomerForename" msprop:Generator_ColumnPropNameInTable="CustomerForenameColumn" msprop:Generator_ColumnVarNameInTable="columnCustomerForename" msprop:Generator_UserColumnName="CustomerForename">
+              <xs:element name="CustomerNum" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="CustomerNum" msprop:Generator_ColumnPropNameInTable="CustomerNumColumn" msprop:Generator_ColumnPropNameInRow="CustomerNum" msprop:Generator_ColumnVarNameInTable="columnCustomerNum" type="xs:int" />
+              <xs:element name="CustomerForename" msprop:Generator_UserColumnName="CustomerForename" msprop:Generator_ColumnPropNameInTable="CustomerForenameColumn" msprop:Generator_ColumnPropNameInRow="CustomerForename" msprop:Generator_ColumnVarNameInTable="columnCustomerForename">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="CustomerSurname" msprop:Generator_ColumnPropNameInRow="CustomerSurname" msprop:Generator_ColumnPropNameInTable="CustomerSurnameColumn" msprop:Generator_ColumnVarNameInTable="columnCustomerSurname" msprop:Generator_UserColumnName="CustomerSurname">
+              <xs:element name="CustomerSurname" msprop:Generator_UserColumnName="CustomerSurname" msprop:Generator_ColumnPropNameInTable="CustomerSurnameColumn" msprop:Generator_ColumnPropNameInRow="CustomerSurname" msprop:Generator_ColumnVarNameInTable="columnCustomerSurname">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="CustomerPostcode" msprop:Generator_ColumnPropNameInRow="CustomerPostcode" msprop:Generator_ColumnPropNameInTable="CustomerPostcodeColumn" msprop:Generator_ColumnVarNameInTable="columnCustomerPostcode" msprop:Generator_UserColumnName="CustomerPostcode">
+              <xs:element name="CustomerPostcode" msprop:Generator_UserColumnName="CustomerPostcode" msprop:Generator_ColumnPropNameInTable="CustomerPostcodeColumn" msprop:Generator_ColumnPropNameInRow="CustomerPostcode" msprop:Generator_ColumnVarNameInTable="columnCustomerPostcode">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="CustomerAddress" msprop:Generator_ColumnPropNameInRow="CustomerAddress" msprop:Generator_ColumnPropNameInTable="CustomerAddressColumn" msprop:Generator_ColumnVarNameInTable="columnCustomerAddress" msprop:Generator_UserColumnName="CustomerAddress">
+              <xs:element name="CustomerAddress" msprop:Generator_UserColumnName="CustomerAddress" msprop:Generator_ColumnPropNameInTable="CustomerAddressColumn" msprop:Generator_ColumnPropNameInRow="CustomerAddress" msprop:Generator_ColumnVarNameInTable="columnCustomerAddress">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="CustomerTown" msprop:Generator_ColumnPropNameInRow="CustomerTown" msprop:Generator_ColumnPropNameInTable="CustomerTownColumn" msprop:Generator_ColumnVarNameInTable="columnCustomerTown" msprop:Generator_UserColumnName="CustomerTown">
+              <xs:element name="CustomerTown" msprop:Generator_UserColumnName="CustomerTown" msprop:Generator_ColumnPropNameInTable="CustomerTownColumn" msprop:Generator_ColumnPropNameInRow="CustomerTown" msprop:Generator_ColumnVarNameInTable="columnCustomerTown">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="CustomerPhone" msprop:Generator_ColumnPropNameInRow="CustomerPhone" msprop:Generator_ColumnPropNameInTable="CustomerPhoneColumn" msprop:Generator_ColumnVarNameInTable="columnCustomerPhone" msprop:Generator_UserColumnName="CustomerPhone">
+              <xs:element name="CustomerPhone" msprop:Generator_UserColumnName="CustomerPhone" msprop:Generator_ColumnPropNameInTable="CustomerPhoneColumn" msprop:Generator_ColumnPropNameInRow="CustomerPhone" msprop:Generator_ColumnVarNameInTable="columnCustomerPhone">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="CustomerDOB" msprop:Generator_ColumnPropNameInRow="CustomerDOB" msprop:Generator_ColumnPropNameInTable="CustomerDOBColumn" msprop:Generator_ColumnVarNameInTable="columnCustomerDOB" msprop:Generator_UserColumnName="CustomerDOB">
+              <xs:element name="CustomerDOB" msprop:Generator_UserColumnName="CustomerDOB" msprop:Generator_ColumnPropNameInTable="CustomerDOBColumn" msprop:Generator_ColumnPropNameInRow="CustomerDOB" msprop:Generator_ColumnVarNameInTable="columnCustomerDOB">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="CustomerSpecialReqs" msprop:Generator_ColumnPropNameInRow="CustomerSpecialReqs" msprop:Generator_ColumnPropNameInTable="CustomerSpecialReqsColumn" msprop:Generator_ColumnVarNameInTable="columnCustomerSpecialReqs" msprop:Generator_UserColumnName="CustomerSpecialReqs" minOccurs="0">
+              <xs:element name="CustomerSpecialReqs" msprop:Generator_UserColumnName="CustomerSpecialReqs" msprop:Generator_ColumnPropNameInTable="CustomerSpecialReqsColumn" msprop:Generator_ColumnPropNameInRow="CustomerSpecialReqs" msprop:Generator_ColumnVarNameInTable="columnCustomerSpecialReqs" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />

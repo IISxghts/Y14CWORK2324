@@ -34,5 +34,11 @@ namespace _9320RyanMillerDatabase.UserControlsMMStaff
             ((LakesideMenu)this.TopLevelControl).Hide();
             new DeleteCustomerForm().Show();
         }
+
+        private void G2ViewCustBtn_Click(object sender, EventArgs e)
+        {
+            ((LakesideMenu)this.TopLevelControl).Hide();
+            new ViewDataForm().Show();
+        }
     }
 }

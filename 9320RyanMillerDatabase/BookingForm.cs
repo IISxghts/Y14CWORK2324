@@ -35,17 +35,23 @@ namespace _9320RyanMillerDatabase
         bool sidebarCourseExpand;
         bool sidebarCustExpand;
         bool sidebarBookExpand;
+        bool sidebarOtherExpand;
 
         private void TempBookingForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'lakeside9320CustomerSelectDataSet.Customer' table. You can move, or remove it, as needed.
             this.customerTableAdapter.Fill(this.lakeside9320CustomerSelectDataSet.Customer);
 
+
+
         }
 
         private void RefreshForm()
         {
             this.customerTableAdapter.Fill(this.lakeside9320CustomerSelectDataSet.Customer);
+            DGVCourse.Refresh();
+
+            
         }
 
 
@@ -55,7 +61,7 @@ namespace _9320RyanMillerDatabase
 
             if (dtPicked >= DateTime.Now.Date)
             {
-                DGVCourse.DataSource = BookingDAL.GetLessonsFromBooking(dtPicked);
+                DGVCourse.DataSource = BookingDAL.GetLessonsFromBooking();
             }
             else
             {
@@ -91,7 +97,7 @@ namespace _9320RyanMillerDatabase
                         
                     int CourseID = Convert.ToInt32(DFRowSelectCourse["CourseID"]);
 
-                    DateTime chosenDate = DTPBooking.Value.Date;
+                    string chosenDate = DTPBooking.Text;
 
                     if (BookingDAL.DoubleBooking(CourseID, CustID).Count != 0)
                     {
@@ -397,6 +403,53 @@ namespace _9320RyanMillerDatabase
             new CustomerReportOne().Show();
         }
 
+
+        
+
+        private void G2OtherSideBtn_Click(object sender, EventArgs e)
+        {
+            OtherSideTimer.Start();
+        }
+
+        private void ViewDataBtnS_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new ViewDataForm().Show();
+        }
+
+        private void SearchDataBtnS_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new SearchForm().Show();
+        }
+
+        private void G2CustListBtnS_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new CustomerReportTwo().Show();
+        }
+
+        private void OtherSideTimer_Tick(object sender, EventArgs e)
+        {
+            if (sidebarOtherExpand)
+            {
+                otherContainer.Height += 10;
+                if (otherContainer.Height == otherContainer.MaximumSize.Height)
+                {
+                    sidebarOtherExpand = false;
+                    OtherSideTimer.Stop();
+                }
+            }
+            else
+            {
+                otherContainer.Height -= 10;
+                if (otherContainer.Height == otherContainer.MinimumSize.Height)
+                {
+                    sidebarOtherExpand = true;
+                    OtherSideTimer.Stop();
+                }
+            }
+        }
 
         #endregion
     }

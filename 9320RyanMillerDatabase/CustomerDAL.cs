@@ -114,5 +114,33 @@ namespace _9320RyanMillerDatabase
                 return dt;
             }
         }
+
+        public static List <int> UnpaidChecker()
+        {
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                List<int> custIDs = new List<int>();
+                connection.Open();
+
+                string SQLQuery = @"SELECT DISTINCT Customer.CustomerNum
+                                    FROM Customer
+                                    INNER JOIN Booking ON Customer.CustomerNum = Booking.CustomerNum
+                                    WHERE Booking.Paid = 0;";
+
+                SqlCommand megaCommand = new SqlCommand(SQLQuery, connection);
+
+                SqlDataReader dataReader = megaCommand.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    int custNum = (int)dataReader["CustomerNum"];
+                    custIDs.Add(custNum);
+                }
+
+                connection.Close();
+
+                return custIDs;
+            }
+        }
     }
 }

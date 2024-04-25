@@ -30,10 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeleteCustomerForm));
-            this.CustDeleteDGV = new System.Windows.Forms.DataGridView();
             this.ViewCustIDLbl = new System.Windows.Forms.Label();
-            this.ViewCourseIDBox = new System.Windows.Forms.TextBox();
-            this.DeleteCourseBtn = new System.Windows.Forms.Button();
+            this.ViewCustIDBox = new System.Windows.Forms.TextBox();
             this.LLMenuLbl = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -66,22 +64,32 @@
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.G2UnpaidBtn = new Guna.UI2.WinForms.Guna2Button();
             this.G2ReportsBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.G2CustListBtnS = new Guna.UI2.WinForms.Guna2Button();
             this.ReportSideTimer = new System.Windows.Forms.Timer(this.components);
             this.CustSideTimer = new System.Windows.Forms.Timer(this.components);
             this.CourseSideTimer = new System.Windows.Forms.Timer(this.components);
             this.BookSideTimer = new System.Windows.Forms.Timer(this.components);
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
-            this.lakeside9320SearchDataSet = new _9320RyanMillerDatabase.Lakeside9320SearchDataSet();
-            this.customerTableAdapter1 = new _9320RyanMillerDatabase.Lakeside9320SearchDataSetTableAdapters.CustomerTableAdapter();
-            this.tableAdapterManager = new _9320RyanMillerDatabase.Lakeside9320SearchDataSetTableAdapters.TableAdapterManager();
+            this.CustDeleteDGV = new System.Windows.Forms.DataGridView();
             this.customerNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customerForenameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customerSurnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customerPhoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lakeside9320CustDataSet = new _9320RyanMillerDatabase.Lakeside9320CustDataSet();
-            this.customerTableAdapter = new _9320RyanMillerDatabase.Lakeside9320CustDataSetTableAdapters.CustomerTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.CustDeleteDGV)).BeginInit();
+            this.lakeside9320ActualCustDeleteDataSet = new _9320RyanMillerDatabase.Lakeside9320ActualCustDeleteDataSet();
+            this.customerTableAdapter = new _9320RyanMillerDatabase.Lakeside9320ActualCustDeleteDataSetTableAdapters.CustomerTableAdapter();
+            this.DelCustBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.OtherSideTimer = new System.Windows.Forms.Timer(this.components);
+            this.otherContainer = new System.Windows.Forms.Panel();
+            this.ViewDataBtnS = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.SearchDataBtnS = new Guna.UI2.WinForms.Guna2Button();
+            this.G2OtherSideBtn = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.sidebar.SuspendLayout();
@@ -97,61 +105,38 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).BeginInit();
             this.ReportsContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320SearchDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CustDeleteDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320CustDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320ActualCustDeleteDataSet)).BeginInit();
+            this.otherContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.SuspendLayout();
-            // 
-            // CustDeleteDGV
-            // 
-            this.CustDeleteDGV.AutoGenerateColumns = false;
-            this.CustDeleteDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CustDeleteDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.customerNumDataGridViewTextBoxColumn,
-            this.customerForenameDataGridViewTextBoxColumn,
-            this.customerSurnameDataGridViewTextBoxColumn,
-            this.customerPhoneDataGridViewTextBoxColumn});
-            this.CustDeleteDGV.DataSource = this.customerBindingSource;
-            this.CustDeleteDGV.Location = new System.Drawing.Point(224, 72);
-            this.CustDeleteDGV.Name = "CustDeleteDGV";
-            this.CustDeleteDGV.RowHeadersWidth = 51;
-            this.CustDeleteDGV.RowTemplate.Height = 24;
-            this.CustDeleteDGV.Size = new System.Drawing.Size(620, 307);
-            this.CustDeleteDGV.TabIndex = 0;
-            this.CustDeleteDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CustDeleteDGV_CellClick);
             // 
             // ViewCustIDLbl
             // 
             this.ViewCustIDLbl.AutoSize = true;
-            this.ViewCustIDLbl.Location = new System.Drawing.Point(865, 74);
+            this.ViewCustIDLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ViewCustIDLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.ViewCustIDLbl.Location = new System.Drawing.Point(76, 379);
             this.ViewCustIDLbl.Name = "ViewCustIDLbl";
-            this.ViewCustIDLbl.Size = new System.Drawing.Size(115, 16);
+            this.ViewCustIDLbl.Size = new System.Drawing.Size(152, 23);
             this.ViewCustIDLbl.TabIndex = 1;
             this.ViewCustIDLbl.Text = "Customer Number";
             // 
-            // ViewCourseIDBox
+            // ViewCustIDBox
             // 
-            this.ViewCourseIDBox.Location = new System.Drawing.Point(868, 93);
-            this.ViewCourseIDBox.Name = "ViewCourseIDBox";
-            this.ViewCourseIDBox.Size = new System.Drawing.Size(100, 22);
-            this.ViewCourseIDBox.TabIndex = 2;
-            // 
-            // DeleteCourseBtn
-            // 
-            this.DeleteCourseBtn.Location = new System.Drawing.Point(868, 121);
-            this.DeleteCourseBtn.Name = "DeleteCourseBtn";
-            this.DeleteCourseBtn.Size = new System.Drawing.Size(100, 52);
-            this.DeleteCourseBtn.TabIndex = 3;
-            this.DeleteCourseBtn.Text = "Delete Customer";
-            this.DeleteCourseBtn.UseVisualStyleBackColor = true;
-            this.DeleteCourseBtn.Click += new System.EventHandler(this.DeleteCustBtn_Click);
+            this.ViewCustIDBox.Location = new System.Drawing.Point(80, 405);
+            this.ViewCustIDBox.Name = "ViewCustIDBox";
+            this.ViewCustIDBox.ReadOnly = true;
+            this.ViewCustIDBox.Size = new System.Drawing.Size(100, 22);
+            this.ViewCustIDBox.TabIndex = 2;
             // 
             // LLMenuLbl
             // 
             this.LLMenuLbl.AutoSize = true;
             this.LLMenuLbl.Font = new System.Drawing.Font("Segoe UI Black", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LLMenuLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
-            this.LLMenuLbl.Location = new System.Drawing.Point(406, 9);
+            this.LLMenuLbl.Location = new System.Drawing.Point(287, 12);
             this.LLMenuLbl.Name = "LLMenuLbl";
             this.LLMenuLbl.Size = new System.Drawing.Size(582, 38);
             this.LLMenuLbl.TabIndex = 1;
@@ -161,7 +146,7 @@
             // 
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(251, 9);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(132, 6);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(144, 51);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -188,6 +173,7 @@
             this.sidebar.Controls.Add(this.coursesContainer);
             this.sidebar.Controls.Add(this.bookingContainer);
             this.sidebar.Controls.Add(this.ReportsContainer);
+            this.sidebar.Controls.Add(this.otherContainer);
             this.sidebar.Location = new System.Drawing.Point(0, 0);
             this.sidebar.MaximumSize = new System.Drawing.Size(215, 500);
             this.sidebar.MinimumSize = new System.Drawing.Size(70, 500);
@@ -565,12 +551,13 @@
             this.ReportsContainer.Controls.Add(this.guna2PictureBox2);
             this.ReportsContainer.Controls.Add(this.G2UnpaidBtn);
             this.ReportsContainer.Controls.Add(this.G2ReportsBtn);
+            this.ReportsContainer.Controls.Add(this.G2CustListBtnS);
             this.ReportsContainer.Location = new System.Drawing.Point(3, 289);
-            this.ReportsContainer.MaximumSize = new System.Drawing.Size(209, 84);
-            this.ReportsContainer.MinimumSize = new System.Drawing.Size(209, 46);
+            this.ReportsContainer.MaximumSize = new System.Drawing.Size(209, 120);
+            this.ReportsContainer.MinimumSize = new System.Drawing.Size(209, 50);
             this.ReportsContainer.Name = "ReportsContainer";
-            this.ReportsContainer.Size = new System.Drawing.Size(209, 46);
-            this.ReportsContainer.TabIndex = 9;
+            this.ReportsContainer.Size = new System.Drawing.Size(209, 50);
+            this.ReportsContainer.TabIndex = 94;
             // 
             // guna2PictureBox2
             // 
@@ -578,7 +565,7 @@
             this.guna2PictureBox2.ImageRotate = 0F;
             this.guna2PictureBox2.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(61, 46);
+            this.guna2PictureBox2.Size = new System.Drawing.Size(61, 50);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox2.TabIndex = 14;
             this.guna2PictureBox2.TabStop = false;
@@ -594,13 +581,12 @@
             this.G2UnpaidBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(38)))), ((int)(((byte)(99)))));
             this.G2UnpaidBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.G2UnpaidBtn.ForeColor = System.Drawing.Color.White;
-            this.G2UnpaidBtn.Location = new System.Drawing.Point(0, 48);
+            this.G2UnpaidBtn.Location = new System.Drawing.Point(0, 50);
             this.G2UnpaidBtn.Name = "G2UnpaidBtn";
-            this.G2UnpaidBtn.Size = new System.Drawing.Size(215, 35);
+            this.G2UnpaidBtn.Size = new System.Drawing.Size(209, 35);
             this.G2UnpaidBtn.TabIndex = 14;
             this.G2UnpaidBtn.Text = "Unpaid Orders";
             this.G2UnpaidBtn.UseTransparentBackground = true;
-            this.G2UnpaidBtn.Click += new System.EventHandler(this.G2UnpaidBtn_Click);
             // 
             // G2ReportsBtn
             // 
@@ -615,11 +601,30 @@
             this.G2ReportsBtn.ForeColor = System.Drawing.Color.White;
             this.G2ReportsBtn.Location = new System.Drawing.Point(0, 0);
             this.G2ReportsBtn.Name = "G2ReportsBtn";
-            this.G2ReportsBtn.Size = new System.Drawing.Size(212, 46);
+            this.G2ReportsBtn.Size = new System.Drawing.Size(209, 50);
             this.G2ReportsBtn.TabIndex = 15;
             this.G2ReportsBtn.Text = "Reports";
             this.G2ReportsBtn.UseTransparentBackground = true;
             this.G2ReportsBtn.Click += new System.EventHandler(this.G2ReportsBtn_Click);
+            // 
+            // G2CustListBtnS
+            // 
+            this.G2CustListBtnS.Animated = true;
+            this.G2CustListBtnS.BackColor = System.Drawing.Color.Transparent;
+            this.G2CustListBtnS.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.G2CustListBtnS.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.G2CustListBtnS.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.G2CustListBtnS.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.G2CustListBtnS.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(38)))), ((int)(((byte)(99)))));
+            this.G2CustListBtnS.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.G2CustListBtnS.ForeColor = System.Drawing.Color.White;
+            this.G2CustListBtnS.Location = new System.Drawing.Point(0, 85);
+            this.G2CustListBtnS.Name = "G2CustListBtnS";
+            this.G2CustListBtnS.Size = new System.Drawing.Size(209, 35);
+            this.G2CustListBtnS.TabIndex = 16;
+            this.G2CustListBtnS.Text = "List of Customers";
+            this.G2CustListBtnS.UseTransparentBackground = true;
+            this.G2CustListBtnS.Click += new System.EventHandler(this.G2CustListBtnS_Click);
             // 
             // ReportSideTimer
             // 
@@ -646,20 +651,29 @@
             this.sidebarTimer.Interval = 10;
             this.sidebarTimer.Tick += new System.EventHandler(this.sidebarTimer_Tick);
             // 
-            // lakeside9320SearchDataSet
+            // CustDeleteDGV
             // 
-            this.lakeside9320SearchDataSet.DataSetName = "Lakeside9320SearchDataSet";
-            this.lakeside9320SearchDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // customerTableAdapter1
-            // 
-            this.customerTableAdapter1.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CustomerTableAdapter = this.customerTableAdapter1;
-            this.tableAdapterManager.UpdateOrder = _9320RyanMillerDatabase.Lakeside9320SearchDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.CustDeleteDGV.AutoGenerateColumns = false;
+            this.CustDeleteDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.CustDeleteDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.customerNumDataGridViewTextBoxColumn,
+            this.customerForenameDataGridViewTextBoxColumn,
+            this.customerSurnameDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.customerPhoneDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5});
+            this.CustDeleteDGV.DataSource = this.customerBindingSource;
+            this.CustDeleteDGV.Location = new System.Drawing.Point(80, 69);
+            this.CustDeleteDGV.Name = "CustDeleteDGV";
+            this.CustDeleteDGV.ReadOnly = true;
+            this.CustDeleteDGV.RowHeadersWidth = 51;
+            this.CustDeleteDGV.RowTemplate.Height = 24;
+            this.CustDeleteDGV.Size = new System.Drawing.Size(897, 307);
+            this.CustDeleteDGV.TabIndex = 74;
+            this.CustDeleteDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CustDeleteDGV_CellClick);
             // 
             // customerNumDataGridViewTextBoxColumn
             // 
@@ -676,6 +690,7 @@
             this.customerForenameDataGridViewTextBoxColumn.HeaderText = "CustomerForename";
             this.customerForenameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.customerForenameDataGridViewTextBoxColumn.Name = "customerForenameDataGridViewTextBoxColumn";
+            this.customerForenameDataGridViewTextBoxColumn.ReadOnly = true;
             this.customerForenameDataGridViewTextBoxColumn.Width = 125;
             // 
             // customerSurnameDataGridViewTextBoxColumn
@@ -684,7 +699,35 @@
             this.customerSurnameDataGridViewTextBoxColumn.HeaderText = "CustomerSurname";
             this.customerSurnameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.customerSurnameDataGridViewTextBoxColumn.Name = "customerSurnameDataGridViewTextBoxColumn";
+            this.customerSurnameDataGridViewTextBoxColumn.ReadOnly = true;
             this.customerSurnameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "CustomerPostcode";
+            this.dataGridViewTextBoxColumn1.HeaderText = "CustomerPostcode";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "CustomerAddress";
+            this.dataGridViewTextBoxColumn2.HeaderText = "CustomerAddress";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "CustomerTown";
+            this.dataGridViewTextBoxColumn3.HeaderText = "CustomerTown";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 125;
             // 
             // customerPhoneDataGridViewTextBoxColumn
             // 
@@ -692,39 +735,159 @@
             this.customerPhoneDataGridViewTextBoxColumn.HeaderText = "CustomerPhone";
             this.customerPhoneDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.customerPhoneDataGridViewTextBoxColumn.Name = "customerPhoneDataGridViewTextBoxColumn";
+            this.customerPhoneDataGridViewTextBoxColumn.ReadOnly = true;
             this.customerPhoneDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "CustomerDOB";
+            this.dataGridViewTextBoxColumn4.HeaderText = "CustomerDOB";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "CustomerSpecialReqs";
+            this.dataGridViewTextBoxColumn5.HeaderText = "CustomerSpecialReqs";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 125;
             // 
             // customerBindingSource
             // 
             this.customerBindingSource.DataMember = "Customer";
-            this.customerBindingSource.DataSource = this.lakeside9320CustDataSet;
+            this.customerBindingSource.DataSource = this.lakeside9320ActualCustDeleteDataSet;
             // 
-            // lakeside9320CustDataSet
+            // lakeside9320ActualCustDeleteDataSet
             // 
-            this.lakeside9320CustDataSet.DataSetName = "Lakeside9320CustDataSet";
-            this.lakeside9320CustDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.lakeside9320ActualCustDeleteDataSet.DataSetName = "Lakeside9320ActualCustDeleteDataSet";
+            this.lakeside9320ActualCustDeleteDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // customerTableAdapter
             // 
             this.customerTableAdapter.ClearBeforeFill = true;
             // 
+            // DelCustBtn
+            // 
+            this.DelCustBtn.AutoRoundedCorners = true;
+            this.DelCustBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.DelCustBtn.BorderRadius = 21;
+            this.DelCustBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.DelCustBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.DelCustBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.DelCustBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.DelCustBtn.FillColor = System.Drawing.Color.Empty;
+            this.DelCustBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.DelCustBtn.ForeColor = System.Drawing.Color.White;
+            this.DelCustBtn.Location = new System.Drawing.Point(80, 443);
+            this.DelCustBtn.Name = "DelCustBtn";
+            this.DelCustBtn.Size = new System.Drawing.Size(226, 45);
+            this.DelCustBtn.TabIndex = 93;
+            this.DelCustBtn.Text = "Delete Customer";
+            this.DelCustBtn.Click += new System.EventHandler(this.DelCustBtn_Click);
+            // 
+            // OtherSideTimer
+            // 
+            this.OtherSideTimer.Interval = 10;
+            this.OtherSideTimer.Tick += new System.EventHandler(this.OtherSideTimer_Tick);
+            // 
+            // otherContainer
+            // 
+            this.otherContainer.Controls.Add(this.ViewDataBtnS);
+            this.otherContainer.Controls.Add(this.guna2PictureBox3);
+            this.otherContainer.Controls.Add(this.SearchDataBtnS);
+            this.otherContainer.Controls.Add(this.G2OtherSideBtn);
+            this.otherContainer.Location = new System.Drawing.Point(3, 345);
+            this.otherContainer.MaximumSize = new System.Drawing.Size(215, 120);
+            this.otherContainer.MinimumSize = new System.Drawing.Size(215, 50);
+            this.otherContainer.Name = "otherContainer";
+            this.otherContainer.Size = new System.Drawing.Size(215, 50);
+            this.otherContainer.TabIndex = 94;
+            // 
+            // ViewDataBtnS
+            // 
+            this.ViewDataBtnS.Animated = true;
+            this.ViewDataBtnS.BackColor = System.Drawing.Color.Transparent;
+            this.ViewDataBtnS.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.ViewDataBtnS.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.ViewDataBtnS.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.ViewDataBtnS.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.ViewDataBtnS.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(38)))), ((int)(((byte)(99)))));
+            this.ViewDataBtnS.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ViewDataBtnS.ForeColor = System.Drawing.Color.White;
+            this.ViewDataBtnS.Location = new System.Drawing.Point(0, 50);
+            this.ViewDataBtnS.Name = "ViewDataBtnS";
+            this.ViewDataBtnS.Size = new System.Drawing.Size(215, 35);
+            this.ViewDataBtnS.TabIndex = 20;
+            this.ViewDataBtnS.Text = "View Data";
+            this.ViewDataBtnS.UseTransparentBackground = true;
+            this.ViewDataBtnS.Click += new System.EventHandler(this.ViewDataBtnS_Click);
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(-3, 0);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(64, 52);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox3.TabIndex = 12;
+            this.guna2PictureBox3.TabStop = false;
+            // 
+            // SearchDataBtnS
+            // 
+            this.SearchDataBtnS.Animated = true;
+            this.SearchDataBtnS.BackColor = System.Drawing.Color.Transparent;
+            this.SearchDataBtnS.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.SearchDataBtnS.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.SearchDataBtnS.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.SearchDataBtnS.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.SearchDataBtnS.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(38)))), ((int)(((byte)(99)))));
+            this.SearchDataBtnS.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.SearchDataBtnS.ForeColor = System.Drawing.Color.White;
+            this.SearchDataBtnS.Location = new System.Drawing.Point(0, 85);
+            this.SearchDataBtnS.Name = "SearchDataBtnS";
+            this.SearchDataBtnS.Size = new System.Drawing.Size(215, 35);
+            this.SearchDataBtnS.TabIndex = 19;
+            this.SearchDataBtnS.Text = "Search Data";
+            this.SearchDataBtnS.UseTransparentBackground = true;
+            this.SearchDataBtnS.Click += new System.EventHandler(this.SearchDataBtnS_Click);
+            // 
+            // G2OtherSideBtn
+            // 
+            this.G2OtherSideBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.G2OtherSideBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.G2OtherSideBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.G2OtherSideBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.G2OtherSideBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(9)))), ((int)(((byte)(97)))));
+            this.G2OtherSideBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.G2OtherSideBtn.ForeColor = System.Drawing.Color.White;
+            this.G2OtherSideBtn.Location = new System.Drawing.Point(3, 0);
+            this.G2OtherSideBtn.Name = "G2OtherSideBtn";
+            this.G2OtherSideBtn.Size = new System.Drawing.Size(215, 50);
+            this.G2OtherSideBtn.TabIndex = 13;
+            this.G2OtherSideBtn.Text = "Other";
+            this.G2OtherSideBtn.Click += new System.EventHandler(this.G2OtherSideBtn_Click);
+            // 
             // DeleteCustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 520);
+            this.ClientSize = new System.Drawing.Size(1000, 500);
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.DeleteCourseBtn);
-            this.Controls.Add(this.ViewCourseIDBox);
+            this.Controls.Add(this.ViewCustIDBox);
             this.Controls.Add(this.ViewCustIDLbl);
             this.Controls.Add(this.CustDeleteDGV);
+            this.Controls.Add(this.DelCustBtn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DeleteCustomerForm";
             this.Text = "Delete Customer";
             this.Load += new System.EventHandler(this.ViewCustomer_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.CustDeleteDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -742,32 +905,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).EndInit();
             this.ReportsContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320SearchDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CustDeleteDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320CustDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lakeside9320ActualCustDeleteDataSet)).EndInit();
+            this.otherContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView CustDeleteDGV;
-        private Lakeside9320CustDataSet lakeside9320CustDataSet;
-        private System.Windows.Forms.BindingSource customerBindingSource;
-        private Lakeside9320CustDataSetTableAdapters.CustomerTableAdapter customerTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn customerNumDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn customerForenameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn customerSurnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn customerPostcodeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn customerAddressDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn customerTownDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn customerPhoneDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn customerDOBDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn customerSpecialReqsDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label ViewCustIDLbl;
-        private System.Windows.Forms.TextBox ViewCourseIDBox;
-        private System.Windows.Forms.Button DeleteCourseBtn;
+        private System.Windows.Forms.TextBox ViewCustIDBox;
         private System.Windows.Forms.Label LLMenuLbl;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.Panel panel3;
@@ -796,17 +951,35 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox8;
         private Guna.UI2.WinForms.Guna2Button G2EditBookBtnS;
         private Guna.UI2.WinForms.Guna2Button G2BookSideBtn;
-        private System.Windows.Forms.Panel ReportsContainer;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
-        private Guna.UI2.WinForms.Guna2Button G2UnpaidBtn;
-        private Guna.UI2.WinForms.Guna2Button G2ReportsBtn;
         private System.Windows.Forms.Timer ReportSideTimer;
         private System.Windows.Forms.Timer CustSideTimer;
         private System.Windows.Forms.Timer CourseSideTimer;
         private System.Windows.Forms.Timer BookSideTimer;
         private System.Windows.Forms.Timer sidebarTimer;
-        private Lakeside9320SearchDataSet lakeside9320SearchDataSet;
-        private Lakeside9320SearchDataSetTableAdapters.CustomerTableAdapter customerTableAdapter1;
-        private Lakeside9320SearchDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.DataGridView CustDeleteDGV;
+        private Lakeside9320ActualCustDeleteDataSet lakeside9320ActualCustDeleteDataSet;
+        private System.Windows.Forms.BindingSource customerBindingSource;
+        private Lakeside9320ActualCustDeleteDataSetTableAdapters.CustomerTableAdapter customerTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerNumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerForenameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerSurnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerPhoneDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private Guna.UI2.WinForms.Guna2Button DelCustBtn;
+        private System.Windows.Forms.Timer OtherSideTimer;
+        private System.Windows.Forms.Panel ReportsContainer;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private Guna.UI2.WinForms.Guna2Button G2UnpaidBtn;
+        private Guna.UI2.WinForms.Guna2Button G2ReportsBtn;
+        private Guna.UI2.WinForms.Guna2Button G2CustListBtnS;
+        private System.Windows.Forms.Panel otherContainer;
+        private Guna.UI2.WinForms.Guna2Button ViewDataBtnS;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
+        private Guna.UI2.WinForms.Guna2Button SearchDataBtnS;
+        private Guna.UI2.WinForms.Guna2Button G2OtherSideBtn;
     }
 }

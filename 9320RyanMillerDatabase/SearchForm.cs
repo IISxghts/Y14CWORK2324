@@ -30,6 +30,7 @@ namespace _9320RyanMillerDatabase
         bool sidebarCourseExpand;
         bool sidebarCustExpand;
         bool sidebarBookExpand;
+        bool sidebarOtherExpand;
 
 
         private void Init()
@@ -62,7 +63,7 @@ namespace _9320RyanMillerDatabase
                     DataModel.ViewOption = "B";
                     break;
                 case "Courses":
-                    CriteriaSelectBox.Items.AddRange(new String[] { "Course ID", "Course Title", "Capacity", "Course Manager Name" });
+                    CriteriaSelectBox.Items.AddRange(new String[] { "Course ID", "Course Title", "Capacity", "Staff ID", "Staff Name" });
                     DataModel.ViewOption = "A";
                     break;
             }
@@ -176,9 +177,16 @@ namespace _9320RyanMillerDatabase
                     sqlDA.Fill(dataT);
                     CustomerInfoDGV.DataSource = dataT;
                 }
-                else if (CriteriaSelectBox.Text == "Course Manager Name")
+                else if (CriteriaSelectBox.Text == "Staff ID")
                 {
-                    SqlDataAdapter sqlDA = new SqlDataAdapter("SELECT * FROM Courses WHERE CManagerName LIKE '" + SearchTxtBox.Text + "%'", sqlC);
+                    SqlDataAdapter sqlDA = new SqlDataAdapter("SELECT * FROM Courses WHERE StaffID LIKE '" + SearchTxtBox.Text + "%'", sqlC);
+                    DataTable dataT = new DataTable();
+                    sqlDA.Fill(dataT);
+                    CustomerInfoDGV.DataSource = dataT;
+                }
+                else if (CriteriaSelectBox.Text == "Staff Name")
+                {
+                    SqlDataAdapter sqlDA = new SqlDataAdapter("SELECT * FROM Staff WHERE StaffName LIKE '" + SearchTxtBox.Text + "%'", sqlC);
                     DataTable dataT = new DataTable();
                     sqlDA.Fill(dataT);
                     CustomerInfoDGV.DataSource = dataT;
@@ -189,7 +197,6 @@ namespace _9320RyanMillerDatabase
                 MessageBox.Show("Error searching for criteria", "Error");
             }
 
-            // you can do some sql here that can show the details for a specific course
         }
 
         private void CriteriaSelectBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -210,6 +217,8 @@ namespace _9320RyanMillerDatabase
             SearchLbl.Visible = true;
             SearchTxtBox.Visible = true;
         }
+
+        #region sidebar controls
 
         private void SidebarPB_Click(object sender, EventArgs e)
         {
@@ -413,5 +422,52 @@ namespace _9320RyanMillerDatabase
             Hide();
             new CustomerReportOne().Show();
         }
+
+        private void G2CustListBtnS_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new CustomerReportTwo().Show();
+        }
+
+        private void G2OtherSideBtn_Click(object sender, EventArgs e)
+        {
+            OtherSideTimer.Start();
+        }
+
+        private void ViewDataBtnS_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new ViewDataForm().Show();
+        }
+
+        private void SearchDataBtnS_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new SearchForm().Show();
+        }
+
+        private void OtherSideTimer_Tick(object sender, EventArgs e)
+        {
+            if (sidebarOtherExpand)
+            {
+                otherContainer.Height += 10;
+                if (otherContainer.Height == otherContainer.MaximumSize.Height)
+                {
+                    sidebarOtherExpand = false;
+                    OtherSideTimer.Stop();
+                }
+            }
+            else
+            {
+                otherContainer.Height -= 10;
+                if (otherContainer.Height == otherContainer.MinimumSize.Height)
+                {
+                    sidebarOtherExpand = true;
+                    OtherSideTimer.Stop();
+                }
+            }
+        }
+
+        #endregion
     }
 }

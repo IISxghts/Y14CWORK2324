@@ -28,10 +28,6 @@ namespace _9320RyanMillerDatabase.UserControls
             ((LakesideMenu)this.TopLevelControl).Hide();
             new CustomerReportTwo().Show();
         }
-        private void G2SearchBtn_Click(object sender, EventArgs e)
-        {
-            ((LakesideMenu)this.TopLevelControl).Hide();
-            new SearchForm().Show();
-        }
+
     }
 }

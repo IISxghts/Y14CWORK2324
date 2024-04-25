@@ -6,8 +6,8 @@
         <Source>Embedded</Source>
         <Value>LlOgoO</Value>
         <Sizing>FitProportional</Sizing>
-        <Top>1cm</Top>
-        <Left>5.25778cm</Left>
+        <Top>0.38617cm</Top>
+        <Left>0.19195cm</Left>
         <Height>2.33567cm</Height>
         <Width>2.56583cm</Width>
         <ToolTip>Lakeside Lodges' Logo</ToolTip>
@@ -38,8 +38,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox23</rd:DefaultName>
-        <Top>1cm</Top>
-        <Left>8cm</Left>
+        <Top>0.38617cm</Top>
+        <Left>2.93417cm</Left>
         <Height>1.12917cm</Height>
         <Width>9.08517cm</Width>
         <ZIndex>1</ZIndex>
@@ -74,8 +74,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox23</rd:DefaultName>
-        <Top>2.5875cm</Top>
-        <Left>8cm</Left>
+        <Top>1.97367cm</Top>
+        <Left>2.93417cm</Left>
         <Height>0.74817cm</Height>
         <Width>9.08517cm</Width>
         <ZIndex>2</ZIndex>
@@ -104,8 +104,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox4</rd:DefaultName>
-        <Top>1.254cm</Top>
-        <Left>17.50814cm</Left>
+        <Top>0.64017cm</Top>
+        <Left>12.44231cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>3</ZIndex>
@@ -134,8 +134,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ExecutionTime</rd:DefaultName>
-        <Top>1.254cm</Top>
-        <Left>20.18453cm</Left>
+        <Top>0.64017cm</Top>
+        <Left>15.1187cm</Left>
         <Height>0.6cm</Height>
         <Width>4.80717cm</Width>
         <ZIndex>4</ZIndex>
@@ -180,24 +180,21 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox1">
+                    <Textbox Name="Textbox19">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Customer ID</Value>
-                              <Style>
-                                <FontFamily>segoe ui</FontFamily>
-                                <FontSize>12pt</FontSize>
-                              </Style>
+                              <Value>Customer Num</Value>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox1</rd:DefaultName>
+                      <rd:DefaultName>Textbox19</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -213,24 +210,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox3">
+                    <Textbox Name="Textbox21">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Forename</Value>
-                              <Style>
-                                <FontFamily>segoe ui</FontFamily>
-                                <FontSize>12pt</FontSize>
-                              </Style>
+                              <Value>Customer Forename</Value>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox3</rd:DefaultName>
+                      <rd:DefaultName>Textbox21</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -246,24 +240,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox5">
+                    <Textbox Name="Textbox27">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Surname</Value>
-                              <Style>
-                                <FontFamily>segoe ui</FontFamily>
-                                <FontSize>12pt</FontSize>
-                              </Style>
+                              <Value>Customer Surname</Value>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox5</rd:DefaultName>
+                      <rd:DefaultName>Textbox27</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -279,24 +270,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox16">
+                    <Textbox Name="Textbox29">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Phone</Value>
-                              <Style>
-                                <FontFamily>segoe ui</FontFamily>
-                                <FontSize>12pt</FontSize>
-                              </Style>
+                              <Value>Customer Phone</Value>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox16</rd:DefaultName>
+                      <rd:DefaultName>Textbox29</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -312,7 +300,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox49">
+                    <Textbox Name="Textbox31">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -320,16 +308,13 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Booking ID</Value>
-                              <Style>
-                                <FontFamily>segoe ui</FontFamily>
-                                <FontSize>12pt</FontSize>
-                              </Style>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox49</rd:DefaultName>
+                      <rd:DefaultName>Textbox31</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -345,7 +330,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox51">
+                    <Textbox Name="Textbox33">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -353,16 +338,13 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Booking Date</Value>
-                              <Style>
-                                <FontFamily>segoe ui</FontFamily>
-                                <FontSize>12pt</FontSize>
-                              </Style>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox51</rd:DefaultName>
+                      <rd:DefaultName>Textbox33</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -378,24 +360,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox47">
+                    <Textbox Name="Textbox25">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Paid?</Value>
-                              <Style>
-                                <FontFamily>segoe ui</FontFamily>
-                                <FontSize>12pt</FontSize>
-                              </Style>
+                              <Value>Paid</Value>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox47</rd:DefaultName>
+                      <rd:DefaultName>Textbox25</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -424,10 +403,7 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!CustomerNum.Value</Value>
-                              <Style>
-                                <FontFamily>segoe ui</FontFamily>
-                                <FontSize>12pt</FontSize>
-                              </Style>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -457,10 +433,7 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!CustomerForename.Value</Value>
-                              <Style>
-                                <FontFamily>segoe ui</FontFamily>
-                                <FontSize>12pt</FontSize>
-                              </Style>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -482,7 +455,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="CustomerSurname">
+                    <Textbox Name="CustomerSurname1">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -490,16 +463,13 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!CustomerSurname.Value</Value>
-                              <Style>
-                                <FontFamily>segoe ui</FontFamily>
-                                <FontSize>12pt</FontSize>
-                              </Style>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>CustomerSurname</rd:DefaultName>
+                      <rd:DefaultName>CustomerSurname1</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -523,10 +493,7 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!CustomerPhone.Value</Value>
-                              <Style>
-                                <FontFamily>segoe ui</FontFamily>
-                                <FontSize>12pt</FontSize>
-                              </Style>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -548,7 +515,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox50">
+                    <Textbox Name="BookingID">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -556,16 +523,13 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!BookingID.Value</Value>
-                              <Style>
-                                <FontFamily>segoe ui</FontFamily>
-                                <FontSize>12pt</FontSize>
-                              </Style>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox50</rd:DefaultName>
+                      <rd:DefaultName>BookingID</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -581,7 +545,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox52">
+                    <Textbox Name="BookingDate">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -589,16 +553,13 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!BookingDate.Value</Value>
-                              <Style>
-                                <FontFamily>segoe ui</FontFamily>
-                                <FontSize>12pt</FontSize>
-                              </Style>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox52</rd:DefaultName>
+                      <rd:DefaultName>BookingDate</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -614,7 +575,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox48">
+                    <Textbox Name="Paid">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -622,16 +583,13 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Paid.Value</Value>
-                              <Style>
-                                <FontFamily>segoe ui</FontFamily>
-                                <FontSize>12pt</FontSize>
-                              </Style>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox48</rd:DefaultName>
+                      <rd:DefaultName>Paid</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -670,9 +628,9 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>Report1Dataset</DataSetName>
-        <Top>4.15192cm</Top>
-        <Left>2.08517cm</Left>
+        <DataSetName>ActualUnpaidOrderDS</DataSetName>
+        <Top>3.2512cm</Top>
+        <Left>0.25778cm</Left>
         <Height>1.2cm</Height>
         <Width>17.5cm</Width>
         <ZIndex>5</ZIndex>
@@ -706,11 +664,18 @@
       </ConnectionProperties>
       <rd:DataSourceID>34a316fc-eb29-4c23-b299-372804b17caa</rd:DataSourceID>
     </DataSource>
+    <DataSource Name="unpaid_ds">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>99101878-a6c1-4e51-a95d-c4d559172ffa</rd:DataSourceID>
+    </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="UnpaidOrdersDataSet">
+    <DataSet Name="ActualUnpaidOrderDS">
       <Query>
-        <DataSourceName>Lakeside9320UnpaidOrderDataSet</DataSourceName>
+        <DataSourceName>unpaid_ds</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -726,38 +691,30 @@
           <DataField>CustomerSurname</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="CustomerPostcode">
-          <DataField>CustomerPostcode</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="CustomerAddress">
-          <DataField>CustomerAddress</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="CustomerTown">
-          <DataField>CustomerTown</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
         <Field Name="CustomerPhone">
           <DataField>CustomerPhone</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="CustomerDOB">
-          <DataField>CustomerDOB</DataField>
+        <Field Name="BookingID">
+          <DataField>BookingID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BookingDate">
+          <DataField>BookingDate</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="CustomerSpecialReqs">
-          <DataField>CustomerSpecialReqs</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+        <Field Name="Paid">
+          <DataField>Paid</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>Lakeside9320UnpaidOrderDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\IISXG\Source\Repos\Y14CWORK2324\9320RyanMillerDatabase\Lakeside9320UnpaidOrderDataSet.xsd</rd:SchemaPath>
-        <rd:TableName>Customer</rd:TableName>
+        <rd:DataSetName>unpaid_ds</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\IISXG\Source\Repos\Y14CWORK2324\9320RyanMillerDatabase\unpaid_ds.xsd</rd:SchemaPath>
+        <rd:TableName>unpaidDT</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>CustomerTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>unpaidDTTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>

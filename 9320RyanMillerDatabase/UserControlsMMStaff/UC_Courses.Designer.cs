@@ -112,8 +112,9 @@
             this.G2ViewCoursesBtn.Size = new System.Drawing.Size(150, 150);
             this.G2ViewCoursesBtn.TabIndex = 9;
             this.G2ViewCoursesBtn.Text = "View Course";
+            this.G2ViewCoursesBtn.Click += new System.EventHandler(this.G2ViewCoursesBtn_Click);
             // 
-            // UC_CoursesStaff
+            // UC_Courses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -123,7 +124,7 @@
             this.Controls.Add(this.G2BtnEditCourse);
             this.Controls.Add(this.G2BtnAddCourse);
             this.Controls.Add(this.LLMenuLbl);
-            this.Name = "UC_CoursesStaff";
+            this.Name = "UC_Courses";
             this.Size = new System.Drawing.Size(953, 340);
             this.ResumeLayout(false);
             this.PerformLayout();
